@@ -1,0 +1,39 @@
+#############################################################################
+###                           --== IMPORTANT ==--                         ###
+#############################################################################
+# If you require changes to this file you must edit the file within the     #
+# original repository.Any changes here will be overwritten when the project #
+# is built.                                                                 #
+#############################################################################
+db:
+    type: 'mariadb:10.4'
+    disk: 2000
+    configuration:
+        schemas:
+            - pacnidb
+            - judiciarynidb
+        endpoints:
+            pacni:
+                default_schema: pacnidb
+                privileges:
+                    pacnidb: admin
+            judiciaryni:
+                default_schema: judiciarynidb
+                privileges:
+                    judiciarynidb: admin
+solr:
+    type: 'solr:7.7'
+    disk: 1024
+    configuration:
+        cores:
+            pacni_index:
+                conf_dir: !archive solr_config/
+            judiciaryni_index:
+                conf_dir: !archive solr_config/
+        endpoints:
+            pacni:
+                core: pacni_index
+            judiciaryni:
+                core: judiciaryni_index
+redis:
+    type: 'redis:6.0'
