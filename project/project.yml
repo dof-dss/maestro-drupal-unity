@@ -1,8 +1,8 @@
 project_type: unity
 project_name: 'Unity Svr 3'
-project_id: platprojidxxxxx
-project_disk_size: 4000
-db_disk_size: 2000
+project_id: vnetibjd44moa
+project_disk_size: 30720
+db_disk_size: 14336
 sites:
     pacni:
         name: 'Planning Appeals Commission'
