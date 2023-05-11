@@ -12,7 +12,7 @@ sites:
         cron_cmd: 'cd web/sites/pacni ; drush core-cron'
         database: pacni
         status: development
-        default: false
+        default: true
     judiciaryni:
         name: 'Judiciary NI'
         url: judiciaryni.uk
@@ -20,5 +20,32 @@ sites:
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/judiciaryni ; drush core-cron'
         database: judiciaryni
+        status: development
+        default: false
+    boundarycommission:
+        name: 'Boundary Commission'
+        url: boundarycommission.org.uk
+        solr: boundarycommission
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/boundarycommission ; drush core-cron'
+        database: boundarycommission
+        status: development
+        default: false
+    industrialcourt:
+        name: 'Industrial Court'
+        url: industrialcourt.gov.uk
+        solr: industrialcourt
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/industrialcourt ; drush core-cron'
+        database: industrialcourt
+        status: development
+        default: false
+    interchangeni:
+        name: 'Interchange NI'
+        url: interchangeni.org.uk
+        solr: interchangeni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/interchangeni ; drush core-cron'
+        database: interchangeni
         status: development
         default: false
