@@ -38,7 +38,7 @@ db:
                     interchangenidb: admin
 solr:
     type: 'solr:7.7'
-    disk: 1024
+    disk: 500
     configuration:
         cores:
             pacni_index:
