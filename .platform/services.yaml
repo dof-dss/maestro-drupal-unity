@@ -15,6 +15,7 @@ db:
             - boundarycommissiondb
             - industrialcourtdb
             - interchangenidb
+            - infolibrarynicsdb
         endpoints:
             pacni:
                 default_schema: pacnidb
@@ -36,6 +37,10 @@ db:
                 default_schema: interchangenidb
                 privileges:
                     interchangenidb: admin
+            infolibrarynics:
+                default_schema: infolibrarynicsdb
+                privileges:
+                    infolibrarynicsdb: admin
 solr:
     type: 'solr:7.7'
     disk: 1024
