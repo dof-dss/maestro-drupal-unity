@@ -45,6 +45,14 @@
 'https://interchangeni.org.uk/':
     type: redirect
     to: 'https://www.interchangeni.org.uk/'
+'https://www.info.library.nics.gov.uk/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://info.library.nics.gov.uk/':
+    type: redirect
+    to: 'https://www.info.library.nics.gov.uk/'
 'https://www.{all}/':
     type: upstream
     upstream: 'unity_svr_3:http'
