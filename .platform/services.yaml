@@ -16,6 +16,7 @@ db:
             - industrialcourtdb
             - interchangenidb
             - infolibrarynicsdb
+            - pressclippingsnicsdb
         endpoints:
             pacni:
                 default_schema: pacnidb
@@ -41,6 +42,10 @@ db:
                 default_schema: infolibrarynicsdb
                 privileges:
                     infolibrarynicsdb: admin
+            pressclippingsnics:
+                default_schema: pressclippingsnicsdb
+                privileges:
+                    pressclippingsnicsdb: admin
 solr:
     type: 'solr:7.7'
     disk: 1024
@@ -56,6 +61,8 @@ solr:
                 conf_dir: !archive solr_config/
             interchangeni_index:
                 conf_dir: !archive solr_config/
+            pressclippingsnics_index:
+                conf_dir: !archive solr_config/
         endpoints:
             pacni:
                 core: pacni_index
@@ -67,5 +74,7 @@ solr:
                 core: industrialcourt_index
             interchangeni:
                 core: interchangeni_index
+            pressclippingsnics:
+                core: pressclippingsnics_index
 redis:
     type: 'redis:6.0'
