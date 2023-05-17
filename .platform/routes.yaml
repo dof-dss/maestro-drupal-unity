@@ -53,6 +53,14 @@
 'https://info.library.nics.gov.uk/':
     type: redirect
     to: 'https://www.info.library.nics.gov.uk/'
+'https://www.parolecomni.org.uk/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://parolecomni.org.uk/':
+    type: redirect
+    to: 'https://www.parolecomni.org.uk/'
 'https://www.{all}/':
     type: upstream
     upstream: 'unity_svr_3:http'

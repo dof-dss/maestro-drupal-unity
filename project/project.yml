@@ -57,3 +57,12 @@ sites:
         database: infolibrarynics
         status: development
         default: false
+    parolecomni:
+        name: 'Parole Commissioners for Northern Ireland'
+        url: parolecomni.org.uk
+        solr: parolecomni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/parolecomni ; drush core-cron'
+        database: parolecomni
+        status: development
+        default: false
