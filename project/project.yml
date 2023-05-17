@@ -49,3 +49,20 @@ sites:
         database: interchangeni
         status: development
         default: false
+    infolibrarynics:
+        name: 'NICS e-library'
+        url: info.library.nics.gov.uk
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/infolibrarynics ; drush core-cron'
+        database: infolibrarynics
+        status: development
+        default: false
+    pressclippingsnics:
+        name: 'Press Clippings Service'
+        url: pressclippings.nics.gov.uk
+        solr: pressclippingsnics
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/pressclippingsnics ; drush core-cron'
+        database: pressclippingsnics
+        status: development
+        default: false
