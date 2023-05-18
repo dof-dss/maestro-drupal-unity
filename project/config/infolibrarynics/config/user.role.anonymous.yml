@@ -2,12 +2,7 @@ uuid: 5238127a-2b47-4721-badc-a7d41652eb5a
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.restricted_html
   module:
-    - eu_cookie_compliance
-    - filter
-    - media
     - search
     - system
 _core:
@@ -17,9 +12,7 @@ label: 'anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'display eu cookie compliance popup'
+  - 'diff view changes'
   - 'search content'
-  - 'use text format restricted_html'
-  - 'view media'
+  - 'view files'

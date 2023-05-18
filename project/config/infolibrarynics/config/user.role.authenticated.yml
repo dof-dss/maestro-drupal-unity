@@ -2,12 +2,10 @@ uuid: a231c588-aff5-453b-b2f3-d4ad09dba556
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.basic_html
   module:
-    - filter
-    - media
     - node
+    - path
+    - pathauto
     - search
     - system
 _core:
@@ -17,13 +15,30 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access comments'
+  - 'access administration menu'
+  - 'access administration pages'
   - 'access content'
-  - 'access shortcuts'
-  - 'post comments'
+  - 'access media browser'
+  - 'access workbench'
+  - 'create page content'
+  - 'create terms content'
+  - 'create url aliases'
+  - 'delete own page content'
+  - 'delete own terms content'
+  - 'diff view changes'
+  - 'edit any page content'
+  - 'edit any terms content'
+  - 'edit own page content'
+  - 'edit own terms content'
+  - 'notify of path changes'
+  - 'revert revisions'
   - 'search content'
-  - 'skip comment approval'
-  - 'use text format basic_html'
-  - 'view all revisions'
-  - 'view media'
+  - 'use media wysiwyg'
+  - 'use text format filtered_html'
+  - 'use text format filtered_html_with_no_images'
+  - 'view files'
+  - 'view moderation history'
+  - 'view moderation messages'
   - 'view own unpublished content'
+  - 'view revisions'
+  - 'view the administration theme'

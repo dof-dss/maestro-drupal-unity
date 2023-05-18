@@ -1,0 +1,18 @@
+uuid: 15b93482-751c-4c90-b8ad-fb53487254f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.terms
+id: node.terms.title
+field_name: title
+entity_type: node
+bundle: terms
+label: 'Terms title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

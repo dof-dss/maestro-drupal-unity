@@ -6,6 +6,7 @@ dependencies:
     - node.type.basic_page
     - node.type.faq
     - node.type.publication
+    - node.type.terms
     - node.type.webform
   module:
     - content_moderation
@@ -99,5 +100,6 @@ type_settings:
       - basic_page
       - faq
       - publication
+      - terms
       - webform
   default_moderation_state: draft
