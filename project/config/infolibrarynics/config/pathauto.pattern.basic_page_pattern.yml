@@ -24,10 +24,10 @@ selection_criteria:
       link: link
       profile: profile
       webform: webform
-  1c31e995-88de-4b26-83c5-d3cf3493281b:
+  f1a6957a-60da-43d0-99e2-40eb29d7f322:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 1c31e995-88de-4b26-83c5-d3cf3493281b
+    uuid: f1a6957a-60da-43d0-99e2-40eb29d7f322
     context_mapping:
       node: node
     bundles:
