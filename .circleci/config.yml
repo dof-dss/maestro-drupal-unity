@@ -223,6 +223,9 @@ jobs:
             # Push to fixed, non-integrating build branch. GitHub webhook integration will propagate this
             # to platform.sh for later steps to use.
             git push -f origin $EDGE_BUILD_BRANCH
+            # Webhook isn't currently working so push the new branch to Platform.sh
+            git remote add platform vnetibjd44moa@git.uk-1.platform.sh:vnetibjd44moa.git
+            git push -f platform $EDGE_BUILD_BRANCH
 
   # Separate task to allow us to sync data on PSH environments, without pauses in other jobs.
   sync_data:
