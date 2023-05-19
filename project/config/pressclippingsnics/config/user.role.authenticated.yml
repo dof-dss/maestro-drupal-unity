@@ -2,28 +2,18 @@ uuid: 3e19323f-85c9-48e2-b834-cbb1974024af
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.basic_html
   module:
-    - filter
-    - media
-    - node
-    - search
     - system
 _core:
   default_config_hash: zLyQwFO06-pj9Gj5UZMWuk_aAuAOSC8YqFEHItUk-Tc
 id: authenticated
-label: 'Authenticated user'
+label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
-  - 'access shortcuts'
-  - 'post comments'
-  - 'search content'
-  - 'skip comment approval'
-  - 'use text format basic_html'
-  - 'view all revisions'
-  - 'view media'
-  - 'view own unpublished content'
+  - 'diff view changes'
+  - 'download any document files'
+  - 'download own document files'
+  - 'use text format filtered_html'
+  - 'view files'
