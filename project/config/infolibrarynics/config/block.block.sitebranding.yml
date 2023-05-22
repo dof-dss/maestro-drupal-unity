@@ -9,7 +9,7 @@ dependencies:
 id: sitebranding
 theme: infolibrarynics_theme
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: system_branding_block
 settings:
