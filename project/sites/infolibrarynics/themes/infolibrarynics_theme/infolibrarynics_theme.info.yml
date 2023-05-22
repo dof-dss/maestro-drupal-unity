@@ -18,6 +18,7 @@ base theme: nicsdru_unity_theme
 regions:
   header: 'Site branding'
   search: 'Search'
+  header_menu: 'Header menu'
   primary_menu: 'Main menu'
   slideshow: 'Slideshow'
   front_welcome: 'Front welcome'

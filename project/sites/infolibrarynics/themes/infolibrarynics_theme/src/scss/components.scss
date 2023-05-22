@@ -4,3 +4,76 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+#header {
+  background: $brand-primary;
+  max-width: 100%;
+  margin: 0;
+  padding: 1% 0 0;
+
+  @include breakpoint($tab) {
+    padding-bottom: 1%;
+  }
+
+  .menu_wrapper {
+    a {
+      @include adjust-font-size-to(16px);
+      color: $white;
+      border-bottom: 1px solid $white;
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid $white;
+      }
+     }
+  }
+}
+
+#main-menu {
+  max-width: 100%;
+
+  #nav-main-menu {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+@include breakpoint($tab) {
+  #header {
+    display: block;
+
+    .menu_wrapper {
+      float: right;
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: $tab) {
+  .top_left {
+    width: 100%;
+
+    #logo {
+      position: relative;
+      float: none;
+    }
+
+    #header-menu .menu {
+      text-align: center;
+    }
+  }
+
+  #headerHero {
+    min-height: 7rem;
+  }
+}
+
+#header-menu {
+  .menu {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding-right: 2rem;
+    }
+  }
+}
