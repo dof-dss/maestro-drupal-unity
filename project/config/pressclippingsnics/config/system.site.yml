@@ -1,15 +1,16 @@
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+langcode: en
+uuid: 78765322-fa2b-444f-90d6-0510cccb5ffc
 name: 'Press Clippings Service'
 mail: Test@test.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /press-clippings
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-uuid: 78765322-fa2b-444f-90d6-0510cccb5ffc
-frontpage_title: 'Welcome to Drupal site'
+frontpage_title: 'Press Clippings Service'
+frontpage_show_title: 0

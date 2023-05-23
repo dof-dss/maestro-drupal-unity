@@ -1,0 +1,18 @@
+uuid: c718c0e5-eb13-4d58-abc1-69bd43592c92
+langcode: en
+status: true
+dependencies:
+  theme:
+    - pressclippingsnics_theme
+id: pagetitle
+theme: pressclippingsnics_theme
+region: content
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }
