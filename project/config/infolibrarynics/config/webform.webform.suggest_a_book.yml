@@ -1,47 +1,57 @@
-uuid: c728ae86-4cf9-4703-ab80-212d5990e352
+uuid: feeb7304-6e10-417d-a2b7-e9572be54d05
 langcode: en
 status: open
-dependencies:
-  enforced:
-    module:
-      - webform
-_core:
-  default_config_hash: CJr5U2B4if_Ff1SZfnNp_csPKwXIynmbUlBC-SmSOAE
+dependencies: {  }
 weight: 0
 open: null
 close: null
-uid: null
+uid: 2
 template: false
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: suggest_a_book
+title: 'Suggest a book'
+description: ''
 category: ''
-elements: |
-  name:
-    '#title': 'Your Name'
-    '#type': textfield
-    '#required': true
-    '#default_value': '[current-user:display-name]'
-  email:
-    '#title': 'Your Email'
-    '#type': email
-    '#required': true
-    '#default_value': '[current-user:mail]'
-  subject:
-    '#title': Subject
-    '#type': textfield
-    '#required': true
-    '#test': 'Testing contact webform from [site:name]'
-  message:
-    '#title': Message
-    '#type': textarea
-    '#required': true
-    '#test': 'Please ignore this email.'
+elements: |-
+  your_details:
+    '#type': fieldset
+    '#title': 'Your details'
+    '#title_display': invisible
+    name:
+      '#type': textfield
+      '#title': Name
+      '#placeholder': 'Please enter your name'
+      '#required': true
+    department:
+      '#type': select
+      '#title': Department
+      '#options':
+        Communities: Communities
+        DAERA: DAERA
+        Economy: Economy
+        Education: Education
+        Finance: Finance
+        Health: Health
+        Infrastructure: Infrastructure
+        Justice: Justice
+        NIO: NIO
+        'The Executive Office': 'The Executive Office'
+        OTHER: OTHER
+      '#required': true
+    email:
+      '#type': email
+      '#title': Email
+      '#placeholder': 'Please enter your email'
+      '#required': true
+    details_of_recommended_book:
+      '#type': textarea
+      '#title': 'Details of recommended book'
+      '#placeholder': 'Please enter your details of recommended book'
+      '#required': true
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': 'Send message'
+    '#submit__label': 'Submit suggestion'
 css: ''
 javascript: ''
 settings:
@@ -54,7 +64,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -144,10 +154,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
-  confirmation_url: '<front>'
+  confirmation_type: page
+  confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
+  confirmation_message: 'Thank you for your submission.'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -169,7 +179,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: false
+  results_disabled: true
   results_disabled_ignore: false
   results_customize: false
   token_view: false
@@ -224,69 +234,32 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
+  email:
     id: email
-    handler_id: email_confirmation
-    label: 'Email confirmation'
+    handler_id: email
+    label: Email
     notes: ''
     status: true
     conditions: {  }
-    weight: 1
+    weight: 0
     settings:
       states:
         - completed
-      to_mail: '[current-user:mail]'
+      to_mail: nicslibrary@finance-ni.gov.uk
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
-  email_notification:
-    id: email
-    handler_id: email_notification
-    label: 'Email notification'
-    notes: ''
-    status: true
-    conditions: {  }
-    weight: 2
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
+      from_mail: nicslibrary@finance-ni.gov.uk
       from_options: {  }
       from_name: '[webform_submission:values:name:raw]'
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      subject: _default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
