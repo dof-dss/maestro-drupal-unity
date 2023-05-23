@@ -1,0 +1,25 @@
+uuid: fba77306-4bc9-4708-be47-2dc34011dfe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer-links
+  module:
+    - system
+  theme:
+    - parolecomni_theme
+id: footerlinks
+theme: parolecomni_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-footer-links'
+settings:
+  id: 'system_menu_block:menu-footer-links'
+  label: 'Footer links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
