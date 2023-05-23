@@ -1,0 +1,8 @@
+uuid: 4e5e3f06-e9a8-465d-9ae4-6d17d03a5edb
+langcode: en
+status: true
+dependencies: {  }
+id: menu-side-menu
+label: 'Side Menu'
+description: 'Main menu placed on the right sidebar'
+locked: false
