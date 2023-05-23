@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_attachment
+    - field.storage.node.field_press_type
     - field.storage.node.field_publication_date
     - search_api.server.solr_default
   module:
@@ -67,6 +68,15 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_attachment
+  field_press_type:
+    label: 'Press Type'
+    datasource_id: 'entity:node'
+    property_path: field_press_type
+    type: integer
+    boost: !!float 3
+    dependencies:
+      config:
+        - field.storage.node.field_press_type
   field_publication_date:
     label: 'Publication date'
     datasource_id: 'entity:node'
@@ -121,12 +131,10 @@ processor_settings:
     alt: true
     tags:
       b: 2
-      em: 1
       h1: 5
       h2: 3
       h3: 2
       strong: 2
-      u: 1
   language_with_fallback: {  }
   rendered_item: {  }
   solr_date_range:

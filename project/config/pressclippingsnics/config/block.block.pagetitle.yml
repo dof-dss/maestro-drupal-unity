@@ -7,7 +7,7 @@ dependencies:
 id: pagetitle
 theme: pressclippingsnics_theme
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: page_title_block
 settings:

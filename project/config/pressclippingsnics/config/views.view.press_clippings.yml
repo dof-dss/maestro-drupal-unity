@@ -10,7 +10,6 @@ dependencies:
     - datetime
     - media
     - search_api
-    - views_custom_cache_tag
 id: press_clippings
 label: 'Press Clippings'
 module: views
@@ -291,9 +290,8 @@ display:
         type: none
         options: {  }
       cache:
-        type: custom_tag
-        options:
-          custom_tag: ''
+        type: search_api_tag
+        options: {  }
       empty: {  }
       sorts:
         field_publication_date:
@@ -348,6 +346,10 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      cache:
+        type: none
+      defaults:
+        cache: false
       exposed_block: true
       display_extenders:
         metatag_display_extender: {  }
