@@ -2,7 +2,11 @@ uuid: da3638ea-a48d-46f7-8222-52498b176b1a
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.basic_page
   module:
+    - menu_admin_per_menu
+    - node
     - redirect
     - system
 _core:
@@ -22,14 +26,18 @@ permissions:
   - 'administer menu-side-menu menu items'
   - 'administer nivo slider'
   - 'administer redirects'
+  - 'create basic_page content'
   - 'create files'
   - 'create new books'
   - 'delete any audio files'
+  - 'delete any basic_page content'
   - 'delete any document files'
   - 'delete any image files'
   - 'delete any page content'
   - 'delete any video files'
+  - 'delete basic_page revisions'
   - 'delete own audio files'
+  - 'delete own basic_page content'
   - 'delete own document files'
   - 'delete own image files'
   - 'delete own video files'
@@ -43,10 +51,12 @@ permissions:
   - 'download own image files'
   - 'download own video files'
   - 'edit any audio files'
+  - 'edit any basic_page content'
   - 'edit any document files'
   - 'edit any image files'
   - 'edit any video files'
   - 'edit own audio files'
+  - 'edit own basic_page content'
   - 'edit own document files'
   - 'edit own image files'
   - 'edit own video files'
@@ -55,6 +65,7 @@ permissions:
   - 'moderate content from needs_review to draft'
   - 'moderate content from needs_review to published'
   - 'moderate content from published to needs_review'
+  - 'revert basic_page revisions'
   - 'schedule revisions'
   - 'show book reorder tab'
   - 'show core Outline form element'
@@ -66,6 +77,7 @@ permissions:
   - 'use workbench_moderation my drafts tab'
   - 'use workbench_moderation needs review tab'
   - 'view all unpublished content'
+  - 'view basic_page revisions'
   - 'view moderation history'
   - 'view moderation messages'
   - 'view own files'
