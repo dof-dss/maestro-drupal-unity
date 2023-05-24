@@ -106,6 +106,7 @@ module:
   toolbar: 0
   twig_tweak: 0
   ultimate_cron: 0
+  unity_breadcrumbs: 0
   unity_common: 0
   unity_eu_cookie_compliance: 0
   unity_frontpage: 0
@@ -134,4 +135,5 @@ theme:
   stable: 0
   adminimal_theme: 0
   nicsdru_unity_theme: 0
+  parolecomni_theme: 0
 profile: nicsdru_unity_profile
