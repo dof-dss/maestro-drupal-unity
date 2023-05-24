@@ -1,0 +1,29 @@
+uuid: c14b5972-f276-4c21-a3eb-471a1f5a22e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.type
+  module:
+    - facets
+    - system
+  theme:
+    - pressclippingsnics_theme
+id: type
+theme: pressclippingsnics_theme
+region: search_facets
+weight: -1
+provider: null
+plugin: 'facet_block:type'
+settings:
+  id: 'facet_block:type'
+  label: Type
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: type
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/press-clippings\r\n/press-clippings/type/*\r\n/press-clippings/date/*"

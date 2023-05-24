@@ -1,0 +1,28 @@
+uuid: 89696d73-5e66-4252-9a47-c43b4aadfdce
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.press_clippings
+  module:
+    - system
+    - views
+  theme:
+    - pressclippingsnics_theme
+id: exposedformpress_clippingspress_clippings
+theme: pressclippingsnics_theme
+region: search_facets
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:press_clippings-press_clippings'
+settings:
+  id: 'views_exposed_filter_block:press_clippings-press_clippings'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/press-clippings\r\n/press-clippings/type/*\r\n/press-clippings/date/*"

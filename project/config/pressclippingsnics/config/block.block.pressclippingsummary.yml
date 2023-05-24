@@ -1,0 +1,23 @@
+uuid: 40a49bff-b98c-4166-acf6-d478705513de
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.press_clipping_summary
+  module:
+    - facets_summary
+  theme:
+    - pressclippingsnics_theme
+id: pressclippingsummary
+theme: pressclippingsnics_theme
+region: search_facets
+weight: -3
+provider: null
+plugin: 'facets_summary_block:press_clipping_summary'
+settings:
+  id: 'facets_summary_block:press_clipping_summary'
+  label: 'Press Clipping Summary'
+  label_display: '0'
+  provider: facets_summary
+  context_mapping: {  }
+visibility: {  }
