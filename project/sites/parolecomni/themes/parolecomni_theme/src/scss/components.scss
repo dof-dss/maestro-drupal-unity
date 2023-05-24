@@ -4,3 +4,20 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.footer-area {
+
+  .footer-area .column {
+    padding: 0;
+  }
+
+  .column:last-child {
+    float: none;
+    width: unset;
+  }
+}
+
+#footer .column li {
+  display: inline-block;
+  border-bottom-style: none;
+}
