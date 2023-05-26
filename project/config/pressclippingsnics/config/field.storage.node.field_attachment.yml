@@ -1,12 +1,10 @@
-uuid: 7021ad92-f754-46e3-947a-6a6367f8fe78
+uuid: 0a668fe3-0233-43fe-8f46-4745ca58cb9a
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
-_core:
-  default_config_hash: JYcnwK1cziS7mHN29hd78z6_OYXihUxujliRqVhcBnI
 id: node.field_attachment
 field_name: field_attachment
 entity_type: node
@@ -15,7 +13,7 @@ settings:
   target_type: media
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

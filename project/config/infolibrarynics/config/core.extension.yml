@@ -10,6 +10,7 @@ module:
   blazy: 0
   block: 0
   block_content: 0
+  book: 0
   breakpoint: 0
   ckeditor: 0
   clientside_validation: 0
@@ -135,4 +136,5 @@ theme:
   stable: 0
   adminimal_theme: 0
   nicsdru_unity_theme: 0
+  infolibrarynics_theme: 0
 profile: nicsdru_unity_profile

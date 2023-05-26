@@ -1,0 +1,27 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+#block-mainpagecontent .page-content time {
+  font-weight: bold;
+}
+
+.footer-area {
+
+  .footer-area .column {
+    padding: 0;
+  }
+
+  .column:last-child {
+    float: none;
+    width: unset;
+  }
+}
+
+#footer .column li {
+  display: inline-block;
+  border-bottom-style: none;
+}
