@@ -5,6 +5,16 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#main-menu li {
+  border-right: 1px solid #fff;
+}
+
+#main-menu .menu .menu-item .active, #main-menu .menu .menu-item .active + .menu-main_sub .title a
+{
+  background: none;
+  border-bottom: none;
+}
+
 #block-mainpagecontent .page-content time {
   font-weight: bold;
 }
