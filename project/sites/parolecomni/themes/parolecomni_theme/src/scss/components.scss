@@ -5,6 +5,29 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#main-menu li {
+  border-right: 1px solid #fff;
+}
+
+#main-menu .menu .menu-item .active, #main-menu .menu .menu-item .active + .menu-main_sub .title a
+{
+  background: none;
+  border-bottom: none;
+}
+
+.front {
+
+  h1 {
+    font-size: 2.2rem;
+    color: $brand-tertiary;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+    color: $brand-tertiary;
+  }
+}
+
 #block-mainpagecontent .page-content time {
   font-weight: bold;
 }
