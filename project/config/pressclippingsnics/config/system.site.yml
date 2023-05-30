@@ -6,7 +6,7 @@ name: 'Press Clippings Service'
 mail: Test@test.com
 slogan: ''
 page:
-  403: ''
+  403: /user/login
   404: ''
   front: /press-clippings
 admin_compact_mode: false
