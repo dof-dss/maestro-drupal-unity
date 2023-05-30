@@ -9,7 +9,7 @@ dependencies:
 id: userlogin
 theme: pressclippingsnics_theme
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: user_login_block
 settings:

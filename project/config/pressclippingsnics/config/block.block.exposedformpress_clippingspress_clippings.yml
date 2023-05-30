@@ -6,13 +6,14 @@ dependencies:
     - views.view.press_clippings
   module:
     - system
+    - user
     - views
   theme:
     - pressclippingsnics_theme
 id: exposedformpress_clippingspress_clippings
 theme: pressclippingsnics_theme
 region: search_facets
-weight: 0
+weight: -3
 provider: null
 plugin: 'views_exposed_filter_block:press_clippings-press_clippings'
 settings:
@@ -26,3 +27,14 @@ visibility:
     id: request_path
     negate: false
     pages: "/press-clippings\r\n/press-clippings/type/*\r\n/press-clippings/date/*"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      supervisor_user: supervisor_user
+      qa: qa
+      author_user: author_user

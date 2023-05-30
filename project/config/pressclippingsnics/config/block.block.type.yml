@@ -7,12 +7,13 @@ dependencies:
   module:
     - facets
     - system
+    - user
   theme:
     - pressclippingsnics_theme
 id: type
 theme: pressclippingsnics_theme
 region: search_facets
-weight: -1
+weight: -4
 provider: null
 plugin: 'facet_block:type'
 settings:
@@ -27,3 +28,14 @@ visibility:
     id: request_path
     negate: false
     pages: "/press-clippings\r\n/press-clippings/type/*\r\n/press-clippings/date/*"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      supervisor_user: supervisor_user
+      qa: qa
+      author_user: author_user
