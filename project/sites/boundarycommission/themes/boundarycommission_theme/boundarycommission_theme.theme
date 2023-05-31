@@ -1,0 +1,34 @@
+<?php
+
+/**
+* @file
+* Functions to support theming in the boundarycommission_theme.
+*/
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\file\FileInterface;
+use Drupal\media\MediaInterface;
+use Drupal\block\Entity\Block;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+* Implements hook_preprocess_field().
+*/
+function boundarycommission_theme_preprocess_field(&$variables) {
+  // Build a link back to the publications page with
+  // the type facet selected.
+  $node = $variables['element']['#object'];
+  $publication_type = $node->field_publication_type;
+  if (is_object($publication_type)) {
+    $tid = $publication_type->getString();
+    if (!empty($tid)) {
+      $link_url = Url::fromUri('https://' . $_SERVER['HTTP_HOST'] . '/publications/type/' . $tid );
+      $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+      $link_text = $term->getName();
+      $variables['facet_link'] = Link::fromTextAndUrl($link_text, $link_url);
+    }
+  }
+}
