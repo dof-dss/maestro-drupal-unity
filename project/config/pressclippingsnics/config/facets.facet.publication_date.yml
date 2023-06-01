@@ -34,7 +34,7 @@ widget:
   type: links
   config:
     show_numbers: true
-    soft_limit: 20
+    soft_limit: 5
     show_reset_link: false
     reset_text: 'Show all'
     hide_reset_when_no_selection: false
@@ -53,18 +53,13 @@ processor_configs:
       sort: 20
     settings:
       sort: DESC
-  date_facet_drilldown:
-    processor_id: date_facet_drilldown
-    weights:
-      build: 1
-    settings: {  }
   date_item:
     processor_id: date_item
     weights:
       build: 35
     settings:
       date_display: actual_date
-      granularity: 6
+      granularity: 4
       date_format: ''
       hierarchy: false
   hierarchy_processor:

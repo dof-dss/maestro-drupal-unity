@@ -13,4 +13,4 @@ admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
 frontpage_title: 'Press Clippings Service'
-frontpage_show_title: 0
+frontpage_show_title: 1

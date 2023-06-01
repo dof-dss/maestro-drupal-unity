@@ -223,6 +223,10 @@ display:
       filters: {  }
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: search-result
+          default_row_class: true
       row:
         type: fields
         options:
