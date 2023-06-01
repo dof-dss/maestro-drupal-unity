@@ -13,7 +13,7 @@ dependencies:
 id: exposedformpress_clippingspress_clippings
 theme: pressclippingsnics_theme
 region: search_facets
-weight: -3
+weight: -4
 provider: null
 plugin: 'views_exposed_filter_block:press_clippings-press_clippings'
 settings:

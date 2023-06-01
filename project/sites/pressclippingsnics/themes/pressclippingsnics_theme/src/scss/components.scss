@@ -20,3 +20,22 @@
 #headerHero {
   background: none;
 }
+
+#block-nicsloginnotice {
+  background: $grey-medium;
+  text-align: center;
+
+  h2 {
+    @include adjust-font-size-to(30px);
+  }
+
+  p {
+    @include adjust-font-size-to(16px);
+  }
+}
+#header {
+  background: $grey-light;
+  border: solid 1px $grey-lightest;
+  border-radius: 6px;
+  padding: .5rem .5rem 0 2rem;
+}
