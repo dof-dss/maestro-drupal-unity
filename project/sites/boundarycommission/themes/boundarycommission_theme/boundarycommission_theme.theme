@@ -21,14 +21,39 @@ function boundarycommission_theme_preprocess_field(&$variables) {
   // Build a link back to the publications page with
   // the type facet selected.
   $node = $variables['element']['#object'];
-  $publication_type = $node->field_publication_type;
-  if (is_object($publication_type)) {
-    $tid = $publication_type->getString();
-    if (!empty($tid)) {
-      $link_url = Url::fromUri('https://' . $_SERVER['HTTP_HOST'] . '/publications/type/' . $tid );
-      $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
-      $link_text = $term->getName();
-      $variables['facet_link'] = Link::fromTextAndUrl($link_text, $link_url);
+  if ($node instanceof Node) {
+    if ($node->getType() == 'publication') {
+      $publication_type = $node->field_publication_type;
+      if (is_object($publication_type)) {
+        $tid = $publication_type->getString();
+        if (!empty($tid)) {
+          $link_url = Url::fromUri('https://' . $_SERVER['HTTP_HOST'] . '/publications/type/' . $tid);
+          $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+          $link_text = $term->getName();
+          $variables['facet_link'] = Link::fromTextAndUrl($link_text, $link_url);
+        }
+      }
+    } elseif ($node->getType() == 'consultation') {
+      $consultation_type = $node->field_response_type;
+      if (is_object($consultation_type)) {
+        $tid = $consultation_type->getString();
+        if (!empty($tid)) {
+          $link_url = Url::fromUri('https://' . $_SERVER['HTTP_HOST'] . '/representations-received/type/' . $tid);
+          $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+          $link_text = $term->getName();
+          $variables['type_link'] = Link::fromTextAndUrl($link_text, $link_url);
+        }
+      }
+      $consultation_stage = $node->field_consultation_stage;
+      if (is_object($consultation_stage)) {
+        $tid = $consultation_stage->getString();
+        if (!empty($tid)) {
+          $link_url = Url::fromUri('https://' . $_SERVER['HTTP_HOST'] . '/representations-received/stage/' . $tid);
+          $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+          $link_text = $term->getName();
+          $variables['stage_link'] = Link::fromTextAndUrl($link_text, $link_url);
+        }
+      }
     }
   }
 }
