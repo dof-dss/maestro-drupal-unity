@@ -33,7 +33,7 @@ function boundarycommission_theme_preprocess_field(&$variables) {
           $variables['facet_link'] = Link::fromTextAndUrl($link_text, $link_url);
         }
       }
-    } elseif ($node->getType() == 'consultation') {
+    } elseif ($node->getType() == 'consultation_response') {
       $consultation_type = $node->field_response_type;
       if (is_object($consultation_type)) {
         $tid = $consultation_type->getString();
