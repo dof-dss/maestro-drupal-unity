@@ -601,7 +601,7 @@ display:
         - 'config:search_api.index.default_content'
   site_search:
     id: site_search
-    display_title: Embed
+    display_title: 'Embed: Site search'
     display_plugin: embed
     position: 2
     display_options:
@@ -742,6 +742,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+      display_description: ''
       display_extenders:
         metatag_display_extender: {  }
     cache_metadata:
