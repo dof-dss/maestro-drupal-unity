@@ -9,6 +9,7 @@ dependencies:
     - node.type.press_clippings
   module:
     - datetime
+    - file
     - user
 id: node.press_clippings.default
 targetEntityType: node
@@ -16,11 +17,10 @@ bundle: press_clippings
 mode: default
 content:
   field_attachment:
-    type: entity_reference_entity_view
+    type: file_default
     label: above
     settings:
-      view_mode: default
-      link: false
+      use_description_as_link_text: true
     third_party_settings: {  }
     weight: 2
     region: content
