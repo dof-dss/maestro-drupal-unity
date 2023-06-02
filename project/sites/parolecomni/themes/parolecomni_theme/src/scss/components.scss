@@ -5,14 +5,22 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
-#main-menu li {
-  border-right: 1px solid #fff;
+#main-menu {
+  li {
+    border-right: 1px solid #fff;
+  }
+  li:last-child {
+    border-right: none;
+  }
 }
 
-#main-menu .menu .menu-item .active, #main-menu .menu .menu-item .active + .menu-main_sub .title a
-{
+#main-menu .menu .menu-item .active, #main-menu .menu .menu-item .active + .menu-main_sub .title a {
   background: none;
   border-bottom: none;
+}
+
+#main-menu .menu-item.leaf.active-trail {
+  border-bottom: 1px solid #fff;
 }
 
 #block-mainpagecontent .page-content time {
@@ -20,18 +28,21 @@
 }
 
 .footer-area {
-
   .footer-area .column {
     padding: 0;
   }
-
   .column:last-child {
     float: none;
     width: unset;
   }
 }
 
+#footer .footer-menu li {
+  margin-right: .5rem;
+}
+
 #footer .column li {
   display: inline-block;
   border-bottom-style: none;
+  padding: 0 .8rem 0 0;
 }
