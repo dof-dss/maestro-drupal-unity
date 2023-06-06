@@ -16,6 +16,11 @@ targetEntityType: node
 bundle: press_clippings
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_attachment:
     type: file_default
     label: above
@@ -37,7 +42,7 @@ content:
     label: above
     settings:
       timezone_override: ''
-      format_type: unity_date
+      format_type: medium
     third_party_settings: {  }
     weight: 0
     region: content
