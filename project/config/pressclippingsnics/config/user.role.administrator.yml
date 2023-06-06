@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
+    - node.type.press_clippings
   module:
     - block
     - filter
@@ -18,7 +19,7 @@ _core:
   default_config_hash: J8rXM_vdD29ZTEwtLOs84Vsn-PTRH-ZDh_Pi610CAEI
 id: administrator
 label: administrator
-weight: 4
+weight: -8
 is_admin: true
 permissions:
   - 'access administration menu'

@@ -10,8 +10,8 @@ dependencies:
     - pressclippingsnics_theme
 id: usermenu
 theme: pressclippingsnics_theme
-region: search
-weight: -4
+region: header
+weight: -3
 provider: null
 plugin: 'system_menu_block:account'
 settings:

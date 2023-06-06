@@ -132,15 +132,7 @@
               {{ page.breadcrumb }}
             {% endif %}
 
-            {% if is_front %}
-              {% if drupal_config('system.site', 'frontpage_title') %}
-                <h1 class="{{ drupal_config('system.site', 'frontpage_show_title') ? '' : 'visually-hidden' }}">
-                  {{ drupal_config('system.site', 'frontpage_title') }}
-                </h1>
-              {% endif %}
-            {% endif %}
-
-            {% if search_page %}
+            {% if search_page or page.search_facets %}
               {{ drupal_block('page_title_block', wrapper=false) }}
             {% endif %}
 
