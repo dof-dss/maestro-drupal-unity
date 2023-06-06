@@ -3,17 +3,24 @@ langcode: en
 status: true
 dependencies:
   module:
+    - media
+    - node
+    - pathauto
     - system
 _core:
   default_config_hash: zLyQwFO06-pj9Gj5UZMWuk_aAuAOSC8YqFEHItUk-Tc
 id: authenticated
 label: 'authenticated user'
-weight: 1
+weight: -9
 is_admin: false
 permissions:
   - 'access content'
   - 'diff view changes'
   - 'download any document files'
   - 'download own document files'
+  - 'notify of path changes'
   - 'use text format filtered_html'
+  - 'view all revisions'
   - 'view files'
+  - 'view media'
+  - 'view own unpublished content'

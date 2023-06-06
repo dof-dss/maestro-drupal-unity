@@ -10,9 +10,12 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - node.type.basic_page
+    - node.type.press_clippings
+    - node.type.webform
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
+    - contextual
     - file
     - filter
     - media
@@ -31,16 +34,16 @@ _core:
   default_config_hash: cI6O43jts_j67JaySnvjojNUQYYJXQmbWghOsb7iQNY
 id: supervisor_user
 label: 'supervisor user'
-weight: 5
+weight: -6
 is_admin: null
 permissions:
   - 'access administration menu'
   - 'access administration pages'
   - 'access ckeditor link'
   - 'access content overview'
+  - 'access contextual links'
   - 'access files overview'
   - 'access location_browser entity browser pages'
-  - 'access media overview'
   - 'access toolbar'
   - 'add content to books'
   - 'add media from remote sources'
@@ -55,17 +58,18 @@ permissions:
   - 'add scheduled transitions node link'
   - 'add scheduled transitions node news'
   - 'add scheduled transitions node page'
+  - 'add scheduled transitions node press_clippings'
   - 'add scheduled transitions node profile'
   - 'add scheduled transitions node publication'
   - 'add scheduled transitions node publication_page'
   - 'add scheduled transitions node staff_member'
   - 'add scheduled transitions node vacancy'
-  - 'add scheduled transitions node webform'
   - 'add terms in site_topics'
   - 'add terms in themes'
   - 'administer book outlines'
   - 'administer main menu items'
   - 'administer redirects'
+  - 'administer scheduled transitions'
   - 'audit content'
   - 'create application content'
   - 'create article content'
@@ -83,6 +87,7 @@ permissions:
   - 'create irish_news content'
   - 'create new books'
   - 'create page content'
+  - 'create press_clippings content'
   - 'create publication_page content'
   - 'create remote_video media'
   - 'create staff_member content'
@@ -107,6 +112,7 @@ permissions:
   - 'delete any image media'
   - 'delete any irish_news content'
   - 'delete any page content'
+  - 'delete any press_clippings content'
   - 'delete any publication_page content'
   - 'delete any remote_video media'
   - 'delete any staff_member content'
@@ -140,6 +146,7 @@ permissions:
   - 'delete own image media'
   - 'delete own irish_news content'
   - 'delete own page content'
+  - 'delete own press_clippings content'
   - 'delete own publication_page content'
   - 'delete own remote_video media'
   - 'delete own staff_member content'
@@ -147,6 +154,7 @@ permissions:
   - 'delete own video files'
   - 'delete own video media'
   - 'delete page revisions'
+  - 'delete press_clippings revisions'
   - 'delete publication_page revisions'
   - 'delete recipe revisions'
   - 'delete revisions'
@@ -154,6 +162,7 @@ permissions:
   - 'delete terms in 1'
   - 'delete umbrella_body revisions'
   - 'delete vacancy revisions'
+  - 'delete webform revisions'
   - 'download any audio files'
   - 'download any document files'
   - 'download any image files'
@@ -179,6 +188,7 @@ permissions:
   - 'edit any image media'
   - 'edit any irish_news content'
   - 'edit any page content'
+  - 'edit any press_clippings content'
   - 'edit any publication_page content'
   - 'edit any remote_video media'
   - 'edit any staff_member content'
@@ -203,6 +213,7 @@ permissions:
   - 'edit own image media'
   - 'edit own irish_news content'
   - 'edit own page content'
+  - 'edit own press_clippings content'
   - 'edit own publication_page content'
   - 'edit own remote_video media'
   - 'edit own staff_member content'
@@ -229,12 +240,12 @@ permissions:
   - 'reschedule scheduled transitions node link'
   - 'reschedule scheduled transitions node news'
   - 'reschedule scheduled transitions node page'
+  - 'reschedule scheduled transitions node press_clippings'
   - 'reschedule scheduled transitions node profile'
   - 'reschedule scheduled transitions node publication'
   - 'reschedule scheduled transitions node publication_page'
   - 'reschedule scheduled transitions node staff_member'
   - 'reschedule scheduled transitions node vacancy'
-  - 'reschedule scheduled transitions node webform'
   - 'revert all revisions'
   - 'revert application revisions'
   - 'revert article revisions'
@@ -247,6 +258,7 @@ permissions:
   - 'revert health_condition revisions'
   - 'revert landing_page revisions'
   - 'revert page revisions'
+  - 'revert press_clippings revisions'
   - 'revert publication_page revisions'
   - 'revert recipe revisions'
   - 'revert staff_member revisions'
@@ -300,6 +312,7 @@ permissions:
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view page revisions'
+  - 'view press_clippings revisions'
   - 'view publication_page revisions'
   - 'view recipe revisions'
   - 'view scheduled transitions node basic_page'
@@ -313,6 +326,7 @@ permissions:
   - 'view scheduled transitions node link'
   - 'view scheduled transitions node news'
   - 'view scheduled transitions node page'
+  - 'view scheduled transitions node press_clippings'
   - 'view scheduled transitions node profile'
   - 'view scheduled transitions node publication'
   - 'view scheduled transitions node publication_page'
