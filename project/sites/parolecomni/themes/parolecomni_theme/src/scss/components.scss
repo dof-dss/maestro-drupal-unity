@@ -7,7 +7,9 @@
 
 #main-menu {
   li {
-    border-right: 1px solid #fff;
+    @media screen and (min-width: $tab) {
+      border-right: 1px solid #fff;
+    }
   }
   li:last-child {
     border-right: none;
@@ -20,7 +22,9 @@
 }
 
 #main-menu .menu-item.leaf.active-trail {
-  border-bottom: 1px solid #fff;
+  @media screen and (max-width: $tab) {
+    border-bottom: 1px solid #fff;
+  }
 }
 
 #block-mainpagecontent .page-content time {
