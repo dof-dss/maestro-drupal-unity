@@ -5,33 +5,56 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
-#main-menu li {
-  border-right: 1px solid #fff;
+#main-menu {
+  li {
+    @media screen and (min-width: $tab) {
+      border-right: 1px solid #fff;
+    }
+  }
+  li:last-child {
+    border-right: none;
+  }
 }
 
-#main-menu .menu .menu-item .active, #main-menu .menu .menu-item .active + .menu-main_sub .title a
-{
+#main-menu .menu .menu-item .active, #main-menu .menu .menu-item .active + .menu-main_sub .title a {
   background: none;
   border-bottom: none;
+}
+
+#main-menu .menu-item.leaf.active-trail {
+  @media screen and (max-width: $tab) {
+    border-bottom: 1px solid #fff;
+  }
 }
 
 #block-mainpagecontent .page-content time {
   font-weight: bold;
 }
 
-.footer-area {
+#facet_publication_type #search-facets .facet-list__links .facet-item ul .facet-item::before, #content .facet-list__links .facet-item ul .facet-item::before {
+  content: '';
+}
 
+#content a:not(.toolbar-icon):not(.file-link):not(.facet--btn):not(.facet-item--link):not(.btn):not(.ui-menu-item-wrapper):not(.thwooper):not(.value):not(.card__title-link):not(.card):not(.layout-builder__link):not(.facets-soft-limit-link), .content a:not(.toolbar-icon):not(.file-link):not(.facet--btn):not(.facet-item--link):not(.btn):not(.ui-menu-item-wrapper):not(.thwooper):not(.value):not(.card__title-link):not(.card):not(.layout-builder__link):not(.facets-soft-limit-link), #footer a:not(.toolbar-icon):not(.file-link):not(.facet--btn):not(.facet-item--link):not(.btn):not(.ui-menu-item-wrapper):not(.thwooper):not(.value):not(.card__title-link):not(.card):not(.layout-builder__link):not(.facets-soft-limit-link) {
+  border-bottom: none;
+}
+
+.footer-area {
   .footer-area .column {
     padding: 0;
   }
-
   .column:last-child {
     float: none;
     width: unset;
   }
 }
 
+#footer .footer-menu li {
+  margin-right: .5rem;
+}
+
 #footer .column li {
   display: inline-block;
   border-bottom-style: none;
+  padding: 0 .8rem 0 0;
 }
