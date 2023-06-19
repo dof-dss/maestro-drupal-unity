@@ -12,7 +12,7 @@ use Drupal\views\ViewExecutable;
 function interchangeni_common_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id == 'node_manager_form' || $form_id == 'node_manager_edit_form') {
     $form['title']['#disabled'] = 'disabled';
-    $form['title']['widget'][0]['value']['#description'] = t('You cannot edit this field. It is created automatically using the Name of Judge and Judicial Tier.');
+    $form['title']['widget'][0]['value']['#description'] = t('You cannot edit this field. It is created automatically using the Surname and the First name.');
 
   }
 }
