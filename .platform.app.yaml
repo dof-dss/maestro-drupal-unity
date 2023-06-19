@@ -73,6 +73,7 @@ web:
                 ^/sites/default/files/(css|js):
                     expires: 2w
 relationships:
+    redis: 'redis:redis'
     pacni: 'db:pacni'
     pacni_solr: 'solr:pacni'
     judiciaryni: 'db:judiciaryni'
