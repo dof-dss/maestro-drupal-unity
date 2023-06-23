@@ -9,7 +9,6 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - node.type.basic_page
-    - node.type.news
     - node.type.publication
     - workflows.workflow.nics_editorial_workflow
   module:
@@ -61,7 +60,6 @@ permissions:
   - 'create files'
   - 'create image media'
   - 'create new books'
-  - 'create news content'
   - 'create publication content'
   - 'create remote_video media'
   - 'create url aliases'
@@ -74,13 +72,11 @@ permissions:
   - 'delete any file media'
   - 'delete any image files'
   - 'delete any image media'
-  - 'delete any news content'
   - 'delete any page content'
   - 'delete any publication content'
   - 'delete any remote_video media'
   - 'delete any video files'
   - 'delete basic_page revisions'
-  - 'delete news revisions'
   - 'delete own audio files'
   - 'delete own audio media'
   - 'delete own basic_page content'
@@ -89,7 +85,6 @@ permissions:
   - 'delete own file media'
   - 'delete own image files'
   - 'delete own image media'
-  - 'delete own news content'
   - 'delete own publication content'
   - 'delete own remote_video media'
   - 'delete own video files'
@@ -111,7 +106,6 @@ permissions:
   - 'edit any file media'
   - 'edit any image files'
   - 'edit any image media'
-  - 'edit any news content'
   - 'edit any publication content'
   - 'edit any remote_video media'
   - 'edit any video files'
@@ -124,7 +118,6 @@ permissions:
   - 'edit own file media'
   - 'edit own image files'
   - 'edit own image media'
-  - 'edit own news content'
   - 'edit own publication content'
   - 'edit own remote_video media'
   - 'edit own video files'
@@ -139,7 +132,6 @@ permissions:
   - 'reschedule scheduled transitions node webform'
   - 'revert all revisions'
   - 'revert basic_page revisions'
-  - 'revert news revisions'
   - 'revert publication revisions'
   - 'schedule revisions'
   - 'show book reorder tab'
@@ -168,7 +160,6 @@ permissions:
   - 'view latest version'
   - 'view moderation history'
   - 'view moderation messages'
-  - 'view news revisions'
   - 'view own files'
   - 'view own unpublished media'
   - 'view publication revisions'
