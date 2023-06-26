@@ -75,3 +75,12 @@ sites:
         database: parolecomni
         status: development
         default: false
+    lgbcni:
+        name: 'Local Government Boundaries Commissioner for Northern Ireland'
+        url: lgbc-ni.org.uk
+        solr: lgbcni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/lgbcni ; drush core-cron'
+        database: lgbcni
+        status: development
+        default: false
