@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains unity_events.module.
+ */
+
+/**
+ * Implements hook_cron().
+ */
+function pressclippingsnics_clippingtidy_cron() {
+  // Retrieve all press clippings.
+  $press_clippings = \Drupal::entityTypeManager()->getStorage('node')
+    ->loadByProperties([
+      'type' => 'press_clippings'
+    ]);
+  // Allow 30 days before archiving.
+  $cutoff_time = time() - (60 * 60 * 24 * 30);
+  // Loop through all events checking the end date.
+  foreach ($press_clippings as $pressclipping) {
+    // If the clipping is already archived, ignore it.
+    $current_state = $pressclipping->moderation_state->getString();
+    if ($current_state != 'archived') {
+      $clippings_date = $pressclipping->get('field_publication_date');
+      $field_publication_date = $clippings_date->getValue()[0]['value'];
+      $field_publication_date = strtotime($field_publication_date);
+      if ($field_publication_date < $cutoff_time) {
+        // If publication date was more than 30 days ago, archive the clipping.
+        \Drupal::logger('clippingtidy')->notice(
+          'Archiving press clipping @nid',
+          ['@nid' => $pressclipping->get('nid')->getString()]
+        );
+        $pressclipping->moderation_state->value = 'archived';
+        $pressclipping->save();
+      }
+    }
+  }
+}
