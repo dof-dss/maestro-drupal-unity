@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains unity_events.module.
+ * Contains pressclippingsnics_clippingtidy.module.
  */
 
 /**
@@ -16,7 +16,7 @@ function pressclippingsnics_clippingtidy_cron() {
     ]);
   // Allow 30 days before archiving.
   $cutoff_time = time() - (60 * 60 * 24 * 30);
-  // Loop through all events checking the end date.
+  // Loop through all press clippings checking the publication date.
   foreach ($press_clippings as $pressclipping) {
     // If the clipping is already archived, ignore it.
     $current_state = $pressclipping->moderation_state->getString();
