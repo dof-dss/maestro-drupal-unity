@@ -1,4 +1,4 @@
-uuid: eefc5cec-39f8-4f9b-9216-871b2b5b89a7
+uuid: 48cca318-ff70-4f77-926a-ae728fa71b1c
 langcode: en
 status: true
 dependencies: {  }
@@ -114,4 +114,10 @@ migration_dependencies:
   required:
     - upgrade_d7_menu
   optional:
+    - upgrade_d7_node_complete_consultation_response
+    - upgrade_d7_node_complete_lgbc_information
+    - upgrade_d7_node_complete_news
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_node_complete_publication_page
+    - upgrade_d7_node_complete_webform
     - upgrade_d7_menu

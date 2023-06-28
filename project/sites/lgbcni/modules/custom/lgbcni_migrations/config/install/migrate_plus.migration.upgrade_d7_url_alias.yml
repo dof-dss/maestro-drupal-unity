@@ -1,4 +1,4 @@
-uuid: 55f76d7b-5cbf-4c63-87be-1319f312ec3a
+uuid: a37c9434-9e6f-44c6-a0c2-68d4442c3722
 langcode: en
 status: true
 dependencies: {  }
@@ -44,7 +44,13 @@ process:
         - 1
     -
       plugin: migration_lookup
-      migration: {  }
+      migration:
+        - upgrade_d7_node_complete_consultation_response
+        - upgrade_d7_node_complete_lgbc_information
+        - upgrade_d7_node_complete_news
+        - upgrade_d7_node_complete_page
+        - upgrade_d7_node_complete_publication_page
+        - upgrade_d7_node_complete_webform
     -
       plugin: node_complete_node_translation_lookup
   langcode:
@@ -67,4 +73,16 @@ destination:
   plugin: 'entity:path_alias'
 migration_dependencies:
   required: {  }
-  optional: {  }
+  optional:
+    - upgrade_d7_node_complete_consultation_response
+    - upgrade_d7_node_complete_lgbc_information
+    - upgrade_d7_node_complete_news
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_node_complete_publication_page
+    - upgrade_d7_node_complete_webform
+    - upgrade_d7_node_complete_consultation_response
+    - upgrade_d7_node_complete_lgbc_information
+    - upgrade_d7_node_complete_news
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_node_complete_publication_page
+    - upgrade_d7_node_complete_webform
