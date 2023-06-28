@@ -19,6 +19,7 @@ db:
             - pressclippingsnicsdb
             - parolecomnidb
             - lgbcnidb
+            - semcommitteedb
         endpoints:
             pacni:
                 default_schema: pacnidb
@@ -56,6 +57,10 @@ db:
                 default_schema: lgbcnidb
                 privileges:
                     lgbcnidb: admin
+            semcommittee:
+                default_schema: semcommitteedb
+                privileges:
+                    semcommitteedb: admin
 solr:
     type: 'solr:7.7'
     disk: 1024
@@ -77,6 +82,8 @@ solr:
                 conf_dir: !archive solr_config/
             lgbcni_index:
                 conf_dir: !archive solr_config/
+            semcommittee_index:
+                conf_dir: !archive solr_config/
         endpoints:
             pacni:
                 core: pacni_index
@@ -94,5 +101,7 @@ solr:
                 core: parolecomni_index
             lgbcni:
                 core: lgbcni_index
+            semcommittee:
+                core: semcommittee_index
 redis:
     type: 'redis:6.0'
