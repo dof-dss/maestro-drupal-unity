@@ -80,6 +80,53 @@ process:
     -
       plugin: get
       source: body
+    -
+      plugin: media_wysiwyg_filter
+    -
+      plugin: filter_absolute_links
+      replace_urls:
+        http://www.lgbc-ni.org.uk
+        https://www.lgbc-ni.org.uk
+        http://test-lgbc-ni.nigov.net
+        http://lgbcni-drupal.nigov.net
+        http://drupal-lgbc-ni.thestables.net
+    -
+      plugin: site_files_filter
+      from_ref: sites/lgbcni/files
+      to_ref: files/lgbcni
+    -
+      plugin: site_files_filter
+      from_ref: sites/lgbc-ni.org.uk/files
+      to_ref: files/lgbcni
+    -
+      plugin: site_files_filter
+      from_ref: sites/lgbcni-drupal.nigov.net/files
+      to_ref: files/lgbcni
+    -
+      plugin: str_replace
+      regex: true
+      search: /(<ul>)?(<li>)?(<div[^>]*>)?<a href="(\S+?files\/\S+)".*?>\s*[^<]*(\([^<]*\))?<\/a>(<\/div>)?(<\/li>)?(<\/ul>)?/
+      replace: ''
+  body/0/format:
+    -
+      plugin: static_map
+      bypass: true
+      source: body/0/format
+      map:
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        filtered_html_with_tokens: basic_html
+        restricted_html: basic_html
+        plain_text: plain_text
+  field_publication_topic:
+    -
+      plugin: static_map
+      source: field_publication_type
+      default_value: null
+      map:
+        finalReport: 1
+        miscellaneous: 2
+        provisionalReport: 3
   field_publication_date:
     -
       plugin: sub_process
@@ -94,14 +141,15 @@ process:
     -
       plugin: get
       source: field_publication_type
-  field_lgbc_attachment:
+  field_attachment:
     -
-      plugin: sub_process
-      source: field_lgbc_attachment
-      process:
-        target_id: fid
-        display: display
-        description: description
+      plugin: callback
+      callable:
+        - '\Drupal\unity_file_migrations\PublicationLinkProcessor'
+        - publicationLinks
+      source:
+        - nid
+        - body
   field_metatag:
     -
       plugin: d7_metatag_entities
