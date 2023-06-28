@@ -69,6 +69,14 @@
 'https://parolecomni.org.uk/':
     type: redirect
     to: 'https://www.parolecomni.org.uk/'
+'https://www.lgbc-ni.org.uk/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://lgbc-ni.org.uk/':
+    type: redirect
+    to: 'https://www.lgbc-ni.org.uk/'
 'https://www.{all}/':
     type: upstream
     upstream: 'unity_svr_3:http'
