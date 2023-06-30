@@ -38,34 +38,50 @@ function judiciaryni_common_entity_presave(EntityInterface $entity) {
       if ($judgeTitle == 'Vacant') {
         $shorttitle = $judgeName . ' ' . $tierName;
       }
-      elseif ($tierName == 'Lord Chief Justice' || $tierName == 'Lady Chief Justice') {
-        $shorttitle = $judgeName . ' LCJ';
-      }
-      elseif ($tierName == 'Justice of Appeal') {
-        $shorttitle = $judgeName . ' LJ';
-      }
-      elseif ($tierName == 'High Court Judge') {
-        $shorttitle = $judgeName . ' J';
-      }
-      elseif ($tierName == 'County Court Judge' || $tierName == 'Recorder of Belfast' || $tierName == 'Recorder of Londonderry') {
-        $sex = 'His ';
-        if ($judgeSex !== 'male') {
-          $sex = 'Her ';
+      else {
+        switch ($tierName) {
+          case 'Lord Chief Justice':
+          case 'Lady Chief Justice':
+            $shorttitle = $judgeName . ' LCJ';
+            break;
+
+          case 'Justice of Appeal':
+            $shorttitle = $judgeName . ' LJ';
+            break;
+
+          case 'High Court Judge':
+            $shorttitle = $judgeName . ' J';
+            break;
+
+          case 'Temporary High Court Judge':
+            $shorttitle = $shorttitle . ' sitting as HCJ';
+            break;
+
+          case 'County Court Judge':
+          case 'Recorder of Belfast':
+          case 'Recorder of Londonderry':
+            $sex = 'His ';
+            if ($judgeSex !== 'male') {
+              $sex = 'Her ';
+            }
+            $shorttitle = $sex . 'Honour Judge ' . $judgeName;
+            break;
+
+          case 'Master of the High Court':
+            $shorttitle = 'Master ' . $judgeName;
+            break;
+
+          case 'District Judge';
+            $shorttitle = 'District Judge ' . $judgeName;
+            break;
+
+          case 'District Judge (Magistrates’ Courts)':
+          case 'Presiding District Judge (Magistrates’ Courts)':
+            $shorttitle = 'District Judge (MC) ' . $judgeName;
+            break;
         }
-        $shorttitle = $sex . 'Honour Judge ' . $judgeName;
       }
-      elseif ($tierName == 'Master of the High Court') {
-        $shorttitle = 'Master ' . $judgeName;
-      }
-      elseif ($tierName == 'District Judge') {
-        $shorttitle = 'District Judge ' . $judgeName;
-      }
-      elseif ($tierName == 'District Judge (Magistrates’ Courts)' || $tierName == 'Presiding District Judge (Magistrates’ Courts)') {
-        $shorttitle = 'District Judge (MC) ' . $judgeName;
-      }
-
     }
-
     $entity->setTitle($shorttitle);
   }
 }
