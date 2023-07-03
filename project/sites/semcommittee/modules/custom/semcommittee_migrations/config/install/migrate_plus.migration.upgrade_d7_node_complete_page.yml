@@ -90,11 +90,15 @@ process:
         https://www.semcommittee.com
     -
       plugin: site_files_filter
-      from_ref: sites/semcommittee/files
+      from_ref: sites/semcommittee.com/files
       to_ref: files/semcommittee
     -
       plugin: site_files_filter
-      from_ref: sites/semcommittee.com/files
+      from_ref: sites/semc/files
+      to_ref: files/semcommittee
+    -
+      plugin: site_files_filter
+      from_ref: sites/semccommittee.com/files
       to_ref: files/semcommittee
   body/0/format:
     -

@@ -90,12 +90,21 @@ process:
         https://www.semcommittee.com
     -
       plugin: site_files_filter
-      from_ref: sites/semcommittee/files
+      from_ref: sites/semcommittee.com/files
       to_ref: files/semcommittee
     -
       plugin: site_files_filter
-      from_ref: sites/semcommittee.com/files
+      from_ref: sites/semc/files
       to_ref: files/semcommittee
+    -
+      plugin: site_files_filter
+      from_ref: sites/semccommittee.com/files
+      to_ref: files/semcommittee
+    -
+      plugin: str_replace
+      regex: true
+      search: /(<ul>)?(<li>)?(<div[^>]*>)?<a href="(\S+?files\/\S+)".*?>\s*[^<]*(\([^<]*\))?<\/a>(<\/div>)?(<\/li>)?(<\/ul>)?/
+      replace: ''
   body/0/format:
     -
       plugin: static_map
@@ -131,6 +140,15 @@ process:
     -
       plugin: get
       source: field_teaser
+  field_attachment:
+    -
+      plugin: callback
+      callable:
+        - '\Drupal\unity_file_migrations\PublicationLinkProcessor'
+        - publicationLinks
+      source:
+        - nid
+        - body
   field_metatag:
     -
       plugin: d7_metatag_entities
