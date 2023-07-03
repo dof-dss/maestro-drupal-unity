@@ -1,15 +1,13 @@
-uuid: 24b31959-b898-468e-8d3d-418873cc0093
+uuid: 0ce60a08-fdc8-40b0-a4a0-3f6bf7a94fb0
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.publication
-_core:
-  default_config_hash: RZReXxGt6xMN6rIDO654C-FmUbPmLjNOLeddn_iFPTc
-id: node.publication.promote
+    - node.type.publication_page
+id: node.publication_page.promote
 field_name: promote
 entity_type: node
-bundle: publication
+bundle: publication_page
 label: 'Promoted to front page'
 description: ''
 required: false

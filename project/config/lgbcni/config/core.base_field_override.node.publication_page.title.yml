@@ -1,15 +1,13 @@
-uuid: d26102b4-446d-4d67-a8eb-d080da974542
+uuid: 10bbf975-6870-4583-a070-bca597ff434f
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.publication
-_core:
-  default_config_hash: USjGaGaX9G_QemgClQu6ZkK6BZs2zqoZp9A7uzNQRKo
-id: node.publication.title
+    - node.type.publication_page
+id: node.publication_page.title
 field_name: title
 entity_type: node
-bundle: publication
+bundle: publication_page
 label: 'Publication title'
 description: ''
 required: true
