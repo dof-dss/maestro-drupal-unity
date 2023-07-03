@@ -1,0 +1,24 @@
+uuid: 7abfc2f3-b506-4df9-b1c6-a29eb5c35b2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - semcommittee_theme
+id: pagetitle
+theme: semcommittee_theme
+region: content
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/search"
