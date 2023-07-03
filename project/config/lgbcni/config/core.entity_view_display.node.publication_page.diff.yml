@@ -88,10 +88,11 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: unity_date
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  content_moderation_control: true
   langcode: true
   links: true
