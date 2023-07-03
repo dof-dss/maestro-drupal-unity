@@ -1,0 +1,29 @@
+uuid: 4c5b9b47-995b-4041-a650-ec96a1cf60ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_type
+    - node.type.publication
+_core:
+  default_config_hash: 14NqevawhWXgH65cBjkur-vAx00JJGor75I4qW8N8pY
+id: node.publication.field_publication_type
+field_name: field_publication_type
+entity_type: node
+bundle: publication
+label: 'Publication type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles: {  }
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
