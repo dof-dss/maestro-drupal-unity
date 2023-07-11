@@ -31,11 +31,11 @@ function judiciaryni_common_entity_presave(EntityInterface $entity) {
     $judge_title = $entity->get('field_prefix_title')->value;
     $short_title = $judge_title . ' ' . $judge_name;
 
-    if ($tier_tid !== NULL) {
+    if (!empty($tier_tid)) {
       $tier = Term::load($tier_tid);
       $tier_name = $tier->getName();
 
-      if ($judge_title == 'Vacant') {
+      if ($judge_title === 'Vacant') {
         $short_title = $judge_name . ' ' . $tier_name;
       }
       else {
