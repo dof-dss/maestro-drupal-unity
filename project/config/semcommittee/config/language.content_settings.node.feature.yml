@@ -1,11 +1,9 @@
-uuid: f7b87bbf-7df8-4aa3-9224-03bc2f61e56b
+uuid: a5976c88-58a7-4f92-9598-1747cb46b949
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.feature
-_core:
-  default_config_hash: YnIXPMe8XJ4hyOr5LcnPkEU5m5nTSR4xunfSdpXDXU4
 id: node.feature
 target_entity_type_id: node
 target_bundle: feature

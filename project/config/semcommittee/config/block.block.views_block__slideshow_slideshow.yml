@@ -1,0 +1,24 @@
+uuid: 32d0c6e1-31c4-47fb-83f5-68f48d5e1ec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.slideshow
+  module:
+    - views
+  theme:
+    - semcommittee_theme
+id: views_block__slideshow_slideshow
+theme: semcommittee_theme
+region: slideshow
+weight: 0
+provider: null
+plugin: 'views_block:slideshow-slideshow'
+settings:
+  id: 'views_block:slideshow-slideshow'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,19 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.top_left {
+  padding-left: 19rem;
+
+  #logo img {
+    height: 100px;
+  }
+}
+
+#main-menu .menu .menu-item .active,
+#main-menu .menu .menu-item .active + .menu-main_sub .title a {
+  border-bottom-color: $brand-secondary;
+}

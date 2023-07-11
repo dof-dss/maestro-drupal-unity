@@ -1,0 +1,8 @@
+uuid: 091c602d-35b4-4488-b4ca-0d975bc3f67e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Publication topics'
+vid: publication_topics
+description: ''
+weight: 0
