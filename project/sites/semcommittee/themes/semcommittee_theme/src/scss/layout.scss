@@ -4,3 +4,30 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/2_layout/index';
+
+#top-area {
+  text-align: left;
+  margin: 2rem auto;
+
+  @include breakpoint($tab) {
+    display: flex;
+  }
+
+  .column {
+    background: $grey-light;
+    padding: 2rem;
+
+    @include breakpoint($lap) {
+      width: 32.6%;
+    }
+
+    .item {
+      list-style: none;
+      border-bottom: 1px solid $grey-dark;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

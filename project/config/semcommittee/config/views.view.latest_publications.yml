@@ -142,7 +142,7 @@ display:
       style:
         type: html_list
         options:
-          row_class: Item
+          row_class: item
           default_row_class: false
           uses_fields: false
           type: ul
