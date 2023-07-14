@@ -6,6 +6,7 @@ dependencies:
     - node.type.basic_page
     - node.type.board_member
     - node.type.feature
+    - node.type.featured_list
     - node.type.news
     - node.type.publication
     - node.type.webform
@@ -101,6 +102,7 @@ type_settings:
       - basic_page
       - board_member
       - feature
+      - featured_list
       - news
       - publication
       - webform

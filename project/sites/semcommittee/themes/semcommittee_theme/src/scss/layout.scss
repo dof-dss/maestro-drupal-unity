@@ -31,3 +31,14 @@
     }
   }
 }
+
+#footer-area .column {
+  width: 95%;
+  @include breakpoint($tab) {
+    width: 30%;
+  }
+
+  &:last-child {
+    float: left;
+  }
+}
