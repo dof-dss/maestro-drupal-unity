@@ -1,0 +1,25 @@
+uuid: a78b6034-af40-48a1-9868-539d74994d15
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:daf56d1c-1365-4dde-af47-7f24e33f8c0b'
+  module:
+    - block_content
+  theme:
+    - semcommittee_theme
+id: mailinglist
+theme: semcommittee_theme
+region: top_third
+weight: 0
+provider: null
+plugin: 'block_content:daf56d1c-1365-4dde-af47-7f24e33f8c0b'
+settings:
+  id: 'block_content:daf56d1c-1365-4dde-af47-7f24e33f8c0b'
+  label: 'Mailing list'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
