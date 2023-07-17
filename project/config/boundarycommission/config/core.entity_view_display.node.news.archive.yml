@@ -1,9 +1,9 @@
-uuid: b2a35b75-2da4-4f49-ba07-fe05f7db54eb
+uuid: 1b86bc65-c522-42ad-ae66-6e4a553d0410
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.search_result
+    - core.entity_view_mode.node.archive
     - field.field.node.news.body
     - field.field.node.news.field_archive
     - field.field.node.news.field_meta_tags
@@ -21,10 +21,10 @@ third_party_settings:
     allow_custom: false
 _core:
   default_config_hash: N-zm1nCnhgYwXANGav75TCg-_kvNUUbT--KKS8PLKgM
-id: node.news.search_result
+id: node.news.archive
 targetEntityType: node
 bundle: news
-mode: search_result
+mode: archive
 content:
   field_published_date:
     type: datetime_default

@@ -7,6 +7,7 @@
 
 #main-menu {
   background: $white;
+
   .menu-link,
   .menu .active,
   .menu-item.open .menu-toggle-btn {
@@ -14,9 +15,7 @@
     @include adjust-font-size-to(16px);
   }
 
-  .menu
-  .menu-item
-  .active {
+  .menu .menu-item .active {
     border-bottom-color: $brand-primary;
   }
 
@@ -27,9 +26,8 @@
       color: $white;
     }
   }
-  .menu-main_sub
-  .menu-item
-  span.active {
+
+  .menu-main_sub .menu-item span.active {
     @include adjust-font-size-to(14px);
     border-bottom-color: $brand-secondary;
     padding: 1rem;
@@ -102,7 +100,7 @@
   .block {
     h2 {
       text-align: left;
-      padding: 0px 10px 0px 10px;
+      padding: 0 10px 0 10px;
       margin: 1.6rem 0 0.8rem;
       color: $brand-primary;
     }
@@ -138,19 +136,19 @@
   }
 
   .featured-item-column {
-    margin: 0px 10px 0px 10px;
+    margin: 0 10px 0 10px;
     padding-bottom: 3rem;
     border: solid 2px $brand-primary;
 
     p {
       @include adjust-font-size-to(18px);
-      padding: 0px 10px 0px 10px;
+      padding: 0 10px 0 10px;
       color: $brand-secondary
     }
 
     .field-link {
       text-align: left;
-      padding: 0px 25px 0px 10px;
+      padding: 0 25px 0 10px;
 
       &:after {
         content: resolve('arrow-right.svg');
@@ -171,6 +169,7 @@
   h2.title {
     @include adjust-font-size-to(21px);
   }
+
   .published-date {
     margin: 0;
   }

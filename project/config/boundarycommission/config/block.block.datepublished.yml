@@ -17,9 +17,10 @@ provider: null
 plugin: 'facet_block:date_published'
 settings:
   id: 'facet_block:date_published'
-  label: 'Date published'
+  label: Date
   label_display: visible
   provider: facets
+  context_mapping: {  }
   block_id: datepublished
 visibility:
   request_path:

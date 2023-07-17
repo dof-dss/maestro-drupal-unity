@@ -1,9 +1,9 @@
-uuid: 600ef7a6-1482-47d3-830d-ec898c9426cc
+uuid: c65bc982-f0c2-4526-a593-a86866368229
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.search_result
+    - core.entity_view_mode.node.archive
     - field.field.node.publication.body
     - field.field.node.publication.field_archive
     - field.field.node.publication.field_attachment
@@ -21,22 +21,14 @@ third_party_settings:
     allow_custom: false
 _core:
   default_config_hash: dGe_U65t-a-PtVI1RO755kulh2XfPgvblOXVKquzmyU
-id: node.publication.search_result
+id: node.publication.archive
 targetEntityType: node
 bundle: publication
-mode: search_result
+mode: archive
 content:
-  field_publication_type:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_published_date:
     type: datetime_default
-    label: inline
+    label: hidden
     settings:
       timezone_override: ''
       format_type: unity_date
@@ -49,6 +41,7 @@ hidden:
   field_archive: true
   field_attachment: true
   field_meta_tags: true
+  field_publication_type: true
   langcode: true
   links: true
   search_api_excerpt: true
