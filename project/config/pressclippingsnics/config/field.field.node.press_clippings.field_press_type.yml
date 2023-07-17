@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_press_type
     - node.type.press_clippings
+    - taxonomy.vocabulary.clippings_category
 id: node.press_clippings.field_press_type
 field_name: field_press_type
 entity_type: node
@@ -18,6 +19,11 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles:
+      clippings_category: clippings_category
     sort:
       field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

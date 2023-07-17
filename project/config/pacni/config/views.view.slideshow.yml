@@ -292,7 +292,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 1
+          items_per_page: 5
       exposed_form:
         type: basic
         options:
@@ -401,9 +401,9 @@ display:
           cache: 0
           skin: default
           style: ''
-          grid: ''
-          grid_medium: ''
-          grid_small: ''
+          grid: null
+          grid_medium: null
+          grid_small: null
           overridables:
             arrows: '0'
             autoplay: '0'
