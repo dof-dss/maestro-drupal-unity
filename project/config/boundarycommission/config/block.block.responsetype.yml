@@ -12,7 +12,7 @@ dependencies:
 id: responsetype
 theme: boundarycommission_theme
 region: search_facets
-weight: -4
+weight: -3
 provider: null
 plugin: 'facet_block:response_type'
 settings:

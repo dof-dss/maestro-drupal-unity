@@ -11,3 +11,19 @@
     width: 35%;
   }
 }
+
+.path-publications,
+.path-representations-received {
+  .search-page {
+    .metaListItem {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.path-publications-archive,
+.path-news-archive {
+  article p {
+    margin-bottom: 0;
+  }
+}

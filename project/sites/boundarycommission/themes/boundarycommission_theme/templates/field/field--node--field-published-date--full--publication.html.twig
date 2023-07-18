@@ -37,5 +37,9 @@
  */
 #}
 <p>
-  <span>Type: {{ type_link }}</span>
+  <span>{{ 'Date published: '|t }} </span>
+  {% for item in items %}
+    <span>{{ item.content }}</span>
+  {% endfor %}
 </p>
+
