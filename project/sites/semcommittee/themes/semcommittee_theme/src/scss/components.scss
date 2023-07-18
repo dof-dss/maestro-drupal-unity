@@ -18,6 +18,20 @@
   border-bottom-color: $brand-secondary;
 }
 
+#block-webform {
+  h2 {
+    @include adjust-font-size-to(24px);
+    padding: 0;
+  }
+}
+
+#block-views-block-board-members-board-members-block {
+  h2 {
+    @include adjust-font-size-to(24px);
+    padding: 0;
+  }
+}
+
 #footer-area .block {
   h2 {
     color: $white;
