@@ -220,7 +220,11 @@
       padding: 1rem;
       display: block;
       min-height: 54rem;
+      position: relative;
 
+      @media screen and (min-width: 500px) and (max-width: $tab) {
+        min-height: 64rem;
+      }
 
       &:after {
         content: '';
