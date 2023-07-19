@@ -65,7 +65,7 @@
         "dof-dss/nicsdru_origins_profile": "0.1.11",
         "dof-dss/nicsdru_unity_modules": "^1.2",
         "dof-dss/nicsdru_unity_profile": "^1.1",
-        "dof-dss/nicsdru_unity_theme": "^0.1.75",
+        "dof-dss/nicsdru_unity_theme": "v0.1.76",
         "drupal/address": "^1.7",
         "drupal/admin_toolbar": "^2.0",
         "drupal/adminimal_theme": "^1.5",
@@ -90,7 +90,7 @@
         "drupal/core-composer-scaffold": "9.5.*",
         "drupal/core-recommended": "9.5.*",
         "drupal/csp": "^1.15",
-        "drupal/date_facet_drilldown": "3.x-dev@dev",
+        "drupal/date_facet_drilldown": "4.x-dev@dev",
         "drupal/diff": "^1.0",
         "drupal/draggableviews": "^2.0",
         "drupal/embed": "^1.6",
@@ -212,12 +212,15 @@
                 "Render blocks in preview page": "https://www.drupal.org/files/issues/2019-10-03/3085364_2.patch",
                 "Provide options to sanitize filenames (transliterate, lowercase, replace whitespace, etc)": "https://www.drupal.org/files/issues/2021-07-26/2492171-311.patch",
                 "Provide link to latest revision of moderated entity": "https://www.drupal.org/files/issues/2021-11-29/2906455-34.patch",
-                "User enable email exception": "https://www.drupal.org/files/issues/2023-04-19/user_email_exception-3355151-1.patch",
+                "User enable email exception": "https://www.drupal.org/files/issues/2023-05-19/user_email_exception-3355151-3.patch",
                 "Expand menu_tree field sizes": "https://www.drupal.org/files/issues/2022-10-11/3106205-36.patch"
             },
             "drupal/easy_install": {
                 "Handle missing core version": "https://www.drupal.org/files/issues/2019-12-19/easy_install_core_version-3101883-0.patch",
                 "non-existent service entity.manager": "https://www.drupal.org/files/issues/2020-12-08/3162621-4.patch"
+            },
+            "drupal/facets": {
+                "Pass facet object onto child items": "https://www.drupal.org/files/issues/2019-11-13/child_item-3094143-2.patch"
             },
             "drupal/facets_pretty_paths": {
                 "facet pretty paths doubling up": "https://www.drupal.org/files/issues/2023-01-12/url_duplication-3254600-45.patch"

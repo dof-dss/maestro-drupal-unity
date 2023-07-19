@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.restricted_html
   module:
     - filter
     - media
     - node
+    - pathauto
     - search
     - system
 _core:
@@ -17,13 +19,27 @@ label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access comments'
+  - 'access administration menu'
   - 'access content'
-  - 'access shortcuts'
-  - 'post comments'
+  - 'access media browser'
+  - 'access workbench'
+  - 'create page content'
+  - 'delete own page content'
+  - 'diff view changes'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'notify of path changes'
+  - 'revert revisions'
   - 'search content'
-  - 'skip comment approval'
+  - 'use media wysiwyg'
   - 'use text format basic_html'
+  - 'use text format filtered_html'
+  - 'use text format filtered_html_with_no_images'
+  - 'use text format restricted_html'
   - 'view all revisions'
+  - 'view files'
   - 'view media'
+  - 'view moderation history'
+  - 'view moderation messages'
   - 'view own unpublished content'
+  - 'view revisions'

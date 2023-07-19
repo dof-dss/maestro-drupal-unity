@@ -1,0 +1,27 @@
+uuid: ed407612-fa86-4997-b52b-d57f461f9dd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachment
+    - node.type.press_clippings
+  module:
+    - file
+id: node.press_clippings.field_attachment
+field_name: field_attachment
+entity_type: node
+bundle: press_clippings
+label: Attachment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'clippings/[date:custom:Y]/[date:custom:M]'
+  file_extensions: 'pdf doc docx xls xlsx xlsm ppt pptx odt ods odp dot zip'
+  max_filesize: 30mb
+  description_field: false
+field_type: file

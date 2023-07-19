@@ -1,0 +1,21 @@
+uuid: f5909c5c-d1f9-43e3-a6e2-35fdc4e8b683
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication_date
+    - node.type.press_clippings
+  module:
+    - datetime
+id: node.press_clippings.field_publication_date
+field_name: field_publication_date
+entity_type: node
+bundle: press_clippings
+label: 'Publication date'
+description: 'Enter the publiation date of the press clipping here.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

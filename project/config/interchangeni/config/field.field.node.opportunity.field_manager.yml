@@ -22,8 +22,8 @@ settings:
     target_bundles:
       manager: manager
     sort:
-      field: _none
-      direction: ASC
+      field: field_first_name
+      direction: DESC
     auto_create: false
     auto_create_bundle: ''
 field_type: entity_reference
