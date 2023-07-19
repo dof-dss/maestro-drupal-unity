@@ -11,6 +11,7 @@ module:
   boundarycommission_migrations: 0
   clone_nodes: 0
   dblog: 0
+  devel: 0
   easy_install: 0
   migrate: 0
   migrate_absolute_links: 0

@@ -4,13 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.featured_content.field_link
+    - field.field.node.featured_content.field_meta_tags
     - field.field.node.featured_content.field_photo
     - field.field.node.featured_content.field_tagline
     - node.type.featured_content
+    - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
     - link
     - media_library
+    - metatag
     - path
     - text
 id: node.featured_content.default
@@ -31,6 +34,13 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 26
+    region: content
+    settings:
+      sidebar: true
     third_party_settings: {  }
   field_photo:
     type: media_library_widget

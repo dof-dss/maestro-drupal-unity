@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.body
     - search_api.index.news
-    - system.menu.main
   module:
     - search_api
     - text
@@ -227,6 +226,10 @@ display:
           fields: {  }
       style:
         type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
       row:
         type: search_api
         options:
@@ -262,7 +265,8 @@ display:
     position: 1
     display_options:
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
       exposed_block: true
@@ -270,16 +274,16 @@ display:
         metatag_display_extender: {  }
       path: news
       menu:
-        type: normal
+        type: none
         title: News
         description: ''
-        weight: -46
+        weight: -42
         expanded: false
         menu_name: main
         parent: ''
         context: '0'
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -287,5 +291,6 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.published_date'
         - 'config:field.storage.node.body'
         - 'config:search_api.index.news'

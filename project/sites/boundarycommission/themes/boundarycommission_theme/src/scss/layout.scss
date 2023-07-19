@@ -7,7 +7,36 @@
 
 #footer-area .column {
   width: 95%;
+  padding-left: 0;
+  margin-left: 0;
+
   @include breakpoint($tab) {
-    width: 35%;
+    width: 40%;
+  }
+
+  &:last-child {
+    @media screen and (max-width: $tab) {
+      float: none;
+    }
+  }
+}
+
+#footer #footer-area .column .social-icons {
+  margin-top: 0;
+}
+
+.path-publications,
+.path-representations-received {
+  .search-page {
+    .metaListItem {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.path-publications-archive,
+.path-news-archive {
+  article p {
+    margin-bottom: 0;
   }
 }
