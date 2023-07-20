@@ -53,6 +53,11 @@ processor_configs:
       sort: 20
     settings:
       sort: ASC
+  date_facet_drilldown:
+    processor_id: date_facet_drilldown
+    weights:
+      build: 1
+    settings: {  }
   date_item:
     processor_id: date_item
     weights:
@@ -61,6 +66,12 @@ processor_configs:
       date_display: actual_date
       granularity: 6
       date_format: ''
+      hierarchy: false
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
   raw_value_widget_order:
     processor_id: raw_value_widget_order
     weights:
