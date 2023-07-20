@@ -106,7 +106,7 @@ class ConsultationResponseBreadcrumb implements BreadcrumbBuilderInterface {
     $title_resolver = $this->titleResolver->getTitle($this->request->getCurrentRequest(), $route_match->getRouteObject());
     if ($this->node) {
       $links[] = Link::createFromRoute(t('Home'), '<front>');
-      $links[] = Link::fromTextandUrl(t('Consultations'), Url::fromUri('internal:/representation-received'));
+      $links[] = Link::fromTextandUrl(t('Consultations'), Url::fromRoute('view.consultations_search.consultations_search_page'));
       $links[] = Link::createFromRoute($title_resolver, '<none>');
       $breadcrumb->setLinks($links);
     }

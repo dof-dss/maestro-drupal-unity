@@ -25,47 +25,70 @@ function judiciaryni_common_entity_presave(EntityInterface $entity) {
   // This will fire when nodes are created or edited.
   if ($entity instanceof NodeInterface && $entity->bundle() === 'judicial_member') {
 
-    $judgeName = $entity->get('field_surname')->value;
-    $judgeSex = $entity->get('field_sex_of_member')->value;
-    $tierTID = $entity->get('field_judicial_tier')->target_id;
-    $judgeTitle = $entity->get('field_prefix_title')->value;
-    $shorttitle = $judgeTitle . ' ' . $judgeName;
+    $judge_name = $entity->get('field_surname')->value;
+    $judge_sex = $entity->get('field_sex_of_member')->value;
+    $tier_tid = $entity->get('field_judicial_tier')->target_id;
+    $judge_title = $entity->get('field_prefix_title')->value;
+    $short_title = $judge_title . ' ' . $judge_name;
 
-    if ($tierTID !== NULL) {
-      $tier = Term::load($tierTID);
-      $tierName = $tier->getName();
+    if (!empty($tier_tid)) {
+      $tier = Term::load($tier_tid);
+      $tier_name = $tier->getName();
 
-      if ($judgeTitle == 'Vacant') {
-        $shorttitle = $judgeName . ' ' . $tierName;
+      if ($judge_title === 'Vacant') {
+        $short_title = $judge_name . ' ' . $tier_name;
       }
-      elseif ($tierName == 'Lord Chief Justice' || $tierName == 'Lady Chief Justice') {
-        $shorttitle = $judgeName . ' LCJ';
+      else {
+        judiciaryni_common_switch_tier($tier_name, $short_title, $judge_name, $judge_sex);
       }
-      elseif ($tierName == 'Justice of Appeal') {
-        $shorttitle = $judgeName . ' LJ';
-      }
-      elseif ($tierName == 'High Court Judge') {
-        $shorttitle = $judgeName . ' J';
-      }
-      elseif ($tierName == 'County Court Judge' || $tierName == 'Recorder of Belfast' || $tierName == 'Recorder of Londonderry') {
-        $sex = 'His ';
-        if ($judgeSex !== 'male') {
-          $sex = 'Her ';
-        }
-        $shorttitle = $sex . 'Honour Judge ' . $judgeName;
-      }
-      elseif ($tierName == 'Master of the High Court') {
-        $shorttitle = 'Master ' . $judgeName;
-      }
-      elseif ($tierName == 'District Judge') {
-        $shorttitle = 'District Judge ' . $judgeName;
-      }
-      elseif ($tierName == 'District Judge (Magistrates’ Courts)' || $tierName == 'Presiding District Judge (Magistrates’ Courts)') {
-        $shorttitle = 'District Judge (MC) ' . $judgeName;
-      }
-
     }
+    $entity->setTitle($short_title);
+  }
+}
 
-    $entity->setTitle($shorttitle);
+/**
+ * Utility function to add a Judge postfix based on their judicial tier.
+ */
+function judiciaryni_common_switch_tier($tier_name, &$short_title, $judge_name, $judge_sex) {
+  switch ($tier_name) {
+    case 'Lord Chief Justice':
+    case 'Lady Chief Justice':
+      $short_title = $judge_name . t(' LCJ');
+      break;
+
+    case 'Justice of Appeal':
+      $short_title = $judge_name . t(' LJ');
+      break;
+
+    case 'High Court Judge':
+      $short_title = $judge_name . t(' J');
+      break;
+
+    case 'Temporary High Court Judge':
+      $short_title = $short_title . t(' sitting as HCJ');
+      break;
+
+    case 'County Court Judge':
+    case 'Recorder of Belfast':
+    case 'Recorder of Londonderry':
+      $sex = t('His ');
+      if ($judge_sex !== 'male') {
+        $sex = t('Her ');
+      }
+      $short_title = $sex . t('Honour Judge ') . $judge_name;
+      break;
+
+    case 'Master of the High Court':
+      $short_title = t('Master ') . $judge_name;
+      break;
+
+    case 'District Judge';
+      $short_title = t('District Judge ') . $judge_name;
+      break;
+
+    case 'District Judge (Magistrates’ Courts)':
+    case 'Presiding District Judge (Magistrates’ Courts)':
+      $short_title = t('District Judge (MC) ') . $judge_name;
+      break;
   }
 }

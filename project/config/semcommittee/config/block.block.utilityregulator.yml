@@ -1,0 +1,25 @@
+uuid: 2cf629b8-e4cc-4043-82d5-9b6468545860
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:b7b21395-b672-424b-979c-4842b431536d'
+  module:
+    - block_content
+  theme:
+    - semcommittee_theme
+id: utilityregulator
+theme: semcommittee_theme
+region: footer_third
+weight: 0
+provider: null
+plugin: 'block_content:b7b21395-b672-424b-979c-4842b431536d'
+settings:
+  id: 'block_content:b7b21395-b672-424b-979c-4842b431536d'
+  label: 'Utility Regulator'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.body
     - search_api.index.publications
-    - system.menu.main
   module:
     - search_api
     - text
@@ -212,6 +211,44 @@ display:
           parse_mode: terms
           min_length: null
           fields: {  }
+        field_archive:
+          id: field_archive
+          table: search_api_index_publications
+          field: field_archive
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_boolean
+          operator: '='
+          value: '0'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: default
       row:
@@ -249,7 +286,8 @@ display:
     position: 1
     display_options:
       cache:
-        type: none
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
       exposed_block: true
@@ -257,16 +295,16 @@ display:
         metatag_display_extender: {  }
       path: publications
       menu:
-        type: normal
+        type: none
         title: Publications
         description: ''
-        weight: -47
+        weight: -43
         expanded: false
         menu_name: main
         parent: ''
         context: '0'
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -274,5 +312,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.date_published'
+        - 'config:facets.facet.publication_type'
         - 'config:field.storage.node.body'
         - 'config:search_api.index.publications'

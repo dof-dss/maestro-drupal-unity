@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.archive
     - node.type.publication
   module:
     - datetime
     - node
     - user
+    - views_custom_cache_tag
 id: publication_archive
 label: 'Publication Archive'
 module: views
@@ -23,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Publication Archive'
+      title: 'Publications Archive'
       fields:
         title:
           id: title
@@ -108,8 +109,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: custom_tag
+        options:
+          custom_tag: 'handy_cache_tags:node:publication'
       empty: {  }
       sorts:
         field_published_date_value:
@@ -193,10 +195,15 @@ display:
             group_items: {  }
       style:
         type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: archive
       query:
         type: views_query
         options:
@@ -227,7 +234,7 @@ display:
       display_description: ''
       display_extenders:
         metatag_display_extender: {  }
-      path: publication-archive
+      path: publications-archive
     cache_metadata:
       max-age: -1
       contexts:

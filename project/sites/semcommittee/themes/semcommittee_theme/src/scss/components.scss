@@ -1,0 +1,77 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.top_left {
+  padding-left: 19rem;
+
+  #logo img {
+    height: 100px;
+  }
+}
+
+#main-menu .menu .menu-item .active,
+#main-menu .menu .menu-item .active + .menu-main_sub .title a {
+  border-bottom-color: $brand-secondary;
+}
+
+#block-webform {
+  h2 {
+    @include adjust-font-size-to(24px);
+    padding: 0;
+  }
+}
+
+#block-views-block-board-members-board-members-block {
+  h2 {
+    @include adjust-font-size-to(24px);
+    padding: 0;
+  }
+}
+
+#footer-area .block {
+  h2 {
+    color: $white;
+    @include adjust-font-size-to(25px)
+  }
+
+  p, a, address {
+    color: $white;
+  }
+}
+
+#footer {
+  background: $brand-primary;
+
+  .container-wrap {
+    display: block;
+  }
+
+  @include breakpoint($tab) {
+    padding: 2%;
+  }
+
+  .footer-menu li {
+    @include adjust-font-size-to(16px);
+    padding-left: 0;
+    list-style-type: none;
+
+    @include breakpoint($mob) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+      margin-right: .5rem;
+    }
+
+    a {
+      @media screen and (min-width: $mob) {
+        display: block;
+      }
+    }
+  }
+}
+
+

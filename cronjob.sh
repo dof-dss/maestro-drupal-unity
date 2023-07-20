@@ -14,3 +14,5 @@
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-infolibrarynics" "/app/log/infolibrarynics/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-pressclippingsnics" "/app/log/pressclippingsnics/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-parolecomni" "/app/log/parolecomni/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
+/bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-lgbcni" "/app/log/lgbcni/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
+/bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-semcommittee" "/app/log/semcommittee/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
