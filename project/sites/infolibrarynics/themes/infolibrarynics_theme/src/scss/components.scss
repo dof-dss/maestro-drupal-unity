@@ -5,7 +5,6 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 #header {
-  background: $brand-primary;
   max-width: 100%;
   margin: 0;
   padding: 1% 0 0;
@@ -15,18 +14,31 @@
   }
 
   .menu_wrapper {
+    margin-right: 2rem;
+
     a {
       @include adjust-font-size-to(16px);
-      color: $white;
-      border-bottom: 1px solid $white;
+      color: $black;
+      border-bottom: 1px solid $black;
 
       &:hover,
       &:focus {
-        border-bottom: 2px solid $white;
+        border-bottom: 2px solid $link;
       }
-     }
+
+      &:focus {
+        color: $white;
+      }
+    }
   }
 }
+
+#header_wrapper {
+  background-image: resolve('library-banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  }
 
 #main-menu {
   max-width: 100%;
@@ -70,10 +82,16 @@
 #header-menu {
   .menu {
     list-style: none;
+    background: $white;
+    border: solid $black 2px;
 
     li {
       display: inline-block;
-      padding-right: 2rem;
+      padding: 0.6rem 2rem 0.8rem 2rem;
+    }
+
+    ul {
+      margin: 1.3rem 2rem 1.8rem 2.4rem;
     }
   }
 }
