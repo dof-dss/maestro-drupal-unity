@@ -60,7 +60,6 @@ permissions:
   - 'administer main menu items'
   - 'administer main-menu menu items'
   - 'administer redirects'
-  - 'administer scheduled transitions'
   - 'audit content'
   - 'create and edit custom blocks'
   - 'create audio media'
