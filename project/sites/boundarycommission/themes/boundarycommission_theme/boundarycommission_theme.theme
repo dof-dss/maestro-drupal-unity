@@ -41,7 +41,7 @@ function boundarycommission_theme_preprocess_field(&$variables) {
     // with the stage facet selected.
     $node = $variables['element']['#object'];
     if ($node instanceof Node) {
-      if ($node->getType() == 'consultation_response') {
+      if ($node->getType() == 'consultation_response' || $node->getType() == 'respresentations') {
         $consultation_type = $node->field_response_type;
         if (is_object($consultation_type)) {
           $tid = $consultation_type->getString();
@@ -68,6 +68,24 @@ function boundarycommission_theme_preprocess_field(&$variables) {
             $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
             $link_text = $term->getName();
             $variables['stage_link'] = Link::fromTextAndUrl($link_text, $link_url);
+          }
+        }
+      }
+    }
+  } elseif ($variables['element']['#field_name'] == 'field_representation_stage') {
+    // Build a link back to the consultation response page
+    // with the stage facet selected.
+    $node = $variables['element']['#object'];
+    if ($node instanceof Node) {
+      if ($node->getType() == 'respresentations') {
+        $respresentations_type = $node->field_representation_stage;
+        if (is_object($respresentations_type)) {
+          $tid = $respresentations_type->getString();
+          if (!empty($tid)) {
+            $link_url = Url::fromUri('https://' . $_SERVER['HTTP_HOST'] . '/representations-received');
+            $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+            $link_text = $term->getName();
+            $variables['representation_link'] = Link::fromTextAndUrl($link_text, $link_url);
           }
         }
       }
