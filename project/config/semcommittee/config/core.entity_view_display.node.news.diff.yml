@@ -25,13 +25,12 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
-        - field_attachment
         - field_teaser
         - field_meta_tags
       label: 'Additional content details'
       parent_name: ''
       region: content
-      weight: 3
+      weight: 4
       format_type: html_element
       format_settings:
         classes: field-collection
@@ -59,12 +58,12 @@ content:
     region: content
   field_attachment:
     type: entity_reference_entity_view
-    label: above
+    label: inline
     settings:
       view_mode: default
       link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 3
     region: content
   field_meta_tags:
     type: metatag_empty_formatter

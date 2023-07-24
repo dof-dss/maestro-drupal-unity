@@ -13,3 +13,8 @@ site-styling:
     # The SMACSS category, "component", is loaded after "base" and "layout" styles.
     component:
       css/components.css: { minified: true }
+
+unity-fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Open+Sans&display=swap': { type: external, minified: true }
