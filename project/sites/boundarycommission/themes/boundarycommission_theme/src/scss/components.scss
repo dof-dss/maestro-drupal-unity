@@ -219,11 +219,10 @@
       background: $grey-lightest;
       padding: 1rem;
       display: block;
-      min-height: 54rem;
       position: relative;
 
-      @media screen and (min-width: 500px) and (max-width: $tab) {
-        min-height: 64rem;
+      @include breakpoint($tab) {
+        min-height: 54rem;
       }
 
       &:after {
@@ -263,17 +262,27 @@
   }
 
   p:last-child {
-    position: absolute;
-    bottom: 0;
+    @include breakpoint($tab) {
+      position: absolute;
+      bottom: 0;
+    }
   }
 
   .column {
     width: 33rem;
+
+    @media screen and (max-width: $tab) {
+      margin: 0 1rem;
+
+      &:last-child {
+        margin-right: 1rem;
+      }
+    }
   }
 
   ul.cards-pack {
     list-style: none;
-    margin-left: 0;
+    margin: 0;
   }
 }
 
