@@ -10,7 +10,7 @@ use Drupal\Core\Field\FieldItemListInterface;
  *
  * @FieldFormatter(
  *   id = "type_formatter",
- *   label = @Translation("Unity type formatter"),
+ *   label = @Translation("Unity type field formatter"),
  *   field_types = {
  *     "entity_reference"
  *   }
@@ -23,7 +23,7 @@ class TypeFormatter extends FormatterBase {
    */
   public function settingsSummary() {
     $summary = [];
-    $summary[] = $this->t('Displays publications of this type.');
+    $summary[] = $this->t('Backlink to display publications of this type.');
     return $summary;
   }
 
