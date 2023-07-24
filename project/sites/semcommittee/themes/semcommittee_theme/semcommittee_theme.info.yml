@@ -8,7 +8,7 @@ libraries:
   - semcommittee_theme/site-styling
   - nicsdru_unity_theme/unity-slider
   - nicsdru_unity_theme/board_member
-  - nicsdru_unity_theme/unity-fonts
+  - semcommittee_theme/semc-font
 
 libraries-override:
   nicsdru_unity_theme/unity-global-styling:

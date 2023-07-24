@@ -27,7 +27,7 @@
     @include adjust-font-size-to(20px);
     color: #008152;
     font-style: normal;
-    font-family: "Gotham", Arial, sans-serif;
+    font-family: $semc-font;
     @media screen and (max-width: $tab) {
       padding: 0 2rem 2rem 2rem;
     }

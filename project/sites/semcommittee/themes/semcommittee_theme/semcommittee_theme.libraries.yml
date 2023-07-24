@@ -14,7 +14,7 @@ site-styling:
     component:
       css/components.css: { minified: true }
 
-unity-fonts:
+semc-font:
   css:
     theme:
-      'https://fonts.googleapis.com/css?family=Open+Sans&display=swap': { type: external, minified: true }
+      'https://fonts.googleapis.com/css2?family=Figtree&display=swap': { type: external, minified: true }
