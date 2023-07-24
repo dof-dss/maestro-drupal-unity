@@ -1,17 +1,23 @@
-uuid: 63f0099c-e34d-4a6b-890d-e45f749c0fcc
+uuid: c69bcc8a-c208-481b-8619-027c94daa13d
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.diff
     - field.field.node.featured_list.field_link
     - node.type.featured_list
   module:
+    - layout_builder
     - link
     - user
-id: node.featured_list.default
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.featured_list.diff
 targetEntityType: node
 bundle: featured_list
-mode: default
+mode: diff
 content:
   content_moderation_control:
     settings: {  }
