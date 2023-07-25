@@ -39,7 +39,7 @@ class RepresentationStageFormatter extends FormatterBase {
       if (!empty($tid)) {
         // Load up the taxonomy term so that we can get the name.
         $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
-        // Build the link to return to the publications page with this term selected.
+        // Build the link to return to the consultations page with this term selected.
         $element[$delta] = ['#markup' => '<a href="/representations-received/' . $tid . '">' . $term->label() . '</a>'];
       }
     }

@@ -6,24 +6,24 @@ use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Field\FieldItemListInterface;
 
 /**
- * Plugin implementation of the ' Response Type' formatter.
+ * Plugin implementation of the 'Consultation Stage' formatter.
  *
  * @FieldFormatter(
- *   id = "response_type_formatter",
- *   label = @Translation("Unity response type field formatter"),
+ *   id = "consultation_stage_formatter",
+ *   label = @Translation("Unity consultation stage field formatter"),
  *   field_types = {
  *     "entity_reference"
  *   }
  * )
  */
-class ResponseTypeFormatter extends FormatterBase {
+class ConsultationStageFormatter extends FormatterBase {
 
   /**
    * {@inheritdoc}
    */
   public function settingsSummary() {
     $summary = [];
-    $summary[] = $this->t('Backlink to display consultations of this response type.');
+    $summary[] = $this->t('Backlink to display consultations of this stage.');
     return $summary;
   }
 
@@ -40,7 +40,7 @@ class ResponseTypeFormatter extends FormatterBase {
         // Load up the taxonomy term so that we can get the name.
         $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
         // Build the link to return to the consultations page with this term selected.
-        $element[$delta] = ['#markup' => '<a href="/representations-received/type/' . $tid . '">' . $term->label() . '</a>'];
+        $element[$delta] = ['#markup' => '<a href="/representations-received/stage/' . $tid . '">' . $term->label() . '</a>'];
       }
     }
 
