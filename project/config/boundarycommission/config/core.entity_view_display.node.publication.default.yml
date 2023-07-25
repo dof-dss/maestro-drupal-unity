@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.publication.field_published_date
     - node.type.publication
   module:
+    - boundarycommission_field_formatter
     - datetime
     - text
     - user
@@ -38,10 +39,9 @@ content:
     weight: 3
     region: content
   field_publication_type:
-    type: entity_reference_label
+    type: type_formatter
     label: above
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content

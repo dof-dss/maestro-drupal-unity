@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.consultation_response.field_response_type
     - node.type.consultation_response
   module:
+    - boundarycommission_field_formatter
     - user
 id: node.consultation_response.default
 targetEntityType: node
@@ -25,18 +26,16 @@ content:
     weight: 2
     region: content
   field_consultation_stage:
-    type: entity_reference_label
+    type: consultation_stage_formatter
     label: inline
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
   field_response_type:
-    type: entity_reference_label
+    type: response_type_formatter
     label: inline
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
     weight: 1
     region: content
