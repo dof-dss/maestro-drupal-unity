@@ -34,8 +34,14 @@ class TypeFormatter extends FormatterBase {
     $element = [];
 
     foreach ($items as $delta => $item) {
-      // Render each element as markup.
-      $element[$delta] = ['#markup' => 'fred'];
+      // Get the taxonomy tid for this field.
+      $tid = $item->target_id;
+      if (!empty($tid)) {
+        // Load up the taxonomy term so that we can get the name.
+        $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+        // Build the link to return to the publications page with this term selected.
+        $element[$delta] = ['#markup' => '<a href="/publications/type/' . $tid . '">' . $term->label() . '</a>'];
+      }
     }
 
     return $element;
