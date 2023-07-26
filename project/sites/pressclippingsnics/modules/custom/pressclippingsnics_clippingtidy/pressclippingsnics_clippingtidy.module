@@ -33,6 +33,9 @@ function pressclippingsnics_clippingtidy_cron() {
 
         $fid = $pressclipping->get('field_attachment')->getValue()[0]['target_id'];
 
+        $pressclipping->moderation_state->value = 'archived';
+        $pressclipping->save();
+
         $connection = Database::getConnection();
         $connection->update('file_managed')
           ->fields(['status' => 0])
@@ -42,9 +45,6 @@ function pressclippingsnics_clippingtidy_cron() {
         $connection->delete('file_usage')
           ->condition('fid', $fid)
           ->execute();
-
-        $pressclipping->moderation_state->value = 'archived';
-        $pressclipping->save();
       }
     }
   }
