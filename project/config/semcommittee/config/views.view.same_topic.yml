@@ -296,7 +296,7 @@ display:
         options:
           grouping: {  }
           columns: 3
-          automatic_width: true
+          automatic_width: false
           alignment: vertical
           row_class_custom: ''
           row_class_default: true
