@@ -12,7 +12,7 @@ entity_type: node
 bundle: consultation_response
 label: Stage
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

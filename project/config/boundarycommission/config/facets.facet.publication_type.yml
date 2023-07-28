@@ -15,6 +15,8 @@ id: publication_type
 name: 'Publication Type'
 weight: 0
 min_count: 1
+missing: false
+missing_label: others
 url_alias: type
 facet_source_id: 'search_api:views_page__publications_search__publication_search_page'
 field_identifier: field_publication_type
@@ -23,6 +25,9 @@ hard_limit: 0
 exclude: false
 use_hierarchy: false
 keep_hierarchy_parents_active: false
+hierarchy:
+  type: taxonomy
+  config: {  }
 expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 widget:
@@ -48,12 +53,17 @@ processor_configs:
       sort: 20
     settings:
       sort: ASC
-  raw_value_widget_order:
-    processor_id: raw_value_widget_order
+  display_value_widget_order:
+    processor_id: display_value_widget_order
     weights:
-      sort: 50
+      sort: 40
     settings:
-      sort: DESC
+      sort: ASC
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 100
+    settings: {  }
   translate_entity:
     processor_id: translate_entity
     weights:

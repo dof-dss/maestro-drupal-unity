@@ -9,6 +9,7 @@ dependencies:
     - datetime
     - node
     - user
+    - views_custom_cache_tag
 id: news_archive
 label: 'News Archive'
 module: views
@@ -108,8 +109,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: custom_tag
+        options:
+          custom_tag: 'handy_cache_tags:node:news'
       empty: {  }
       sorts:
         field_published_date_value:

@@ -30,7 +30,7 @@ third_party_settings:
       label: 'Additional content details'
       parent_name: ''
       region: content
-      weight: 3
+      weight: 4
       format_type: html_element
       format_settings:
         classes: field-collection
@@ -56,12 +56,21 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_attachment:
+    type: entity_reference_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_meta_tags:
     type: metatag_empty_formatter
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 2
     region: content
   field_photo:
     type: entity_reference_entity_view
@@ -87,10 +96,10 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 1
     region: content
 hidden:
   content_moderation_control: true
-  field_attachment: true
   langcode: true
   links: true
+  search_api_excerpt: true
