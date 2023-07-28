@@ -84,6 +84,13 @@
 }
 
 #block-views-block-same-topic-same-topic {
+  .views-col {
+    width: 33%;
+    @media screen and (max-width: $tab) {
+      width: 100%
+    }
+  }
+
   h2 {
     @include adjust-font-size-to(24px);
     padding: 0;
@@ -92,7 +99,15 @@
   .views-view-grid .views-row {
     padding: 0 1rem 3rem 0;
   }
+
+  .views-view-grid {
+    @media screen and (max-width: $tab) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
+
 
 #footer-area .block {
   h2 {
