@@ -2,7 +2,13 @@ uuid: 4bf62e35-b87d-4bc5-866a-bfadf3774c89
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.basic_html
+    - node.type.consultation_response
+    - node.type.publication_page
   module:
+    - filter
+    - node
     - system
 id: author_user
 label: 'author user'
@@ -34,6 +40,7 @@ permissions:
   - 'edit own video files'
   - 'moderate content from draft to needs_review'
   - 'moderate content from needs_review to draft'
+  - 'use text format basic_html'
   - 'use text format filtered_html'
   - 'use text format filtered_html_with_no_images'
   - 'use workbench_moderation my drafts tab'

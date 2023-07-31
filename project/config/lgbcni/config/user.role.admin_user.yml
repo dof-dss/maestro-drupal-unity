@@ -3,7 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.consultation_response
+    - node.type.lgbc_information
     - node.type.news
+    - node.type.publication_page
   module:
     - block
     - node
