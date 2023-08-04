@@ -7,6 +7,8 @@
 
 
 .region-slideshow {
+  background: resolve('lgbc-bkgd.png') no-repeat 50%;
+  height: 30rem;
 
   blockquote {
     @include adjust-font-size-to(30px);
@@ -21,6 +23,7 @@
 
     h2 {
       color: $white;
+      margin: 5rem;
     }
 
     &::before,
