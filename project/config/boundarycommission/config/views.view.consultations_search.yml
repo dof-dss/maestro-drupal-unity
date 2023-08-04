@@ -303,15 +303,15 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        search_api_relevance:
-          id: search_api_relevance
+        title:
+          id: title
           table: search_api_index_consultation_responses
-          field: search_api_relevance
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: search_api
-          order: DESC
+          order: ASC
           expose:
             label: ''
             field_identifier: ''

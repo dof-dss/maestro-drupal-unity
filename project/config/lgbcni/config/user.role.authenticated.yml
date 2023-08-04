@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
     - node.type.news
+    - node.type.publication_page
   module:
+    - filter
     - node
     - path
     - pathauto
@@ -38,6 +41,7 @@ permissions:
   - 'notify of path changes'
   - 'revert revisions'
   - 'use media wysiwyg'
+  - 'use text format basic_html'
   - 'use text format filtered_html'
   - 'use text format filtered_html_with_no_images'
   - 'view files'

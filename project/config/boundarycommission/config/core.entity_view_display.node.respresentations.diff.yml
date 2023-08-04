@@ -21,12 +21,11 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
-        - field_attachment
         - field_meta_tags
       label: 'Additional content details'
       parent_name: ''
       region: content
-      weight: 2
+      weight: 3
       format_type: html_element
       format_settings:
         classes: field-collection
@@ -46,11 +45,11 @@ mode: diff
 content:
   field_attachment:
     type: entity_reference_label
-    label: inline
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: content
   field_meta_tags:
     type: metatag_empty_formatter

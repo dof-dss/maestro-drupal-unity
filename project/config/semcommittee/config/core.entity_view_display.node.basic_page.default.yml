@@ -25,17 +25,11 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_publication_topics:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
 hidden:
   content_moderation_control: true
   field_meta_tags: true
   field_next_audit_due: true
+  field_publication_topics: true
   langcode: true
   links: true
+  search_api_excerpt: true

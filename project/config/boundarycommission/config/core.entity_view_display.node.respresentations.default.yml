@@ -15,6 +15,15 @@ targetEntityType: node
 bundle: respresentations
 mode: default
 content:
+  field_attachment:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: embed
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_representation_stage:
     type: entity_reference_label
     label: above
@@ -33,7 +42,6 @@ content:
     region: content
 hidden:
   content_moderation_control: true
-  field_attachment: true
   field_meta_tags: true
   langcode: true
   links: true
