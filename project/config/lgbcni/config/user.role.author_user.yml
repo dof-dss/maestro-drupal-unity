@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
-    - node.type.consultation_response
     - node.type.publication_page
   module:
     - filter
@@ -20,10 +19,8 @@ permissions:
   - 'access ckeditor link'
   - 'add media from remote sources'
   - 'administer main-menu menu items'
-  - 'create consultation_response content'
   - 'create files'
   - 'create publication_page content'
-  - 'delete own consultation_response content'
   - 'download any audio files'
   - 'download any document files'
   - 'download any image files'
@@ -32,9 +29,7 @@ permissions:
   - 'download own document files'
   - 'download own image files'
   - 'download own video files'
-  - 'edit any consultation_response content'
   - 'edit own audio files'
-  - 'edit own consultation_response content'
   - 'edit own document files'
   - 'edit own image files'
   - 'edit own video files'
