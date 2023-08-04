@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.basic_html
     - node.type.news
+    - node.type.publication_page
   module:
+    - filter
     - node
     - redirect
     - system
@@ -23,25 +26,19 @@ permissions:
   - 'administer book outlines'
   - 'administer main-menu menu items'
   - 'administer redirects'
-  - 'create consultation_response content'
   - 'create files'
-  - 'create lgbc_information content'
   - 'create new books'
   - 'create publication_page content'
   - 'delete any audio files'
-  - 'delete any consultation_response content'
   - 'delete any document files'
   - 'delete any image files'
-  - 'delete any lgbc_information content'
   - 'delete any news content'
   - 'delete any page content'
   - 'delete any publication_page content'
   - 'delete any video files'
   - 'delete own audio files'
-  - 'delete own consultation_response content'
   - 'delete own document files'
   - 'delete own image files'
-  - 'delete own lgbc_information content'
   - 'delete own publication_page content'
   - 'delete own video files'
   - 'delete revisions'
@@ -54,17 +51,13 @@ permissions:
   - 'download own image files'
   - 'download own video files'
   - 'edit any audio files'
-  - 'edit any consultation_response content'
   - 'edit any document files'
   - 'edit any image files'
-  - 'edit any lgbc_information content'
   - 'edit any publication_page content'
   - 'edit any video files'
   - 'edit own audio files'
-  - 'edit own consultation_response content'
   - 'edit own document files'
   - 'edit own image files'
-  - 'edit own lgbc_information content'
   - 'edit own publication_page content'
   - 'edit own video files'
   - 'flag content_audit'
@@ -77,6 +70,7 @@ permissions:
   - 'show core Outline form element'
   - 'show core Outline tab'
   - 'unflag content_audit'
+  - 'use text format basic_html'
   - 'use text format filtered_html'
   - 'use text format filtered_html_with_no_images'
   - 'use workbench_media add form'

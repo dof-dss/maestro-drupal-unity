@@ -13,3 +13,8 @@ site-styling:
     # The SMACSS category, "component", is loaded after "base" and "layout" styles.
     component:
       css/components.css: { minified: true }
+
+semc-font:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css2?family=Figtree&display=swap': { type: external, minified: true }

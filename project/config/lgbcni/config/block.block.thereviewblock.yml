@@ -1,0 +1,30 @@
+uuid: 10eaefa1-5adb-4a1e-b660-aa735e100813
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:b615b472-90a5-4540-bf37-51f13ee18163'
+  module:
+    - block_content
+    - system
+  theme:
+    - lgbcni_theme
+id: thereviewblock
+theme: lgbcni_theme
+region: bottom_widget_1
+weight: 0
+provider: null
+plugin: 'block_content:b615b472-90a5-4540-bf37-51f13ee18163'
+settings:
+  id: 'block_content:b615b472-90a5-4540-bf37-51f13ee18163'
+  label: 'The Review'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
