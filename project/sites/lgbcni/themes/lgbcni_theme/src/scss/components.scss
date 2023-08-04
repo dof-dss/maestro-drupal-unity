@@ -4,3 +4,29 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+
+.region-slideshow {
+
+  blockquote {
+    @include adjust-font-size-to(30px);
+    font-weight: bold;
+    max-width: 60%;
+    @media screen and (max-width: $tab) {
+      @include adjust-font-size-to(26px);
+    }
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(22px);
+    }
+
+    h2 {
+      color: $white;
+    }
+
+    &::before,
+    &::after {
+      background: none;
+      padding: 0;
+    }
+  }
+}
