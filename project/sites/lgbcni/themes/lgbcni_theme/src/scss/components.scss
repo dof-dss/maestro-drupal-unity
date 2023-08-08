@@ -5,6 +5,69 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+.menu_wrapper {
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+#main-menu {
+  background: $white;
+
+  li {
+    @media screen and (min-width: $tab) {
+      border-right: 1px solid #fff;
+    }
+  }
+
+  .menu-link,
+  .menu .active,
+  .menu-item.open .menu-toggle-btn {
+    color: #333;
+    @include adjust-font-size-to(16px);
+  }
+
+  .menu .menu-item .active {
+    border-bottom-color: $brand-primary;
+    background: #333;
+    color: #fff;
+  }
+
+  .menu-link {
+    &:hover,
+    &:focus {
+      background: #333;
+      color: $white;
+      border-bottom-color: $brand-primary;
+    }
+  }
+
+  .menu-main_sub .menu-item span.active {
+    @include adjust-font-size-to(14px);
+    border-bottom-color: $brand-secondary;
+    padding: 1rem;
+  }
+
+  .menu-main_sub {
+    background: #333;
+
+    .menu-item {
+      .active {
+        background: $brand-secondary;
+        color: $white;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          color: $white;
+          border-bottom-color: $brand-primary;
+        }
+      }
+    }
+  }
+}
+
 
 .region-slideshow {
   background: resolve('lgbc-bkgd.png') no-repeat 50%;
