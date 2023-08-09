@@ -6,7 +6,6 @@ dependencies:
     - node.type.basic_page
     - node.type.faq
     - node.type.feature
-    - node.type.featured_content_list
     - node.type.news
     - node.type.publication_page
     - node.type.webform
@@ -102,7 +101,6 @@ type_settings:
       - basic_page
       - faq
       - feature
-      - featured_content_list
       - news
       - publication_page
       - webform
