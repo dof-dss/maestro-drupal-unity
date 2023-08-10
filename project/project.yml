@@ -29,7 +29,7 @@ sites:
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/boundarycommission ; drush core-cron'
         database: boundarycommission
-        status: development
+        status: production
         default: false
     industrialcourt:
         name: 'Industrial Court'
