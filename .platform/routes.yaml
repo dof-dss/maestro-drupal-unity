@@ -21,14 +21,6 @@
 'https://judiciaryni.uk/':
     type: redirect
     to: 'https://www.judiciaryni.uk/'
-'https://www.boundarycommission.org.uk/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://boundarycommission.org.uk/':
-    type: redirect
-    to: 'https://www.boundarycommission.org.uk/'
 'https://www.industrialcourt.gov.uk/':
     type: upstream
     upstream: 'unity_svr_3:http'
