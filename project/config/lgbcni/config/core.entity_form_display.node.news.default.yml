@@ -77,7 +77,7 @@ content:
     weight: 4
     region: content
     settings:
-      size: 120
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   flag:
