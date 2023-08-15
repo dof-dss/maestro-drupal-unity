@@ -14,7 +14,6 @@ dependencies:
   module:
     - datetime
     - layout_builder
-    - text
     - user
 third_party_settings:
   layout_builder:
@@ -27,14 +26,6 @@ targetEntityType: node
 bundle: news
 mode: search_index
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_published_date:
     type: datetime_default
     label: hidden
@@ -44,12 +35,20 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_teaser:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
+  body: true
   content_moderation_control: true
   field_meta_tags: true
   field_photo: true
   field_summary: true
-  field_teaser: true
   langcode: true
   links: true
   search_api_excerpt: true
