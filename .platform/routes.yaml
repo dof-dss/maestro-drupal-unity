@@ -5,14 +5,14 @@
 # original repository.Any changes here will be overwritten when the project #
 # is built.                                                                 #
 #############################################################################
-'https://www.pacni.gov.uk.{default}/':
+'https://www.pacni.gov.uk/':
     type: upstream
     upstream: 'unity_svr_3:http'
     cache:
         enabled: 'false'
-'https://pacni.gov.uk.{default}/':
+'https://pacni.gov.uk/':
     type: redirect
-    to: 'https://www.pacni.gov.uk.{default}/'
+    to: 'https://www.pacni.gov.uk/'
 'https://www.judiciaryni.uk/':
     type: upstream
     upstream: 'unity_svr_3:http'
@@ -21,14 +21,14 @@
 'https://judiciaryni.uk/':
     type: redirect
     to: 'https://www.judiciaryni.uk/'
-'https://www.boundarycommission.org.uk/':
+'https://www.boundarycommission.org.uk.{default}/':
     type: upstream
     upstream: 'unity_svr_3:http'
     cache:
         enabled: 'false'
-'https://boundarycommission.org.uk/':
+'https://boundarycommission.org.uk.{default}/':
     type: redirect
-    to: 'https://www.boundarycommission.org.uk/'
+    to: 'https://www.boundarycommission.org.uk.{default}/'
 'https://www.industrialcourt.gov.uk/':
     type: upstream
     upstream: 'unity_svr_3:http'
