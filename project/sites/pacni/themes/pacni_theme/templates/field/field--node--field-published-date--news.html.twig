@@ -46,9 +46,7 @@
 {% if label_hidden %}
     <p{{ attributes }}>
     {% for item in items %}
-      <strong>
         <span{{ item.attributes }}>{{ item.content }}</span>
-      </strong>
     {% endfor %}
     </p>
 {% else %}
