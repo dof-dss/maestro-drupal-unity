@@ -55,9 +55,7 @@
     <p{{ attributes }}>
       <span{{ title_attributes.addClass(title_classes) }}>{{ label }}: </span>
       {% for item in items %}
-        <strong>
-          <span{{ item.attributes }}>{{ item.content }}</span>
-        </strong>
+        <span{{ item.attributes }}>{{ item.content }}</span>
       {% endfor %}
     </p>
 {% endif %}
