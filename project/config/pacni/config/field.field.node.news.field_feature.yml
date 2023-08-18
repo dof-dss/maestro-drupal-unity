@@ -10,7 +10,7 @@ field_name: field_feature
 entity_type: node
 bundle: news
 label: Feature
-description: ''
+description: 'Show content item in "Latest News" on Homepage'
 required: false
 translatable: false
 default_value:
