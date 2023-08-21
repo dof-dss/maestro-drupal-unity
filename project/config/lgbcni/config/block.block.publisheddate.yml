@@ -1,4 +1,4 @@
-uuid: bf67a3e4-cd0c-40b5-b7f5-ff4c3a842e42
+uuid: d5a078c5-c929-4bf0-92ab-22e7603bd183
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ dependencies:
     - system
   theme:
     - lgbcni_theme
-id: publications_date
+id: publisheddate
 theme: lgbcni_theme
 region: search_facets
-weight: -4
+weight: -5
 provider: null
 plugin: 'facet_block:published_date_publications'
 settings:
@@ -21,7 +21,7 @@ settings:
   label_display: visible
   provider: facets
   context_mapping: {  }
-  block_id: publications_date
+  block_id: publisheddate
 visibility:
   request_path:
     id: request_path
