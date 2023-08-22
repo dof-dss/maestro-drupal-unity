@@ -5,10 +5,18 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#headerHero {
+  @media screen and (max-width: 766px) {
+    background-color: #333;
+  }
+}
+
 .menu_wrapper {
-  padding: 1rem 0;
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  @media screen and (min-width: 767px) {
+    padding: 1rem 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
 }
 
 #main-menu {
@@ -68,7 +76,6 @@
   }
 }
 
-
 .region-slideshow {
   background: resolve('lgbc-bkgd.png') no-repeat 50%;
   height: 30rem;
@@ -97,8 +104,28 @@
   }
 }
 
-#footer {
-  background: #333;
+#bottom_wrapper {
+  @media screen and (max-width: $tab) {
+    padding: 0 1rem;
+  }
+}
+
+.bottom_widget .footer-area .column {
+  @media screen and (max-width: $tab) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.region-bottom-widget-2 .content {
+  p {
+    margin-bottom: 0;
+  }
+
+  .more-link {
+    margin-top: 4.4rem;
+  }
 }
 
 .footer-area {
@@ -116,23 +143,9 @@
     border: none;
   }
 
-  #main-menu .nav-main {
-    background: #333;
-
-    .menu .menu-item a {
-      color: #fff;
-
-    &:hover,
-    &:focus {
-      background: #fff;
-      color: #333;
-    }
-    }
+  #main-menu {
+    background: $footer-background;
   }
-}
-
-#content a:not(.toolbar-icon):not(.file-link):not(.facet--btn):not(.facet-item--link):not(.btn):not(.ui-menu-item-wrapper):not(.thwooper):not(.value):not(.card__title-link):not(.card):not(.layout-builder__link):not(.facets-soft-limit-link):hover:not(.facet-item--link):not(.facet--btn), .content a:not(.toolbar-icon):not(.file-link):not(.facet--btn):not(.facet-item--link):not(.btn):not(.ui-menu-item-wrapper):not(.thwooper):not(.value):not(.card__title-link):not(.card):not(.layout-builder__link):not(.facets-soft-limit-link):hover:not(.facet-item--link):not(.facet--btn), #footer a:not(.toolbar-icon):not(.file-link):not(.facet--btn):not(.facet-item--link):not(.btn):not(.ui-menu-item-wrapper):not(.thwooper):not(.value):not(.card__title-link):not(.card):not(.layout-builder__link):not(.facets-soft-limit-link):hover:not(.facet-item--link):not(.facet--btn) {
-  border-bottom: 5px solid $brand-primary;
 }
 
 #footer .column li {
