@@ -18,7 +18,7 @@ plugin: 'block_content:153072bb-13c9-4d0b-bbab-444b8b81fe0f'
 settings:
   id: 'block_content:153072bb-13c9-4d0b-bbab-444b8b81fe0f'
   label: 'About us'
-  label_display: visible
+  label_display: '0'
   provider: block_content
   status: true
   info: ''
