@@ -18,3 +18,4 @@
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-semcommittee" "/app/log/semcommittee/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-boundarycommission" "/app/log/boundarycommission/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-pacni" "/app/log/pacni/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
+/bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-interchangeni" "/app/log/interchangeni/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
