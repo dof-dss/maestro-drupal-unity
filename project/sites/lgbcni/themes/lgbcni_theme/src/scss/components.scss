@@ -5,7 +5,37 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#header {
+  display: flex;
+
+  .top_left{
+    display: flex;
+    flex: 2;
+
+    .region-header {
+      flex: .3;
+    }
+
+    .header_slogan {
+      display: flex;
+      flex: 2;
+
+      p {
+        margin: 0;
+        padding: 0 1rem;
+        border-right: 2px solid $brand-primary;
+      }
+
+      p:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
 #headerHero {
+  flex: 1;
+
   @media screen and (max-width: 766px) {
     background-color: #333;
   }
