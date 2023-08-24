@@ -70,6 +70,7 @@ module:
   link_fix_absolute_urls: 0
   linkit: 0
   media: 0
+  media_file_delete: 0
   media_library: 0
   media_library_edit: 0
   menu_breadcrumb: 0
