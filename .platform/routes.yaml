@@ -85,6 +85,14 @@
 'https://semcommittee.com/':
     type: redirect
     to: 'https://www.semcommittee.com/'
+'https://www.nibureau.com/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://nibureau.com/':
+    type: redirect
+    to: 'https://www.nibureau.com/'
 'https://www.{all}/':
     type: upstream
     upstream: 'unity_svr_3:http'

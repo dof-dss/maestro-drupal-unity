@@ -172,7 +172,7 @@ display:
           admin_label: ''
           plugin_id: search_api_fulltext
           operator: or
-          value: Keywords
+          value: ''
           group: 1
           exposed: true
           expose:
