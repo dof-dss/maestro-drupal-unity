@@ -38,8 +38,7 @@ function interchangeni_theme_theme_suggestions_page_title_alter(array &$suggesti
 function interchangeni_theme_preprocess_page_title(&$variables) {
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($node instanceof NodeInterface && $node->getType() === 'opportunity') {
-    $organisation = $node->get('field_manager_organisation')->getValue();
-    $organisation_nid = $organisation[0]['target_id'];
+    $organisation_nid = $node->get('field_manager_organisation')->referencedEntities()[0]->id();
     $organisation_name = Node::load($organisation_nid)->getTitle();
     $variables['organisation_name'] = $organisation_name;
   }
