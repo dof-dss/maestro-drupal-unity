@@ -1,4 +1,4 @@
-uuid: 39edc043-7a72-46b1-85b6-1181d47f22c5
+uuid: a242cedb-9130-40b1-b790-425ea10dacb9
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,11 @@ dependencies:
     - search_api.index.publications
     - views.view.publications_search
   module:
+    - facets_pretty_paths
     - search_api
+third_party_settings:
+  facets_pretty_paths:
+    coder: default_coder
 id: published_date_publications
 name: 'Published date'
 weight: 0
@@ -46,18 +50,18 @@ processor_configs:
   active_widget_order:
     processor_id: active_widget_order
     weights:
-      sort: -10
+      sort: 20
     settings:
       sort: ASC
   date_facet_drilldown:
     processor_id: date_facet_drilldown
     weights:
-      build: 5
+      build: 1
     settings: {  }
   date_item:
     processor_id: date_item
     weights:
-      build: -10
+      build: 35
     settings:
       date_display: actual_date
       granularity: 6
@@ -66,7 +70,7 @@ processor_configs:
   hierarchy_processor:
     processor_id: hierarchy_processor
     weights:
-      build: -10
+      build: 100
     settings: {  }
   raw_value_widget_order:
     processor_id: raw_value_widget_order
@@ -78,5 +82,5 @@ processor_configs:
     processor_id: url_processor_handler
     weights:
       pre_query: 50
-      build: -10
+      build: 15
     settings: {  }

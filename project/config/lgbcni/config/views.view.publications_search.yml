@@ -158,7 +158,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_fulltext
-          operator: and
+          operator: or
           value: ''
           group: 1
           exposed: true
@@ -180,8 +180,6 @@ display:
               administrator: '0'
               author_user: '0'
               supervisor_user: '0'
-              editor_user: '0'
-              admin_user: '0'
               qa: '0'
             expose_fields: false
             placeholder: Keywords

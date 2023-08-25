@@ -93,3 +93,12 @@ sites:
         database: semcommittee
         status: development
         default: false
+    nibureau:
+        name: 'Northern Ireland Bureau'
+        url: nibureau.com
+        solr: nibureau
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/nibureau ; drush core-cron'
+        database: nibureau
+        status: development
+        default: false
