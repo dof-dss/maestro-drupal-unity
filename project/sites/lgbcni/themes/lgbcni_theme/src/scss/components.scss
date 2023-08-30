@@ -6,30 +6,110 @@
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
 #header {
-  display: flex;
-
-  .top_left{
-    display: flex;
-    flex: 2;
-
+  .top_left {
     .region-header {
-      flex: .3;
+      @media screen and (max-width: 766px) {
+        flex: 1;
+      }
+
+      @media screen and (max-width: $mob) {
+        flex: 0;
+      }
+
+      @media screen and (max-width: $mob) {
+        margin-right: 7rem;
+      }
     }
 
-    .header_slogan {
+    #logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      bottom: 0;
+
+      @media screen and (max-width: $phab) {
+        padding: 0;
+      }
+    }
+    @media screen and (max-width: $tab) {
+      display: flex;
+    }
+  }
+
+  .header_slogan {
+    @media screen and (max-width: $phab) {
+      font-size: 1.2rem;
+      margin-left: 2rem;
+    }
+
+    @media screen and (max-width: 766px) {
+      display: flex;
+      line-height: 2;
+      flex: 7;
+    }
+
+    @media screen and (max-width: $mob) {
+      margin-left: 0;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 1rem;
+      border-right: 2px solid $brand-primary;
+
+      @media screen and (max-width: $phab) {
+        padding: .7rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tab) {
+    display: flex;
+
+    .top_left {
       display: flex;
       flex: 2;
 
-      p {
-        margin: 0;
-        padding: 0 1rem;
-        border-right: 2px solid $brand-primary;
+      .region-header {
+        flex: .3;
       }
 
-      p:last-child {
-        border: none;
+      .header_slogan {
+        display: flex;
+        flex: 2;
+
+        @media screen and (max-width: $phab) {
+          font-size: 1.2rem;
+          margin-left: 2rem;
+        }
+
+        @media screen and (max-width: 766px) {
+          display: flex;
+          line-height: 2;
+        }
+
+        @media screen and (max-width: $mob) {
+          margin-left: 0;
+        }
+
+        p {
+          margin: 0;
+          padding: 0 1rem;
+          border-right: 2px solid $brand-primary;
+
+          @media screen and (max-width: $phab) {
+            padding: .7rem;
+          }
+        }
+
+        p:last-child {
+          border: none;
+        }
       }
     }
+  }
+  @media screen and (max-width: 766px) {
+    display: grid;
   }
 }
 
@@ -40,6 +120,7 @@
     background-color: #333;
   }
 }
+
 
 .menu_wrapper {
   @media screen and (min-width: 767px) {
