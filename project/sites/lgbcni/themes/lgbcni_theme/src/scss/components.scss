@@ -61,6 +61,10 @@
         padding: .7rem;
       }
     }
+
+    p:last-child {
+      border-right: none;
+    }
   }
 
   @media screen and (min-width: $tab) {
