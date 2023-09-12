@@ -9,7 +9,6 @@ dependencies:
     - media.type.image
     - media.type.remote_video
     - node.type.basic_page
-    - node.type.book
     - node.type.faq
     - node.type.publication
     - node.type.terms
@@ -62,7 +61,6 @@ permissions:
   - 'audit content'
   - 'create audio media'
   - 'create basic_page content'
-  - 'create book content'
   - 'create document media'
   - 'create faq content'
   - 'create file media'
