@@ -115,17 +115,12 @@
 
 #footer-area .block {
   h2 {
-    color: $white;
+    color: $black;
     @include adjust-font-size-to(25px)
-  }
-
-  p, a, address {
-    color: $white;
   }
 }
 
 #footer {
-  background: $brand-primary;
 
   .container-wrap {
     display: block;
