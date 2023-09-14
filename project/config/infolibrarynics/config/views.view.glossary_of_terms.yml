@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - node.type.terms
+  content:
+    - 'node:basic_page:ea265f24-d3c2-446f-85a2-d7cbfc56899d'
   module:
     - node
     - user
@@ -23,7 +25,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Glossary of terms'
+      title: 'Online databases'
       fields:
         title:
           id: title
@@ -122,7 +124,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: string
-          default_action: default
+          default_action: ignore
           exception:
             value: all
             title_enable: false
@@ -237,27 +239,22 @@ display:
           entity_field: uid
           plugin_id: standard
           required: false
-      header: {  }
+      header:
+        entity_node:
+          id: entity_node
+          table: views
+          field: entity_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: false
+          target: ea265f24-d3c2-446f-85a2-d7cbfc56899d
+          view_mode: default
+          tokenize: true
+          bypass_access: false
       footer: {  }
       display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  e_resources:
-    id: e_resources
-    display_title: 'EResources Block'
-    display_plugin: block
-    position: 1
-    display_options:
-      display_description: ''
-      display_extenders:
-        metatag_display_extender: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -323,11 +320,12 @@ display:
           break_phrase: false
       defaults:
         arguments: false
+        header: false
+      header: {  }
       display_extenders:
         metatag_display_extender: {  }
       displays:
         default: default
-        e_resources: e_resources
         glossary_page: glossary_page
       inherit_arguments: false
     cache_metadata:
@@ -345,9 +343,25 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      defaults:
+        header: false
+      header:
+        entity_node:
+          id: entity_node
+          table: views
+          field: entity_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: entity
+          empty: false
+          target: ea265f24-d3c2-446f-85a2-d7cbfc56899d
+          view_mode: default
+          tokenize: false
+          bypass_access: false
       display_extenders:
         metatag_display_extender: {  }
-      path: glossary-terms
+      path: online-databases
     cache_metadata:
       max-age: -1
       contexts:
