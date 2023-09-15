@@ -21,6 +21,7 @@ dependencies:
     - file
     - file_delete_ui
     - media
+    - media_file_delete
     - menu_admin_per_menu
     - moderation_sidebar
     - node
@@ -57,6 +58,7 @@ permissions:
   - 'administer entity browsers'
   - 'administer main menu items'
   - 'administer main-menu menu items'
+  - 'administer media file delete'
   - 'administer redirects'
   - 'audit content'
   - 'create audio media'
