@@ -32,10 +32,6 @@
   }
 }
 
-.region-slideshow {
-  height: 250px;
-}
-
 .sidebar-second-layout {
   .rel-menu--latest-news {
     margin-bottom: 2rem;
@@ -76,9 +72,12 @@
   background: $brand-tertiary;
   width: 35.5rem;
   margin-top: .1rem;
-  padding-left: .8rem;
 
-  @media screen and (max-width: $tab) {
+  @media screen and (min-width: 990px) {
+    padding: 2rem 3rem;
+  }
+
+  @media screen and (max-width: 990px) {
     position: relative;
     width: 100%;
     margin-top: 0;
@@ -86,24 +85,24 @@
 
   .content {
 
-    @media screen and (max-width: $tab) {
+    @media screen and (max-width: 990px) {
       padding: 1rem;
     }
 
     div {
 
       h2 {
-        color: #fff;
-        font-size: 1.8rem;
+        color: $white;
+        @include adjust-font-size-to(20px);
         margin: 0;
       }
 
       p {
-        color: #fff;
+        color: $white;
       }
 
       a.btn {
-        padding: 0 .6rem;
+        padding: .4rem 1.6rem;
       }
     }
   }
