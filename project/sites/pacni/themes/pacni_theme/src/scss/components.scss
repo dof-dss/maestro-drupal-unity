@@ -9,8 +9,16 @@
   background: resolve('header_bg.jpg') no-repeat top right;
   margin: .5rem auto .1rem;
 
-  @media screen and (max-width: $tab) {
+  @media screen and (max-width: 890px) {
     background: none;
+  }
+}
+
+.top_left {
+  min-height: 14.5rem;
+
+  #logo img {
+    height: 120px;
   }
 }
 
