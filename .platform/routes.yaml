@@ -29,14 +29,6 @@
 'https://boundarycommission.org.uk.{default}/':
     type: redirect
     to: 'https://www.boundarycommission.org.uk.{default}/'
-'https://www.industrialcourt.gov.uk/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://industrialcourt.gov.uk/':
-    type: redirect
-    to: 'https://www.industrialcourt.gov.uk/'
 'https://www.info.library.nics.gov.uk/':
     type: upstream
     upstream: 'unity_svr_3:http'
