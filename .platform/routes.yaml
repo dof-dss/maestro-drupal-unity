@@ -29,14 +29,6 @@
 'https://boundarycommission.org.uk.{default}/':
     type: redirect
     to: 'https://www.boundarycommission.org.uk.{default}/'
-'https://www.interchangeni.org.uk/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://interchangeni.org.uk/':
-    type: redirect
-    to: 'https://www.interchangeni.org.uk/'
 'https://www.info.library.nics.gov.uk/':
     type: upstream
     upstream: 'unity_svr_3:http'

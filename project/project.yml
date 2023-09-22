@@ -47,7 +47,7 @@ sites:
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/interchangeni ; drush core-cron'
         database: interchangeni
-        status: development
+        status: production
         default: false
     infolibrarynics:
         name: 'NICS e-library'
