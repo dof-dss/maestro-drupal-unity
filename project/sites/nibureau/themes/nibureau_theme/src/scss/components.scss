@@ -10,10 +10,6 @@
   min-height: 18rem;
   @media screen and (max-width: $tab) {
     padding-left: 0;
-
-    #logo {
-      position: relative;
-    }
   }
 
   #logo img {
