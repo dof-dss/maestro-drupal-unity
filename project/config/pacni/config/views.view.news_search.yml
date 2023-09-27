@@ -9,7 +9,6 @@ dependencies:
   module:
     - search_api
     - text
-    - views_custom_cache_tag
 id: news_search
 label: 'News search'
 module: views
@@ -269,9 +268,8 @@ display:
     position: 1
     display_options:
       cache:
-        type: custom_tag
-        options:
-          custom_tag: ''
+        type: search_api_tag
+        options: {  }
       defaults:
         cache: false
       exposed_block: true
@@ -290,7 +288,7 @@ display:
         parent: ''
         context: '0'
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -298,5 +296,6 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.published_date'
         - 'config:field.storage.node.body'
         - 'config:search_api.index.news'

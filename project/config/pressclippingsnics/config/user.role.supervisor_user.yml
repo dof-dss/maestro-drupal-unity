@@ -9,9 +9,7 @@ dependencies:
     - media.type.file
     - media.type.image
     - media.type.remote_video
-    - node.type.basic_page
     - node.type.press_clippings
-    - node.type.webform
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
@@ -75,7 +73,6 @@ permissions:
   - 'create application content'
   - 'create article content'
   - 'create audio media'
-  - 'create basic_page content'
   - 'create book content'
   - 'create department_management content'
   - 'create document media'
@@ -100,7 +97,6 @@ permissions:
   - 'delete any article content'
   - 'delete any audio files'
   - 'delete any audio media'
-  - 'delete any basic_page content'
   - 'delete any book content'
   - 'delete any department_management content'
   - 'delete any document files'
@@ -123,7 +119,6 @@ permissions:
   - 'delete any video media'
   - 'delete application revisions'
   - 'delete article revisions'
-  - 'delete basic_page revisions'
   - 'delete cold_weather_payment revisions'
   - 'delete driving_instructor revisions'
   - 'delete embargoed_publication revisions'
@@ -135,7 +130,6 @@ permissions:
   - 'delete own article content'
   - 'delete own audio files'
   - 'delete own audio media'
-  - 'delete own basic_page content'
   - 'delete own book content'
   - 'delete own department_management content'
   - 'delete own document files'
@@ -164,7 +158,6 @@ permissions:
   - 'delete terms in 1'
   - 'delete umbrella_body revisions'
   - 'delete vacancy revisions'
-  - 'delete webform revisions'
   - 'download any audio files'
   - 'download any document files'
   - 'download any image files'
@@ -177,7 +170,6 @@ permissions:
   - 'edit any article content'
   - 'edit any audio files'
   - 'edit any audio media'
-  - 'edit any basic_page content'
   - 'edit any book content'
   - 'edit any department_management content'
   - 'edit any document files'
@@ -202,7 +194,6 @@ permissions:
   - 'edit own article content'
   - 'edit own audio files'
   - 'edit own audio media'
-  - 'edit own basic_page content'
   - 'edit own book content'
   - 'edit own department_management content'
   - 'edit own document files'
@@ -251,7 +242,6 @@ permissions:
   - 'revert all revisions'
   - 'revert application revisions'
   - 'revert article revisions'
-  - 'revert basic_page revisions'
   - 'revert cold_weather_payment revisions'
   - 'revert driving_instructor revisions'
   - 'revert embargoed_publication revisions'
@@ -284,6 +274,7 @@ permissions:
   - 'use nics_editorial_workflow transition create_new_draft'
   - 'use nics_editorial_workflow transition draft_of_published'
   - 'use nics_editorial_workflow transition publish'
+  - 'use nics_editorial_workflow transition quick_publish'
   - 'use nics_editorial_workflow transition reject'
   - 'use nics_editorial_workflow transition restore'
   - 'use nics_editorial_workflow transition restore_to_draft'
@@ -298,7 +289,6 @@ permissions:
   - 'view any unpublished content'
   - 'view application revisions'
   - 'view article revisions'
-  - 'view basic_page revisions'
   - 'view cold_weather_payment revisions'
   - 'view content references'
   - 'view driving_instructor revisions'
