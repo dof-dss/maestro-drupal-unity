@@ -6,7 +6,6 @@
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
 #main-menu {
-
   background: rgba(0,0,0,0);
 
   li {
@@ -17,21 +16,27 @@
   li:last-child {
     border-right: none;
   }
-}
 
-#main-menu .menu-link, #main-menu .menu .active {
-  color: black;
+  .menu-link, #main-menu .menu .active {
+    color: #333;
+  }
+
+  .menu-item.leaf.active-trail {
+    @media screen and (max-width: $tab) {
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  .menu-link:hover, #main-menu .menu-link:focus {
+    color: #fff;
+    background: $brand-secondary;
+  }
 }
 
 #main-menu .menu .menu-item .active, #main-menu .menu .menu-item .active + .menu-main_sub .title a {
   background: rgba(191,191,191,0.25);
   border-bottom: 5px solid $brand-primary;
-}
-
-#main-menu .menu-item.leaf.active-trail {
-  @media screen and (max-width: $tab) {
-    border-bottom: 1px solid #fff;
-  }
+  color: #333;
 }
 
 .front .front-banner {
