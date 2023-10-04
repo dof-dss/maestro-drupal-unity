@@ -43,10 +43,6 @@ elements: |-
       '#type': textarea
       '#title': 'Your Message'
       '#required': true
-    comments_optional:
-      '#type': textfield
-      '#title': 'Additional comments (optional)'
-      '#maxlength': 255
 css: ''
 javascript: ''
 settings:
