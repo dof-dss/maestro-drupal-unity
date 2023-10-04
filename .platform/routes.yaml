@@ -29,14 +29,11 @@
 'https://boundarycommission.org.uk.{default}/':
     type: redirect
     to: 'https://www.boundarycommission.org.uk.{default}/'
-'https://www.info.library.nics.gov.uk/':
+'https://info.library.nics.gov.uk/':
     type: upstream
     upstream: 'unity_svr_3:http'
     cache:
         enabled: 'false'
-'https://info.library.nics.gov.uk/':
-    type: redirect
-    to: 'https://www.info.library.nics.gov.uk/'
 'https://pressclippings.nics.gov.uk/':
     type: upstream
     upstream: 'unity_svr_3:http'
