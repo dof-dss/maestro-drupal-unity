@@ -5,6 +5,10 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#header {
+  margin-bottom: auto;
+}
+
 #main-menu {
   background: rgba(0,0,0,0);
 
