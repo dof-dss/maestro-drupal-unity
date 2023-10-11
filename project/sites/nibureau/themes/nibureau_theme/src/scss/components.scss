@@ -20,7 +20,124 @@
   }
 }
 
-#main-menu .menu .menu-item .active,
-#main-menu .menu .menu-item .active + .menu-main_sub .title a {
-  border-bottom-color: $brand-secondary;
+#main-menu {
+  background: $white;
+
+  .menu-link,
+  .menu .active,
+  .menu-item.open .menu-toggle-btn {
+    color: $black;
+    @include adjust-font-size-to(16px);
+  }
+
+  .menu
+  .menu-item
+  .active {
+    border-bottom-color: rgba(191,191,191,0.10);
+  }
+
+  .menu-link {
+    &:hover,
+    &:focus {
+      background: $brand-primary;
+      color: $white;
+    }
+  }
+  .menu-main_sub
+  .menu-item
+  span.active {
+    @include adjust-font-size-to(14px);
+    padding: 1rem;
+  }
+
+  .menu-main_sub {
+    background: $brand-primary;
+
+    .menu-item {
+      background: $brand-primary;
+
+      .active {
+        background: $brand-primary;
+        color: $white;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          color: $white;
+          background: $brand-secondary;
+        }
+      }
+    }
+  }
 }
+
+.region-primary-menu .menu_wrapper {
+  border-bottom: solid 5px;
+  border-image: linear-gradient(to right, #04225b 33%, #78a8cc 33%, #78a8cc 66%, #8c8a85 33%) 5;
+}
+
+.homepage--pull-quote {
+  background: resolve('front-banner.png') no-repeat 50%;
+  height: 30rem;
+
+  .container-wrap {
+    padding: 8.4rem 0;
+
+    @media screen and (max-width: $max-grid-width) {
+      padding: 8.4rem 2rem;
+    }
+    @media screen and (max-width: $mob) {
+      padding: 5rem 2rem;
+    }
+  }
+
+  blockquote {
+    @include adjust-font-size-to(40px);
+    font-weight: bold;
+    max-width: 44%;
+    text-shadow: 1px 1px 1px #000;
+    margin-left: 3rem;
+    @media screen and (max-width: $tab) {
+      @include adjust-font-size-to(26px);
+    }
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(22px);
+    }
+
+    p {
+      color: $white;
+    }
+
+    &::before,
+    &::after {
+      background: none;
+      padding: 0;
+    }
+  }
+}
+
+.region-front-welcome {
+  text-align: left;
+}
+
+#block-whatwedo {
+  background: #f6f6f6;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    color: $brand-primary
+  }
+
+  p, img {
+    padding: 1rem;
+  }
+}
+
+#footer {
+  border-top: solid 5px;
+  border-image: linear-gradient(to right, #04225b 33%, #78a8cc 33%, #78a8cc 66%, #8c8a85 33%) 5;
+}
+
+
