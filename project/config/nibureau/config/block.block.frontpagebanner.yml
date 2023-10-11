@@ -1,0 +1,30 @@
+uuid: fdd55448-5908-483d-b06d-fc132dffc160
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:0fc2c688-2de7-4f49-9ddc-d89e6ecf01c8'
+  module:
+    - block_content
+    - system
+  theme:
+    - nibureau_theme
+id: frontpagebanner
+theme: nibureau_theme
+region: slideshow
+weight: -4
+provider: null
+plugin: 'block_content:0fc2c688-2de7-4f49-9ddc-d89e6ecf01c8'
+settings:
+  id: 'block_content:0fc2c688-2de7-4f49-9ddc-d89e6ecf01c8'
+  label: 'Frontpage banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

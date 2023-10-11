@@ -1,0 +1,30 @@
+uuid: 12f9633f-3bc1-45cd-bf82-2e5c308b4a95
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:a53c3b0b-e6af-4106-bb0c-e5519477d892'
+  module:
+    - block_content
+    - system
+  theme:
+    - nibureau_theme
+id: whatwedo
+theme: nibureau_theme
+region: front_welcome
+weight: -4
+provider: null
+plugin: 'block_content:a53c3b0b-e6af-4106-bb0c-e5519477d892'
+settings:
+  id: 'block_content:a53c3b0b-e6af-4106-bb0c-e5519477d892'
+  label: 'What we do'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
