@@ -1,0 +1,41 @@
+uuid: ceb0dc12-2d2e-4c6e-bb6f-7e4c13da6ee0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.feature.field_link
+    - field.field.node.feature.field_photo
+    - node.type.feature
+  module:
+    - link
+    - user
+id: node.feature.default
+targetEntityType: node
+bundle: feature
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

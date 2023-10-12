@@ -1,0 +1,30 @@
+uuid: cf8519a2-c2f1-4b79-9398-2632b824821e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:59740e96-3ada-404c-a55e-70c4dc71a2d4'
+  module:
+    - block_content
+    - system
+  theme:
+    - nibureau_theme
+id: sitewelcome
+theme: nibureau_theme
+region: front_welcome
+weight: -5
+provider: null
+plugin: 'block_content:59740e96-3ada-404c-a55e-70c4dc71a2d4'
+settings:
+  id: 'block_content:59740e96-3ada-404c-a55e-70c4dc71a2d4'
+  label: 'Site welcome'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
