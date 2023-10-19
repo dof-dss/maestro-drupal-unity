@@ -182,8 +182,6 @@
     }
 
     .card__link {
-      background: $brand-primary;
-
       &:hover {
         background: $brand-primary;
 
@@ -193,14 +191,33 @@
       }
     }
 
-    .media-image {
-      display: block;
-      margin: 0;
-      position: absolute;
-      right: 1.5rem;
-      bottom: 1.5rem;
-      width: 9rem;
-      height: auto;
+    &.one .card__link {
+      background: no-repeat 50% 50% resolve('trade-1.png');
+      background-size: cover;
+
+    }
+
+    &.two .card__link {
+      background: no-repeat 50% 50% resolve('tourism-1.png');
+      background-size: cover;
+
+    }
+
+    &.three .card__link {
+      background: no-repeat 50% 50% resolve('education-1.png');
+      background-size: cover;
+
+    }
+
+    &.four .card__link {
+      background: no-repeat 50% 50% resolve('arts-1.png');
+      background-size: cover;
+
+    }
+
+    &.five .card__link {
+      background: no-repeat 50% 50% resolve('politics-1.png');
+      background-size: cover;
     }
   }
 }
