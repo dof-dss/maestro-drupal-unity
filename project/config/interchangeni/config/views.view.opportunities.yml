@@ -859,7 +859,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_opportunity_date__end_value|date("d F Y") }}'
+            text: '{{ field_opportunity_date__value|date("r") }}'
             make_link: false
             path: ''
             absolute: false
@@ -880,7 +880,7 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: false
+            strip_tags: true
             trim: false
             preserve_tags: ''
             html: false
@@ -900,7 +900,7 @@ display:
           type: daterange_default
           settings:
             timezone_override: ''
-            format_type: unity_date
+            format_type: rss_feeds
             separator: '-'
           group_column: value
           group_columns: {  }
