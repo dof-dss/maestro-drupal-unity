@@ -1,24 +1,24 @@
-uuid: cf8519a2-c2f1-4b79-9398-2632b824821e
+uuid: 31b77b56-cede-4d35-9c3e-d6634ca918bc
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic_block:59740e96-3ada-404c-a55e-70c4dc71a2d4'
+    - 'block_content:basic_block:0124a05f-b56c-4637-8f9d-ad4b40de6b9e'
   module:
     - block_content
     - system
   theme:
     - nibureau_theme
-id: sitewelcome
+id: howwecanhelp
 theme: nibureau_theme
 region: front_welcome
-weight: -6
+weight: -4
 provider: null
-plugin: 'block_content:59740e96-3ada-404c-a55e-70c4dc71a2d4'
+plugin: 'block_content:0124a05f-b56c-4637-8f9d-ad4b40de6b9e'
 settings:
-  id: 'block_content:59740e96-3ada-404c-a55e-70c4dc71a2d4'
-  label: 'Site welcome'
-  label_display: '0'
+  id: 'block_content:0124a05f-b56c-4637-8f9d-ad4b40de6b9e'
+  label: 'How we can help'
+  label_display: visible
   provider: block_content
   status: true
   info: ''

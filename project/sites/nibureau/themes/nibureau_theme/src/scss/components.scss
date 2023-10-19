@@ -135,6 +135,164 @@
   }
 }
 
+#block-howwecanhelp{
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    color: $brand-primary
+  }
+
+  p, img {
+    padding: 1rem;
+  }
+}
+
+.homepage--card-deck {
+  .cards-pack {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+
+    @media screen and (min-width: $phab) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: $tab) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .card {
+    list-style: none;
+    text-align: left;
+
+    .card__link::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 3rem;
+      right: 0.5rem;
+      width: 3rem;
+      height: 3rem;
+      mask: no-repeat 100% 100% resolve('arrow_forward_white.svg');
+      mask-size: cover;
+      background-color: #fff;
+    }
+
+    .card__link {
+      &:hover {
+        background: $brand-primary;
+
+        &::after {
+          background: $brand-primary;
+        }
+      }
+    }
+
+    &.one .card__link {
+      background: no-repeat 50% 50% resolve('trade-1.png');
+      background-size: cover;
+
+    }
+
+    &.two .card__link {
+      background: no-repeat 50% 50% resolve('tourism-1.png');
+      background-size: cover;
+
+    }
+
+    &.three .card__link {
+      background: no-repeat 50% 50% resolve('education-1.png');
+      background-size: cover;
+
+    }
+
+    &.four .card__link {
+      background: no-repeat 50% 50% resolve('arts-1.png');
+      background-size: cover;
+
+    }
+
+    &.five .card__link {
+      background: no-repeat 50% 50% resolve('politics-1.png');
+      background-size: cover;
+    }
+  }
+}
+
+#content .homepage--card-deck {
+  .card__link {
+    border-bottom: 0 !important;
+    border-left: 5px solid transparent;
+    color: #fff;
+    display: block;
+    height: 100%;
+    min-height: 240px;
+    padding: 3rem 5rem 9rem 1.5rem !important;
+    position: relative;
+    text-decoration: none;
+    @include adjust-font-size-to(21px);
+
+    &:hover,
+    &:focus {
+      background: #e7e7e7;
+      color: $brand-primary;
+      border-left-color: $brand-primary;
+    }
+
+    &:focus {
+      outline: 2px solid $brand-primary;
+    }
+  }
+}
+
+#top-area {
+  .block-homepage-block {
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      column-gap: 2rem;
+      border-bottom: none;
+
+      &:focus,
+      &:hover {
+        border: solid #0e6bb3 2px;
+      }
+    }
+
+    .content {
+      position: relative;
+      padding-right: 2rem;
+      flex: auto;
+      margin-left: 1rem;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 3rem;
+        right: 0.4rem;
+        width: 3rem;
+        height: 3rem;
+        background-image: resolve('arrow_forward_white.svg');
+        background-position: center center;
+        background-size: 2.4rem auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:hover .content:after,
+    &:focus .content:after {
+      background-color: $white;
+      background-image: resolve('arrow_forward_black.svg');
+    }
+  }
+}
+
 #footer {
   border-top: solid 5px;
   border-image: linear-gradient(to right, #04225b 33%, #78a8cc 33%, #78a8cc 66%, #8c8a85 33%) 5;
