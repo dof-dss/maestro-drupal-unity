@@ -183,10 +183,13 @@
 
     .card__link {
       &:hover {
-        background: $brand-primary;
+        background: $white;
+        filter: $grey;
+        -webkit-filter: grayscale(0.8);
+        -webkit-transition: all .3s ease-in-out;
 
         &::after {
-          background: $brand-primary;
+          background: $white;
         }
       }
     }
@@ -225,7 +228,6 @@
 #content .homepage--card-deck {
   .card__link {
     border-bottom: 0 !important;
-    border-left: 5px solid transparent;
     color: #fff;
     display: block;
     height: 100%;
@@ -237,9 +239,9 @@
 
     &:hover,
     &:focus {
-      background: #e7e7e7;
-      color: $brand-primary;
+      color: $white;
       border-left-color: $brand-primary;
+      text-decoration: underline;
     }
 
     &:focus {
