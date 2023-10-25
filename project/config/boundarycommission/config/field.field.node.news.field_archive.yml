@@ -10,7 +10,7 @@ field_name: field_archive
 entity_type: node
 bundle: news
 label: Archive
-description: 'If you''d like to archive this news item then check the checkbox.'
+description: "If you'd like to archive this news item then check the checkbox."
 required: false
 translatable: false
 default_value:
