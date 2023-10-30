@@ -11,6 +11,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - views_custom_cache_tag
 id: same_topic
 label: 'Same Topic'
 module: views
@@ -174,8 +175,9 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
-        options: {  }
+        type: custom_tag
+        options:
+          custom_tag: 'handy_cache_tags:node:publication'
       empty: {  }
       sorts:
         field_published_date_value:
@@ -298,7 +300,7 @@ display:
           row_class: item
           default_row_class: true
           type: ul
-          wrapper_class: item-list
+          wrapper_class: same-topic
           class: ''
       row:
         type: fields
@@ -319,7 +321,7 @@ display:
       relationships: {  }
       use_more: true
       use_more_always: true
-      use_more_text: 'View all Publications'
+      use_more_text: 'View all Capacity Remuneration Mechanism publications'
       link_display: custom_url
       link_url: '/publications/topic/{{ raw_arguments.tid }}'
       header: {  }
