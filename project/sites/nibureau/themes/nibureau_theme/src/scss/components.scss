@@ -4,3 +4,300 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.top_left {
+  padding-left: 19rem;
+  min-height: 18rem;
+  @media screen and (max-width: $tab) {
+    padding-left: 0;
+  }
+
+  #logo img {
+    height: 17rem;
+    @media screen and (max-width: $tab) {
+      position: relative;
+    }
+  }
+}
+
+#main-menu {
+  background: $white;
+
+  .menu-link,
+  .menu .active,
+  .menu-item.open .menu-toggle-btn {
+    color: $black;
+    @include adjust-font-size-to(16px);
+  }
+
+  .menu
+  .menu-item
+  .active {
+    border-bottom-color: rgba(191,191,191,0.10);
+  }
+
+  .menu-link {
+    &:hover,
+    &:focus {
+      background: $brand-primary;
+      color: $white;
+    }
+  }
+  .menu-main_sub
+  .menu-item
+  span.active {
+    @include adjust-font-size-to(14px);
+    padding: 1rem;
+  }
+
+  .menu-main_sub {
+    background: $brand-primary;
+
+    .menu-item {
+      background: $brand-primary;
+
+      .active {
+        background: $brand-primary;
+        color: $white;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          color: $white;
+          background: $brand-secondary;
+        }
+      }
+    }
+  }
+}
+
+.region-primary-menu .menu_wrapper {
+  border-bottom: solid 5px;
+  border-image: linear-gradient(to right, #04225b 33%, #78a8cc 33%, #78a8cc 66%, #8c8a85 33%) 5;
+}
+
+.homepage--pull-quote {
+  background: resolve('front-banner.png') no-repeat 50%;
+  height: 30rem;
+
+  .container-wrap {
+    padding: 8.4rem 0;
+
+    @media screen and (max-width: $max-grid-width) {
+      padding: 8.4rem 2rem;
+    }
+    @media screen and (max-width: $mob) {
+      padding: 5rem 2rem;
+    }
+  }
+
+  blockquote {
+    @include adjust-font-size-to(40px);
+    font-weight: bold;
+    max-width: 44%;
+    text-shadow: 1px 1px 1px #000;
+    margin-left: 3rem;
+    @media screen and (max-width: $tab) {
+      @include adjust-font-size-to(26px);
+    }
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(22px);
+    }
+
+    p {
+      color: $white;
+    }
+
+    &::before,
+    &::after {
+      background: none;
+      padding: 0;
+    }
+  }
+}
+
+.region-front-welcome {
+  text-align: left;
+}
+
+#block-whatwedo {
+  background: #f6f6f6;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    color: $brand-primary
+  }
+
+  p, img {
+    padding: 1rem;
+  }
+}
+
+#block-howwecanhelp{
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    color: $brand-primary
+  }
+
+  p, img {
+    padding: 1rem;
+  }
+}
+
+.homepage--card-deck {
+  .cards-pack {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+
+    @media screen and (min-width: $phab) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: $tab) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .card {
+    list-style: none;
+    text-align: left;
+
+    .card__link::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 3rem;
+      right: 0.5rem;
+      width: 3rem;
+      height: 3rem;
+      mask: no-repeat 100% 100% resolve('arrow_forward_white.svg');
+      mask-size: cover;
+      background-color: #fff;
+    }
+
+    .card__link {
+      &:hover {
+        background: $white;
+        filter: $grey;
+        -webkit-filter: grayscale(0.8);
+        -webkit-transition: all .3s ease-in-out;
+
+        &::after {
+          background: $white;
+        }
+      }
+    }
+
+    &.one .card__link {
+      background: no-repeat 50% 50% resolve('trade-1.png');
+      background-size: cover;
+
+    }
+
+    &.two .card__link {
+      background: no-repeat 50% 50% resolve('tourism-1.png');
+      background-size: cover;
+
+    }
+
+    &.three .card__link {
+      background: no-repeat 50% 50% resolve('education-1.png');
+      background-size: cover;
+
+    }
+
+    &.four .card__link {
+      background: no-repeat 50% 50% resolve('arts-1.png');
+      background-size: cover;
+
+    }
+
+    &.five .card__link {
+      background: no-repeat 50% 50% resolve('politics-1.png');
+      background-size: cover;
+    }
+  }
+}
+
+#content .homepage--card-deck {
+  .card__link {
+    border-bottom: 0 !important;
+    color: #fff;
+    display: block;
+    height: 100%;
+    min-height: 240px;
+    padding: 3rem 5rem 9rem 1.5rem !important;
+    position: relative;
+    text-decoration: none;
+    @include adjust-font-size-to(21px);
+
+    &:hover,
+    &:focus {
+      color: $white;
+      border-left-color: $brand-primary;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 2px solid $brand-primary;
+    }
+  }
+}
+
+#top-area {
+  .block-homepage-block {
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      column-gap: 2rem;
+      border-bottom: none;
+
+      &:focus,
+      &:hover {
+        border: solid #0e6bb3 2px;
+      }
+    }
+
+    .content {
+      position: relative;
+      padding-right: 2rem;
+      flex: auto;
+      margin-left: 1rem;
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 3rem;
+        right: 0.4rem;
+        width: 3rem;
+        height: 3rem;
+        background-image: resolve('arrow_forward_white.svg');
+        background-position: center center;
+        background-size: 2.4rem auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:hover .content:after,
+    &:focus .content:after {
+      background-color: $white;
+      background-image: resolve('arrow_forward_black.svg');
+    }
+  }
+}
+
+#footer {
+  border-top: solid 5px;
+  border-image: linear-gradient(to right, #04225b 33%, #78a8cc 33%, #78a8cc 66%, #8c8a85 33%) 5;
+}
+
+

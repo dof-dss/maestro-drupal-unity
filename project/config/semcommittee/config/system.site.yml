@@ -3,7 +3,7 @@ _core:
 langcode: en
 uuid: b00ef3b7-244c-4131-848c-a16ea07a6877
 name: 'The Single Electricity Market Committee'
-mail: Test@test.com
+mail: info@cru.ie
 slogan: 'The decision making authority for the Single Electricity Market on the island of Ireland'
 page:
   403: ''
@@ -12,5 +12,5 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
-frontpage_title: 'Welcome to Drupal site'
+frontpage_title: 'Welcome to The Single Electricity Market Committee'
 frontpage_show_title: 0

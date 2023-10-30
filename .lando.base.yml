@@ -14,6 +14,10 @@ env_file:
   - .env
 services:
   appserver:
+    scanner: false
+    overrides:
+      environment:
+        CPPFLAGS: "-DPNG_ARM_NEON_OPT=0"
     xdebug: debug
     build_as_root:
       - /app/.lando/scripts/appserver_build.sh
@@ -158,3 +162,14 @@ tooling:
     description: List all databases
     cmd: mysql -uroot -e "SHOW DATABASES;"
     user: root
+  rebuild-unity-site-themes:
+    service: appserver
+    description: "Re-builds the Unity themes for each sites. Examples:\n\n
+            > Rebuild all site themes\n
+              lando rebuild-unity-site-themes\n
+            > Rebuild single site theme\n
+              lando rebuild-unity-site-themes --site-names octf\n
+            > Rebuild site themes specified - comma separated\n
+              lando rebuild-unity-site-themes --site-names octf,pbni"
+    cmd: "/app/build-themes.sh"
+

@@ -6,6 +6,7 @@ dependencies:
     - node.type.basic_page
     - node.type.board_member
     - node.type.faq
+    - node.type.feature
     - node.type.news
     - node.type.webform
   module:
@@ -100,6 +101,7 @@ type_settings:
       - basic_page
       - board_member
       - faq
+      - feature
       - news
       - webform
   default_moderation_state: draft
