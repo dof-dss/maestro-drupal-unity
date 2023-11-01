@@ -1,0 +1,41 @@
+uuid: 390810f1-df2c-49bb-8c29-2e005aa385d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+    - webform
+id: infolibrarynics
+label: infolibrarynics
+weight: 0
+container_id: GTM-MTWVH4H
+data_layer: dataLayer
+include_classes: false
+whitelist_classes: |-
+  google
+  nonGooglePixels
+  nonGoogleScripts
+  nonGoogleIframes
+blacklist_classes: |-
+  customScripts
+  customPixels
+include_environment: false
+environment_id: ''
+environment_token: ''
+path_toggle: 'exclude listed'
+path_list: |-
+  /admin*
+  /batch*
+  /node/add*
+  /node/*/edit
+  /node/*/delete
+  /user/*/edit*
+  /user/*/cancel*
+role_toggle: 'exclude listed'
+role_list: {  }
+status_toggle: 'exclude listed'
+status_list: |-
+  403
+  404
+conditions: {  }

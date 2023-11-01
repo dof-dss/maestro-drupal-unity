@@ -1,0 +1,29 @@
+uuid: 624e71c2-4fc5-4357-9fb6-d1114c41b205
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.publication_date
+  module:
+    - facets
+    - system
+  theme:
+    - semcommittee_theme
+id: publicationdate
+theme: semcommittee_theme
+region: search_facets
+weight: -9
+provider: null
+plugin: 'facet_block:publication_date'
+settings:
+  id: 'facet_block:publication_date'
+  label: 'Publication Date'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publicationdate
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news\r\n/news/date/*"
