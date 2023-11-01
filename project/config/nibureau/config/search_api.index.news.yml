@@ -1,6 +1,6 @@
 uuid: 332b9cb9-a441-4ec7-8457-cdb89523dc0d
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - field.storage.node.body
@@ -55,6 +55,8 @@ third_party_settings:
       include_language_independent: true
       specific_languages:
         en: '0'
+      use_language_undefined_as_fallback_language: false
+      use_universal_collation: false
 id: news
 name: News
 description: ''

@@ -18,6 +18,7 @@ dependencies:
     - contextual
     - entityqueue
     - file
+    - file_delete_ui
     - layout_builder
     - media
     - menu_admin_per_menu
@@ -40,6 +41,7 @@ permissions:
   - 'access administration menu'
   - 'access administration pages'
   - 'access ckeditor link'
+  - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
   - 'access toolbar'
@@ -75,6 +77,7 @@ permissions:
   - 'delete any document files'
   - 'delete any document media'
   - 'delete any faq content'
+  - 'delete any file'
   - 'delete any file media'
   - 'delete any image files'
   - 'delete any image media'
