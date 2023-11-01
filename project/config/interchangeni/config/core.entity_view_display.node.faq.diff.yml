@@ -43,6 +43,11 @@ targetEntityType: node
 bundle: faq
 mode: diff
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_faq:
     type: entity_reference_revisions_entity_view
     weight: 0
@@ -62,3 +67,4 @@ content:
 hidden:
   langcode: true
   links: true
+  search_api_excerpt: true
