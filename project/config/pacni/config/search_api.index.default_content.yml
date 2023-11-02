@@ -1,6 +1,6 @@
 uuid: 62bc441d-9a94-4710-8a07-069e3a8b7bc1
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.body
@@ -176,6 +176,7 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
   auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
   entity_status: {  }
   entity_type: {  }
   highlight:
