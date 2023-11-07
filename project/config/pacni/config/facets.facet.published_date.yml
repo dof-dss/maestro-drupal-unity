@@ -6,7 +6,11 @@ dependencies:
     - search_api.index.news
     - views.view.news_search
   module:
+    - facets_pretty_paths
     - search_api
+third_party_settings:
+  facets_pretty_paths:
+    coder: default_coder
 id: published_date
 name: 'Published date'
 weight: 0
@@ -52,16 +56,22 @@ processor_configs:
   date_facet_drilldown:
     processor_id: date_facet_drilldown
     weights:
-      build: 5
+      build: -10
     settings: {  }
   date_item:
     processor_id: date_item
     weights:
-      build: -10
+      build: -8
     settings:
       date_display: actual_date
       granularity: 6
       date_format: ''
+      hierarchy: false
+  hierarchy_processor:
+    processor_id: hierarchy_processor
+    weights:
+      build: 5
+    settings: {  }
   raw_value_widget_order:
     processor_id: raw_value_widget_order
     weights:
@@ -72,5 +82,5 @@ processor_configs:
     processor_id: url_processor_handler
     weights:
       pre_query: 50
-      build: -10
+      build: -9
     settings: {  }

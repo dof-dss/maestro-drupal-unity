@@ -1,7 +1,7 @@
 name: 'Migrate SEM Committee'
 type: module
 description: 'SEM Committee complete migrations'
-core_version_requirement: 8.x || ^9
+core_version_requirement: 8.x || ^9 || ^10
 package: 'Custom'
 migration_dependencies:
  required: { }

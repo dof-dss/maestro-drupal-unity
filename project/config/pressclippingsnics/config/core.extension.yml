@@ -57,6 +57,9 @@ module:
   image: 0
   inline_entity_form: 0
   inline_form_errors: 0
+  jquery_ui: 0
+  jquery_ui_autocomplete: 0
+  jquery_ui_menu: 0
   language: 0
   layout_builder: 0
   layout_discovery: 0
@@ -91,6 +94,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  phpass: 0
   pressclippingsnics_clippingtidy: 0
   rdf: 0
   redirect: 0

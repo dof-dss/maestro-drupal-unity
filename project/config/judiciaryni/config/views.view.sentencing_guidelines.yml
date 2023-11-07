@@ -106,7 +106,7 @@ display:
             alter_text: false
             text: '{{ name }}-{{ tid }}'
             make_link: true
-            path: '/judiciary-decision-types/type/{{ name|render|striptags|trim|lower|replace({'' '' : ''-'', '','' : '''' }) }}-{{ tid }}'
+            path: "/judiciary-decision-types/type/{{ name|render|striptags|trim|lower|replace({' ' : '-', ',' : '' }) }}-{{ tid }}"
             absolute: false
             external: false
             replace_spaces: true
