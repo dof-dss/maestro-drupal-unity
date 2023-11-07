@@ -57,6 +57,8 @@ third_party_settings:
     multilingual:
       limit_to_content_language: false
       include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      use_universal_collation: false
 id: decisions_index
 name: 'Decisions index'
 description: ''
@@ -162,7 +164,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: !!float 5
+    boost: 5.0
     dependencies:
       module:
         - node
@@ -170,7 +172,7 @@ field_settings:
     label: 'Title fulltext'
     property_path: aggregated_field
     type: text
-    boost: !!float 13
+    boost: 13.0
     configuration:
       type: union
       fields:

@@ -68,9 +68,10 @@ commands:
       - run:
           name: Switch dof-dss packages to HEAD on development branch
           command: |
-            composer require dof-dss/nicsdru_unity_theme:dev-9.x-dev \
-              dof-dss/nicsdru_origins_modules:dev-9.x-dev \
-                dof-dss/nicsdru_unity_modules:dev-9.x-dev
+            composer require dof-dss/nicsdru_unity_theme:dev-10.x-dev \
+              dof-dss/nicsdru_origins_modules:dev-10.x-dev \
+              dof-dss/nicsdru_unity_modules:dev-10.x-dev \
+              dof-dss/nicsdru_unity_profile:dev-10.x-dev
   install_psh_cli:
     description: "Install the Platform.sh CLI tool"
     steps:
@@ -249,7 +250,7 @@ jobs:
             do
               result=$(platform drush "st -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Drupal bootstrap : Successful" || true) )
               if [[ -n $result ]]; then
-                result2=$(platform drush "pml -l ${site}" -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Fastly (fastly)" || true) )
+                result2=$(platform drush "pml --status=enabled -l ${site}" -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH | (grep "Fastly (fastly)" || true) )
                 if [[ -n $result2 ]]; then
                   echo "***** Uninstall Fastly - ${site} *****"
                   platform drush "pmu fastly -l ${site}" -y -p $PLATFORM_PROJECT -e $EDGE_BUILD_BRANCH

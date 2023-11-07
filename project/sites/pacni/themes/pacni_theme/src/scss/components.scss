@@ -121,6 +121,13 @@
   border-bottom: none;
 }
 
+#main-menu .menu-main_sub .menu-item {
+  @media screen and (max-width: 766px)
+  {
+    background: $brand-secondary;
+  }
+}
+
 .region-bottom-widget-1,
 .region-bottom-widget-2,
 .region-bottom-widget-3,

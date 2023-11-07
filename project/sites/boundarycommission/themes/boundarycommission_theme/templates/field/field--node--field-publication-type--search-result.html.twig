@@ -37,7 +37,10 @@
 */
 #}
 {% for item in items %}
-  <span class="metaListItem">{{ item.content }}</span>
+  <p class="publication_type">
+    <span>Type:</span>
+    <span>{{ item.content }}</span>
+  </p>
 {% endfor %}
 
 

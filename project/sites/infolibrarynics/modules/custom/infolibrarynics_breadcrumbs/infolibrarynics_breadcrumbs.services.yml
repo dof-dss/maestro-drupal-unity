@@ -1,6 +1,6 @@
 services:
-  infolibrarynics_breadcrumbs.breadcrumb.view_page:
-    class: Drupal\infolibrarynics_breadcrumbs\ViewPageBreadcrumb
+  infolibrarynics_breadcrumbs.breadcrumb.glossary:
+    class: Drupal\infolibrarynics_breadcrumbs\GlossaryBreadcrumb
     arguments: [ '@request_stack', '@title_resolver' ]
     tags:
       - { name: breadcrumb_builder, priority: 1011 }
