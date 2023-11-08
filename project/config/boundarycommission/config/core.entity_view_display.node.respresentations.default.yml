@@ -26,11 +26,10 @@ content:
     weight: 2
     region: content
   field_representation_stage:
-    type: 'Map taxonomy term to facet'
+    type: entity_reference_label
     label: above
     settings:
-      search_page_url: representations-received
-      facets: stage
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
