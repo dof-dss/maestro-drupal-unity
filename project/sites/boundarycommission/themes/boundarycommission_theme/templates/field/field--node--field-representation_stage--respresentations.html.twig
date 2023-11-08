@@ -36,7 +36,9 @@
  * @see template_preprocess_field()
  */
 #}
+{% for item in items %}
 <p class="publication_type">
   <span>Stage:</span>
-  <span>{{ representation_link }}</span>
+  <span>{{ item.content }}</span>
 </p>
+{% endfor %}
