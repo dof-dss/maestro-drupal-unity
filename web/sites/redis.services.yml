@@ -28,7 +28,8 @@ services:
     arguments: [true]
 
   # Replaces the default flood backend with a redis implementation.
-  # (Commented out so that admins may regain control of the flood table)
-  flood:
-    class: Drupal\Core\Flood\FloodInterface
-    factory: ['@redis.flood.factory', get]
+  # (Commented out so that admins may regain control of the flood table by
+  # using the flood_control module.)
+  #flood:
+  #  class: Drupal\Core\Flood\FloodInterface
+  #  factory: ['@redis.flood.factory', get]
