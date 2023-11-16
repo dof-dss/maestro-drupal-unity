@@ -10,8 +10,8 @@ dependencies:
     - industrialcourt_theme
 id: footerlinks
 theme: industrialcourt_theme
-region: footer_first
-weight: 0
+region: footer
+weight: -8
 provider: null
 plugin: 'system_menu_block:menu-footer-links'
 settings:
