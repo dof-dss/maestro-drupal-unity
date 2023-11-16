@@ -59,22 +59,31 @@
   border-bottom: none;
 }
 
-.footer-area {
-  .footer-area .column {
-    padding: 0;
-  }
-  .column:last-child {
-    float: none;
-    width: unset;
-  }
-}
+#footer {
 
-#footer .footer-menu li {
-  margin-right: .5rem;
-}
+  .container-wrap {
+    display: block;
+  }
 
-#footer .column li {
-  display: inline-block;
-  border-bottom-style: none;
-  padding: 0 .8rem 0 0;
+  @include breakpoint($tab) {
+    padding: 2%;
+  }
+
+  .footer-menu li {
+    @include adjust-font-size-to(16px);
+    padding-left: 0;
+    list-style-type: none;
+    @include breakpoint($mob) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+      margin-right: .5rem;
+    }
+
+    a {
+      @media screen and (min-width: $mob) {
+        display: block;
+      }
+    }
+  }
 }
