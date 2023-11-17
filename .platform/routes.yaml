@@ -55,14 +55,6 @@
 'https://lgbc-ni.org.uk/':
     type: redirect
     to: 'https://www.lgbc-ni.org.uk/'
-'https://www.semcommittee.com/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://semcommittee.com/':
-    type: redirect
-    to: 'https://www.semcommittee.com/'
 'https://www.nibureau.com/':
     type: upstream
     upstream: 'unity_svr_3:http'
