@@ -324,7 +324,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h3><a href=\"{{ search_api_url }}\">{{ field_last_name }}{{ ', '|t }}{{ field_first_name }}</h3>\r\n{{ field_manager_organisation }}{{ ' - ' }}{{ field_organisation_type }}"
+            text: "<h3><a href=\"{{ search_api_url }}\">{{ field_last_name }}{{ ', '|t }}{{ field_first_name }}</a></h3>\r\n{{ field_manager_organisation }}{{ ' - ' }}{{ field_organisation_type }}"
             make_link: false
             path: ''
             absolute: false
@@ -550,6 +550,7 @@ display:
         - 'config:field.storage.node.field_manager_organisation'
         - 'config:field.storage.node.field_organisation_type'
         - 'config:search_api.index.managers_index'
+        - 'search_api_list:managers_index'
   members_search_page:
     id: members_search_page
     display_title: 'Members search page'
@@ -581,3 +582,4 @@ display:
         - 'config:field.storage.node.field_manager_organisation'
         - 'config:field.storage.node.field_organisation_type'
         - 'config:search_api.index.managers_index'
+        - 'search_api_list:managers_index'
