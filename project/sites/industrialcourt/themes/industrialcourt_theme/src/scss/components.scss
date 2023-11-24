@@ -90,3 +90,31 @@
   display: inline-block;
   border-bottom-style: none;
 }
+
+.decision-fields {
+  .delivered-field {
+    margin-bottom: 0;
+  }
+
+  .type-field {
+    margin-bottom: 0;
+
+    div {
+      margin-bottom: 1.8rem;
+    }
+  }
+
+  .union-field {
+      margin: 1.8rem 0 0 0;
+  }
+
+  .employer-field {
+    margin: 1.8rem 0 0 0;
+  }
+
+  .decisions-body {
+    margin-top: 1.8rem;
+  }
+}
+
+
