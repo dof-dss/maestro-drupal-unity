@@ -767,14 +767,14 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: 'Salaried Judicial Complement (as at {{ field_date_appointed }})'
+            text: 'Salaried Judicial Complement (as at {{ field_date_appointed|spaceless }})'
             make_link: false
             path: ''
             absolute: false
             external: false
             replace_spaces: false
             path_case: none
-            trim_whitespace: false
+            trim_whitespace: true
             alt: ''
             rel: ''
             link_class: ''
@@ -798,7 +798,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: h2
-          element_wrapper_class: ''
+          element_wrapper_class: salaried-date
           element_default_classes: false
           empty: ''
           hide_empty: false

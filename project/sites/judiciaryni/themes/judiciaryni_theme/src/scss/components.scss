@@ -185,3 +185,7 @@ p.published-date {
     }
   }
 }
+
+.salaried-date {
+  @include adjust-font-size-to(26px);
+}
