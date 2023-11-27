@@ -343,7 +343,7 @@ display:
       use_more_always: true
       use_more_text: 'More news'
       link_display: custom_url
-      link_url: 'http://lgbc-ni.org.uk.lndo.site/news'
+      link_url: 'http://lgbc-ni.org.uk/news'
       header: {  }
       footer: {  }
       display_extenders:
@@ -365,7 +365,9 @@ display:
     display_options:
       exposed_block: true
       display_extenders:
-        metatag_display_extender: {  }
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:
