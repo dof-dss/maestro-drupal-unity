@@ -52,6 +52,7 @@ module:
   filelog: 0
   filter: 0
   flag: 0
+  flood_control: 0
   geocoder: 0
   geocoder_address: 0
   geocoder_field: 0
@@ -131,7 +132,7 @@ module:
   unity_frontpage: 0
   unity_image_styles: 0
   unity_internal_link_checker: 0
-  unity_map_embed: 0
+  unity_map_block: 0
   unity_search_pages: 0
   update: 0
   user: 0

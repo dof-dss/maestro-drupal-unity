@@ -20,3 +20,4 @@
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-pacni" "/app/log/pacni/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-interchangeni" "/app/log/interchangeni/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-industrialcourt" "/app/log/industrialcourt/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
+/bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-judiciaryni" "/app/log/judiciaryni/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"

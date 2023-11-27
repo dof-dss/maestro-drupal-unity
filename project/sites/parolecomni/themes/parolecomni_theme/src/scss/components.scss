@@ -10,37 +10,51 @@
 }
 
 #main-menu {
-  background: rgba(0,0,0,0);
+  background: $white;
 
-  li {
-    @media screen and (min-width: $tab) {
-      border-right: 1px solid $white;
+  .menu-link,
+  .menu .active,
+  .menu-item.open .menu-toggle-btn {
+    color: $brand-primary;
+    @include adjust-font-size-to(14px);
+  }
+
+  .menu .menu-item .active {
+    border-bottom-color: $brand-primary;
+  }
+
+  .menu-link {
+    &:hover,
+    &:focus {
+      background: $brand-primary;
+      color: $white;
     }
   }
-  li:last-child {
-    border-right: none;
+
+  .menu-main_sub .menu-item span.active {
+    @include adjust-font-size-to(14px);
+    border-bottom-color: $brand-secondary;
+    padding: 1rem;
   }
 
-  .menu-link, #main-menu .menu .active {
-    color: $charcoal;
-  }
+  .menu-main_sub {
+    background: $brand-primary;
 
-  .menu-item.leaf.active-trail {
-    @media screen and (max-width: $tab) {
-      border-bottom: 1px solid $white;
+    .menu-item {
+      .active {
+        background: $brand-secondary;
+        color: $white;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          color: $white;
+          background: $brand-secondary;
+        }
+      }
     }
   }
-
-  .menu-link:hover, #main-menu .menu-link:focus {
-    color: $white;
-    background: $brand-secondary;
-  }
-}
-
-#main-menu .menu .menu-item .active, #main-menu .menu .menu-item .active + .menu-main_sub .title a {
-  background: rgba(191,191,191,0.25);
-  border-bottom: 5px solid $brand-primary;
-  color: $charcoal;
 }
 
 .front .front-banner {
@@ -58,24 +72,4 @@
 
 #content a:not(.toolbar-icon):not(.file-link):not(.facet--btn):not(.facet-item--link):not(.btn):not(.ui-menu-item-wrapper):not(.thwooper):not(.value):not(.card__title-link):not(.card):not(.layout-builder__link):not(.facets-soft-limit-link), .content a:not(.toolbar-icon):not(.file-link):not(.facet--btn):not(.facet-item--link):not(.btn):not(.ui-menu-item-wrapper):not(.thwooper):not(.value):not(.card__title-link):not(.card):not(.layout-builder__link):not(.facets-soft-limit-link), #footer a:not(.toolbar-icon):not(.file-link):not(.facet--btn):not(.facet-item--link):not(.btn):not(.ui-menu-item-wrapper):not(.thwooper):not(.value):not(.card__title-link):not(.card):not(.layout-builder__link):not(.facets-soft-limit-link) {
   border-bottom: none;
-}
-
-.footer-area {
-  .footer-area .column {
-    padding: 0;
-  }
-  .column:last-child {
-    float: none;
-    width: unset;
-  }
-}
-
-#footer .footer-menu li {
-  margin-right: .5rem;
-}
-
-#footer .column li {
-  display: inline-block;
-  border-bottom-style: none;
-  padding: 0 .8rem 0 0;
 }

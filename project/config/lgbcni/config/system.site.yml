@@ -12,5 +12,5 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
-frontpage_title: 'Welcome to Drupal site'
+frontpage_title: 'Welcome to Local Government Boundaries Commissioner for Northern Ireland'
 frontpage_show_title: 0

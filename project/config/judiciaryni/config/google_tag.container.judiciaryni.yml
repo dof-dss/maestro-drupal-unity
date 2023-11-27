@@ -8,7 +8,7 @@ id: judiciaryni
 label: Judiciaryni
 weight: 0
 tag_container_ids:
-  - GTM-XXXXX
+  - GTM-PBVRJPB
 advanced_settings:
   gtm:
     data_layer: dataLayer
@@ -29,14 +29,7 @@ conditions:
   request_path:
     id: request_path
     negate: true
-    pages: |-
-      /admin*
-      /batch*
-      /node/add*
-      /node/*/edit
-      /node/*/delete
-      /user/*/edit*
-      /user/*/cancel*
+    pages: "/admin*\r\n/batch*\r\n/node/add*\r\n/node/*/edit\r\n/node/*/delete\r\n/user/*/edit*\r\n/user/*/cancel*"
   response_code:
     id: response_code
     negate: true
@@ -44,13 +37,13 @@ conditions:
       403
       404
 events:
+  custom: {  }
   generate_lead:
     value: ''
     currency: ''
-  search: {  }
-  webform_purchase: {  }
-  custom: {  }
   login:
     method: CMS
+  search: {  }
   sign_up:
     method: CMS
+  webform_purchase: {  }
