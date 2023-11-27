@@ -80,7 +80,21 @@
 <article{{ attributes.addClass(classes).setAttribute('id', 'node-' ~ node.id).removeAttribute('role') }}>
   {% endif %}
   <h1>{{ content.field_decision_title }}</h1>
-    {{ content.body }}
+  <div class="decision-fields">
+    <p class="delivered-field">
+      <span class="delivered">{{ 'Delivered: '|t }}{{ content.field_published_date }}</span>
+    </p>
+    <p class="type-field">
+      <span class="decision-type">{{ 'Decision type: '|t }}{{ content.field_decision_type }}</span>
+    </p>
+    <p class="union-field">
+      <span class="decision-union">{{ 'Union: '|t }}{{ content.field_union }}</span>
+    </p>
+    <p class="employer-field">
+      <span class="decision-employer">{{ 'Employer name: '|t }}{{ content.field_employer_name }}</span>
+    </p>
+    <div class="decisions-body">{{ content.body }}</div>
+  </div>
   {% apply spaceless %}
   {% endapply %}
   {{ content.field_attachment }}

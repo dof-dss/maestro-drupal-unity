@@ -26,12 +26,11 @@ third_party_settings:
       children:
         - field_employer_name
         - field_union
-        - field_published_date
         - field_decision_type
       label: 'Additional content details'
       parent_name: ''
       region: content
-      weight: 2
+      weight: 3
       format_type: html_element
       format_settings:
         classes: field-collection
@@ -54,7 +53,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_attachment:
     type: entity_reference_entity_view
@@ -63,7 +62,7 @@ content:
       view_mode: embed
       link: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_decision_type:
     type: entity_reference_label
@@ -83,12 +82,12 @@ content:
     region: content
   field_published_date:
     type: datetime_default
-    label: inline
+    label: hidden
     settings:
       timezone_override: ''
       format_type: unity_date
     third_party_settings: {  }
-    weight: 8
+    weight: 0
     region: content
   field_union:
     type: string

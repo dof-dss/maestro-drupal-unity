@@ -10,8 +10,8 @@ dependencies:
     - pacni_theme
 id: footerlinks
 theme: pacni_theme
-region: footer_first
-weight: 0
+region: footer
+weight: -9
 provider: null
 plugin: 'system_menu_block:menu-footer-links'
 settings:
