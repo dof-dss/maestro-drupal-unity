@@ -343,7 +343,7 @@ display:
       use_more_always: true
       use_more_text: 'More news'
       link_display: custom_url
-      link_url: 'http://lgbc-ni.org.uk/news'
+      link_url: /news
       header: {  }
       footer: {  }
       display_extenders:
