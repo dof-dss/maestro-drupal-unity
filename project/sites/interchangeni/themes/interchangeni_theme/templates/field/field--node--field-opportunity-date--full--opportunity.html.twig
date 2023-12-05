@@ -44,6 +44,13 @@
       <p>
         <span>{{ 'Closing date: ' }}</span><span>{{ item.content.end_date }}</span>
       </p>
+    {% elseif item.content.end_date['#attributes'].datetime|date('U') == 'now'|date('U') %}
+      <p class="opportunity-open">
+        <span>{{ 'Date added: ' }}</span><span>{{ item.content }}</span>
+      </p>
+      <p>
+        <span>{{ 'Closing date: ' }}</span><span>{{ item.content }}</span>
+      </p>
     {% else %}
       <p class="opportunity-closed">
         <span>{{ 'Closed: ' }}</span><span>{{ item.content.end_date }}</span>
