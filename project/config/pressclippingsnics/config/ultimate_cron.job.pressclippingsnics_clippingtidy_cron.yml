@@ -1,0 +1,29 @@
+uuid: 2fb874f9-332b-4188-97da-be22302d5795
+langcode: en
+status: true
+dependencies:
+  module:
+    - pressclippingsnics_clippingtidy
+title: 'Press Clipping content archiver '
+id: pressclippingsnics_clippingtidy_cron
+weight: 0
+module: pressclippingsnics_clippingtidy
+callback: pressclippingsnics_clippingtidy_cron
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '*/15+@ * * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000
