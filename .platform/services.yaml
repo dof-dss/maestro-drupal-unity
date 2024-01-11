@@ -21,6 +21,7 @@ db:
             - lgbcnidb
             - semcommitteedb
             - nibureaudb
+            - liofadb
         endpoints:
             pacni:
                 default_schema: pacnidb
@@ -66,6 +67,10 @@ db:
                 default_schema: nibureaudb
                 privileges:
                     nibureaudb: admin
+            liofa:
+                default_schema: liofadb
+                privileges:
+                    liofadb: admin
 solr_8_11:
     type: 'solr:8.11'
     disk: 1024
@@ -91,6 +96,8 @@ solr_8_11:
                 conf_dir: !archive solr_config/
             nibureau_index:
                 conf_dir: !archive solr_config/
+            liofa_index:
+                conf_dir: !archive solr_config/
         endpoints:
             pacni:
                 core: pacni_index
@@ -112,5 +119,7 @@ solr_8_11:
                 core: semcommittee_index
             nibureau:
                 core: nibureau_index
+            liofa:
+                core: liofa_index
 redis:
     type: 'redis:6.0'
