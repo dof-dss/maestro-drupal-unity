@@ -1,0 +1,24 @@
+uuid: a3a2f993-49b5-4561-9e05-9ad61ce41a28
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: tO1mNPPnctB1Gq8shitxaK9xI1iLrGwqOHnQNcMGogw
+id: publication_pattern
+label: 'Publication pattern'
+type: 'canonical_entities:node'
+pattern: 'publications/[node:title]'
+selection_criteria:
+  c79f8a57-5e28-4ca6-9744-5981bf13982e:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: c79f8a57-5e28-4ca6-9744-5981bf13982e
+    context_mapping:
+      node: node
+    bundles:
+      publication: publication
+selection_logic: and
+weight: -5
+relationships: {  }

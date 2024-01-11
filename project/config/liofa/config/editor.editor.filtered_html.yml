@@ -1,0 +1,49 @@
+uuid: 92f4ec16-aad7-4e4d-a76d-878399f50ae1
+langcode: en-gb
+status: false
+dependencies:
+  config:
+    - filter.format.filtered_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: bKGBNZh0mMpw42wc3TvYsVbnpjFK_BPEKr26PPkcGr0
+format: filtered_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+        -
+          name: Tools
+          items:
+            - Source
+  plugins: {  }
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null
