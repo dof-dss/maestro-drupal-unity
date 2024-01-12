@@ -6,7 +6,9 @@ session:
 url:
   source: path_prefix
   prefixes:
-    en-gb: ''
+    en: en
+    ga: ga
   domains:
-    en-gb: ''
+    en: ''
+    ga: ''
 selected_langcode: site_default
