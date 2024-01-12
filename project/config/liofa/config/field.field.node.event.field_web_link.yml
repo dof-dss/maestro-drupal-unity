@@ -1,0 +1,23 @@
+uuid: 085dd6ba-2325-478a-9866-64b39393823b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_web_link
+    - node.type.event
+  module:
+    - link
+id: node.event.field_web_link
+field_name: field_web_link
+entity_type: node
+bundle: event
+label: 'Web link'
+description: 'If there is a website or page for the event, please enter it here. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

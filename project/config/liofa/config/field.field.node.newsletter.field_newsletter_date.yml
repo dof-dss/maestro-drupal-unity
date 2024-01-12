@@ -1,0 +1,21 @@
+uuid: f3ecef05-bbc4-4233-ab26-63c8473f2b91
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_newsletter_date
+    - node.type.newsletter
+  module:
+    - datetime
+id: node.newsletter.field_newsletter_date
+field_name: field_newsletter_date
+entity_type: node
+bundle: newsletter
+label: Date
+description: 'The month and year in which the newsletter was published (this value is used for sorting newsletters in chronological order).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

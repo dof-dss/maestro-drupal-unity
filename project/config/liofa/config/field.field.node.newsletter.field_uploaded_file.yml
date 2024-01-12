@@ -1,0 +1,27 @@
+uuid: 87fdeaca-b800-41cf-bf4d-8bed9bc5d4e6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_uploaded_file
+    - node.type.newsletter
+  module:
+    - file
+id: node.newsletter.field_uploaded_file
+field_name: field_uploaded_file
+entity_type: node
+bundle: newsletter
+label: File
+description: 'The file (typically, in Adobe PDF format) containing the newsletter'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: newsletters
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

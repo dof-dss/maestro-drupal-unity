@@ -1,0 +1,33 @@
+uuid: 6c43be90-a6d7-43e7-9ec6-67ca7e15479f
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.surname.body
+    - field.field.node.surname.field_heritage_surname_image
+    - node.type.surname
+  module:
+    - text
+    - user
+id: node.surname.teaser
+targetEntityType: node
+bundle: surname
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_heritage_surname_image: true
+  langcode: true

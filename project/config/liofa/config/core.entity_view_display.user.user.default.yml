@@ -3,6 +3,8 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_user_firstname
+    - field.field.user.user.field_user_lastname
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -28,4 +30,6 @@ content:
     weight: 0
     region: content
 hidden:
+  field_user_firstname: true
+  field_user_lastname: true
   langcode: true

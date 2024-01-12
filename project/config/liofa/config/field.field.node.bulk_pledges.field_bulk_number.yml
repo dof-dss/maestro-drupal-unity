@@ -1,0 +1,23 @@
+uuid: 15a65d78-7045-4461-bacd-45b1851f4f86
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bulk_number
+    - node.type.bulk_pledges
+id: node.bulk_pledges.field_bulk_number
+field_name: field_bulk_number
+entity_type: node
+bundle: bulk_pledges
+label: 'Number of pledges'
+description: 'The number of pledges collected.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

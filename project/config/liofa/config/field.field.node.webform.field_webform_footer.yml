@@ -1,0 +1,22 @@
+uuid: acda32d2-abe0-4267-a0cb-4ce075fd09dd
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_webform_footer
+    - node.type.webform
+  module:
+    - text
+id: node.webform.field_webform_footer
+field_name: field_webform_footer
+entity_type: node
+bundle: webform
+label: Footer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

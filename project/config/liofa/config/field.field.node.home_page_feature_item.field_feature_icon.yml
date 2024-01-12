@@ -1,0 +1,38 @@
+uuid: 0080f05c-7202-4079-93be-1c8769d6c3d6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_icon
+    - node.type.home_page_feature_item
+  module:
+    - image
+id: node.home_page_feature_item.field_feature_icon
+field_name: field_feature_icon
+entity_type: node
+bundle: home_page_feature_item
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: sites/default/images/feature-item
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

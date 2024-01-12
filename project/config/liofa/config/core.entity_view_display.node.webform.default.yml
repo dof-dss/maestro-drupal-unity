@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.webform.body
+    - field.field.node.webform.field_webform_footer
+    - field.field.node.webform.field_webform_header
     - field.field.node.webform.webform
     - node.type.webform
   module:
@@ -24,6 +26,11 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -37,4 +44,6 @@ content:
     weight: 102
     region: content
 hidden:
+  field_webform_footer: true
+  field_webform_header: true
   langcode: true

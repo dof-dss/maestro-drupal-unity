@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.faq.field_faq
+    - field.field.node.faq.field_faq_question
     - field.field.node.faq.field_meta_tags
     - node.type.faq
   module:
@@ -16,6 +17,11 @@ targetEntityType: node
 bundle: faq
 mode: teaser
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -23,5 +29,6 @@ content:
     region: content
 hidden:
   field_faq: true
+  field_faq_question: true
   field_meta_tags: true
   langcode: true

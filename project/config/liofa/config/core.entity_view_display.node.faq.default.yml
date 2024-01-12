@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.faq.field_faq
+    - field.field.node.faq.field_faq_question
     - field.field.node.faq.field_meta_tags
     - node.type.faq
   module:
@@ -27,6 +28,7 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  field_faq_question: true
   field_meta_tags: true
   langcode: true
   links: true

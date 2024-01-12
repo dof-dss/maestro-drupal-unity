@@ -1,0 +1,18 @@
+uuid: 4575513b-8863-4eb5-bddb-644373f328d2
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Phrase of the week'
+type: phrase_of_the_week
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

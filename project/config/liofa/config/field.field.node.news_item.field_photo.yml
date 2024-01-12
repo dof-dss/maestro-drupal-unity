@@ -1,0 +1,33 @@
+uuid: 538113f1-349f-43a8-afd3-f7c7f0dd5fc4
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photo
+    - node.type.news_item
+  module:
+    - image
+id: node.news_item.field_photo
+field_name: field_photo
+entity_type: node
+bundle: news_item
+label: Photo
+description: 'Choose an image from the media browser to display on the news item.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: images/news
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '5 MB'
+  max_resolution: ''
+  min_resolution: 600x400
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image: 0
+field_type: image

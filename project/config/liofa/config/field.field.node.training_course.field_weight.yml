@@ -1,0 +1,23 @@
+uuid: 9ad5461b-38aa-4fd1-ab7a-c7c6488261a3
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.training_course
+id: node.training_course.field_weight
+field_name: field_weight
+entity_type: node
+bundle: training_course
+label: Weight
+description: 'Giving items a weight makes it easier to sort them in a view.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 200
+  prefix: ''
+  suffix: ''
+field_type: integer

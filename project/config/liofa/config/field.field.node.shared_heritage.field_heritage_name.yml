@@ -1,0 +1,19 @@
+uuid: badf89f3-f7a7-45db-919f-777ad7c3b662
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_heritage_name
+    - node.type.shared_heritage
+id: node.shared_heritage.field_heritage_name
+field_name: field_heritage_name
+entity_type: node
+bundle: shared_heritage
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

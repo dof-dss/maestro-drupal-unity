@@ -1,0 +1,27 @@
+uuid: 381c5f8a-7a4b-4d03-b4a8-551c6b137bfe
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_course_zip
+    - node.type.training_course
+  module:
+    - file
+id: node.training_course.field_course_zip
+field_name: field_course_zip
+entity_type: node
+bundle: training_course
+label: 'Zip file'
+description: 'Upload a zip file for the course module (for users to download and use offline).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: resources/course
+  file_extensions: zip
+  max_filesize: ''
+  description_field: false
+field_type: file

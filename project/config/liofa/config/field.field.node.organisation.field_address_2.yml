@@ -1,0 +1,19 @@
+uuid: 416916e7-15c5-48fb-8af1-fd9c73dd18b6
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_2
+    - node.type.organisation
+id: node.organisation.field_address_2
+field_name: field_address_2
+entity_type: node
+bundle: organisation
+label: 'Address line 2'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

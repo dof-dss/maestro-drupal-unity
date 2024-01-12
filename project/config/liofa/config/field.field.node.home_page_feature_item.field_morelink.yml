@@ -1,0 +1,33 @@
+uuid: db0ef156-caa5-40c5-962c-6c577a1f761e
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_morelink
+    - node.type.home_page_feature_item
+    - node.type.page
+    - node.type.webform
+id: node.home_page_feature_item.field_morelink
+field_name: field_morelink
+entity_type: node
+bundle: home_page_feature_item
+label: Link
+description: 'Select a page within the site to open when the user clicks the "more" link.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      page: page
+      webform: webform
+    sort:
+      field: title
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference
