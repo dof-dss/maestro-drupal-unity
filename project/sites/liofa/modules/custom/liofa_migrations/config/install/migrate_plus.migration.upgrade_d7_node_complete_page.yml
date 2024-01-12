@@ -77,9 +77,17 @@ process:
       plugin: get
       source: comment
   body:
-    -
-      plugin: get
+    - plugin: get
       source: body
+    - plugin: media_wysiwyg_filter
+    - plugin: filter_absolute_links
+
+      replace_urls:
+        http://www.liofa.eu
+        https://www.liofa.eu
+    - plugin: site_files_filter
+      from_ref: sites/liofa/files
+      to_ref: files/liofa
   field_metatag:
     -
       plugin: d7_metatag_entities
