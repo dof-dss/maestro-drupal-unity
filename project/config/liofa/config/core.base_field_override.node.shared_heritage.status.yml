@@ -1,0 +1,22 @@
+uuid: 94223c37-7c80-47ce-9f3a-ffadb5234743
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shared_heritage
+id: node.shared_heritage.status
+field_name: status
+entity_type: node
+bundle: shared_heritage
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

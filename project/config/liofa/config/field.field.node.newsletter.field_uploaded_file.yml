@@ -14,7 +14,7 @@ bundle: newsletter
 label: File
 description: 'The file (typically, in Adobe PDF format) containing the newsletter'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

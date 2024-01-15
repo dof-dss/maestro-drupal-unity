@@ -14,7 +14,7 @@ bundle: event
 label: Photo
 description: 'Choose an image from the media browser to display on the news item.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

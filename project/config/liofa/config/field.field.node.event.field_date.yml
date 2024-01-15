@@ -14,7 +14,7 @@ bundle: event
 label: 'Start date and time of event'
 description: 'The date and time the event starts.'
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

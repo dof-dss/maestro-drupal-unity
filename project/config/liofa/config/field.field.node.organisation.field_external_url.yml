@@ -12,7 +12,7 @@ bundle: organisation
 label: Link
 description: "The address of the partner's website."
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

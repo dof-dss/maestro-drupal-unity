@@ -14,7 +14,7 @@ bundle: newsletter
 label: Date
 description: 'The month and year in which the newsletter was published (this value is used for sorting newsletters in chronological order).'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

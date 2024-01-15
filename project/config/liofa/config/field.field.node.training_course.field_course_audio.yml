@@ -14,7 +14,7 @@ bundle: training_course
 label: Audio
 description: 'Upload the course notes (typically, an MP3 file)'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

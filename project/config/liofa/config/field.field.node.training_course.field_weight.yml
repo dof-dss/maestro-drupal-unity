@@ -12,7 +12,7 @@ bundle: training_course
 label: Weight
 description: 'Giving items a weight makes it easier to sort them in a view.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

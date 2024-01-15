@@ -1,0 +1,20 @@
+uuid: 844f79cc-7d55-44a1-bc41-fadcc616b53e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shared_heritage
+id: node.shared_heritage.menu_link
+field_name: menu_link
+entity_type: node
+bundle: shared_heritage
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

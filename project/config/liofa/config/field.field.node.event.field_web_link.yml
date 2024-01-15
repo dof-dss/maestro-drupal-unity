@@ -14,7 +14,7 @@ bundle: event
 label: 'Web link'
 description: 'If there is a website or page for the event, please enter it here. '
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

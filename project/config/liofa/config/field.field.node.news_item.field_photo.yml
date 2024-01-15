@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_photo
     - node.type.news_item
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.news_item.field_photo
 field_name: field_photo
 entity_type: node

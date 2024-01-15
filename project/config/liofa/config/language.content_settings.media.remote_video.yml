@@ -4,6 +4,13 @@ status: true
 dependencies:
   config:
     - media.type.remote_video
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 _core:
   default_config_hash: HILKif5JKI3yQK5RYNv69tIhkfp3lb3IeYmCwn0o8lM
 id: media.remote_video

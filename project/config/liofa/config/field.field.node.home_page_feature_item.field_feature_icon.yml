@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_feature_icon
     - node.type.home_page_feature_item
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.home_page_feature_item.field_feature_icon
 field_name: field_feature_icon
 entity_type: node
@@ -14,7 +21,7 @@ bundle: home_page_feature_item
 label: Icon
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

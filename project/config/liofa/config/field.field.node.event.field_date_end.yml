@@ -14,7 +14,7 @@ bundle: event
 label: 'End date and time of event'
 description: 'The optional date and time the event ends.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

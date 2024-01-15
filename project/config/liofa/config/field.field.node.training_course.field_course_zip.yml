@@ -14,7 +14,7 @@ bundle: training_course
 label: 'Zip file'
 description: 'Upload a zip file for the course module (for users to download and use offline).'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
