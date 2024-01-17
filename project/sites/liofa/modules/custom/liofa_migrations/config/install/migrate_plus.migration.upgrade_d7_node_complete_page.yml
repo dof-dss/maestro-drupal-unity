@@ -88,6 +88,18 @@ process:
     - plugin: site_files_filter
       from_ref: sites/liofa/files
       to_ref: files/liofa
+  body/0/format:
+    - plugin: static_map
+      bypass: true
+      source: body/0/format
+      map:
+        full_html: full_html
+        filtered_html_with_images: basic_html
+        wysiwyg: basic_html
+        filtered_html_with_tokens: basic_html
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        plain_text: plain_text
   field_metatag:
     -
       plugin: d7_metatag_entities
