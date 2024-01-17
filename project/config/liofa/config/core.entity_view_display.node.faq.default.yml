@@ -3,12 +3,12 @@ langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.field.node.faq.field_faq
+    - field.field.node.faq.field_faq_answer
     - field.field.node.faq.field_faq_question
     - field.field.node.faq.field_meta_tags
     - node.type.faq
   module:
-    - entity_reference_revisions
+    - text
     - user
 _core:
   default_config_hash: '-3T7E8enbNwc5SIfLwfdJAYn1xX81bXWmuPuYajnv-I'
@@ -17,18 +17,22 @@ targetEntityType: node
 bundle: faq
 mode: default
 content:
-  field_faq:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
+  field_faq_answer:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_faq_question:
+    type: basic_string
+    label: above
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   content_moderation_control: true
-  field_faq_question: true
   field_meta_tags: true
   langcode: true
   links: true

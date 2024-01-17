@@ -3,7 +3,7 @@ langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.field.node.faq.field_faq
+    - field.field.node.faq.field_faq_answer
     - field.field.node.faq.field_faq_question
     - field.field.node.faq.field_meta_tags
     - node.type.faq
@@ -11,8 +11,8 @@ dependencies:
   module:
     - content_moderation
     - metatag
-    - paragraphs
     - path
+    - text
 _core:
   default_config_hash: lbvwFroKV9__SmVGlklLXFuGgqVmbqhHn7u_QjXMr0Q
 id: node.faq.default
@@ -26,17 +26,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_faq:
-    type: entity_reference_paragraphs
-    weight: 122
+  field_faq_answer:
+    type: text_textarea_with_summary
+    weight: 124
     region: content
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: faq_accordion
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   field_faq_question:
     type: string_textarea
@@ -100,6 +98,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

@@ -4,12 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.diff
-    - field.field.node.faq.field_faq
+    - field.field.node.faq.field_faq_answer
     - field.field.node.faq.field_faq_question
     - field.field.node.faq.field_meta_tags
     - node.type.faq
   module:
-    - entity_reference_revisions
     - field_group
     - layout_builder
     - metatag
@@ -49,15 +48,6 @@ content:
     third_party_settings: {  }
     weight: -20
     region: content
-  field_faq:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_meta_tags:
     type: metatag_empty_formatter
     label: inline
@@ -66,6 +56,7 @@ content:
     weight: 3
     region: content
 hidden:
+  field_faq_answer: true
   field_faq_question: true
   langcode: true
   links: true
