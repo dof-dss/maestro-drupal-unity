@@ -90,10 +90,22 @@ process:
     -
       plugin: get
       source: field_heritage_name
-  field_heritage_name_desc:
+  field_heritage_name_description:
     -
       plugin: get
       source: field_heritage_name_desc
+  field_heritage_name_desc/0/format:
+    - plugin: static_map
+      bypass: true
+      source: field_heritage_name_desc/0/format
+      map:
+        full_html: full_html
+        filtered_html_with_images: basic_html
+        wysiwyg: basic_html
+        filtered_html_with_tokens: basic_html
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        plain_text: plain_text
   field_heritage_place:
     -
       plugin: get
@@ -102,14 +114,38 @@ process:
     -
       plugin: get
       source: field_heritage_place_desc
+  field_heritage_place_desc/0/format:
+    - plugin: static_map
+      bypass: true
+      source: field_heritage_place_desc/0/format
+      map:
+        full_html: full_html
+        filtered_html_with_images: basic_html
+        wysiwyg: basic_html
+        filtered_html_with_tokens: basic_html
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        plain_text: plain_text
   field_heritage_surname:
     -
       plugin: get
       source: field_heritage_surname
-  field_heritage_surname_desc:
+  field_surname_description:
     -
       plugin: get
       source: field_heritage_surname_desc
+  field_surname_desc/0/format:
+    - plugin: static_map
+      bypass: true
+      source: field_surname_desc/0/format
+      map:
+        full_html: full_html
+        filtered_html_with_images: basic_html
+        wysiwyg: basic_html
+        filtered_html_with_tokens: basic_html
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        plain_text: plain_text
   field_heritage_name_image:
     -
       plugin: sub_process

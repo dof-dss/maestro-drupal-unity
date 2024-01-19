@@ -14,7 +14,7 @@ bundle: shared_heritage
 label: 'Display date'
 description: 'Select the month in which this item is to be featured.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }
