@@ -80,10 +80,34 @@ process:
     -
       plugin: get
       source: field_webform_footer
+  field_webform_footer/0/format:
+    - plugin: static_map
+      bypass: true
+      source: field_webform_footer/0/format
+      map:
+        full_html: full_html
+        filtered_html_with_images: basic_html
+        wysiwyg: basic_html
+        filtered_html_with_tokens: basic_html
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        plain_text: plain_text
   field_webform_header:
     -
       plugin: get
       source: field_webform_header
+  field_webform_header/0/format:
+    - plugin: static_map
+      bypass: true
+      source: field_webform_header/0/format
+      map:
+        full_html: full_html
+        filtered_html_with_images: basic_html
+        wysiwyg: basic_html
+        filtered_html_with_tokens: basic_html
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        plain_text: plain_text
   field_metatag:
     -
       plugin: d7_metatag_entities
