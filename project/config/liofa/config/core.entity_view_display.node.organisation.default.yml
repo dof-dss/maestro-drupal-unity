@@ -1,0 +1,51 @@
+uuid: 439476ff-bf34-43e1-b9ae-9df8aa4f7068
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.organisation.field_address_1
+    - field.field.node.organisation.field_address_2
+    - field.field.node.organisation.field_county
+    - field.field.node.organisation.field_description
+    - field.field.node.organisation.field_email
+    - field.field.node.organisation.field_external_url
+    - field.field.node.organisation.field_image
+    - field.field.node.organisation.field_mobile
+    - field.field.node.organisation.field_org_type
+    - field.field.node.organisation.field_phone
+    - field.field.node.organisation.field_postcode
+    - field.field.node.organisation.field_town_city
+    - node.type.organisation
+  module:
+    - text
+    - user
+id: node.organisation.default
+targetEntityType: node
+bundle: organisation
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address_1: true
+  field_address_2: true
+  field_county: true
+  field_email: true
+  field_external_url: true
+  field_image: true
+  field_mobile: true
+  field_org_type: true
+  field_phone: true
+  field_postcode: true
+  field_town_city: true
+  langcode: true

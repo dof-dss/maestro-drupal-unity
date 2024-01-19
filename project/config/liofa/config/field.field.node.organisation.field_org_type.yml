@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_org_type
     - node.type.organisation
+    - taxonomy.vocabulary.org_type
 id: node.organisation.field_org_type
 field_name: field_org_type
 entity_type: node
@@ -18,6 +19,11 @@ default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
+    target_bundles:
+      org_type: org_type
     sort:
       field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference
