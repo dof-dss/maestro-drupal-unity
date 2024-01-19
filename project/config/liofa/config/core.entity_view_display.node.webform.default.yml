@@ -3,7 +3,6 @@ langcode: en-gb
 status: true
 dependencies:
   config:
-    - field.field.node.webform.body
     - field.field.node.webform.field_webform_footer
     - field.field.node.webform.field_webform_header
     - field.field.node.webform.webform
@@ -19,31 +18,30 @@ targetEntityType: node
 bundle: webform
 mode: default
 content:
-  body:
+  field_webform_footer:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 2
     region: content
-  content_moderation_control:
+  field_webform_header:
+    type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: -20
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
   webform:
     type: webform_entity_reference_entity_view
     label: hidden
-    settings: {  }
+    settings:
+      source_entity: true
+      lazy: false
     third_party_settings: {  }
-    weight: 102
+    weight: 1
     region: content
 hidden:
-  field_webform_footer: true
-  field_webform_header: true
+  content_moderation_control: true
   langcode: true
+  links: true
