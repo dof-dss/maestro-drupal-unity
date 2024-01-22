@@ -17,5 +17,5 @@ selection_criteria:
     bundles:
       bulk_pledges: bulk_pledges
 selection_logic: and
-weight: 0
+weight: -14
 relationships: {  }

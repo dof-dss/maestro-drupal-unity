@@ -17,5 +17,5 @@ selection_criteria:
     bundles:
       newsletter: newsletter
 selection_logic: and
-weight: 0
+weight: -5
 relationships: {  }

@@ -17,5 +17,5 @@ selection_criteria:
     bundles:
       home_page_banner: home_page_banner
 selection_logic: and
-weight: 0
+weight: -7
 relationships: {  }

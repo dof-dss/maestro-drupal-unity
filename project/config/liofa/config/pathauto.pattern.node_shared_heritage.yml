@@ -17,5 +17,5 @@ selection_criteria:
     bundles:
       shared_heritage: shared_heritage
 selection_logic: and
-weight: 0
+weight: 2
 relationships: {  }

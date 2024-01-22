@@ -12,7 +12,7 @@ bundle: event
 label: 'Event contact phone number'
 description: 'Phone number to contact for more information about the event (this number will be published on the website).'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

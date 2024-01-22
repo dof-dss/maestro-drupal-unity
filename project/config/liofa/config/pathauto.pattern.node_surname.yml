@@ -17,5 +17,5 @@ selection_criteria:
     bundles:
       surname: surname
 selection_logic: and
-weight: 0
+weight: 4
 relationships: {  }

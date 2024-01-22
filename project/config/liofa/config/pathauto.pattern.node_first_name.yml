@@ -17,5 +17,5 @@ selection_criteria:
     bundles:
       first_name: first_name
 selection_logic: and
-weight: 0
+weight: -8
 relationships: {  }

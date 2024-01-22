@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_photo
     - node.type.event
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: node.event.field_photo
 field_name: field_photo
 entity_type: node
@@ -14,7 +21,7 @@ bundle: event
 label: Photo
 description: 'Choose an image from the media browser to display on the news item.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

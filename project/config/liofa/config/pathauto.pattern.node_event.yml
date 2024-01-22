@@ -17,5 +17,5 @@ selection_criteria:
     bundles:
       event: event
 selection_logic: and
-weight: 0
+weight: -12
 relationships: {  }
