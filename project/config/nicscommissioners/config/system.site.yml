@@ -1,5 +1,7 @@
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+langcode: en
+uuid: 0f652bed-edfc-491a-ae0e-327f97e5baef
 name: 'Civil Service Commissioners for Northern Ireland'
 mail: test@test.com
 slogan: ''
@@ -9,7 +11,6 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-uuid: 0f652bed-edfc-491a-ae0e-327f97e5baef
-frontpage_title: 'Welcome to Drupal site'
+frontpage_title: 'Civil Service Commissioners for Northern Ireland'
+frontpage_show_title: 0
