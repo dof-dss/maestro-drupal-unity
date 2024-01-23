@@ -8,7 +8,7 @@ id: node.forum.title
 field_name: title
 entity_type: node
 bundle: forum
-label: Title
+label: Subject
 description: ''
 required: true
 translatable: false
