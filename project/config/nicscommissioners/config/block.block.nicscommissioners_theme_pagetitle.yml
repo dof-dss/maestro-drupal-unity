@@ -1,0 +1,24 @@
+uuid: bfb7344e-0447-43eb-aba3-f7a0cb77dfed
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nicscommissioners_theme
+id: nicscommissioners_theme_pagetitle
+theme: nicscommissioners_theme
+region: content
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/search\r\n/node/*/revisions/view/*\r\n/publications\r\n/publications/date/*\r\n/publications/type/*\r\n"
