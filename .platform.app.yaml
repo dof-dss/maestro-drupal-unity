@@ -95,10 +95,10 @@ relationships:
     semcommittee_solr: 'solr_8_11:semcommittee'
     nibureau: 'db:nibureau'
     nibureau_solr: 'solr_8_11:nibureau'
-    liofa: 'db:liofa'
-    liofa_solr: 'solr_8_11:liofa'
     nicscommissioners: 'db:nicscommissioners'
     nicscommissioners_solr: 'solr_8_11:nicscommissioners'
+    liofa: 'db:liofa'
+    liofa_solr: 'solr_8_11:liofa'
 crons:
     pacni:
         spec: '10 * * * *'
@@ -138,9 +138,9 @@ crons:
     nibureau:
         spec: '10 * * * *'
         cmd: 'cd web/sites/nibureau ; drush core-cron'
-    liofa:
-        spec: '10 * * * *'
-        cmd: 'cd web/sites/liofa ; drush core-cron'
     nicscommissioners:
         spec: '10 * * * *'
         cmd: 'cd web/sites/nicscommissioners ; drush core-cron'
+    liofa:
+        spec: '10 * * * *'
+        cmd: 'cd web/sites/liofa ; drush core-cron'
