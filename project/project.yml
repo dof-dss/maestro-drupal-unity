@@ -105,6 +105,16 @@ sites:
         database: nibureau
         status: development
         default: false
+    nicscommissioners:
+        name: 'Civil Service Commissioners for Northern Ireland'
+        url: nicscommissioners.org
+        solr: nicscommissioners
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/nicscommissioners ; drush core-cron'
+        database: nicscommissioners
+        status: development
+        default: false
     liofa:
         name: Liofa
         url: liofa.eu
