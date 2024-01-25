@@ -1,0 +1,22 @@
+uuid: e8ef4861-a792-4112-b2aa-12744dec0197
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.forum
+id: node.forum.promote
+field_name: promote
+entity_type: node
+bundle: forum
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

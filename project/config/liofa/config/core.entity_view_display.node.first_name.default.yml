@@ -1,0 +1,31 @@
+uuid: caf51453-aa6d-43e1-b030-b81ccd66033b
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.first_name.body
+    - field.field.node.first_name.field_heritage_name_image
+    - node.type.first_name
+  module:
+    - text
+    - user
+id: node.first_name.default
+targetEntityType: node
+bundle: first_name
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_heritage_name_image: true
+  langcode: true

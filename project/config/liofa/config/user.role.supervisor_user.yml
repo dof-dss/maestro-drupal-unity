@@ -1,0 +1,34 @@
+uuid: c1f477b4-b5d4-47c6-a61d-3e174e2111da
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.faq
+  module:
+    - block
+    - node
+    - path
+    - pathauto
+    - system
+_core:
+  default_config_hash: 6dGYtGiX0D6hjlvLXGLSklpZZUhzbdlDZbbVZdBDcuM
+id: supervisor_user
+label: 'supervisor user'
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access site reports'
+  - 'administer blocks'
+  - 'administer pathauto'
+  - 'administer url aliases'
+  - 'create faq content'
+  - 'create url aliases'
+  - 'delete any faq content'
+  - 'delete own faq content'
+  - 'edit any faq content'
+  - 'edit own faq content'
+  - 'view own unpublished content'
+  - 'view the administration theme'

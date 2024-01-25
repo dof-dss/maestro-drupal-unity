@@ -1,0 +1,18 @@
+uuid: 3d22cbad-2a2f-49b2-ac99-81cafd2e3057
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.home_page_feature_item
+id: node.home_page_feature_item.created
+field_name: created
+entity_type: node
+bundle: home_page_feature_item
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

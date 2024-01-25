@@ -1,0 +1,183 @@
+uuid: 390a4864-8e9b-4a00-9ed2-126a09ba518c
+langcode: en-gb
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_event
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Event)'
+source:
+  plugin: d7_node_complete
+  node_type: event
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_event/0/status:
+    -
+      plugin: get
+      source: comment
+  field_date:
+    -
+      plugin: sub_process
+      source: field_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value
+  field_county:
+    -
+      plugin: sub_process
+      source: field_county
+      process:
+        target_id: tid
+  field_address_1:
+    -
+      plugin: get
+      source: field_address_1
+  field_address_2:
+    -
+      plugin: get
+      source: field_address_2
+  field_details:
+    -
+      plugin: get
+      source: field_details
+  field_details/0/format:
+    - plugin: static_map
+      bypass: true
+      source: field_details/0/format
+      map:
+        full_html: full_html
+        filtered_html_with_images: basic_html
+        wysiwyg: basic_html
+        filtered_html_with_tokens: basic_html
+        filtered_html: basic_html
+        filtered_html_with_no_images: basic_html
+        plain_text: plain_text
+  field_summary:
+    -
+      plugin: get
+      source: field_summary
+  field_postcode:
+    -
+      plugin: get
+      source: field_postcode
+  field_town_city:
+    -
+      plugin: get
+      source: field_town_city
+  field_phone:
+    -
+      plugin: get
+      source: field_phone
+  field_date_end:
+    -
+      plugin: sub_process
+      source: field_date_end
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value
+  field_web_link:
+    -
+      plugin: field_link
+      source: field_web_link
+  field_contact_name:
+    -
+      plugin: sub_process
+      source: field_contact_name
+      process:
+        value: email
+  field_consent:
+    -
+      plugin: get
+      source: field_consent
+  field_photo:
+    -
+      plugin: sub_process
+      source: field_photo
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: event
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
