@@ -1,0 +1,20 @@
+uuid: 1a62ad36-7bb8-4ff4-9405-ccae9f842955
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newsletter
+  module:
+    - path
+id: node.newsletter.path
+field_name: path
+entity_type: node
+bundle: newsletter
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

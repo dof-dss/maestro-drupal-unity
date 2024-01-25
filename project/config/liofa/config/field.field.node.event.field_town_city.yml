@@ -1,0 +1,19 @@
+uuid: 6250fa0b-0db0-4175-b9a8-a0c6aba31a8d
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_town_city
+    - node.type.event
+id: node.event.field_town_city
+field_name: field_town_city
+entity_type: node
+bundle: event
+label: 'Town or city'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

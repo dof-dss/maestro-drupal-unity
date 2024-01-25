@@ -1,0 +1,18 @@
+uuid: 1ea117f8-aeca-46e7-ba1d-8a896fcb1be1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.home_page_banner
+id: node.home_page_banner.created
+field_name: created
+entity_type: node
+bundle: home_page_banner
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

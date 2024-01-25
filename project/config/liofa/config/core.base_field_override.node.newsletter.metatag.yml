@@ -1,0 +1,20 @@
+uuid: 2324a777-1415-40b4-a74b-4aeeb21c7a6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.newsletter
+  module:
+    - metatag
+id: node.newsletter.metatag
+field_name: metatag
+entity_type: node
+bundle: newsletter
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

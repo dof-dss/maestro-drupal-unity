@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.terms.body
+    - field.field.node.terms.field_meta_tags
     - node.type.terms
   module:
     - text
@@ -22,5 +23,6 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  field_meta_tags: true
   langcode: true
   links: true
