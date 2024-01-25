@@ -1,0 +1,22 @@
+uuid: d5c8a5f0-0b18-4290-803b-48d5bfdf31af
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.training_course
+id: node.training_course.status
+field_name: status
+entity_type: node
+bundle: training_course
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

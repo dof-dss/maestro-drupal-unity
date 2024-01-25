@@ -1,0 +1,55 @@
+uuid: 36170f04-46a9-49d9-8719-156632137c76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.training_course.field_course_audio
+    - field.field.node.training_course.field_course_notes
+    - field.field.node.training_course.field_course_zip
+    - field.field.node.training_course.field_description
+    - field.field.node.training_course.field_weight
+    - node.type.training_course
+  module:
+    - file
+    - text
+    - user
+id: node.training_course.default
+targetEntityType: node
+bundle: training_course
+mode: default
+content:
+  field_course_audio:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_course_notes:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_course_zip:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_weight: true
+  langcode: true
+  links: true

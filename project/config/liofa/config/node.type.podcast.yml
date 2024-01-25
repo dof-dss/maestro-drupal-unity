@@ -1,0 +1,18 @@
+uuid: 9c5d83ee-1d5b-496f-a734-400b7d8765e7
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: Podcast
+type: podcast
+description: 'Add details of a Líofa podcast'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

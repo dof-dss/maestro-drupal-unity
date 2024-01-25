@@ -1,0 +1,21 @@
+uuid: 281c4f2b-1558-485c-a3c3-044ba18efc3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_home_page_banner
+label: 'Content - Home page banner'
+type: 'canonical_entities:node'
+pattern: 'homepage-banner/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      home_page_banner: home_page_banner
+selection_logic: and
+weight: -7
+relationships: {  }
