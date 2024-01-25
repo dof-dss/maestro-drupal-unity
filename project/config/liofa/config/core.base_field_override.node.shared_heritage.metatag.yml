@@ -1,0 +1,20 @@
+uuid: 85de0565-ca29-476f-b001-a8c9890d16ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shared_heritage
+  module:
+    - metatag
+id: node.shared_heritage.metatag
+field_name: metatag
+entity_type: node
+bundle: shared_heritage
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

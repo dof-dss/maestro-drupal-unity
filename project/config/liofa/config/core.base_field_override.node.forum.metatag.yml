@@ -1,0 +1,20 @@
+uuid: 02bc5300-7c8a-4cec-9ad2-659b0c29e908
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.forum
+  module:
+    - metatag
+id: node.forum.metatag
+field_name: metatag
+entity_type: node
+bundle: forum
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

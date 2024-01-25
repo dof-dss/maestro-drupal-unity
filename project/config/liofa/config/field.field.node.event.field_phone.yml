@@ -1,0 +1,19 @@
+uuid: 15f536db-6177-4b59-b710-03d3d07969a9
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone
+    - node.type.event
+id: node.event.field_phone
+field_name: field_phone
+entity_type: node
+bundle: event
+label: 'Event contact phone number'
+description: 'Phone number to contact for more information about the event (this number will be published on the website).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

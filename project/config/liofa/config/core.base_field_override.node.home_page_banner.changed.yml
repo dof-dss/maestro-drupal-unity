@@ -1,0 +1,18 @@
+uuid: 3812922b-1b2d-4336-a5a8-9e4d8cf55c9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.home_page_banner
+id: node.home_page_banner.changed
+field_name: changed
+entity_type: node
+bundle: home_page_banner
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

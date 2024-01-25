@@ -1,0 +1,20 @@
+uuid: 5beac44f-8ff1-4609-bb5f-6cf5b408ff84
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shared_heritage
+  module:
+    - path
+id: node.shared_heritage.path
+field_name: path
+entity_type: node
+bundle: shared_heritage
+label: 'URL alias'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

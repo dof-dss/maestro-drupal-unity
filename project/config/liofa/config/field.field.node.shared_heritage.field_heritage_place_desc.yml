@@ -1,0 +1,29 @@
+uuid: 1a86b4bd-66b2-4946-b197-c945b26d3298
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_heritage_place_desc
+    - filter.format.plain_text
+    - node.type.shared_heritage
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+id: node.shared_heritage.field_heritage_place_desc
+field_name: field_heritage_place_desc
+entity_type: node
+bundle: shared_heritage
+label: 'Place description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text_long

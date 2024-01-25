@@ -1,0 +1,18 @@
+uuid: 50a2baf8-d609-4adf-aa43-badb371059cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.panel
+id: node.panel.created
+field_name: created
+entity_type: node
+bundle: panel
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,53 @@
+uuid: 53f4361c-33b4-4e4a-a5d0-ec2059ddd712
+langcode: ga
+status: true
+dependencies:
+  config:
+    - field.field.node.shared_heritage.field_heritage_date
+    - field.field.node.shared_heritage.field_heritage_name
+    - field.field.node.shared_heritage.field_heritage_name_description
+    - field.field.node.shared_heritage.field_heritage_name_image
+    - field.field.node.shared_heritage.field_heritage_place
+    - field.field.node.shared_heritage.field_heritage_place_desc
+    - field.field.node.shared_heritage.field_heritage_place_image
+    - field.field.node.shared_heritage.field_heritage_surname
+    - field.field.node.shared_heritage.field_heritage_surname_image
+    - field.field.node.shared_heritage.field_surname_description
+    - node.type.shared_heritage
+  module:
+    - text
+    - user
+id: node.shared_heritage.default
+targetEntityType: node
+bundle: shared_heritage
+mode: default
+content:
+  field_heritage_name_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_surname_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_heritage_date: true
+  field_heritage_name: true
+  field_heritage_name_image: true
+  field_heritage_place: true
+  field_heritage_place_desc: true
+  field_heritage_place_image: true
+  field_heritage_surname: true
+  field_heritage_surname_image: true
+  langcode: true
