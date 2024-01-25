@@ -1,0 +1,31 @@
+uuid: dbd5c472-0d16-4631-b591-0271697489e0
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.surname.body
+    - field.field.node.surname.field_heritage_surname_image
+    - node.type.surname
+  module:
+    - text
+    - user
+id: node.surname.default
+targetEntityType: node
+bundle: surname
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_heritage_surname_image: true
+  langcode: true

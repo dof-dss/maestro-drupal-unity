@@ -1,0 +1,31 @@
+uuid: f5a47581-b931-44ec-be19-ee489a6452c1
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.basic_html
+    - node.type.surname
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - basic_html
+id: node.surname.body
+field_name: body
+entity_type: node
+bundle: surname
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - basic_html
+field_type: text_with_summary

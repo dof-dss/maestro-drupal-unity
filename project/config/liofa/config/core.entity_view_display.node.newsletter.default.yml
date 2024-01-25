@@ -1,0 +1,50 @@
+uuid: 74dfe947-dc4e-440a-abb4-c4898d07dedc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.newsletter.field_newsletter_date
+    - field.field.node.newsletter.field_newsletter_image
+    - field.field.node.newsletter.field_uploaded_file
+    - node.type.newsletter
+  module:
+    - datetime
+    - file
+    - image
+    - user
+id: node.newsletter.default
+targetEntityType: node
+bundle: newsletter
+mode: default
+content:
+  field_newsletter_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_newsletter_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_uploaded_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true

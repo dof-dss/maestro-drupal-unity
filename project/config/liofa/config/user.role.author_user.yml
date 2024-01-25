@@ -1,0 +1,21 @@
+uuid: 24927f2a-7da5-4584-9f83-cd95970c152d
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - node.type.faq
+  module:
+    - node
+    - system
+_core:
+  default_config_hash: CKfpacVfMmh209v93lvkrSNFkdxh-8fmgpTUUaFDF-M
+id: author_user
+label: 'author user'
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'create faq content'
+  - 'edit any faq content'
+  - 'edit own faq content'
+  - 'view the administration theme'

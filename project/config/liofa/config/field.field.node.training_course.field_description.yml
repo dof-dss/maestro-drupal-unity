@@ -1,0 +1,26 @@
+uuid: c52bec4d-f3bf-465b-a43f-68db1b2787f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.training_course
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats: {  }
+id: node.training_course.field_description
+field_name: field_description
+entity_type: node
+bundle: training_course
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
