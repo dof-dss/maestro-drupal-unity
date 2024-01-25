@@ -4,3 +4,88 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+
+  #logo img {
+    height: 9rem;
+    @media screen and (max-width: $tab) {
+      position: relative;
+    }
+  }
+
+.region-primary-menu .menu_wrapper {
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+}
+
+#main-menu {
+  background: $white;
+
+  .menu-link,
+  .menu .active,
+  .menu-item.open .menu-toggle-btn {
+    color: $black;
+    @include adjust-font-size-to(16px);
+  }
+
+  .menu
+  .menu-item
+  .active {
+    border-bottom-color: $brand-secondary;
+    background: $brand-primary;
+    color: white;
+  }
+
+  .menu-link {
+    &:hover,
+    &:focus {
+      background: $brand-primary;
+      color: $white;
+    }
+  }
+  .menu-main_sub
+  .menu-item
+  span.active {
+    @include adjust-font-size-to(14px);
+    padding: 1rem;
+  }
+
+  .menu-main_sub {
+    background: $brand-primary;
+
+    .menu-item {
+      background: $brand-primary;
+
+      .active {
+        background: $brand-primary;
+        color: $white;
+      }
+
+      a {
+        &:hover,
+        &:focus {
+          color: $white;
+          background: $brand-secondary;
+        }
+      }
+    }
+  }
+}
+
+.region-front-welcome {
+  .main-content {
+    background: $brand-primary;
+  }
+  #block-homepageinformation {
+    border-bottom: solid $brand-primary 2px;
+    margin-bottom: 5%;
+    background: $brand-primary;
+    color: $white;
+    text-align: left;
+
+    p {
+      color: $white;
+    }
+  }
+}
+
