@@ -8,21 +8,23 @@ dependencies:
     - field.field.node.event.field_consent
     - field.field.node.event.field_contact_name
     - field.field.node.event.field_county
-    - field.field.node.event.field_date
     - field.field.node.event.field_date_end
     - field.field.node.event.field_details
     - field.field.node.event.field_phone
     - field.field.node.event.field_photo
     - field.field.node.event.field_postcode
+    - field.field.node.event.field_published_date
     - field.field.node.event.field_summary
     - field.field.node.event.field_town_city
     - field.field.node.event.field_web_link
     - node.type.event
+    - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
     - datetime
-    - file
     - link
+    - media_library
+    - media_library_edit
     - path
     - text
 id: node.event.default
@@ -77,12 +79,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_date:
-    type: datetime_default
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_date_end:
     type: datetime_default
     weight: 4
@@ -106,12 +102,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_photo:
-    type: file_generic
-    weight: 6
+    type: media_library_widget
+    weight: 3
     region: content
     settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   field_postcode:
     type: string_textfield
     weight: 11
@@ -119,6 +117,12 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_published_date:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_summary:
     type: string_textarea
@@ -143,6 +147,11 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  flag:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -191,6 +200,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

@@ -76,11 +76,11 @@ process:
     -
       plugin: get
       source: comment
-  field_podcast_desc:
+  field_teaser:
     -
       plugin: get
       source: field_podcast_desc
-  field_date:
+  field_published_date:
     -
       plugin: sub_process
       source: field_date

@@ -1,0 +1,24 @@
+uuid: bbcc0a37-8803-4e34-9e63-6da2ee2ae394
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_published_date
+    - node.type.shared_heritage
+  module:
+    - datetime
+id: node.shared_heritage.field_published_date
+field_name: field_published_date
+entity_type: node
+bundle: shared_heritage
+label: 'Display date'
+description: 'Select the month in which this item is to be featued.'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime
