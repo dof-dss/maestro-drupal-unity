@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.event.field_date_end
     - field.field.node.event.field_details
     - field.field.node.event.field_phone
-    - field.field.node.event.field_photo
     - field.field.node.event.field_postcode
     - field.field.node.event.field_summary
     - field.field.node.event.field_town_city
@@ -21,7 +20,6 @@ dependencies:
   module:
     - content_moderation
     - datetime
-    - file
     - link
     - path
     - text
@@ -105,13 +103,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_photo:
-    type: file_generic
-    weight: 6
-    region: content
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
   field_postcode:
     type: string_textfield
     weight: 11
@@ -191,6 +182,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

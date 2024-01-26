@@ -1,17 +1,17 @@
-uuid: 16561b7d-092b-40f1-9026-6d827266e200
+uuid: e187edcb-f2f2-41fd-9fdc-0795483470d5
 langcode: en
 status: true
 dependencies:
   module:
-    - media
+    - datetime
     - node
-id: node.field_photo
-field_name: field_photo
+id: node.field_published_date
+field_name: field_published_date
 entity_type: node
-type: entity_reference
+type: datetime
 settings:
-  target_type: media
-module: core
+  datetime_type: datetime
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

@@ -8,8 +8,8 @@ dependencies:
     - liofa_theme
 id: liofa_theme_languageswitcher
 theme: liofa_theme
-region: header
-weight: 0
+region: search
+weight: -1
 provider: null
 plugin: 'language_block:language_interface'
 settings:

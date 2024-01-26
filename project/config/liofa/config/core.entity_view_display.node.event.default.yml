@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.event.field_date_end
     - field.field.node.event.field_details
     - field.field.node.event.field_phone
-    - field.field.node.event.field_photo
     - field.field.node.event.field_postcode
     - field.field.node.event.field_summary
     - field.field.node.event.field_town_city
@@ -20,7 +19,6 @@ dependencies:
     - node.type.event
   module:
     - datetime
-    - image
     - link
     - text
     - user
@@ -102,17 +100,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 8
-    region: content
-  field_photo:
-    type: image
-    label: above
-    settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 13
     region: content
   field_postcode:
     type: string
