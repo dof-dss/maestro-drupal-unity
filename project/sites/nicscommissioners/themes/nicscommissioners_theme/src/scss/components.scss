@@ -73,9 +73,11 @@
 }
 
 .region-front-welcome {
-  .main-content {
-    background: $brand-primary;
-  }
+  background: $brand-primary;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+
   #block-homepageinformation {
     border-bottom: solid $brand-primary 2px;
     margin-bottom: 5%;
@@ -88,4 +90,5 @@
     }
   }
 }
+
 
