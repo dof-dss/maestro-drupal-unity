@@ -10,7 +10,6 @@ dependencies:
     - node.type.feature
     - node.type.first_name
     - node.type.form_page
-    - node.type.forum
     - node.type.news
     - node.type.newsletter
     - node.type.organisation
@@ -117,7 +116,6 @@ type_settings:
       - feature
       - first_name
       - form_page
-      - forum
       - news
       - newsletter
       - organisation
