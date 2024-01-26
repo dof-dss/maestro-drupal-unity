@@ -3,7 +3,21 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - node.type.basic_page
+    - node.type.bulk_pledges
+    - node.type.event
     - node.type.faq
+    - node.type.feature
+    - node.type.first_name
+    - node.type.form_page
+    - node.type.news
+    - node.type.newsletter
+    - node.type.organisation
+    - node.type.phrase_of_the_week
+    - node.type.podcast
+    - node.type.shared_heritage
+    - node.type.surname
+    - node.type.training_course
     - node.type.webform
   module:
     - content_moderation
@@ -94,6 +108,20 @@ type_settings:
       weight: -2
   entity_types:
     node:
+      - basic_page
+      - bulk_pledges
+      - event
       - faq
+      - feature
+      - first_name
+      - form_page
+      - news
+      - newsletter
+      - organisation
+      - phrase_of_the_week
+      - podcast
+      - shared_heritage
+      - surname
+      - training_course
       - webform
   default_moderation_state: draft

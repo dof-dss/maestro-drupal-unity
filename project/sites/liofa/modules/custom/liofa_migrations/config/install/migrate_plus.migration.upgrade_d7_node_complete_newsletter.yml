@@ -76,7 +76,7 @@ process:
     -
       plugin: get
       source: comment
-  field_uploaded_file:
+  field_attachment:
     -
       plugin: sub_process
       source: field_uploaded_file
@@ -94,7 +94,7 @@ process:
           from_format: 'Y-m-d H:i:s'
           to_format: Y-m-d
           source: value
-  field_newsletter_image:
+  field_photo:
     -
       plugin: sub_process
       source: field_newsletter_image

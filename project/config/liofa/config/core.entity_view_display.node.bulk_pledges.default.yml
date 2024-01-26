@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.bulk_pledges.field_bulk_date
     - field.field.node.bulk_pledges.field_bulk_number
     - field.field.node.bulk_pledges.field_bulk_source
+    - field.field.node.bulk_pledges.field_meta_tags
     - node.type.bulk_pledges
   module:
     - datetime
@@ -42,5 +43,7 @@ content:
     weight: 1
     region: content
 hidden:
+  content_moderation_control: true
+  field_meta_tags: true
   langcode: true
   links: true

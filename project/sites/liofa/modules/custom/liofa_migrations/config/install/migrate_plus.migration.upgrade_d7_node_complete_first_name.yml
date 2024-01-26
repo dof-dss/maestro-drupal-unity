@@ -76,11 +76,11 @@ process:
     -
       plugin: get
       source: comment
-  field_heritage_name_desc:
+  field_heritage_name_description:
     -
       plugin: get
       source: field_heritage_name_desc
-  field_heritage_name_image:
+  field_photo:
     -
       plugin: sub_process
       source: field_heritage_name_image

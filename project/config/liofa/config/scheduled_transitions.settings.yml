@@ -13,13 +13,13 @@ bundles:
     bundle: basic_page
   -
     entity_type: node
-    bundle: board_member
+    bundle: blog
   -
     entity_type: node
-    bundle: consultation
+    bundle: bulk_pledges
   -
     entity_type: node
-    bundle: contact
+    bundle: event
   -
     entity_type: node
     bundle: faq
@@ -28,22 +28,40 @@ bundles:
     bundle: feature
   -
     entity_type: node
-    bundle: featured_content_list
+    bundle: first_name
   -
     entity_type: node
-    bundle: layout_page
+    bundle: form_page
   -
     entity_type: node
-    bundle: link
+    bundle: forum
   -
     entity_type: node
     bundle: news
   -
     entity_type: node
-    bundle: profile
+    bundle: newsletter
   -
     entity_type: node
-    bundle: publication
+    bundle: organisation
+  -
+    entity_type: node
+    bundle: panel
+  -
+    entity_type: node
+    bundle: phrase_of_the_week
+  -
+    entity_type: node
+    bundle: podcast
+  -
+    entity_type: node
+    bundle: shared_heritage
+  -
+    entity_type: node
+    bundle: surname
+  -
+    entity_type: node
+    bundle: training_course
   -
     entity_type: node
     bundle: webform
