@@ -1,8 +1,9 @@
-uuid: 53f4361c-33b4-4e4a-a5d0-ec2059ddd712
-langcode: ga
+uuid: 1101aaca-1b9f-4b35-8e87-b7b2a4416f5e
+langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.diff
     - field.field.node.shared_heritage.field_heritage_name
     - field.field.node.shared_heritage.field_heritage_name_description
     - field.field.node.shared_heritage.field_heritage_place
@@ -17,12 +18,35 @@ dependencies:
     - node.type.shared_heritage
   module:
     - datetime
+    - field_group
+    - metatag
     - text
     - user
-id: node.shared_heritage.default
+third_party_settings:
+  field_group:
+    group_additional_content_details:
+      children:
+        - field_meta_tags
+      label: 'Additional content details'
+      parent_name: ''
+      region: content
+      weight: 10
+      format_type: html_element
+      format_settings:
+        classes: field-collection
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.shared_heritage.diff
 targetEntityType: node
 bundle: shared_heritage
-mode: default
+mode: diff
 content:
   field_heritage_name:
     type: string
@@ -62,12 +86,19 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
   field_photo:
     type: entity_reference_entity_view
-    label: hidden
+    label: above
     settings:
       view_mode: default
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 7
     region: content
@@ -76,7 +107,7 @@ content:
     label: above
     settings:
       view_mode: default
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 9
     region: content
@@ -85,7 +116,7 @@ content:
     label: above
     settings:
       timezone_override: ''
-      format_type: unity_date
+      format_type: medium
     third_party_settings: {  }
     weight: 0
     region: content
@@ -101,12 +132,11 @@ content:
     label: above
     settings:
       view_mode: default
-      link: false
+      link: true
     third_party_settings: {  }
     weight: 8
     region: content
 hidden:
   content_moderation_control: true
-  field_meta_tags: true
   langcode: true
   links: true

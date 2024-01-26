@@ -1,17 +1,17 @@
-uuid: 47a66855-44f3-4354-9dca-12c41608268e
-langcode: und
+uuid: 50b02279-5b3c-4880-9d91-1aaddba1f8b7
+langcode: en
 status: true
 dependencies:
   module:
-    - datetime
+    - media
     - node
-id: node.field_heritage_date
-field_name: field_heritage_date
+id: node.field_place_image
+field_name: field_place_image
 entity_type: node
-type: datetime
+type: entity_reference
 settings:
-  datetime_type: date
-module: datetime
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true
