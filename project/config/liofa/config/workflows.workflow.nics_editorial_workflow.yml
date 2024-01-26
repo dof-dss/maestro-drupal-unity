@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - node.type.basic_page
-    - node.type.blog
     - node.type.bulk_pledges
     - node.type.event
     - node.type.faq
@@ -112,7 +111,6 @@ type_settings:
   entity_types:
     node:
       - basic_page
-      - blog
       - bulk_pledges
       - event
       - faq
