@@ -13,7 +13,6 @@ dependencies:
     - node.type.news
     - node.type.newsletter
     - node.type.organisation
-    - node.type.panel
     - node.type.phrase_of_the_week
     - node.type.podcast
     - node.type.shared_heritage
@@ -119,7 +118,6 @@ type_settings:
       - news
       - newsletter
       - organisation
-      - panel
       - phrase_of_the_week
       - podcast
       - shared_heritage
