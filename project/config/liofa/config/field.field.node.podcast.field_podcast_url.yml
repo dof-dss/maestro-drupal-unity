@@ -1,0 +1,29 @@
+uuid: 96601bef-e597-4a8a-a1d5-b9fccdb79faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_podcast_url
+    - media.type.audio
+    - node.type.podcast
+id: node.podcast.field_podcast_url
+field_name: field_podcast_url
+entity_type: node
+bundle: podcast
+label: 'Podcast URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: audio
+field_type: entity_reference

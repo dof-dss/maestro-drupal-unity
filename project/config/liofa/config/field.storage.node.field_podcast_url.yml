@@ -1,17 +1,16 @@
-uuid: b235fec4-b395-47f5-beea-11cb21492c78
-langcode: und
+uuid: ee87ddb7-dfdf-479b-b48e-f5a3f69b14a2
+langcode: en
 status: true
 dependencies:
   module:
+    - media
     - node
-id: node.field_podcast_desc
-field_name: field_podcast_desc
+id: node.field_podcast_url
+field_name: field_podcast_url
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
+  target_type: media
 module: core
 locked: false
 cardinality: 1
