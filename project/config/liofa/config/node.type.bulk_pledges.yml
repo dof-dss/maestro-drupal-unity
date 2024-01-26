@@ -24,6 +24,6 @@ name: 'Bulk pledges'
 type: bulk_pledges
 description: 'Add details of a collection of Liofa pledges collected offline.'
 help: ''
-new_revision: false
+new_revision: true
 preview_mode: 1
 display_submitted: false

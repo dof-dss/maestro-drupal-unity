@@ -6,10 +6,13 @@ dependencies:
     - field.field.node.bulk_pledges.field_bulk_date
     - field.field.node.bulk_pledges.field_bulk_number
     - field.field.node.bulk_pledges.field_bulk_source
+    - field.field.node.bulk_pledges.field_meta_tags
     - node.type.bulk_pledges
+    - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
     - datetime
+    - metatag
     - path
 id: node.bulk_pledges.default
 targetEntityType: node
@@ -42,6 +45,19 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 14
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  flag:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -90,6 +106,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
