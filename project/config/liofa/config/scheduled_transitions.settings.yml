@@ -10,6 +10,9 @@ automation:
 bundles:
   -
     entity_type: node
+    bundle: basic_page
+  -
+    entity_type: node
     bundle: blog
   -
     entity_type: node
@@ -41,9 +44,6 @@ bundles:
   -
     entity_type: node
     bundle: organisation
-  -
-    entity_type: node
-    bundle: page
   -
     entity_type: node
     bundle: panel

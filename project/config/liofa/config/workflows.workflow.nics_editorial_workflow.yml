@@ -3,6 +3,7 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - node.type.basic_page
     - node.type.blog
     - node.type.bulk_pledges
     - node.type.event
@@ -14,7 +15,6 @@ dependencies:
     - node.type.news
     - node.type.newsletter
     - node.type.organisation
-    - node.type.page
     - node.type.panel
     - node.type.phrase_of_the_week
     - node.type.podcast
@@ -111,6 +111,7 @@ type_settings:
       weight: -2
   entity_types:
     node:
+      - basic_page
       - blog
       - bulk_pledges
       - event
@@ -122,7 +123,6 @@ type_settings:
       - news
       - newsletter
       - organisation
-      - page
       - panel
       - phrase_of_the_week
       - podcast
