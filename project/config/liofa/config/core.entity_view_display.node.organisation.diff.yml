@@ -20,6 +20,7 @@ dependencies:
     - node.type.organisation
   module:
     - field_group
+    - link
     - metatag
     - text
     - user
@@ -27,11 +28,12 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
+        - field_org_type
         - field_meta_tags
       label: 'Additional content details'
       parent_name: ''
       region: content
-      weight: 12
+      weight: 11
       format_type: html_element
       format_settings:
         classes: field-collection
@@ -51,23 +53,23 @@ mode: diff
 content:
   field_address_1:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
   field_address_2:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 2
     region: content
   field_county:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -75,36 +77,40 @@ content:
     region: content
   field_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 10
     region: content
   field_email:
     type: basic_string
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_external_url:
-    type: string
-    label: above
+    type: link
+    label: inline
     settings:
-      link_to_entity: false
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 6
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 14
+    weight: 12
     region: content
   field_mobile:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -112,43 +118,44 @@ content:
     region: content
   field_org_type:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 11
     region: content
   field_phone:
     type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  field_photo:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_postcode:
-    type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     weight: 8
     region: content
-  field_town_city:
+  field_photo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_postcode:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 11
+    weight: 4
+    region: content
+  field_town_city:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   content_moderation_control: true

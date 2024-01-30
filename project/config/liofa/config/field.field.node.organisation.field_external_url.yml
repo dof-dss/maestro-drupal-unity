@@ -1,19 +1,23 @@
-uuid: 1177eca7-19b2-4e7f-ba6b-28d3691bdb7e
-langcode: en-gb
+uuid: 9b23771d-27f3-4a45-ab24-3061f23324a1
+langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_external_url
     - node.type.organisation
+  module:
+    - link
 id: node.organisation.field_external_url
 field_name: field_external_url
 entity_type: node
 bundle: organisation
 label: Link
-description: "The address of the partner's website."
+description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: string
+settings:
+  title: 0
+  link_type: 16
+field_type: link
