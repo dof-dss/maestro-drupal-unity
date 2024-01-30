@@ -1,0 +1,63 @@
+uuid: b3e033c1-df78-4337-82cd-23e931fe1991
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_address_1
+    - field.field.node.event.field_address_2
+    - field.field.node.event.field_consent
+    - field.field.node.event.field_contact_name
+    - field.field.node.event.field_county
+    - field.field.node.event.field_date_end
+    - field.field.node.event.field_details
+    - field.field.node.event.field_phone
+    - field.field.node.event.field_photo
+    - field.field.node.event.field_postcode
+    - field.field.node.event.field_published_date
+    - field.field.node.event.field_summary
+    - field.field.node.event.field_town_city
+    - field.field.node.event.field_web_link
+    - node.type.event
+  module:
+    - datetime
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_published_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: unity_date
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_address_1: true
+  field_address_2: true
+  field_consent: true
+  field_contact_name: true
+  field_county: true
+  field_date_end: true
+  field_details: true
+  field_phone: true
+  field_photo: true
+  field_postcode: true
+  field_summary: true
+  field_town_city: true
+  field_web_link: true
+  langcode: true
