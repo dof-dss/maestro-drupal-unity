@@ -12,7 +12,7 @@ dependencies:
 id: homepageinformation
 theme: nicscommissioners_theme
 region: front_welcome
-weight: 0
+weight: -7
 provider: null
 plugin: 'block_content:f5e3d608-74da-4797-8361-653348105517'
 settings:
