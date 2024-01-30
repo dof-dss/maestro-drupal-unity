@@ -4,3 +4,14 @@
  */
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+address {
+  margin-bottom: 2.4rem;
+}
+
+.node-type-organisation {
+  .media-image[data-picture-mapping="inline"] img {
+    float: none;
+    margin-left: 0;
+  }
+}

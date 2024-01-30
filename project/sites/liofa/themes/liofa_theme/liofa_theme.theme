@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function liofa_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  // Add view mode to node field theme suggestions.
+  $element = $variables['element'];
+
+  $address_field_names = [
+    'field_address_1',
+    'field_address_2',
+    'field_county',
+    'field_town_city',
+    'field_postcode'
+  ];
+
+  if (in_array($element['#field_name'], $address_field_names)) {
+    $suggestions[] = 'field__field_address_organisation';
+  }
+}
