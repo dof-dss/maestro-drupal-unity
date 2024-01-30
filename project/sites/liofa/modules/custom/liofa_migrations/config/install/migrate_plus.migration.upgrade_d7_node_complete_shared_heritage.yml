@@ -76,7 +76,7 @@ process:
     -
       plugin: get
       source: comment
-  field_heritage_date:
+  field_published_date:
     -
       plugin: sub_process
       source: field_heritage_date
@@ -146,7 +146,7 @@ process:
         filtered_html: basic_html
         filtered_html_with_no_images: basic_html
         plain_text: plain_text
-  field_heritage_name_image:
+  field_photo:
     -
       plugin: sub_process
       source: field_heritage_name_image
@@ -156,7 +156,7 @@ process:
         title: title
         width: width
         height: height
-  field_heritage_surname_image:
+  field_surname_image:
     -
       plugin: sub_process
       source: field_heritage_surname_image
@@ -166,7 +166,7 @@ process:
         title: title
         width: width
         height: height
-  field_heritage_place_image:
+  field_place_image:
     -
       plugin: sub_process
       source: field_heritage_place_image
