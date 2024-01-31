@@ -11,7 +11,7 @@ id: node.organisation.field_external_url
 field_name: field_external_url
 entity_type: node
 bundle: organisation
-label: Link
+label: Web
 description: ''
 required: false
 translatable: false

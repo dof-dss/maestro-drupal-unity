@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_county
     - field.field.node.event.field_date_end
     - field.field.node.event.field_details
+    - field.field.node.event.field_meta_tags
     - field.field.node.event.field_phone
     - field.field.node.event.field_photo
     - field.field.node.event.field_postcode
@@ -20,9 +21,35 @@ dependencies:
     - node.type.event
   module:
     - datetime
+    - field_group
     - link
     - text
     - user
+third_party_settings:
+  field_group:
+    group_address:
+      children:
+        - field_address_1
+        - field_address_2
+        - field_town_city
+        - field_county
+        - field_postcode
+      label: Address
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: address
+        show_label: true
+        label_element: span
+        label_element_classes: label-bold
+        attributes: ''
+        effect: none
+        speed: fast
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -30,11 +57,11 @@ mode: default
 content:
   field_address_1:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_address_2:
     type: string
@@ -42,29 +69,29 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_contact_name:
     type: email_mailto
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_county:
     type: entity_reference_label
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_date_end:
     type: datetime_default
     label: above
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: liofa_event
     third_party_settings: {  }
     weight: 2
     region: content
@@ -73,13 +100,13 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_photo:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: default
+      view_mode: article_float
       link: false
     third_party_settings: {  }
     weight: 0
@@ -90,24 +117,24 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_published_date:
     type: datetime_default
     label: above
     settings:
       timezone_override: ''
-      format_type: unity_date
+      format_type: liofa_event
     third_party_settings: {  }
     weight: 1
     region: content
   field_town_city:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_web_link:
     type: link
@@ -119,11 +146,12 @@ content:
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
 hidden:
   content_moderation_control: true
   field_consent: true
+  field_meta_tags: true
   field_phone: true
   field_summary: true
   langcode: true
