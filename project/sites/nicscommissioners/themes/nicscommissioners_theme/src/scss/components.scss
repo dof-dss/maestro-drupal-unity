@@ -77,10 +77,10 @@
   max-width: 100%;
   display: flex;
   justify-content: center;
+  padding: 3%;
 
   #block-homepageinformation {
     border-bottom: solid $brand-primary 2px;
-    margin-bottom: 5%;
     background: $brand-primary;
     color: $white;
     text-align: left;
@@ -88,6 +88,84 @@
     p {
       color: $white;
     }
+  }
+}
+
+#top-area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+  padding-top: 5rem;
+
+  #block-views-block-featured-content-featured-content-list-first,
+  #block-views-block-featured-content-featured-content-list-middle,
+  #block-views-block-featured-content-featured-content-list-last {
+    .content .card-deck .cards-pack .card .card__link {
+      border: none;
+      background: $brand-primary;
+      display: block;
+      position: relative;
+
+      @include breakpoint($tab) {
+        min-height: 38rem;
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: 15px;
+        right: 10px;
+        width: 3rem;
+        height: 3rem;
+        background-image: resolve('arrow_forward_link_blue.svg');
+        background-position: center center;
+        background-size: 2.4rem auto;
+        background-repeat: no-repeat;
+      }
+
+      &:hover,
+      &:focus {
+        background: $offwhite;
+
+        &:after {
+          background-color: $charcoal;
+          background-image: resolve('arrow_forward_white.svg');
+        }
+        h2 {
+          color: $brand-primary;
+        }
+      }
+
+      .media-image {
+        margin: 0;
+      }
+    }
+  }
+
+
+  h2 {
+    @include adjust-font-size-to(22px);
+    color: $white;
+    padding: 1rem;
+  }
+
+  .column {
+    width: 33rem;
+
+    @media screen and (max-width: $tab) {
+      margin: 0 1rem;
+
+      &:last-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  ul.cards-pack {
+    list-style: none;
+    margin: 0;
   }
 }
 
