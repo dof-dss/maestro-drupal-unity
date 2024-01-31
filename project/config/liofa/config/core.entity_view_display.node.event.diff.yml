@@ -45,10 +45,10 @@ third_party_settings:
         classes: ''
         show_empty_fields: false
         id: ''
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
+        element: address
+        show_label: true
+        label_element: span
+        label_element_classes: label-bold
         attributes: ''
         effect: none
         speed: fast
@@ -116,7 +116,7 @@ content:
     type: entity_reference_label
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 6
     region: content
@@ -196,11 +196,11 @@ content:
     type: link
     label: above
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
     weight: 6
     region: content

@@ -33,13 +33,36 @@ third_party_settings:
       label: 'Additional content details'
       parent_name: ''
       region: content
-      weight: 11
+      weight: 12
       format_type: html_element
       format_settings:
         classes: field-collection
         show_empty_fields: false
         id: ''
         element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_address:
+      children:
+        - field_address_1
+        - field_address_2
+        - field_town_city
+        - field_county
+        - field_postcode
+      label: Address
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: address
         show_label: false
         label_element: h3
         label_element_classes: ''
@@ -57,7 +80,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_address_2:
     type: string
@@ -65,13 +88,13 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_county:
     type: entity_reference_label
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 5
     region: content
@@ -80,26 +103,26 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_email:
     type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_external_url:
     type: link
     label: inline
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
@@ -114,13 +137,13 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_org_type:
     type: entity_reference_label
     label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 11
     region: content
@@ -130,14 +153,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_photo:
     type: entity_reference_entity_view
     label: hidden
     settings:
-      view_mode: default
-      link: true
+      view_mode: article_float
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -147,7 +170,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 6
     region: content
   field_town_city:
     type: string
@@ -155,7 +178,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
 hidden:
   content_moderation_control: true
