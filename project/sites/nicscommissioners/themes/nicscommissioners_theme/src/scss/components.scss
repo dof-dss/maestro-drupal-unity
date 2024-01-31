@@ -96,14 +96,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   text-align: left;
+  padding-top: 5rem;
 
   #block-views-block-featured-content-featured-content-list-first,
   #block-views-block-featured-content-featured-content-list-middle,
   #block-views-block-featured-content-featured-content-list-last {
     .content .card-deck .cards-pack .card .card__link {
       border: none;
-      background: $grey-lightest;
-      padding: 1rem;
+      background: $brand-primary;
       display: block;
       position: relative;
 
@@ -133,6 +133,9 @@
           background-color: $charcoal;
           background-image: resolve('arrow_forward_white.svg');
         }
+        h2 {
+          color: $brand-primary;
+        }
       }
 
       .media-image {
@@ -143,8 +146,9 @@
 
 
   h2 {
-    @include adjust-font-size-to(24px);
-    color: $link;
+    @include adjust-font-size-to(22px);
+    color: $white;
+    padding: 1rem;
   }
 
   .column {
