@@ -1,19 +1,19 @@
-uuid: a89d7c58-fca2-4340-9ae7-7d1d8d6ee6f6
-langcode: en
+uuid: a1700ad8-6b64-4a2b-87db-2d7907ba9e17
+langcode: ga
 status: true
 dependencies:
   config:
-    - block_content.type.basic_block
+    - entityqueue.entity_queue.slideshow
   module:
     - metatag
-id: block_content.basic_block.metatag
+id: entity_subqueue.slideshow.metatag
 field_name: metatag
-entity_type: block_content
-bundle: basic_block
+entity_type: entity_subqueue
+bundle: slideshow
 label: 'Metatags (Hidden field for JSON support)'
 description: 'The computed meta tags for the entity.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

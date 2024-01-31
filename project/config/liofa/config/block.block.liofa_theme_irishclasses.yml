@@ -1,9 +1,9 @@
-uuid: 149069ed-acde-4248-a887-937f4322b362
-langcode: en
+uuid: 60223b30-4392-4349-a362-67d4be684e91
+langcode: ga
 status: true
 dependencies:
   content:
-    - 'block_content:basic_block:51be0722-b4cd-48a1-af2e-807ec4fb3fba'
+    - 'block_content:feature_block:4cdb2b8a-e14d-4123-ac58-4178f548dbc9'
   module:
     - block_content
   theme:
@@ -13,10 +13,10 @@ theme: liofa_theme
 region: top_second
 weight: 0
 provider: null
-plugin: 'block_content:51be0722-b4cd-48a1-af2e-807ec4fb3fba'
+plugin: 'block_content:4cdb2b8a-e14d-4123-ac58-4178f548dbc9'
 settings:
-  id: 'block_content:51be0722-b4cd-48a1-af2e-807ec4fb3fba'
-  label: 'Irish classes'
+  id: 'block_content:4cdb2b8a-e14d-4123-ac58-4178f548dbc9'
+  label: 'Ranganna Gaeilge'
   label_display: visible
   provider: block_content
   status: true
