@@ -1,0 +1,25 @@
+uuid: 8926347a-074f-4145-8092-0623da65a4c2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:96251539-f3b5-4863-bf4c-a82711fcfdd1'
+  module:
+    - block_content
+  theme:
+    - liofa_theme
+id: liofa_theme_signuptoliofa
+theme: liofa_theme
+region: top_first
+weight: 0
+provider: null
+plugin: 'block_content:96251539-f3b5-4863-bf4c-a82711fcfdd1'
+settings:
+  id: 'block_content:96251539-f3b5-4863-bf4c-a82711fcfdd1'
+  label: 'Sign up to Líofa'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

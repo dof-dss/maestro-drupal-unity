@@ -1,0 +1,25 @@
+uuid: 149069ed-acde-4248-a887-937f4322b362
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:51be0722-b4cd-48a1-af2e-807ec4fb3fba'
+  module:
+    - block_content
+  theme:
+    - liofa_theme
+id: liofa_theme_irishclasses
+theme: liofa_theme
+region: top_second
+weight: 0
+provider: null
+plugin: 'block_content:51be0722-b4cd-48a1-af2e-807ec4fb3fba'
+settings:
+  id: 'block_content:51be0722-b4cd-48a1-af2e-807ec4fb3fba'
+  label: 'Irish classes'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
