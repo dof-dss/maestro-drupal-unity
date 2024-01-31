@@ -38,7 +38,7 @@
 #}
 {% for item in items %}
   <p>
-    <span>{{ 'Web: '|t }}</span>
+    <span class="label-bold">{{ label }}{{ ':' }}</span>
     <span>{{ item.content }}</span>
   </p>
 {% endfor %}

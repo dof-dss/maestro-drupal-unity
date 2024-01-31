@@ -38,8 +38,8 @@
 #}
 {% for item in items %}
   <p>
-    <span>{{ 'Phone: '|t }}</span>
-    <span>{{ item.content }}</span>
+  <span class="label-bold">{{ label }}</span>
+  <span>{{ item.content }}</span>
   </p>
 {% endfor %}
 

@@ -18,5 +18,9 @@ address {
 
 .label-bold {
   font-weight: bold;
-  display: block; 
+  display: block;
+
+  &:after {
+    content: ':';
+  }
 }
