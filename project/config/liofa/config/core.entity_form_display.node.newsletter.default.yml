@@ -50,7 +50,7 @@ content:
     region: content
     settings:
       increment: 15
-      date_order: MDY
+      date_order: DMY
       time_type: none
     third_party_settings: {  }
   field_photo:

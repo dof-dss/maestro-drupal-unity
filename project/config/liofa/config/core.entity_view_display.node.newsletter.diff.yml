@@ -18,11 +18,12 @@ third_party_settings:
   field_group:
     group_additional_content_details:
       children:
+        - field_newsletter_date
         - field_meta_tags
       label: 'Additional content details'
       parent_name: ''
       region: content
-      weight: 3
+      weight: 2
       format_type: html_element
       format_settings:
         classes: field-collection
@@ -41,23 +42,24 @@ bundle: newsletter
 mode: diff
 content:
   field_attachment:
-    type: entity_reference_label
+    type: entity_reference_entity_view
     label: above
     settings:
-      link: true
+      view_mode: embed
+      link: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_meta_tags:
     type: metatag_empty_formatter
     label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 2
     region: content
   field_newsletter_date:
     type: datetime_default
-    label: above
+    label: inline
     settings:
       timezone_override: ''
       format_type: unity_date
@@ -65,12 +67,13 @@ content:
     weight: 1
     region: content
   field_photo:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
+      view_mode: article_full
+      link: false
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
 hidden:
   content_moderation_control: true

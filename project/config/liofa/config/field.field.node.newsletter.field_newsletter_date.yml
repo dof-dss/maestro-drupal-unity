@@ -15,7 +15,10 @@ label: Date
 description: 'The month and year in which the newsletter was published. (This value is used for sorting newsletters in chronological order).'
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    default_date_type: now
+    default_date: now
 default_value_callback: ''
 settings: {  }
 field_type: datetime
