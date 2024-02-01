@@ -100,17 +100,6 @@ field_settings:
     label: 'Language (with fallback)'
     property_path: language_with_fallback
     type: solr_text_spellcheck
-  spelling:
-    label: Spelling
-    property_path: aggregated_field
-    type: string
-    configuration:
-      type: union
-      separator: |+
-
-
-      fields:
-        - 'entity:node/title'
   status:
     label: Published
     datasource_id: 'entity:node'
@@ -201,7 +190,6 @@ processor_settings:
       - body
       - field_summary
       - language_with_fallback
-      - spelling
       - summary
       - title
       - title_fulltext

@@ -8,7 +8,6 @@ dependencies:
   module:
     - datetime
     - search_api
-    - search_api_spellcheck
     - views_custom_cache_tag
 id: search
 label: Search
@@ -259,18 +258,6 @@ display:
         options:
           custom_tag: ''
       empty:
-        search_api_spellcheck_did_you_mean:
-          id: search_api_spellcheck_did_you_mean
-          table: views
-          field: search_api_spellcheck_did_you_mean
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api_spellcheck_did_you_mean
-          empty: true
-          search_api_spellcheck_count: 1
-          search_api_spellcheck_hide_on_result: 1
-          search_api_spellcheck_collate: true
         area:
           id: area
           table: views
