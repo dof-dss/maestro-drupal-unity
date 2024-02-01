@@ -6,7 +6,7 @@
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
 
-  #logo img {
+  .top_left #logo img {
     height: 9rem;
     @media screen and (max-width: $tab) {
       position: relative;
@@ -74,7 +74,6 @@
 
 .region-front-welcome {
   background: $brand-primary;
-  max-width: 100%;
   display: flex;
   justify-content: center;
   padding: 3%;
@@ -106,6 +105,7 @@
       background: $brand-primary;
       display: block;
       position: relative;
+      border: 2px solid $black;
 
       @include breakpoint($tab) {
         min-height: 38rem;
