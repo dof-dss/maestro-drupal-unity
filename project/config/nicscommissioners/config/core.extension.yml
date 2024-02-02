@@ -87,6 +87,7 @@ module:
   metatag_views: 0
   moderation_sidebar: 0
   mysql: 0
+  nicscommissioners_breadcrumbs: 0
   node: 0
   node_edit_protection: 0
   noreferrer: 0

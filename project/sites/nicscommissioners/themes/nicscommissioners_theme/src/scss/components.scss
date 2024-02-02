@@ -13,6 +13,16 @@
     }
   }
 
+#inner_header_wrapper {
+  background-image: resolve('banner-top.png');
+  background-size: cover;
+  height: 13rem;
+  @media screen and (max-width: $tab) {
+    background: none;
+    height: 18rem;
+  }
+}
+
 .region-primary-menu .menu_wrapper {
   border-top: 1px solid $black;
   border-bottom: 1px solid $black;
