@@ -7,7 +7,7 @@ dependencies:
 id: liofa_theme_pagetitle
 theme: liofa_theme
 region: content
-weight: -1
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

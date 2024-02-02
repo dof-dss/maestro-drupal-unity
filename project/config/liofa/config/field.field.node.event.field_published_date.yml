@@ -11,7 +11,7 @@ id: node.event.field_published_date
 field_name: field_published_date
 entity_type: node
 bundle: event
-label: 'Start and end time of event'
+label: 'Start date and time of event'
 description: 'Enter the start and end time of the event.'
 required: true
 translatable: false

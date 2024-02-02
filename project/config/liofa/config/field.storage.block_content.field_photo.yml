@@ -1,13 +1,13 @@
-uuid: ee87ddb7-dfdf-479b-b48e-f5a3f69b14a2
+uuid: 771b6810-f107-4ef0-9210-0cd61e52bc80
 langcode: en
 status: true
 dependencies:
   module:
+    - block_content
     - media
-    - node
-id: node.field_podcast_url
-field_name: field_podcast_url
-entity_type: node
+id: block_content.field_photo
+field_name: field_photo
+entity_type: block_content
 type: entity_reference
 settings:
   target_type: media

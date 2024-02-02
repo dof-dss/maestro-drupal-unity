@@ -1,16 +1,16 @@
-uuid: 96601bef-e597-4a8a-a1d5-b9fccdb79faa
+uuid: 58a292a1-fa41-48b2-a3d7-97e6b5ab2b4d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_podcast_url
-    - media.type.audio
-    - node.type.podcast
-id: node.podcast.field_podcast_url
-field_name: field_podcast_url
-entity_type: node
-bundle: podcast
-label: 'Podcast URL'
+    - block_content.type.feature_block
+    - field.storage.block_content.field_photo
+    - media.type.image
+id: block_content.feature_block.field_photo
+field_name: field_photo
+entity_type: block_content
+bundle: feature_block
+label: Icon
 description: ''
 required: false
 translatable: false
@@ -20,10 +20,10 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      audio: audio
+      image: image
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: audio
+    auto_create_bundle: ''
 field_type: entity_reference
