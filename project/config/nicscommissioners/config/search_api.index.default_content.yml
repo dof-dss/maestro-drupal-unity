@@ -99,11 +99,11 @@ field_settings:
   language_with_fallback:
     label: 'Language (with fallback)'
     property_path: language_with_fallback
-    type: solr_text_spellcheck
+    type: string
   spelling:
     label: Spelling
     property_path: aggregated_field
-    type: string
+    type: solr_text_spellcheck
     configuration:
       type: union
       separator: |+
@@ -170,6 +170,7 @@ datasource_settings:
     bundles:
       default: true
       selected:
+        - featured_content
         - webform
     languages:
       default: true
