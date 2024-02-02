@@ -47,13 +47,18 @@ function liofa_theme_theme_suggestions_field_alter(array &$suggestions, array $v
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function liofa_theme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
-  $base_plugin_id = $variables['elements']['#base_plugin_id'];
+  $id = $variables['elements']['#id'];
 
-//  if ($plugin_id === 'liofa_theme_signuptoliofa') {
-//    $x = 1;
-//  }
+  $homepage_feature_blocks = [
+    'liofa_theme_signuptoliofa',
+    'liofa_theme_irishclasses',
+    'liofa_theme_liofaresources'
+  ];
 
-  $suggestions[] = 'block__' . $base_plugin_id;
+  if (in_array($id, $homepage_feature_blocks)) {
+    $suggestions[] = 'block__homepage_feature';
+  }
+
 }
 
 ///**
