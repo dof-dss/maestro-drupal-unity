@@ -12,7 +12,7 @@ bundle: news
 label: Summary
 description: 'Summary of the item - shown on the homepage.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

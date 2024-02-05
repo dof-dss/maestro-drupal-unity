@@ -72,6 +72,11 @@ article.block-link-with-wrapper {
     h2 {
       color: $link;
     }
+
+    .block-link__date {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
   }
 
   a {
@@ -111,7 +116,8 @@ article.block-link {
     }
   }
 
-  p.feature-morelink {
+  p.feature-morelink,
+  p.feature-morelink-irish {
     color: $link;
 
     &:after {
@@ -119,7 +125,7 @@ article.block-link {
       display: inline-block;
       position: absolute;
       bottom: 2.6rem;
-      right: .1rem;
+      right: 1rem;
       width: 3rem;
       height: 3rem;
       background-image: resolve('arrow_forward_link_blue.svg');
@@ -135,7 +141,8 @@ article.block-link {
 }
 
 #content #top-area .column article.block-link a,
-#content #bottom_wrapper .column article.block-link-with-wrapper a {
+#content #bottom_wrapper .column article.block-link-with-wrapper a,
+#content #block-liofa-theme-mainpagecontent article.block-link-with-wrapper a{
   border: none;
   margin: 0;
   padding: 0 1rem 1rem;
@@ -153,7 +160,9 @@ article.block-link {
   }
 
   &:hover p.feature-morelink:after,
-  &:focus p.feature-morelink:after {
+  &:focus p.feature-morelink:after,
+  &:hover p.feature-morelink-irish:after,
+  &:focus p.feature-morelink-irish:after{
     background-color: $charcoal;
     background-image: resolve('arrow_forward_white.svg');
     background-repeat: no-repeat;
@@ -162,6 +171,7 @@ article.block-link {
 
 #top-area {
   text-align: left;
+  margin-top: 2rem;
 
   h2 {
     color: $link;
@@ -174,10 +184,28 @@ article.block-link {
       margin-top: 4.4rem;
     }
   }
+
+  @media screen and (max-width: $desk) {
+    .column:last-child {
+      margin-right: 1rem;
+    }
+  }
+}
+
+#bottom-area.container-wrap {
+  @media screen and (max-width: $tab) {
+    margin: 1rem;
+  }
 }
 
 .bottom_widget .footer-area .column {
-  width: 60%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($tab) {
+    width: 60%;
+  }
 
   &:last-child {
     width: 100%;
@@ -191,6 +219,8 @@ article.block-link {
 #footer-area {
   .column:last-child {
     float: left;
+    width: 30rem;
+    margin: 0;
   }
 }
 
@@ -203,5 +233,11 @@ article.block-link {
 
   .media-image {
     margin: 0;
+  }
+}
+
+#footer-menu {
+  @media screen and (max-width: $tab) {
+    margin-left: 1rem;
   }
 }
