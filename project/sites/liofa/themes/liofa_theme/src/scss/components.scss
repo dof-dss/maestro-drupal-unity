@@ -241,3 +241,13 @@ article.block-link {
     margin-left: 1rem;
   }
 }
+
+.accordion-row h3,
+.path-gaeltacht .item-list h3 {
+  @include adjust-font-size-to(18px);
+  margin: 0 0 1rem;
+}
+
+.path-gaeltacht .item-list ul {
+  margin: 1.2rem 0 1.8rem 2.4rem;
+}

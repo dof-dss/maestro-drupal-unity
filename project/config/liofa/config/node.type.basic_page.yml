@@ -11,7 +11,7 @@ third_party_settings:
       - main
     parent: 'main:'
   origins_toc:
-    toc_enable: 1
+    toc_enable: 0
     toc_title: Contents
     toc_location: .page-title
     toc_insert: after
