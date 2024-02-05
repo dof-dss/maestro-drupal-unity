@@ -13,6 +13,16 @@
     }
   }
 
+#inner_header_wrapper {
+  background-image: resolve('banner-top.png');
+  background-size: cover;
+  height: 13rem;
+  @media screen and (max-width: $tab) {
+    background: none;
+    height: 18rem;
+  }
+}
+
 .region-primary-menu .menu_wrapper {
   border-top: 1px solid $black;
   border-bottom: 1px solid $black;
@@ -84,6 +94,10 @@
     color: $white;
     text-align: left;
 
+    li {
+      margin-left: 2rem;
+    }
+
     p {
       color: $white;
     }
@@ -97,12 +111,30 @@
   text-align: left;
   padding-top: 5rem;
 
+  #block-views-block-featured-content-featured-content-list-first {
+    .content .card-deck .cards-pack .card .card__link {
+      background: $brand-primary;
+    }
+  }
+
+  #block-views-block-featured-content-featured-content-list-middle {
+    .content .card-deck .cards-pack .card .card__link {
+      background: $brand-secondary;
+    }
+  }
+
+  #block-views-block-featured-content-featured-content-list-last {
+    .content .card-deck .cards-pack .card .card__link {
+      background: #0b3993;
+    }
+  }
+
+
   #block-views-block-featured-content-featured-content-list-first,
   #block-views-block-featured-content-featured-content-list-middle,
   #block-views-block-featured-content-featured-content-list-last {
     .content .card-deck .cards-pack .card .card__link {
       border: none;
-      background: $brand-primary;
       display: block;
       position: relative;
       border: 2px solid $black;
@@ -119,22 +151,15 @@
         right: 10px;
         width: 3rem;
         height: 3rem;
-        background-image: resolve('arrow_forward_link_blue.svg');
-        background-position: center center;
-        background-size: 2.4rem auto;
-        background-repeat: no-repeat;
       }
 
       &:hover,
       &:focus {
         background: $offwhite;
 
-        &:after {
-          background-color: $charcoal;
-          background-image: resolve('arrow_forward_white.svg');
-        }
         h2 {
           color: $brand-primary;
+          text-decoration: underline;
         }
       }
 
