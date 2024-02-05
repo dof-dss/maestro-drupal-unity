@@ -41,6 +41,7 @@ module:
   entity_browser_entity_form: 0
   entity_embed: 0
   entity_reference_revisions: 0
+  entityqueue: 0
   facets: 0
   facets_pretty_paths: 0
   facets_summary: 0
@@ -86,6 +87,7 @@ module:
   metatag_views: 0
   moderation_sidebar: 0
   mysql: 0
+  nicscommissioners_breadcrumbs: 0
   node: 0
   node_edit_protection: 0
   noreferrer: 0
