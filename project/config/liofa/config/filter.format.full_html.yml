@@ -17,6 +17,7 @@ dependencies:
     - ckeditor5_allowed_html
     - editor
     - entity_embed
+    - linkit
     - media
     - noreferrer
     - origins_common
@@ -187,3 +188,10 @@ filters:
       thumbnail_effect: ''
       thumbnail_position: ''
       override: false
+  linkit:
+    id: linkit
+    provider: linkit
+    status: false
+    weight: 0
+    settings:
+      title: true

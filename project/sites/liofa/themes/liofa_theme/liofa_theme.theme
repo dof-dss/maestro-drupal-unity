@@ -76,4 +76,3 @@ function liofa_theme_theme_suggestions_views_view_unformatted_alter(array &$sugg
     $suggestions[] = 'views_view_unformatted__organisations_accordion';
   }
 }
-
