@@ -1,27 +1,24 @@
-uuid: 7bc97656-3e4d-4954-a748-f9d6e7526f35
-langcode: en-gb
+uuid: 07f399d8-eace-42a9-8da6-ce01468b8b7e
+langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.diff
     - field.field.node.webform.body
     - field.field.node.webform.webform
     - node.type.webform
   module:
     - text
     - user
-_core:
-  default_config_hash: Ls5l3Xs7-YstJnurxFLKj38Exqr2JMZs1j9YeX1Kh2o
-id: node.webform.teaser
+id: node.webform.diff
 targetEntityType: node
 bundle: webform
-mode: teaser
+mode: diff
 content:
   body:
-    type: text_summary_or_trimmed
+    type: text_default
     label: hidden
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
