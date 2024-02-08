@@ -1,14 +1,7 @@
 uuid: d0dea441-50ef-4e54-b3e0-8168f3f48904
 langcode: en
 status: open
-dependencies:
-  module:
-    - webform_counter
-third_party_settings:
-  webform_counter:
-    offline_submissions_count: 5
-    target_submissions_count: 1
-    submissions_count_text: !!binary Aw==
+dependencies: {  }
 weight: 0
 open: null
 close: null
@@ -32,10 +25,6 @@ elements: |-
     '#type': textfield
     '#title': Postcode
     '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
-  processed_text:
-    '#type': processed_text
-    '#text': '<p><code class=" language-php"><span class="token punctuation">[</span>site<span class="token punctuation">:</span>webform<span class="token operator">-</span>counter<span class="token punctuation">:sign_up_to_liofa]</span></code></p>'
-    '#format': full_html
 css: ''
 javascript: ''
 settings:
