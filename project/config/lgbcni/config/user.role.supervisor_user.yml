@@ -18,7 +18,6 @@ dependencies:
   module:
     - content_moderation
     - file
-    - file_delete_ui
     - filter
     - media
     - menu_admin_per_menu
