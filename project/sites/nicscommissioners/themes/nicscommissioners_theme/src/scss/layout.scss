@@ -34,7 +34,7 @@
 }
 
 #footer-area .column {
-  width: 95%;
+  width: 100%;
   padding-left: 0;
   margin-left: 0;
 
@@ -42,12 +42,18 @@
     width: 30%;
   }
 
-  &:last-child {
+  &:first-child {
+    width: 40%;
     @media screen and (max-width: $tab) {
-      float: none;
+      width: 100%;
     }
   }
-}
+
+  &:last-child {
+    float: left;
+    }
+  }
+
 
 #footer #footer-area .column .social-icons {
   margin-top: 0;
