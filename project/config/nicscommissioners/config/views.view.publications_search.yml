@@ -120,11 +120,11 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
@@ -216,6 +216,10 @@ display:
         type: default
       row:
         type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              publication: search_index
       query:
         type: search_api_query
         options:
@@ -245,10 +249,6 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      cache:
-        type: none
-      defaults:
-        cache: false
       exposed_block: true
       display_extenders:
         metatag_display_extender:
@@ -259,13 +259,13 @@ display:
         type: normal
         title: Publications
         description: ''
-        weight: -45
+        weight: 0
         expanded: false
         menu_name: main
         parent: ''
         context: '0'
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -273,6 +273,7 @@ display:
         - url.query_args
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.date_published'
         - 'config:field.storage.node.body'
         - 'config:search_api.index.publications'
         - 'search_api_list:publications'

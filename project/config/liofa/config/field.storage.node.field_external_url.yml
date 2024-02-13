@@ -1,18 +1,16 @@
-uuid: 2bbc5597-061d-4ef1-9bae-dbe9d6072bf0
-langcode: und
+uuid: 0de22733-10cf-446c-9186-b536ed654628
+langcode: en
 status: true
 dependencies:
   module:
+    - link
     - node
 id: node.field_external_url
 field_name: field_external_url
 entity_type: node
-type: string
-settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: 1
 translatable: true

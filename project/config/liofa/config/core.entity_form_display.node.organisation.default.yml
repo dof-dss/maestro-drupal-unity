@@ -20,6 +20,7 @@ dependencies:
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
+    - link
     - media_library
     - media_library_edit
     - metatag
@@ -79,16 +80,16 @@ content:
       size: 60
     third_party_settings: {  }
   field_external_url:
-    type: string_textfield
+    type: link_default
     weight: 2
     region: content
     settings:
-      size: 60
-      placeholder: ''
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 14
+    weight: 15
     region: content
     settings:
       sidebar: true

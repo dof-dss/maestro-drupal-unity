@@ -3,8 +3,9 @@ langcode: en-gb
 status: true
 dependencies:
   config:
+    - field.field.node.podcast.field_external_url
     - field.field.node.podcast.field_meta_tags
-    - field.field.node.podcast.field_podcast_url
+    - field.field.node.podcast.field_metatag
     - field.field.node.podcast.field_published_date
     - field.field.node.podcast.field_teaser
     - node.type.podcast
@@ -12,7 +13,7 @@ dependencies:
   module:
     - content_moderation
     - datetime
-    - media_library
+    - link
     - metatag
     - path
 id: node.podcast.default
@@ -22,34 +23,43 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_external_url:
+    type: link_default
+    weight: 4
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 14
+    weight: 8
     region: content
     settings:
       sidebar: true
       use_details: true
     third_party_settings: {  }
-  field_podcast_url:
-    type: media_library_widget
-    weight: 121
+  field_metatag:
+    type: metatag_firehose
+    weight: 15
     region: content
     settings:
-      media_types: {  }
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_published_date:
     type: datetime_default
-    weight: 4
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_teaser:
     type: string_textfield
-    weight: 1
+    weight: 2
     region: content
     settings:
       size: 60
@@ -62,54 +72,54 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 15
+    weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 120
+    weight: 14
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 16
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 10
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -124,7 +134,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

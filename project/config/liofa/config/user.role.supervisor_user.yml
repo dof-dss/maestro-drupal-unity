@@ -3,13 +3,38 @@ langcode: en-gb
 status: true
 dependencies:
   config:
-    - node.type.faq
+    - media.type.audio
+    - media.type.document
+    - media.type.file
+    - media.type.image
+    - media.type.remote_video
+    - node.type.basic_page
+    - node.type.bulk_pledges
+    - node.type.feature
+    - node.type.news
+    - node.type.organisation
+    - node.type.phrase_of_the_week
+    - node.type.podcast
+    - node.type.webform
+    - workflows.workflow.nics_editorial_workflow
   module:
     - block
+    - content_moderation
+    - entityqueue
+    - file
+    - media
+    - menu_admin_per_menu
+    - moderation_sidebar
     - node
+    - origins_metatag
+    - origins_workflow
     - path
     - pathauto
+    - redirect
+    - scheduled_transitions
     - system
+    - toolbar
+    - whatlinkshere
 _core:
   default_config_hash: 6dGYtGiX0D6hjlvLXGLSklpZZUhzbdlDZbbVZdBDcuM
 id: supervisor_user
@@ -20,15 +45,128 @@ permissions:
   - 'access administration pages'
   - 'access content'
   - 'access content overview'
-  - 'access site reports'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'add scheduled transitions node basic_page'
+  - 'add scheduled transitions node bulk_pledges'
+  - 'add scheduled transitions node feature'
+  - 'add scheduled transitions node news'
+  - 'add scheduled transitions node organisation'
+  - 'add scheduled transitions node phrase_of_the_week'
+  - 'add scheduled transitions node podcast'
   - 'administer blocks'
+  - 'administer main menu items'
   - 'administer pathauto'
-  - 'administer url aliases'
-  - 'create faq content'
+  - 'administer redirects'
+  - 'audit content'
+  - 'create audio media'
+  - 'create document media'
+  - 'create feature content'
+  - 'create file media'
+  - 'create image media'
+  - 'create news content'
+  - 'create organisation content'
+  - 'create phrase_of_the_week content'
+  - 'create podcast content'
+  - 'create remote_video media'
   - 'create url aliases'
-  - 'delete any faq content'
-  - 'delete own faq content'
-  - 'edit any faq content'
-  - 'edit own faq content'
+  - 'create webform content'
+  - 'delete all revisions'
+  - 'delete any audio media'
+  - 'delete any basic_page content'
+  - 'delete any bulk_pledges content'
+  - 'delete any document media'
+  - 'delete any feature content'
+  - 'delete any file'
+  - 'delete any file media'
+  - 'delete any image media'
+  - 'delete any news content'
+  - 'delete any organisation content'
+  - 'delete any phrase_of_the_week content'
+  - 'delete any podcast content'
+  - 'delete any remote_video media'
+  - 'delete basic_page revisions'
+  - 'delete bulk_pledges revisions'
+  - 'delete feature revisions'
+  - 'delete news revisions'
+  - 'delete organisation revisions'
+  - 'delete own audio media'
+  - 'delete own document media'
+  - 'delete own feature content'
+  - 'delete own file media'
+  - 'delete own image media'
+  - 'delete own news content'
+  - 'delete own organisation content'
+  - 'delete own phrase_of_the_week content'
+  - 'delete own podcast content'
+  - 'delete own remote_video media'
+  - 'delete phrase_of_the_week revisions'
+  - 'delete podcast revisions'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any feature content'
+  - 'edit any file media'
+  - 'edit any image media'
+  - 'edit any news content'
+  - 'edit any organisation content'
+  - 'edit any phrase_of_the_week content'
+  - 'edit any podcast content'
+  - 'edit any remote_video media'
+  - 'edit basic meta tags'
+  - 'edit own audio media'
+  - 'edit own document media'
+  - 'edit own feature content'
+  - 'edit own file media'
+  - 'edit own image media'
+  - 'edit own news content'
+  - 'edit own organisation content'
+  - 'edit own phrase_of_the_week content'
+  - 'edit own podcast content'
+  - 'edit own remote_video media'
+  - 'manipulate entityqueues'
+  - 'reschedule scheduled transitions node basic_page'
+  - 'reschedule scheduled transitions node bulk_pledges'
+  - 'reschedule scheduled transitions node feature'
+  - 'reschedule scheduled transitions node news'
+  - 'reschedule scheduled transitions node organisation'
+  - 'reschedule scheduled transitions node phrase_of_the_week'
+  - 'reschedule scheduled transitions node podcast'
+  - 'revert all revisions'
+  - 'revert basic_page revisions'
+  - 'revert bulk_pledges revisions'
+  - 'revert feature revisions'
+  - 'revert news revisions'
+  - 'revert organisation revisions'
+  - 'revert phrase_of_the_week revisions'
+  - 'revert podcast revisions'
+  - 'update slideshow entityqueue'
+  - 'use moderation sidebar'
+  - 'use nics_editorial_workflow transition archive'
+  - 'use nics_editorial_workflow transition create_new_draft'
+  - 'use nics_editorial_workflow transition draft_of_published'
+  - 'use nics_editorial_workflow transition publish'
+  - 'use nics_editorial_workflow transition reject'
+  - 'use nics_editorial_workflow transition restore'
+  - 'use nics_editorial_workflow transition restore_to_draft'
+  - 'use nics_editorial_workflow transition submit_for_review'
+  - 'view all scheduled transitions'
+  - 'view any unpublished content'
+  - 'view basic_page revisions'
+  - 'view bulk_pledges revisions'
+  - 'view content references'
+  - 'view feature revisions'
+  - 'view latest version'
+  - 'view news revisions'
+  - 'view organisation revisions'
   - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view phrase_of_the_week revisions'
+  - 'view podcast revisions'
+  - 'view scheduled transitions node basic_page'
+  - 'view scheduled transitions node bulk_pledges'
+  - 'view scheduled transitions node feature'
+  - 'view scheduled transitions node news'
+  - 'view scheduled transitions node organisation'
+  - 'view scheduled transitions node phrase_of_the_week'
+  - 'view scheduled transitions node podcast'
   - 'view the administration theme'

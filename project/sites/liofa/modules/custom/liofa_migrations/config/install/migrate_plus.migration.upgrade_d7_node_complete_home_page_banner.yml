@@ -76,7 +76,7 @@ process:
     -
       plugin: get
       source: comment
-  field_banner_image:
+  field_photo:
     -
       plugin: sub_process
       source: field_banner_image
@@ -86,7 +86,7 @@ process:
         title: title
         width: width
         height: height
-  field_banner_text:
+  field_teaser:
     -
       plugin: get
       source: field_banner_text
@@ -97,7 +97,7 @@ process:
 destination:
   plugin: 'entity_complete:node'
   translations: true
-  default_bundle: home_page_banner
+  default_bundle: feature
 migration_dependencies:
   required:
     - upgrade_d7_user
