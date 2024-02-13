@@ -21,7 +21,7 @@ content:
     label: above
     settings:
       timezone_override: ''
-      format_type: unity_date
+      format_type: liofa_bulk_pledges
     third_party_settings: {  }
     weight: 2
     region: content

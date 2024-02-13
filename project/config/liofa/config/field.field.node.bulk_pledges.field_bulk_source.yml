@@ -12,7 +12,7 @@ bundle: bulk_pledges
 label: Source
 description: 'Details of where the pledges were collected from.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

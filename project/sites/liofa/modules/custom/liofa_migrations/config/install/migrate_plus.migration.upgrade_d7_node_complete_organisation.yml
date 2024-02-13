@@ -78,7 +78,7 @@ process:
       source: comment
   field_external_url:
     -
-      plugin: get
+      plugin: text_to_link
       source: field_external_url
   field_description:
     -
