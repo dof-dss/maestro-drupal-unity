@@ -67,9 +67,10 @@
 
   .column {
     float: none;
+    flex-basis: 100%;
 
     @include breakpoint($tab) {
-      flex-basis: 30rem;
+      flex-basis: 50rem;
     }
   }
 
