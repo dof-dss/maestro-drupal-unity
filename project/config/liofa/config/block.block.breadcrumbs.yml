@@ -1,4 +1,4 @@
-uuid: 28f6d426-13e2-4a56-93c2-3be139e17fc9
+uuid: e0eaebcb-ad93-4972-9571-2724f21295d8
 langcode: en
 status: true
 dependencies:
@@ -6,19 +6,19 @@ dependencies:
     - system
   theme:
     - liofa_theme
-id: liofa_theme_pagetitle
+id: breadcrumbs
 theme: liofa_theme
-region: content
-weight: -4
+region: breadcrumb
+weight: 0
 provider: null
-plugin: page_title_block
+plugin: system_breadcrumb_block
 settings:
-  id: page_title_block
-  label: 'Page title'
+  id: system_breadcrumb_block
+  label: Breadcrumbs
   label_display: '0'
-  provider: core
+  provider: system
 visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "<front>\r\n/search\r\n"
+    pages: '<front>'
