@@ -190,3 +190,12 @@ p.published-date {
 .salaried-date {
   @include adjust-font-size-to(26px);
 }
+
+.sign-up {
+  background-color: $grey-lightest;
+  padding: 1rem;
+
+  i {
+    padding-right: 1rem;
+  }
+}
