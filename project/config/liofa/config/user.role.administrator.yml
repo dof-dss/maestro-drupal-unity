@@ -8,7 +8,6 @@ dependencies:
     - block
     - content_translation
     - contextual
-    - devel
     - filter
     - image
     - language
@@ -18,7 +17,6 @@ dependencies:
     - pathauto
     - system
     - taxonomy
-    - views_ui
 _core:
   default_config_hash: J8rXM_vdD29ZTEwtLOs84Vsn-PTRH-ZDh_Pi610CAEI
 id: administrator
@@ -30,7 +28,6 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access contextual links'
-  - 'access devel information'
   - 'access site in maintenance mode'
   - 'access site reports'
   - 'access user profiles'
@@ -50,14 +47,12 @@ permissions:
   - 'administer themes'
   - 'administer url aliases'
   - 'administer users'
-  - 'administer views'
   - 'bypass node access'
   - 'cancel account'
   - 'change own username'
   - 'create url aliases'
   - 'notify of path changes'
   - 'select account cancellation method'
-  - 'switch users'
   - 'translate any entity'
   - 'translate interface'
   - 'use text format full_html'
