@@ -73,6 +73,7 @@ module:
   link: 0
   link_fix_absolute_urls: 0
   linkit: 0
+  liofa_pledges: 0
   locale: 0
   media: 0
   media_file_delete: 0
@@ -91,6 +92,7 @@ module:
   node: 0
   node_edit_protection: 0
   noreferrer: 0
+  object_log: 0
   options: 0
   origins_ckeditor_enhancements: 0
   origins_common: 0
@@ -108,11 +110,7 @@ module:
   redis: 0
   responsive_image: 0
   scheduled_transitions: 0
-  search_api: 0
-  search_api_autocomplete: 0
-  search_api_solr: 0
-  search_api_solr_autocomplete: 0
-  search_api_spellcheck: 0
+  search: 0
   simplei: 0
   slick: 0
   slick_ui: 0
@@ -126,13 +124,11 @@ module:
   toolbar: 0
   twig_tweak: 0
   ultimate_cron: 0
-  unity_breadcrumbs: 0
   unity_common: 0
   unity_eu_cookie_compliance: 0
   unity_frontpage: 0
   unity_image_styles: 0
   unity_internal_link_checker: 0
-  unity_search_pages: 0
   update: 0
   user: 0
   views_custom_cache_tag: 0
