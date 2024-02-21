@@ -15,6 +15,7 @@ dependencies:
     - node
     - path
     - pathauto
+    - search
     - system
     - taxonomy
 _core:
@@ -41,6 +42,7 @@ permissions:
   - 'administer nodes'
   - 'administer pathauto'
   - 'administer permissions'
+  - 'administer search'
   - 'administer site configuration'
   - 'administer software updates'
   - 'administer taxonomy'
@@ -52,9 +54,11 @@ permissions:
   - 'change own username'
   - 'create url aliases'
   - 'notify of path changes'
+  - 'search content'
   - 'select account cancellation method'
   - 'translate any entity'
   - 'translate interface'
+  - 'use advanced search'
   - 'use text format full_html'
   - 'view own unpublished content'
   - 'view the administration theme'
