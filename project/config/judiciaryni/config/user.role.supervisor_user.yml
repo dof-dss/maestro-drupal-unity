@@ -112,7 +112,6 @@ permissions:
   - 'edit own judicial_member content'
   - 'edit own publication content'
   - 'edit own remote_video media'
-  - 'manipulate all entityqueues'
   - 'manipulate entityqueues'
   - 'reschedule scheduled transitions node basic_page'
   - 'reschedule scheduled transitions node feature'
