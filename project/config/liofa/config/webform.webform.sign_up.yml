@@ -16,9 +16,11 @@ elements: |-
   name:
     '#type': textfield
     '#title': Name
+    '#required': true
   email_address:
     '#type': email
     '#title': 'Email address'
+    '#required': true
   postcode:
     '#type': textfield
     '#title': Postcode
@@ -31,7 +33,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: '/signup'
+  page_submit_path: /signup
   page_confirm_path: ''
   page_theme_name: ''
   form_title: both
@@ -128,7 +130,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: page
   confirmation_url: ''
-  confirmation_title: 'Success'
+  confirmation_title: Success
   confirmation_message: 'Thank you for signing up to Liofa.'
   confirmation_attributes: {  }
   confirmation_back: true
