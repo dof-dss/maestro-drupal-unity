@@ -13,55 +13,16 @@ bundles:
     bundle: basic_page
   -
     entity_type: node
-    bundle: blog
-  -
-    entity_type: node
     bundle: bulk_pledges
-  -
-    entity_type: node
-    bundle: event
-  -
-    entity_type: node
-    bundle: faq
   -
     entity_type: node
     bundle: feature
   -
     entity_type: node
-    bundle: first_name
-  -
-    entity_type: node
-    bundle: form_page
-  -
-    entity_type: node
-    bundle: forum
-  -
-    entity_type: node
     bundle: news
   -
     entity_type: node
-    bundle: newsletter
-  -
-    entity_type: node
     bundle: organisation
-  -
-    entity_type: node
-    bundle: panel
-  -
-    entity_type: node
-    bundle: phrase_of_the_week
-  -
-    entity_type: node
-    bundle: podcast
-  -
-    entity_type: node
-    bundle: shared_heritage
-  -
-    entity_type: node
-    bundle: surname
-  -
-    entity_type: node
-    bundle: training_course
   -
     entity_type: node
     bundle: webform
