@@ -68,8 +68,8 @@
 #}
 {{ content.field_publication_date }}
 <h3>
-  <a href="{{ url }}">{{ content.field_decision_title|render|striptags|trim }}</a>
+  <a href="{{ url }}">{{ content.field_decision_title|render|striptags|raw }}</a>
 </h3>
-{{ content.field_decision_issues }}
+{{ content.field_description }}
 <span class="neutral-citation">{{ node.label }}</span>
 {{ content.field_judiciary }}
