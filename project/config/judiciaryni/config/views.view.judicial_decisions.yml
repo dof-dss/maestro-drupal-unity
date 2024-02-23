@@ -312,7 +312,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<p><a href="judicial-decisions/type/judgment">More Judgments</a></p>'
+            value: '<p><a href="judicial-decisions/type/judgments-118">More Judgments</a></p>'
             format: basic_html
           tokenize: false
       display_extenders: {  }
