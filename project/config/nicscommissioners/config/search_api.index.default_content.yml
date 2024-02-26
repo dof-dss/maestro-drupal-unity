@@ -109,6 +109,7 @@ field_settings:
       separator: |+
 
 
+
       fields:
         - 'entity:node/title'
   status:
@@ -144,6 +145,7 @@ field_settings:
     configuration:
       type: union
       separator: |+
+
 
 
       fields:

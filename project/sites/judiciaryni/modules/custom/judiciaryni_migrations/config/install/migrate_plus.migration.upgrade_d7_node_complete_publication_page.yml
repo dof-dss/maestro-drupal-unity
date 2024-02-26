@@ -122,7 +122,7 @@ process:
         filtered_html_with_tokens: basic_html
         restricted_html: basic_html
         plain_text: plain_text
-  field_publication_date:
+  field_published_date:
     -
       plugin: sub_process
       source: field_publication_date
