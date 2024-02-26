@@ -16,7 +16,7 @@ provider: null
 plugin: 'block_content:3843fcba-d46d-442b-b2cf-ed5e3ba104f5'
 settings:
   id: 'block_content:3843fcba-d46d-442b-b2cf-ed5e3ba104f5'
-  label: 'What is Líofa?'
+  label: 'Cad is Líofa ann?'
   label_display: visible
   provider: block_content
   status: true
