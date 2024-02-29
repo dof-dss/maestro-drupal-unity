@@ -52,7 +52,7 @@ function liofa_theme_theme_suggestions_block_alter(array &$suggestions, array $v
   $homepage_feature_blocks = [
     'liofa_theme_signuptoliofa',
     'liofa_theme_irishclasses',
-    'liofa_theme_liofaresources'
+    'liofa_theme_thegaeltacht'
   ];
 
   if (in_array($id, $homepage_feature_blocks)) {
