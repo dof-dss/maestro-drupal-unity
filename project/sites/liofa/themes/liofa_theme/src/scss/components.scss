@@ -5,6 +5,52 @@
 @import 'init/index';
 @import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
 
+#block-liofa-theme-languageswitcher {
+
+  ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+  }
+
+  li {
+    float: left;
+    padding: 5px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      text-decoration-color: $link;
+    }
+
+    .is-active {
+      background: $brand-primary;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        text-decoration-color: $white;
+      }
+    }
+  }
+
+  a {
+    @include adjust-font-size-to(16px);
+    display: block;
+    border: $black 2px solid;
+    padding: 4px;
+    @media screen and (max-width: $tab) {
+      background: $white;
+    }
+  }
+}
+
+
+#main-menu .hamburger {
+  top: -11.5rem;
+}
+
 #main-menu .menu .menu-item .active,
 #main-menu .menu .menu-item .active + .menu-main_sub .title a {
   border-bottom-color: $brand-secondary;
