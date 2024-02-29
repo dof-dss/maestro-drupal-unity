@@ -17,9 +17,21 @@
     float: left;
     padding: 5px;
 
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      text-decoration-color: $link;
+    }
+
     .is-active {
       background: $brand-primary;
       color: $white;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        text-decoration-color: $white;
+      }
     }
   }
 
