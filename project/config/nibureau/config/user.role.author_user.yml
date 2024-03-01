@@ -27,7 +27,6 @@ label: 'author user'
 weight: 2
 is_admin: null
 permissions:
-  - 'access administration menu'
   - 'access administration pages'
   - 'access ckeditor link'
   - 'access content overview'
