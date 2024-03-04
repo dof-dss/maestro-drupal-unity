@@ -5,22 +5,6 @@
 # original repository.Any changes here will be overwritten when the project #
 # is built.                                                                 #
 #############################################################################
-'https://www.pacni.gov.uk/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://pacni.gov.uk/':
-    type: redirect
-    to: 'https://www.pacni.gov.uk/'
-'https://www.judiciaryni.uk/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://judiciaryni.uk/':
-    type: redirect
-    to: 'https://www.judiciaryni.uk/'
 'https://www.boundarycommission.org.uk.{default}/':
     type: upstream
     upstream: 'unity_svr_3:http'
@@ -39,30 +23,6 @@
     upstream: 'unity_svr_3:http'
     cache:
         enabled: 'false'
-'https://www.parolecomni.org.uk/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://parolecomni.org.uk/':
-    type: redirect
-    to: 'https://www.parolecomni.org.uk/'
-'https://www.lgbc-ni.org.uk/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://lgbc-ni.org.uk/':
-    type: redirect
-    to: 'https://www.lgbc-ni.org.uk/'
-'https://www.nibureau.com/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://nibureau.com/':
-    type: redirect
-    to: 'https://www.nibureau.com/'
 'https://www.nicscommissioners.org/':
     type: upstream
     upstream: 'unity_svr_3:http'
