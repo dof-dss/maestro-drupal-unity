@@ -2,6 +2,7 @@
 
 namespace Drupal\judiciaryni_custom_redirects\Commands;
 
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\structure_sync\StructureSyncHelper;
 use Drupal\redirect\Entity\Redirect;
 use Drush\Commands\DrushCommands;
@@ -21,9 +22,9 @@ class JudiciaryniDrushCommands extends DrushCommands {
   /**
    * Class constructor.
    */
-  public function __construct() {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
     parent::__construct();
-    $this->entityTypeManager = \Drupal::entityTypeManager();
+    $this->entityTypeManager = $entity_type_manager;
   }
 
   /**
