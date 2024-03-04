@@ -40,9 +40,11 @@ class JudiciaryniDrushCommands extends DrushCommands {
     $files = $storage->loadMultiple($fids);
     $total = 0;
     foreach ($files as $file) {
+      // Retrieve the current URL for the file.
       $url = urldecode($file->createFileUrl());
+      // Generate the old version of the URL.
       $oldpath = str_replace('files/judiciaryni/decisions','sites/judiciary/files/decisions',$url);
-      $oldpath = str_replace('files/judiciaryni/media-files','sites/judiciary/files/media-files',$url);
+      $oldpath = str_replace('files/judiciaryni/media-files','sites/judiciary/files/media-files',$oldpath);
       // Check to see if a redirect already exists.
       $redirects = $this->entityTypeManager->getStorage('redirect')->getQuery()
         ->accessCheck(TRUE)
