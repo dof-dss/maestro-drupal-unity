@@ -26,7 +26,7 @@ class JudiciaryniDrushCommands extends DrushCommands {
   }
 
   /**
-   * Drush command to generate old style redirects (sites/judiciaryni/files)
+   * Drush command to generate old style redirects (sites/judiciary/files)
    * for Drupal 10 style paths (files/judiciaryni).
    *
    * @command judiciary-generate-old-redirects
@@ -41,6 +41,8 @@ class JudiciaryniDrushCommands extends DrushCommands {
     foreach ($files as $file) {
       $url = $file->createFileUrl();
       print("Path is " . $url . "\n");
+      $oldpath = str_replace('files/judiciaryni','sites/judiciary/files',$url);
+      print("Old path is " . $oldpath . "\n\n");
     }
   }
 }
