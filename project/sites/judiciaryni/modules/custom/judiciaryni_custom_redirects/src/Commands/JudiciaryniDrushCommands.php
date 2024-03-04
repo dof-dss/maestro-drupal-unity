@@ -39,8 +39,8 @@ class JudiciaryniDrushCommands extends DrushCommands {
     $files = $storage->loadMultiple($fids);
     $titles = [];
     foreach ($files as $file) {
-      $title = $file->getFilename();
-      print("Title is " . $title);
+      $url = $file->createFileUrl();
+      print("Path is " . $url . "\n");
     }
   }
 }
