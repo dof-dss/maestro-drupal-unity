@@ -291,7 +291,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<h3><a href=\"{{ view_node }}\">{{ title }}\r\n{% if field_town_city %}\r\n, {{ field_town_city }}</a></h3>\r\n{% else %}\r\n</a></h3>\r\n{% endif %}"
+            text: "<h3><a href=\"{{ view_node }}\">{{ title }}\r\n{% if field_town_city %}, \r\n{{ field_town_city }}</a></h3>\r\n{% else %}\r\n</a></h3>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
