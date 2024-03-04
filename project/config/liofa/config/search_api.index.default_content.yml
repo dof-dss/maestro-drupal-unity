@@ -133,9 +133,6 @@ field_settings:
 
 
 
-
-
-
       fields:
         - 'entity:node/body'
         - 'entity:node/title'
