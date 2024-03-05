@@ -14,7 +14,7 @@ bundle: bulk_pledges
 label: Date
 description: 'The date on which the pledges were collected..'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

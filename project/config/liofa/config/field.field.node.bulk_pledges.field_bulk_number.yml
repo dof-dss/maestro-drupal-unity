@@ -12,7 +12,7 @@ bundle: bulk_pledges
 label: 'Number of pledges'
 description: 'The number of pledges collected.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
