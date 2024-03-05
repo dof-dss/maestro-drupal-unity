@@ -46,6 +46,8 @@ class JudiciaryniDrushCommands extends DrushCommands {
       // Generate the old version of the URL.
       $oldpath = str_replace('files/judiciaryni/decisions','sites/judiciary/files/decisions',$url);
       $oldpath = str_replace('files/judiciaryni/media-files','sites/judiciary/files/media-files',$oldpath);
+      $oldpath = str_replace('files/judiciaryni/2024-02','sites/judiciary/files/media-files',$oldpath);
+      $oldpath = str_replace('files/judiciaryni/2024-01','sites/judiciary/files/media-files',$oldpath);
       // Only create the redirect if the url has been changed.
       if ($oldpath != $url) {
         // Check to see if a redirect already exists.
