@@ -46,20 +46,23 @@ class JudiciaryniDrushCommands extends DrushCommands {
       // Generate the old version of the URL.
       $oldpath = str_replace('files/judiciaryni/decisions','sites/judiciary/files/decisions',$url);
       $oldpath = str_replace('files/judiciaryni/media-files','sites/judiciary/files/media-files',$oldpath);
-      // Check to see if a redirect already exists.
-      $redirects = $this->entityTypeManager->getStorage('redirect')->getQuery()
-        ->accessCheck(TRUE)
-        ->condition('redirect_source.path', substr($oldpath,1))
-        ->execute();
-      if (empty($redirects)) {
-        // Create the new redirect.
-        Redirect::create([
-          'redirect_source' => substr($oldpath,1),
-          'redirect_redirect' => 'internal:' . $url,
-          'language' => 'und',
-          'status_code' => '301',
-        ])->save();
-        $total++;
+      // Only create the redirect if the url has been changed.
+      if ($oldpath != $url) {
+        // Check to see if a redirect already exists.
+        $redirects = $this->entityTypeManager->getStorage('redirect')->getQuery()
+          ->accessCheck(TRUE)
+          ->condition('redirect_source.path', substr($oldpath,1))
+          ->execute();
+        if (empty($redirects)) {
+          // Create the new redirect.
+          Redirect::create([
+            'redirect_source' => substr($oldpath,1),
+            'redirect_redirect' => 'internal:' . $url,
+            'language' => 'und',
+            'status_code' => '301',
+          ])->save();
+          $total++;
+        }
       }
     }
     if ($total > 0) {
