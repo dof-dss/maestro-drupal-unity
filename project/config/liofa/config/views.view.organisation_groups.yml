@@ -8,9 +8,10 @@ dependencies:
     - taxonomy.vocabulary.org_type
     - taxonomy.vocabulary.regions
   content:
-    - 'taxonomy_term:org_type:e7e27999-cd17-4a0d-a611-f045cd792ce6'
-    - 'taxonomy_term:regions:8949b6fd-7a4e-4925-ae3b-7b30e9df4215'
-    - 'taxonomy_term:regions:a1cdb1a9-de71-4d83-9f05-c11378f58d6b'
+    - 'taxonomy_term:org_type:03129731-7402-4e45-9f49-4523aaae4dca'
+    - 'taxonomy_term:org_type:d4a1a5fd-d617-44f4-ab3e-79043e16d23d'
+    - 'taxonomy_term:regions:7920c8a2-9512-4f8c-baa0-7bbb05589795'
+    - 'taxonomy_term:regions:ad73bb96-e1da-4d52-acb7-bf0b7afdaa47'
   module:
     - node
     - taxonomy
@@ -406,10 +407,128 @@ display:
     position: 1
     display_options:
       title: 'Irish-Language groups'
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            organisation: organisation
+        field_org_type_target_id:
+          id: field_org_type_target_id
+          table: node__field_org_type
+          field: field_org_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 80
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          vid: org_type
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_region_target_id:
+          id: field_region_target_id
+          table: taxonomy_term__field_region
+          field: field_region_target_id
+          relationship: field_county
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            82: 82
+            84: 84
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          vid: regions
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       defaults:
         title: false
-        filters: true
-        filter_groups: true
+        filters: false
+        filter_groups: false
       display_description: ''
       rendering_language: '***LANGUAGE_language_interface***'
       display_extenders:
