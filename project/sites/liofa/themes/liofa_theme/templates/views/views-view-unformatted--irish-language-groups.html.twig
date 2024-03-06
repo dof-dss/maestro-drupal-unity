@@ -21,8 +21,6 @@
 {% endif %}
 <div class="accordion-section">
   <div class="accordion-row">
-    {#{% for row in rows %}#}
-  {{ drupal_view('organisations_by_term', 'organisation_classes', county_tid) }}
+    {{ drupal_view('organisations_by_term', 'organisation_grouped', county_tid) }}
   </div>
-  {#{% endfor %}#}
 </div>
