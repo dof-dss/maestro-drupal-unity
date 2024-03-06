@@ -1,0 +1,6 @@
+services:
+  liofa_breadcrumbs.breadcrumb.Organisation:
+    class: Drupal\liofa_breadcrumbs\OrganisationBreadcrumb
+    arguments: ['@entity_type.manager', '@title_resolver', '@request_stack']
+    tags:
+      - { name: breadcrumb_builder, priority: 105 }
