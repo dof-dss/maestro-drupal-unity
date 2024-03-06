@@ -30,7 +30,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 /**
  * {@inheritdoc}
  */
-class OrganisationBreadcrumb implements BreadcrumbBuilderInterface {
+class NewsBreadcrumb implements BreadcrumbBuilderInterface {
 
   /**
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
@@ -90,7 +90,7 @@ class OrganisationBreadcrumb implements BreadcrumbBuilderInterface {
         $this->node = $this->entityTypeManager->getStorage('node')->load($this->node);
       }
       if (!empty($this->node)) {
-        if ($this->node->bundle() === 'organisation') {
+        if ($this->node->bundle() === 'news') {
           $match = TRUE;
         }
       }
@@ -108,10 +108,12 @@ class OrganisationBreadcrumb implements BreadcrumbBuilderInterface {
     if ($this->node) {
       $links[] = Link::createFromRoute(t('Home'), '<front>');
       if (!empty($lang) && $lang === 'ga') {
-        $links[] = Link::fromTextandUrl(t('Foghlaim na Gaeilge'), Url::fromUri('internal:/ga/ag-foghlaim-gaeilge'));
+        $links[] = Link::fromTextandUrl(t('Maidir le Líofa'), Url::fromUri('internal:/ga/maidir-le-liofa'));
+        $links[] = Link::fromTextandUrl(t('Nuacht'), Url::fromRoute('view.news_and_events.news_page'));
       }
       else {
-        $links[] = Link::fromTextandUrl(t('Learning Irish'), Url::fromUri('internal:/learning-irish'));
+        $links[] = Link::fromTextandUrl(t('About Líofa'), Url::fromUri('internal:/about-liofa'));
+        $links[] = Link::fromTextandUrl(t('News'), Url::fromRoute('view.news_and_events.news_page'));
       }
       $links[] = Link::createFromRoute($title_resolver, '<none>');
       $breadcrumb->setLinks($links);
