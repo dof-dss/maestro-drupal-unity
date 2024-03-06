@@ -1,0 +1,20 @@
+uuid: 34bd4381-7702-4c1b-9bce-22b673a872c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - liofa_pledges
+  theme:
+    - liofa_theme
+id: liofa_theme_liofapledgesblock
+theme: liofa_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: liofa_pledges_block
+settings:
+  id: liofa_pledges_block
+  label: 'Líofa Latest'
+  label_display: visible
+  provider: liofa_pledges
+visibility: {  }
