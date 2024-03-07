@@ -1,47 +1,44 @@
-uuid: ae2c21cc-63fe-484a-ad59-12c58c343937
+uuid: 0c7a77ae-4707-4367-bd44-78654211931d
 langcode: en
 status: open
-dependencies:
-  enforced:
-    module:
-      - webform
-_core:
-  default_config_hash: _je-MWeeJB6gfm6iECiqjcyNetfMFbn-YIInYwZ1gIk
+dependencies: {  }
 weight: 0
 open: null
 close: null
-uid: null
+uid: 305
 template: false
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: contact_us
+title: 'Contact us'
+description: ''
 categories: {  }
 elements: |-
-  name:
-    '#title': 'Your Name'
+  first_name:
     '#type': textfield
+    '#title': 'First name'
     '#required': true
-    '#default_value': '[current-user:display-name]'
-  email:
-    '#title': 'Your Email'
+  last_name:
+    '#type': textfield
+    '#title': 'Last name'
+    '#required': true
+  contact_email:
     '#type': email
+    '#title': Email
     '#required': true
-    '#default_value': '[current-user:mail]'
-  subject:
-    '#title': Subject
+  contact_telephone:
     '#type': textfield
+    '#title': Telephone
     '#required': true
-    '#test': 'Testing contact webform from [site:name]'
-  message:
-    '#title': Message
+    '#pattern': '^[0-9\(\) \+\-]{6,20}$'
+    '#pattern_error': 'Enter a valid phone number'
+  contact_help:
     '#type': textarea
+    '#title': 'How can we help you?'
     '#required': true
-    '#test': 'Please ignore this email.'
   actions:
     '#type': webform_actions
     '#title': 'Submit button(s)'
-    '#submit__label': 'Send message'
+    '#submit__label': 'Submit contact us'
 css: ''
 javascript: ''
 settings:
@@ -50,11 +47,11 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: true
-  page_submit_path: /contact-us
-  page_confirm_path: /contact-us-success
+  page: false
+  page_submit_path: ''
+  page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -146,13 +143,13 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: inline
-  confirmation_url: '<front>'
-  confirmation_title: 'Thank you for contacting us.'
-  confirmation_message: 'Your message has been sent.'
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: 'Thank you for your submission.'
   confirmation_attributes: {  }
   confirmation_back: true
-  confirmation_back_label: 'Back to Contact form'
+  confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
   confirmation_exclude_token: false
@@ -171,7 +168,7 @@ settings:
   entity_limit_user_interval: null
   purge: none
   purge_days: null
-  results_disabled: false
+  results_disabled: true
   results_disabled_ignore: false
   results_customize: false
   token_view: false
@@ -226,69 +223,32 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
+  email:
     id: email
-    handler_id: email_confirmation
-    label: 'Email confirmation'
+    handler_id: email
+    label: Email
     notes: ''
     status: true
     conditions: {  }
-    weight: 1
+    weight: 0
     settings:
       states:
         - completed
-      to_mail: '[current-user:mail]'
+      to_mail: liofa@communities-ni.gov.uk
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
-      from_mail: _default
+      from_mail: webmaster@liofa.eu
       from_options: {  }
-      from_name: _default
+      from_name: 'Liofa website'
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
-  email_notification:
-    id: email
-    handler_id: email_notification
-    label: 'Email notification'
-    notes: ''
-    status: true
-    conditions: {  }
-    weight: 2
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      subject: 'Contact request submitted via Líofa website'
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
