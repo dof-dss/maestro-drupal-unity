@@ -1,31 +1,40 @@
-uuid: ed10eb20-ca4f-4d37-b853-94eb52cea6ac
+uuid: 0c7a77ae-4707-4367-bd44-78654211931d
 langcode: en
 status: open
 dependencies: {  }
 weight: 0
 open: null
 close: null
-uid: 295
+uid: 305
 template: false
 archive: false
-id: sign_up
-title: 'Sign up'
-description: 'Sign up webform'
+id: contact_us
+title: 'Contact us'
+description: ''
 categories: {  }
 elements: |-
-  name:
+  first_name:
     '#type': textfield
-    '#title': Name
+    '#title': 'First name'
     '#required': true
-  email_address:
+  last_name:
+    '#type': textfield
+    '#title': 'Last name'
+    '#required': true
+  contact_email:
     '#type': email
-    '#title': 'Email address'
+    '#title': Email
     '#required': true
-  postcode:
+  contact_telephone:
     '#type': textfield
-    '#title': Postcode
-    '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
-    '#pattern_error': 'Enter a valid UK postcode'
+    '#title': Telephone
+    '#required': true
+    '#pattern': '^[0-9\(\) \+\-]{6,20}$'
+    '#pattern_error': 'Enter a valid phone number'
+  contact_help:
+    '#type': textarea
+    '#title': 'How can we help you?'
+    '#required': true
 css: ''
 javascript: ''
 settings:
@@ -136,7 +145,7 @@ settings:
   confirmation_message: 'Thank you for your submission.'
   confirmation_attributes: {  }
   confirmation_back: true
-  confirmation_back_label: 'Back to sign up form'
+  confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
   confirmation_exclude_token: false
@@ -234,7 +243,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'Líofa pledge submitted via website'
+      subject: 'Contact request submitted via Líofa website'
       body: _default
       excluded_elements: {  }
       ignore_access: false
