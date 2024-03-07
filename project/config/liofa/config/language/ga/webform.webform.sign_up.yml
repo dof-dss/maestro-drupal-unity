@@ -5,3 +5,5 @@ elements: |
     '#title': Ríomhphost
   postcode:
     '#title': Postchód
+  actions:
+    '#submit__label': 'Cuir Cláraigh'

@@ -35,6 +35,10 @@ elements: |-
     '#type': textarea
     '#title': 'How can we help you?'
     '#required': true
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Submit contact us'
 css: ''
 javascript: ''
 settings:

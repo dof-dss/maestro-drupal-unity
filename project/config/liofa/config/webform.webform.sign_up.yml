@@ -26,6 +26,10 @@ elements: |-
     '#title': Postcode
     '#pattern': '^[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}$'
     '#pattern_error': 'Enter a valid UK postcode'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': 'Submit Sign up'
 css: ''
 javascript: ''
 settings:

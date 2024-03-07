@@ -9,3 +9,5 @@ elements: |
     '#title': Teileafón
   contact_help:
     '#title': 'An dtiocfadh linn cuidiú leat?'
+  actions:
+    '#submit__label': 'Cuir Déan teagmháil linn'
