@@ -19,4 +19,13 @@ function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $web
   }
 }
 
-
+/**
+ * Implements hook_preprocess_block().
+ * Getting the liofa_pledges overall count and storing it in a variable to use in
+ * themes/liofa_theme/templates/block/block--liofa-theme-liofapledgesblock.html.twig.
+ */
+function liofa_pledges_preprocess_block(&$variables) {
+  if (!empty($variables['elements']['#id']) && $variables['elements']['#id'] == 'liofa_theme_liofapledgesblock') {
+    $variables['plegde_count'] = number_format(\Drupal::config('liofa_pledges.countsettings')->get('pledge_count_submissions'));
+  }
+}

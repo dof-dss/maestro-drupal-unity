@@ -66,8 +66,10 @@ function liofa_theme_theme_suggestions_block_alter(array &$suggestions, array $v
  */
 function liofa_theme_preprocess_views_view_unformatted(&$variables) {
   foreach ($variables['rows'] as $row) {
-    // Get the Taxonomy Term ID of the county and store it in a variable to use in twig.
-    $county_tid = $row['content']['#row']->node__field_county_field_county_target_id;
-    $variables['county_tid'] = $county_tid;
+    if (!empty($row['content']['#row']->node__field_county_field_county_target_id)) {
+      // Get the Taxonomy Term ID of the county and store it in a variable to use in twig.
+      $county_tid = $row['content']['#row']->node__field_county_field_county_target_id;
+      $variables['county_tid'] = $county_tid;
+    }
   }
 }
