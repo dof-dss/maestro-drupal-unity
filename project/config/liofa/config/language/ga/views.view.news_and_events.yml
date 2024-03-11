@@ -13,3 +13,5 @@ display:
             format: basic_html
   news_page:
     display_title: Preasráitis
+  latest_news:
+    display_title: 'Latest nuacht'
