@@ -1,0 +1,43 @@
+<?php
+
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_ENTITY_presave() for nodes.
+ */
+function liofa_common_entity_presave(EntityInterface $entity) {
+  if ($entity instanceof ContentEntityInterface && $entity->hasField('moderation_state')) {
+    $l = $entity->language()->getId();
+    if (!$entity->hasTranslation('ga') && $entity->get('moderation_state')->value === 'needs_review' || $entity->get('moderation_state')->value === 'draft') {
+      \Drupal::messenger()
+        ->addMessage(t("Please update the Irish version for this content. You won't be able to publish this content without a translated version."), "error");
+    }
+    elseif (!$entity->hasTranslation('ga') && $entity->get('moderation_state')->value === 'published') {
+      \Drupal::messenger()
+        ->addMessage(t("Please update the Irish version for this content"), "error");
+    }
+  }
+}
+
+/**
+* Implements hook_form_FORM_ID_form_alter().
+ */
+function liofa_common_form_node_form_alter(&$form, FormStateInterface $form_state) {
+    // Add a custom form validation for content types.
+    $form['#validate'][] = 'liofa_common_node_form_validate';
+}
+
+/**
+ * Validate handler for the events form timefield field.
+ *
+ * @see nicybersecuritycentre_common_form_node_form_alter()
+ */
+function liofa_common_node_form_validate($form, FormStateInterface $form_state) {
+  $node = $form_state->getFormObject()->getEntity();
+  if (!$node->hasTranslation('ga') && $node->hasField('moderation_state') && $node->get('moderation_state')->value === 'published') {
+    // Don't let the end time be before the start time.
+      $form_state->setErrorbyName('', t('You cannot publish the page until a translation has been created.'));
+  }
+}
