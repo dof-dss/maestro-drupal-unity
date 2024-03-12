@@ -1,43 +1,48 @@
 <?php
 
-use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_ENTITY_presave() for nodes.
  */
 function liofa_common_entity_presave(EntityInterface $entity) {
-  if ($entity instanceof ContentEntityInterface && $entity->hasField('moderation_state')) {
-    $l = $entity->language()->getId();
-    if (!$entity->hasTranslation('ga') && $entity->get('moderation_state')->value === 'needs_review' || $entity->get('moderation_state')->value === 'draft') {
-      \Drupal::messenger()
-        ->addMessage(t("Please update the Irish version for this content. You won't be able to publish this content without a translated version."), "error");
+  if ($entity instanceof NodeInterface) {
+    // Bypass Feature and Bulk pledges content types as they aren't translatable.
+    if ($entity->bundle() === 'feature' || $entity->bundle() === 'bulk_pledges') {
+      return;
     }
-    elseif (!$entity->hasTranslation('ga') && $entity->get('moderation_state')->value === 'published') {
+    $node_language = $entity->language()->getId();
+    // Check there is no translation currently on the site for this node.
+    if ($node_language === 'ga' && !$entity->hasTranslation('en') || $node_language === 'en' && !$entity->hasTranslation('ga')) {
       \Drupal::messenger()
-        ->addMessage(t("Please update the Irish version for this content"), "error");
+        ->addMessage(t("Please update the Irish version for this content. The site won't function correctly without a published translated version."), "error");
     }
   }
 }
 
-/**
-* Implements hook_form_FORM_ID_form_alter().
- */
-function liofa_common_form_node_form_alter(&$form, FormStateInterface $form_state) {
-    // Add a custom form validation for content types.
-    $form['#validate'][] = 'liofa_common_node_form_validate';
-}
+// Code to stop a user saving a node unless it has a translation. Code isn't needed now but could be in the future.
 
-/**
- * Validate handler for the events form timefield field.
- *
- * @see nicybersecuritycentre_common_form_node_form_alter()
- */
-function liofa_common_node_form_validate($form, FormStateInterface $form_state) {
-  $node = $form_state->getFormObject()->getEntity();
-  if (!$node->hasTranslation('ga') && $node->hasField('moderation_state') && $node->get('moderation_state')->value === 'published') {
-    // Don't let the end time be before the start time.
-      $form_state->setErrorbyName('', t('You cannot publish the page until a translation has been created.'));
-  }
-}
+///**
+//* Implements hook_form_FORM_ID_form_alter().
+// */
+//function liofa_common_form_node_form_alter(&$form, FormStateInterface $form_state) {
+//    $form['#validate'][] = 'liofa_common_node_form_validate';
+//
+//}
+//
+///**
+// * Validate handler for the events form timefield field.
+// *
+// * @see liofa_common_form_node_form_alter()
+// */
+//function liofa_common_node_form_validate($form, FormStateInterface $form_state) {
+//  $node = $form_state->getFormObject()->getEntity();
+//  if ($node->get('moderation_state', 'published')) {
+//    if (!$node->hasTranslation('ga') && $node->hasField('moderation_state') && $form_state->getValue('moderation_state')[0]['value'] === 'published') {
+//      // Don't let the end time be before the start time.
+//      $form_state->setErrorbyName('', t('You cannot publish the page until a translation has been created.'));
+//    }
+//  }
+//}
