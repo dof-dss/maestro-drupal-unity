@@ -74,6 +74,7 @@ module:
   link_fix_absolute_urls: 0
   linkit: 0
   liofa_breadcrumbs: 0
+  liofa_common: 0
   liofa_pledges: 0
   locale: 0
   media: 0
