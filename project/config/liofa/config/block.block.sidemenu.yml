@@ -5,6 +5,7 @@ dependencies:
   config:
     - system.menu.main
   module:
+    - node
     - system
   theme:
     - liofa_theme
@@ -23,7 +24,10 @@ settings:
   depth: 0
   expand_all_items: false
 visibility:
-  request_path:
-    id: request_path
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     negate: false
-    pages: "/learning-irish\r\n/ga/foghlaim-na-gaeilge\r\n/shared-heritage\r\n/gaeltacht"
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      basic_page: basic_page

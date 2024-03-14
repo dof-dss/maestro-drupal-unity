@@ -104,7 +104,7 @@ article.block-link-with-wrapper {
 
   .block-link__body {
     position: relative;
-    padding-right: 1rem;
+    padding-right: 2rem;
 
     &:after {
       content: '';
@@ -244,6 +244,8 @@ article.block-link {
 }
 
 #bottom-area.container-wrap {
+  margin-top: 3rem;
+
   @media screen and (max-width: $tab) {
     margin: 1rem;
   }
@@ -302,4 +304,32 @@ article.block-link {
 
 .path-gaeltacht .item-list ul {
   margin: 1.2rem 0 1.8rem 2.4rem;
+}
+
+.front .region-sidebar-second,
+.region-sidebar-second .block {
+  .content {
+    background: $grey-light;
+    padding: 3rem 1rem;
+    text-align: center;
+
+    h3 {
+      @include adjust-font-size-to(50px);
+      margin: 2.5rem 0 3rem;
+    }
+
+    p {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.front .region-sidebar-second {
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 910px) {
+    float: right;
+    width: 33rem;
+    margin-bottom: 0;
+  }
 }
