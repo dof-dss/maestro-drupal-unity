@@ -273,16 +273,21 @@ article.block-link {
 #footer-area {
   .column:last-child {
     float: left;
-    width: 30rem;
+    width: 40rem;
     margin: 0;
   }
 }
 
-#block-liofa-theme-footercontactinformation {
-  .content a {
+#footer-area #block-liofa-theme-footercontactinformation {
+  .content div p a {
     margin: 0;
     padding: 0;
     border: none;
+
+    &:hover,
+    &:focus {
+      border: none;
+    }
   }
 
   .media-image {
