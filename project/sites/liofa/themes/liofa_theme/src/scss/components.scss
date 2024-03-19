@@ -89,6 +89,7 @@ article.block-link-with-wrapper {
 
   .block-link-wrapper {
     display: flex;
+    flex-flow: wrap;
   }
 
   h2 {
@@ -100,11 +101,13 @@ article.block-link-with-wrapper {
   .block-link__image {
     width: 34rem;
     padding-right: 2rem;
+    flex-basis: 15rem;
   }
 
   .block-link__body {
     position: relative;
     padding-right: 2rem;
+    flex-basis: 45rem;
 
     &:after {
       content: '';
