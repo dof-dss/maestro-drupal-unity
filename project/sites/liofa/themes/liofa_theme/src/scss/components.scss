@@ -89,6 +89,7 @@ article.block-link-with-wrapper {
 
   .block-link-wrapper {
     display: flex;
+    flex-flow: wrap;
   }
 
   h2 {
@@ -100,11 +101,16 @@ article.block-link-with-wrapper {
   .block-link__image {
     width: 34rem;
     padding-right: 2rem;
+    flex-basis: 15rem;
   }
 
   .block-link__body {
     position: relative;
     padding-right: 2rem;
+
+    @include breakpoint($mob) {
+      flex: 2;
+    }
 
     &:after {
       content: '';
@@ -273,16 +279,21 @@ article.block-link {
 #footer-area {
   .column:last-child {
     float: left;
-    width: 30rem;
+    width: 25rem;
     margin: 0;
   }
 }
 
-#block-liofa-theme-footercontactinformation {
-  .content a {
+#footer-area #block-liofa-theme-footercontactinformation {
+  .content div p a {
     margin: 0;
     padding: 0;
     border: none;
+
+    &:hover,
+    &:focus {
+      border: none;
+    }
   }
 
   .media-image {
