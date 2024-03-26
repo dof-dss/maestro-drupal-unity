@@ -107,7 +107,10 @@ article.block-link-with-wrapper {
   .block-link__body {
     position: relative;
     padding-right: 2rem;
-    flex-basis: 45rem;
+
+    @include breakpoint($mob) {
+      flex: 2;
+    }
 
     &:after {
       content: '';
