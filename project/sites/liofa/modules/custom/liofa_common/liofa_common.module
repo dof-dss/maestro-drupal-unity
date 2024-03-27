@@ -15,9 +15,13 @@ function liofa_common_entity_presave(EntityInterface $entity) {
     }
     $node_language = $entity->language()->getId();
     // Check there is no translation currently on the site for this node.
-    if ($node_language === 'ga' && !$entity->hasTranslation('en') || $node_language === 'en' && !$entity->hasTranslation('ga')) {
+    if ($node_language === 'en' && !$entity->hasTranslation('ga')) {
       \Drupal::messenger()
         ->addMessage(t("Please update the Irish version for this content. The site won't function correctly without a published translated version."), "error");
+    }
+    elseif ($node_language === 'ga' && !$entity->hasTranslation('en')) {
+      \Drupal::messenger()
+        ->addMessage(t("Please update the English version for this content. The site won't function correctly without a published translated version."), "error");
     }
   }
 }
