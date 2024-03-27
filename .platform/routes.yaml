@@ -23,22 +23,14 @@
     upstream: 'unity_svr_3:http'
     cache:
         enabled: 'false'
-'https://www.nicscommissioners.org/':
+'https://www.independentpanel.truthrecoveryni.co.uk/':
     type: upstream
     upstream: 'unity_svr_3:http'
     cache:
         enabled: 'false'
-'https://nicscommissioners.org/':
+'https://independentpanel.truthrecoveryni.co.uk/':
     type: redirect
-    to: 'https://www.nicscommissioners.org/'
-'https://www.liofa.eu/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://liofa.eu/':
-    type: redirect
-    to: 'https://www.liofa.eu/'
+    to: 'https://www.independentpanel.truthrecoveryni.co.uk/'
 'https://www.{all}/':
     type: upstream
     upstream: 'unity_svr_3:http'
