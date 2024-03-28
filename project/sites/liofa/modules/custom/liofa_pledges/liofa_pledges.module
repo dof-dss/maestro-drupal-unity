@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Cache\Cache;
+use Drupal\liofa_pledges\Controller\LiofaPledgesController;
 use Drupal\webform\WebformSubmissionInterface;
 
 /**
@@ -17,6 +18,9 @@ function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $web
     $config
       ->set('pledge_count_submissions', $onsite_pledges)
       ->save();
+
+    // Update pledge count totals.
+    LiofaPledgesController::generateTotals();
 
     // Invalidate custom cache tag.
     Cache::invalidateTags(['liofa_pledges']);
