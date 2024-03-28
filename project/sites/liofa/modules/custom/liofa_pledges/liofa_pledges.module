@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains Liofa pledges code.
+ */
+
 use Drupal\Core\Cache\Cache;
 use Drupal\liofa_pledges\Controller\LiofaPledgesController;
 use Drupal\webform\WebformSubmissionInterface;

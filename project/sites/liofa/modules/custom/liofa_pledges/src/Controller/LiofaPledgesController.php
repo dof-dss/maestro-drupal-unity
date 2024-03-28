@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\liofa_pledges\Controller;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -64,6 +65,9 @@ class LiofaPledgesController extends ControllerBase {
     ];
   }
 
+  /**
+   * Generate pledge count totals and store in config.
+   */
   public static function generateTotals() {
     $config = \Drupal::configFactory()->getEditable('liofa_pledges.countsettings');
     // Retrieve pledge count submitted online.

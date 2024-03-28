@@ -10,7 +10,7 @@ use Drupal\liofa_pledges\Controller\LiofaPledgesController;
 /**
  * Implements admin form to allow setting of audit text.
  */
-class pledgeCountForm extends ConfigFormBase {
+class PledgeCountForm extends ConfigFormBase {
 
   /**
    * {@inheritdoc}
