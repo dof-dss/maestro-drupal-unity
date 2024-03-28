@@ -77,10 +77,12 @@
     background: resolve('header-bg.png');
     background-size: cover;
     height: 20rem;
+    width: 100%;
 
     p {
       color: $white;
       padding: 2%;
+      width: 70%;
       @include adjust-font-size-to(22px);
     }
   }
