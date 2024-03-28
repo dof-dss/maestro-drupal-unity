@@ -23,23 +23,13 @@ class LiofaPledgesController extends ControllerBase {
   protected $config;
 
   /**
-   * Count storage.
-   */
-  protected $onsite_pledges;
-  protected $bulk_pledge_count;
-  protected $pledge_count_offset;
-
-  /**
    * Constructs the LiofaPledgesController object.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The config factory.
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The entity type manager
    */
-  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager) {
+  public function __construct(ConfigFactoryInterface $config_factory) {
     $this->configFactory = $config_factory;
-    $this->entityTypeManager = $entity_type_manager;
     $this->config = $this->configFactory->getEditable('liofa_pledges.countsettings');
   }
 
@@ -48,8 +38,7 @@ class LiofaPledgesController extends ControllerBase {
    */
   public static function create(ContainerInterface $container) {
     return new static(
-      $container->get('config.factory'),
-      $container->get('entity_type.manager')
+      $container->get('config.factory')
     );
   }
 
