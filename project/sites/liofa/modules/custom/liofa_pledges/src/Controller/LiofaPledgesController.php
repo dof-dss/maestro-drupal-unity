@@ -40,7 +40,7 @@ class LiofaPledgesController extends ControllerBase {
   public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entity_type_manager) {
     $this->configFactory = $config_factory;
     $this->entityTypeManager = $entity_type_manager;
-    $this->config = $this->configFactory->get('liofa_pledges.countsettings');
+    $this->config = $this->configFactory->getEditable('liofa_pledges.countsettings');
   }
 
   /**
@@ -61,8 +61,6 @@ class LiofaPledgesController extends ControllerBase {
    */
   public function pledgesSummary() {
     $this->generateTotals();
-    // Calculate overall total.
-    $total = $this->onsite_pledges + $this->bulk_pledge_count + $this->pledge_count_offset;
     // Output table.
     $table_html = '<table id="pledges-table">
             <thead><tr><th>Component</th><th class="right">Value</th> </tr></thead>
@@ -70,7 +68,7 @@ class LiofaPledgesController extends ControllerBase {
              <tr class="odd"><td>Pledges submitted online</td><td class="right">' . $this->onsite_pledges . '</td> </tr>
              <tr class="even"><td>Bulk pledges</td><td class="right">' . $this->bulk_pledge_count . '</td> </tr>
              <tr class="odd"><td>Pledge count offset</td><td class="right">' . $this->pledge_count_offset . '</td> </tr>
-             <tr class="even"><td class="total">Total</td><td class="right total">' . $total . '</td> </tr>
+             <tr class="even"><td class="total">Total</td><td class="right total">' . $this->pledge_count_total . '</td> </tr>
             </tbody>
       </table>';
     return [
@@ -97,6 +95,9 @@ class LiofaPledgesController extends ControllerBase {
     if (empty($this->pledge_count_offset)) {
       $this->pledge_count_offset = 0;
     }
+    // Calculate overall total.
+    $this->pledge_count_total = $this->onsite_pledges + $this->bulk_pledge_count + $this->pledge_count_offset;
+    $this->config->set('pledge_count_total', $this->pledge_count_total)->save();
   }
 
 }
