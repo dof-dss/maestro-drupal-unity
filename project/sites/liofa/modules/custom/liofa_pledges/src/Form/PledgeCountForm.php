@@ -2,6 +2,7 @@
 
 namespace Drupal\liofa_pledges\Form;
 
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -86,6 +87,9 @@ class pledgeCountForm extends ConfigFormBase {
       ->set('pledge_count_submissions', $form_state->getValue('pledge_count_submissions'))
       ->set('pledge_count_offset', $form_state->getValue('pledge_count_offset'))
       ->save();
+
+    // Invalidate custom cache tag.
+    Cache::invalidateTags(['liofa_pledges']);
   }
 
 }
