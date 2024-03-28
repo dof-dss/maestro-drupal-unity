@@ -1,5 +1,6 @@
 <?php
 
+use Drupal\Core\Cache\Cache;
 use Drupal\webform\WebformSubmissionInterface;
 
 /**
@@ -16,6 +17,7 @@ function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $web
     $config
       ->set('pledge_count_submissions', $onsite_pledges)
       ->save();
+    Cache::invalidateTags(['liofa_pledges']);
   }
 }
 
@@ -26,6 +28,7 @@ function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $web
  */
 function liofa_pledges_preprocess_block(&$variables) {
   if (!empty($variables['elements']['#id']) && $variables['elements']['#id'] == 'liofa_theme_liofapledgesblock') {
-    $variables['plegde_count'] = number_format(\Drupal::config('liofa_pledges.countsettings')->get('pledge_count_submissions'));
+    $variables['pledge_count'] = number_format(\Drupal::config('liofa_pledges.countsettings')->get('pledge_count_submissions'));
+    $variables['#cache']['tags'][] = 'liofa_pledges';
   }
 }
