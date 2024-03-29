@@ -118,7 +118,7 @@ sites:
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/nicscommissioners ; drush core-cron'
         database: nicscommissioners
-        status: development
+        status: production
         default: false
     liofa:
         name: Liofa
@@ -128,7 +128,7 @@ sites:
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/liofa ; drush core-cron'
         database: liofa
-        status: development
+        status: production
         default: false
     independentpaneltruthrecoveryni:
         name: 'Independent Panel Truth Recovery NI'
