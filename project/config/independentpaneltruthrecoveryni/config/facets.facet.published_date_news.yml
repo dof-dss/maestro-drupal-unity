@@ -1,24 +1,20 @@
-uuid: d6e2d0c8-4a82-4b9e-a2a1-9c5e7ae65d49
+uuid: 54f01d14-8077-4a3f-bd8e-6c325d4f90b3
 langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.publications
-    - views.view.publications_search
+    - search_api.index.news
+    - views.view.news_search
   module:
-    - facets_pretty_paths
     - search_api
-third_party_settings:
-  facets_pretty_paths:
-    coder: default_coder
-id: published_date
-name: 'Published date'
+id: published_date_news
+name: 'Published Date'
 weight: 0
 min_count: 1
 missing: false
 missing_label: others
 url_alias: date
-facet_source_id: 'search_api:views_page__publications_search__publication_search_page'
+facet_source_id: 'search_api:views_page__news_search__news_search_page'
 field_identifier: field_published_date
 query_operator: and
 hard_limit: 0
@@ -52,7 +48,7 @@ processor_configs:
     weights:
       sort: 20
     settings:
-      sort: ASC
+      sort: DESC
   date_facet_drilldown:
     processor_id: date_facet_drilldown
     weights:
