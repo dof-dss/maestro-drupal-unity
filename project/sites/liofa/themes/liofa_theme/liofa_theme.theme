@@ -73,3 +73,30 @@ function liofa_theme_preprocess_views_view_unformatted(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_views_view().
+ * Changing more news path and no results behavior text based on the language selected.
+ */
+function liofa_theme_preprocess_views_view(&$variables) {
+  $lang_code = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  if ($variables['view']->current_display == 'latest_news') {
+    if ($lang_code === 'en') {
+      $variables['footer']['area']['#text'] = '<p><a href="/news">More news items</a></p>';
+      $variables['empty']['area']['#text'] = '<p>Sorry, no current press releases were found.</p>';
+    }
+    else {
+      $variables['footer']['area']['#text'] = '<p><a href="/ga/news">More news items</a></p>';
+      $variables['empty']['area']['#text'] = '<p>Níl aon preasráiteas ar fáil.</p>';
+    }
+  }
+
+  if ($variables['view']->current_display == 'news_page') {
+    if ($lang_code === 'en') {
+      $variables['empty']['area']['#text'] = '<p>Sorry, no current press releases were found.</p>';
+    }
+    else {
+      $variables['empty']['area']['#text'] = '<p>Níl aon preasráiteas ar fáil.</p>';
+    }
+  }
+}
