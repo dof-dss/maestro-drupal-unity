@@ -80,7 +80,7 @@ function liofa_theme_preprocess_views_view_unformatted(&$variables) {
  */
 function liofa_theme_preprocess_views_view(&$variables) {
   $lang_code = \Drupal::languageManager()->getCurrentLanguage()->getId();
-  if ($variables['view']->current_display == 'latest_news') {
+  if (!empty($variables['view']->current_display) && $variables['view']->current_display == 'latest_news') {
     if ($lang_code === 'en') {
       $variables['footer']['area']['#text'] = '<p><a href="/news">More news items</a></p>';
       $variables['empty']['area']['#text'] = '<p>Sorry, no current press releases were found.</p>';
@@ -91,7 +91,7 @@ function liofa_theme_preprocess_views_view(&$variables) {
     }
   }
 
-  if ($variables['view']->current_display == 'news_page') {
+  if (!empty($variables['view']->current_display) && $variables['view']->current_display == 'news_page') {
     if ($lang_code === 'en') {
       $variables['empty']['area']['#text'] = '<p>Sorry, no current press releases were found.</p>';
     }
