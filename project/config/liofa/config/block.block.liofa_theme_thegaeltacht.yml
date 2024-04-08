@@ -16,7 +16,7 @@ provider: null
 plugin: 'block_content:67bb2871-e190-45df-b727-59fcd6f5126a'
 settings:
   id: 'block_content:67bb2871-e190-45df-b727-59fcd6f5126a'
-  label: 'The Gaeltacht'
+  label: 'The Ghaeltacht'
   label_display: visible
   provider: block_content
   status: true
