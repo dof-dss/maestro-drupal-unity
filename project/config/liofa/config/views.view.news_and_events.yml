@@ -270,7 +270,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<a href="/news">More news items</a>'
+            value: "<p>\r\n<a href=\"/news\">More news items</a>\r\n</p>"
             format: basic_html
           tokenize: false
       display_extenders: {  }
