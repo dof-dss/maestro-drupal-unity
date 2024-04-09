@@ -12,7 +12,7 @@ dependencies:
 id: homepageinformation
 theme: independentpaneltruthrecoveryni_theme
 region: front_welcome
-weight: -2
+weight: -5
 provider: null
 plugin: 'block_content:7bc90673-5218-49de-b95b-5bdd88959ecc'
 settings:
