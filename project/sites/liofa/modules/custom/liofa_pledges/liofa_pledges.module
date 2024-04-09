@@ -6,7 +6,9 @@
  */
 
 use Drupal\Core\Cache\Cache;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\liofa_pledges\Controller\LiofaPledgesController;
+use Drupal\node\NodeInterface;
 use Drupal\webform\WebformSubmissionInterface;
 
 /**
@@ -29,6 +31,22 @@ function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $web
 
     // Invalidate custom cache tag.
     Cache::invalidateTags(['liofa_pledges']);
+  }
+}
+
+/**
+ * Implements hook_ENTITY_presave() for nodes.
+ */
+function liofa_pledges_entity_presave(EntityInterface $entity) {
+  if ($entity instanceof NodeInterface) {
+    // Update the Bulk pledges added through the content type. Only if published.
+    if ($entity->bundle() === 'bulk_pledges' && $entity->isPublished()) {
+      // Update pledge count totals.
+      LiofaPledgesController::generateTotals();
+
+      // Invalidate custom cache tag.
+      Cache::invalidateTags(['liofa_pledges']);
+    }
   }
 }
 
