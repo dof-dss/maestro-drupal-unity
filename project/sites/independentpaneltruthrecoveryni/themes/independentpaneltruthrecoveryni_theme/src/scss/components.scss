@@ -12,8 +12,12 @@
   }
 }
 
+.region-primary-menu .menu_wrapper {
+  background: #e7e7e7
+}
+
 #main-menu {
-  background: $white;
+  background: #e7e7e7;
 
   .menu-link,
   .menu .active,
@@ -61,6 +65,8 @@
 }
 
 .region-front-welcome {
+  margin-top: 0;
+
   .block h2 {
   text-align: left;
 }
@@ -156,8 +162,8 @@
     &:hover,
     &:focus {
       background: #e7e7e7;
-      color: $brand-primary;
-      border-left-color: $brand-primary;
+      color: #764c63;
+      border-left-color: #764c63;
       text-decoration: underline;
     }
 
