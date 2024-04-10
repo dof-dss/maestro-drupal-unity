@@ -109,6 +109,7 @@ permissions:
   - 'revert board_member revisions'
   - 'revert publication revisions'
   - 'update board_members_queue entityqueue'
+  - 'update featured_content entityqueue'
   - 'use moderation sidebar'
   - 'use nics_editorial_workflow transition archive'
   - 'use nics_editorial_workflow transition create_new_draft'
