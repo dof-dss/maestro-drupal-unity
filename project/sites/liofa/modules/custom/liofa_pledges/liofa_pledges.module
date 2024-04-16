@@ -6,8 +6,8 @@
  */
 
 use Drupal\Core\Cache\Cache;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\liofa_pledges\Controller\LiofaPledgesController;
+use Drupal\node\NodeInterface;
 use Drupal\webform\WebformSubmissionInterface;
 
 /**
@@ -34,11 +34,22 @@ function liofa_pledges_webform_submission_insert(WebformSubmissionInterface $web
 }
 
 /**
- * Implements hook_ENTITY_presave() for nodes.
+ * Implements hook_entity_type_insert() for nodes.
  */
-function liofa_pledges_node_presave(EntityInterface $entity) {
+function liofa_pledges_node_insert(NodeInterface $node) {
+  update_counts($node);
+}
+
+/**
+ * Implements hook_entity_type_update() for nodes.
+ */
+function liofa_pledges_node_update(NodeInterface $node) {
+  update_counts($node);
+}
+
+function update_counts(NodeInterface $node) {
   // Update the Bulk pledges added through the content type. Only if published.
-  if ($entity->bundle() === 'bulk_pledges' && $entity->isPublished()) {
+  if ($node->getType() === 'bulk_pledges' && $node->isPublished()) {
     // Update pledge count totals.
     LiofaPledgesController::generateTotals();
 
