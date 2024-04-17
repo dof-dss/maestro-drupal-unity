@@ -1,5 +1,7 @@
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+langcode: en
+uuid: 7b524741-f6b5-4550-86a9-535a9b0aa66b
 name: 'Independent Panel Truth Recovery NI'
 mail: test@test.com
 slogan: ''
@@ -9,7 +11,6 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-uuid: 7b524741-f6b5-4550-86a9-535a9b0aa66b
-frontpage_title: 'Welcome to Drupal site'
+frontpage_title: 'Independent Panel Truth Recovery NI'
+frontpage_show_title: 0
