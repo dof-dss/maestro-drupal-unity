@@ -9,7 +9,7 @@ dependencies:
 id: pagetitle
 theme: independentpaneltruthrecoveryni_theme
 region: content
-weight: -1
+weight: -2
 provider: null
 plugin: page_title_block
 settings:
@@ -21,4 +21,4 @@ visibility:
   request_path:
     id: request_path
     negate: true
-    pages: "<front>\r\n/search"
+    pages: "<front>\r\n/search\r\n/publications\r\n/publications/date/*\r\n/news\r\n/news/date/*"

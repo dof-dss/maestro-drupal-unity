@@ -11,6 +11,7 @@ dependencies:
     - media.type.remote_video
     - node.type.basic_page
     - node.type.board_member
+    - node.type.featured_content
     - node.type.publication
     - node.type.webform
     - workflows.workflow.nics_editorial_workflow
@@ -57,6 +58,7 @@ permissions:
   - 'create basic_page content'
   - 'create board_member content'
   - 'create document media'
+  - 'create featured_content content'
   - 'create file media'
   - 'create image media'
   - 'create publication content'
@@ -67,6 +69,7 @@ permissions:
   - 'delete any basic_page content'
   - 'delete any board_member content'
   - 'delete any document media'
+  - 'delete any featured_content content'
   - 'delete any file'
   - 'delete any file media'
   - 'delete any image media'
@@ -74,10 +77,12 @@ permissions:
   - 'delete any remote_video media'
   - 'delete basic_page revisions'
   - 'delete board_member revisions'
+  - 'delete featured_content revisions'
   - 'delete own audio media'
   - 'delete own basic_page content'
   - 'delete own board_member content'
   - 'delete own document media'
+  - 'delete own featured_content content'
   - 'delete own file media'
   - 'delete own image media'
   - 'delete own publication content'
@@ -87,6 +92,7 @@ permissions:
   - 'edit any basic_page content'
   - 'edit any board_member content'
   - 'edit any document media'
+  - 'edit any featured_content content'
   - 'edit any file media'
   - 'edit any image media'
   - 'edit any publication content'
@@ -96,6 +102,7 @@ permissions:
   - 'edit own basic_page content'
   - 'edit own board_member content'
   - 'edit own document media'
+  - 'edit own featured_content content'
   - 'edit own file media'
   - 'edit own image media'
   - 'edit own publication content'
@@ -107,8 +114,10 @@ permissions:
   - 'revert all revisions'
   - 'revert basic_page revisions'
   - 'revert board_member revisions'
+  - 'revert featured_content revisions'
   - 'revert publication revisions'
   - 'update board_members_queue entityqueue'
+  - 'update featured_content entityqueue'
   - 'use moderation sidebar'
   - 'use nics_editorial_workflow transition archive'
   - 'use nics_editorial_workflow transition create_new_draft'
@@ -125,6 +134,7 @@ permissions:
   - 'view basic_page revisions'
   - 'view board_member revisions'
   - 'view content references'
+  - 'view featured_content revisions'
   - 'view latest version'
   - 'view own unpublished content'
   - 'view own unpublished media'
