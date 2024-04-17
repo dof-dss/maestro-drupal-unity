@@ -9,6 +9,7 @@
   height: 8.5rem;
   @media screen and (max-width: $tab) {
     position: relative;
+    height: 7.5rem;
   }
 }
 
@@ -85,6 +86,9 @@
     background-size: cover;
     height: 20rem;
     width: 100%;
+    @media screen and (max-width: $tab) {
+      background: #635474;
+    }
 
     p {
       color: $white;
