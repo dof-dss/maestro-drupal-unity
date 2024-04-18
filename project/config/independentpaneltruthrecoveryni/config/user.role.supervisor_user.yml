@@ -11,12 +11,14 @@ dependencies:
     - media.type.remote_video
     - node.type.basic_page
     - node.type.board_member
+    - node.type.feature
     - node.type.news
     - node.type.publication
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
     - contextual
+    - entityqueue
     - file
     - filter
     - media
@@ -55,6 +57,7 @@ permissions:
   - 'create basic_page content'
   - 'create board_member content'
   - 'create document media'
+  - 'create feature content'
   - 'create file media'
   - 'create image media'
   - 'create news content'
@@ -66,6 +69,7 @@ permissions:
   - 'delete any basic_page content'
   - 'delete any board_member content'
   - 'delete any document media'
+  - 'delete any feature content'
   - 'delete any file'
   - 'delete any file media'
   - 'delete any image media'
@@ -74,11 +78,13 @@ permissions:
   - 'delete any remote_video media'
   - 'delete basic_page revisions'
   - 'delete board_member revisions'
+  - 'delete feature revisions'
   - 'delete news revisions'
   - 'delete own audio media'
   - 'delete own basic_page content'
   - 'delete own board_member content'
   - 'delete own document media'
+  - 'delete own feature content'
   - 'delete own file media'
   - 'delete own image media'
   - 'delete own news content'
@@ -89,6 +95,7 @@ permissions:
   - 'edit any basic_page content'
   - 'edit any board_member content'
   - 'edit any document media'
+  - 'edit any feature content'
   - 'edit any file media'
   - 'edit any image media'
   - 'edit any news content'
@@ -99,11 +106,14 @@ permissions:
   - 'edit own basic_page content'
   - 'edit own board_member content'
   - 'edit own document media'
+  - 'edit own feature content'
   - 'edit own file media'
   - 'edit own image media'
   - 'edit own news content'
   - 'edit own publication content'
   - 'edit own remote_video media'
+  - 'manipulate all entityqueues'
+  - 'manipulate entityqueues'
   - 'reschedule scheduled transitions node basic_page'
   - 'reschedule scheduled transitions node board_member'
   - 'reschedule scheduled transitions node news'
@@ -111,8 +121,11 @@ permissions:
   - 'revert all revisions'
   - 'revert basic_page revisions'
   - 'revert board_member revisions'
+  - 'revert feature revisions'
   - 'revert news revisions'
   - 'revert publication revisions'
+  - 'update board_members_queue entityqueue'
+  - 'update homepage_block_bundle entityqueue'
   - 'use moderation sidebar'
   - 'use nics_editorial_workflow transition archive'
   - 'use nics_editorial_workflow transition create_new_draft'
@@ -129,6 +142,7 @@ permissions:
   - 'view basic_page revisions'
   - 'view board_member revisions'
   - 'view content references'
+  - 'view feature revisions'
   - 'view latest version'
   - 'view news revisions'
   - 'view own unpublished content'

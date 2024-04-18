@@ -5,13 +5,14 @@ dependencies:
   config:
     - views.view.homepage_cards
   module:
+    - system
     - views
   theme:
     - independentpaneltruthrecoveryni_theme
 id: views_block__homepage_cards_homepage_cards
 theme: independentpaneltruthrecoveryni_theme
-region: front_welcome
-weight: -4
+region: homepage_blocks
+weight: -7
 provider: null
 plugin: 'views_block:homepage_cards-homepage_cards'
 settings:
@@ -21,4 +22,8 @@ settings:
   provider: views
   views_label: ''
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /home
