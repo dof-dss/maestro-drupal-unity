@@ -10,8 +10,8 @@ dependencies:
     - independentpaneltruthrecoveryni_theme
 id: views_block__homepage_cards_homepage_cards
 theme: independentpaneltruthrecoveryni_theme
-region: front_welcome
-weight: -4
+region: homepage_blocks
+weight: -7
 provider: null
 plugin: 'views_block:homepage_cards-homepage_cards'
 settings:
