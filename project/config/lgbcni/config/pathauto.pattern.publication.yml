@@ -5,14 +5,14 @@ dependencies:
   module:
     - node
 id: publication
-label: Publication
+label: 'Publication Pattern'
 type: 'canonical_entities:node'
 pattern: 'publications/[node:title]'
 selection_criteria:
-  1a30f1a1-af24-41a9-aba2-2d3375e76ca2:
+  1ee2c876-d449-4da3-b880-f87bb3473caf:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 1a30f1a1-af24-41a9-aba2-2d3375e76ca2
+    uuid: 1ee2c876-d449-4da3-b880-f87bb3473caf
     context_mapping:
       node: node
     bundles:
