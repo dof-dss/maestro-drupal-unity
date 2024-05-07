@@ -8,7 +8,7 @@ logo:
   path: sites/independentpaneltruthrecoveryni/themes/independentpaneltruthrecoveryni_theme/logo.png
 favicon:
   use_default: 1
-basic_page_structure: 0
+basic_page_structure: 1
 twitter_profile_url: 'https://twitter.com/TruthPanel_NI'
 facebook_profile_url: ''
 linkedin_profile_url: ''
