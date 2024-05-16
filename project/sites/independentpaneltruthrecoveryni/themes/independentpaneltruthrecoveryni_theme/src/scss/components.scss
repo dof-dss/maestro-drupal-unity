@@ -211,3 +211,33 @@
   }
 }
 
+#site-message-banner {
+  display:flex;
+  background: #bf5803;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+
+  .important_site_message {
+    position: relative;
+    display:block;
+    width: 100%;
+  }
+
+  p {
+    max-width: 1024px;
+    margin: auto;
+    color: $white;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration-thickness: 2px;
+    }
+  }
+}
+
