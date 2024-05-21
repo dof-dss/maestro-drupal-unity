@@ -1,9 +1,9 @@
-uuid: 1bb6d7ce-16bc-48bb-8e4b-b33dfdf6cbb4
+uuid: 02fcba17-d889-4f9a-a0b0-978cdad097cf
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic_block:4cc9d86a-3e3f-467f-bceb-13183599507b'
+    - 'block_content:basic_block:48aabb9b-c3de-44be-a9da-f5f779f756fd'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: independentpaneltruthrecoveryni_theme
 region: site_message
 weight: 0
 provider: null
-plugin: 'block_content:4cc9d86a-3e3f-467f-bceb-13183599507b'
+plugin: 'block_content:48aabb9b-c3de-44be-a9da-f5f779f756fd'
 settings:
-  id: 'block_content:4cc9d86a-3e3f-467f-bceb-13183599507b'
+  id: 'block_content:48aabb9b-c3de-44be-a9da-f5f779f756fd'
   label: 'Site Message'
   label_display: '0'
   provider: block_content
