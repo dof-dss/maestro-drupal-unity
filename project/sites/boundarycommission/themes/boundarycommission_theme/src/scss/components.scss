@@ -255,10 +255,17 @@
     }
   }
 
+  h2 {
+    color: $link;
+  }
 
-  h2,
   p:last-child {
     color: $link;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
   }
 
   p:last-child {
