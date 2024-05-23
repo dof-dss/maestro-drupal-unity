@@ -10,6 +10,7 @@ report-only:
       sources:
         - 'https://www.google-analytics.com'
         - 'https://region1.google-analytics.com'
+        - 'https://*.twitter.com'
         - 'https://plus.browsealoud.com/'
         - 'https://www.browsealoud.com'
     font-src:
@@ -38,6 +39,7 @@ report-only:
         - 'https://maps.gstatic.com'
         - 'https://maps.googleapis.com'
         - 'data:'
+        - 'https://*.twitter.com'
     manifest-src:
       base: self
     script-src:
