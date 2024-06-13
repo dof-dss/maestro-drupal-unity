@@ -1,0 +1,29 @@
+uuid: 410434fd-50e4-43a5-b279-8d7ddadf3a5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.published_date
+  module:
+    - facets
+    - system
+  theme:
+    - parolecomni_theme
+id: publisheddate
+theme: parolecomni_theme
+region: search_facets
+weight: -3
+provider: null
+plugin: 'facet_block:published_date'
+settings:
+  id: 'facet_block:published_date'
+  label: Date
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publisheddate
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"

@@ -1,0 +1,27 @@
+uuid: 47de3d46-0e70-4bbc-959a-3ff00208932e
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: local
+description: 'Local development split. Enables debugging and development modules'
+weight: 0
+folder: ../project/config/infolibrarynics/local
+module:
+  clone_nodes: 0
+  dblog: 0
+  easy_install: 0
+  infolibrarynics_migrations: 0
+  migrate: 0
+  migrate_absolute_links: 0
+  migrate_drupal: 0
+  migrate_plus: 0
+  migrate_tools: 0
+  migrate_upgrade: 0
+  unity_file_migrations: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

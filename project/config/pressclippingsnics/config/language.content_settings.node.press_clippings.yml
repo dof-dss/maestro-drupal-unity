@@ -1,0 +1,11 @@
+uuid: d76cc73d-ae91-4c03-9fd7-e0ee103ef061
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.press_clippings
+id: node.press_clippings
+target_entity_type_id: node
+target_bundle: press_clippings
+default_langcode: site_default
+language_alterable: false
