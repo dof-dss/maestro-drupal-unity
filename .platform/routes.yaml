@@ -23,14 +23,6 @@
     upstream: 'unity_svr_3:http'
     cache:
         enabled: 'false'
-'https://www.independentpanel.truthrecoveryni.co.uk/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://independentpanel.truthrecoveryni.co.uk/':
-    type: redirect
-    to: 'https://www.independentpanel.truthrecoveryni.co.uk/'
 'https://www.{all}/':
     type: upstream
     upstream: 'unity_svr_3:http'

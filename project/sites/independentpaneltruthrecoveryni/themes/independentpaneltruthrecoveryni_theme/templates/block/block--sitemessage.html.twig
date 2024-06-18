@@ -10,8 +10,8 @@
 ] %}
 
 <div id="site-message-banner" class="clearfix">
-  <span {{ item.attributes.addClass('important_site_message') }}>
+  <div {{ item.attributes.addClass('important_site_message') }}>
     <strong id="site-message-icon"><span class="visually-hidden">Important information</span></strong>
       {{ content }}
-  </span>
+  </div>
 </div>
