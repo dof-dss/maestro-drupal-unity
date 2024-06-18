@@ -138,5 +138,5 @@ sites:
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/independentpaneltruthrecoveryni ; drush core-cron'
         database: independentpaneltruthrecoveryni
-        status: development
+        status: production
         default: false
