@@ -1,0 +1,25 @@
+uuid: 74399059-682a-422f-903d-7d402d1e11fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.featured_list.field_link
+    - node.type.featured_list
+  module:
+    - user
+id: node.featured_list.teaser
+targetEntityType: node
+bundle: featured_list
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  field_link: true
+  langcode: true
+  search_api_excerpt: true

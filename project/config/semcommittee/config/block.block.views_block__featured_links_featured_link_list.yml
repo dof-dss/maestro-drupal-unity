@@ -1,0 +1,24 @@
+uuid: 8ad8dedf-1753-4256-a70e-292ee1749eba
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_links
+  module:
+    - views
+  theme:
+    - semcommittee_theme
+id: views_block__featured_links_featured_link_list
+theme: semcommittee_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'views_block:featured_links-featured_link_list'
+settings:
+  id: 'views_block:featured_links-featured_link_list'
+  label: 'Quick Links'
+  label_display: visible
+  provider: views
+  views_label: 'Quick Links'
+  items_per_page: none
+visibility: {  }
