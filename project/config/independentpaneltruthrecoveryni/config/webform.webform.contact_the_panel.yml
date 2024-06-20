@@ -138,7 +138,7 @@ settings:
   confirmation_message: 'Thank you for contacting us.'
   confirmation_attributes: {  }
   confirmation_back: true
-  confirmation_back_label: 'Back to Contact the Panel'
+  confirmation_back_label: 'Back to Contact the Panel page'
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
   confirmation_exclude_token: false
