@@ -11,9 +11,8 @@ report-only:
         - 'https://www.google-analytics.com'
         - 'https://region1.google-analytics.com'
         - 'https://*.twitter.com'
-        - 'https://wiki-summarizer-eu.texthelp.com'
-        - 'https://browsealoud-webservices-8.texthelp.com'
-        - 'https://browsealoud-webservices-eu.texthelp.com'
+        - 'https://plus.browsealoud.com/'
+        - 'https://www.browsealoud.com'
     font-src:
       base: self
       sources:
@@ -41,8 +40,6 @@ report-only:
         - 'https://maps.googleapis.com'
         - 'data:'
         - 'https://*.twitter.com'
-        - 'https://browsealoud-webservices-8.texthelp.com'
-        - 'https://browsealoud-webservices-eu.texthelp.com'
     manifest-src:
       base: self
     script-src:
@@ -51,24 +48,48 @@ report-only:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
         - 'https://*.twitter.com'
+        - 'https://plus.browsealoud.com'
+        - 'https://www.browsealoud.com'
+        - 'http://www.browsealoud.com/plus/scripts/ba.js'
+        - "'sha256-K+EgnlR8Sed9/8PNusrhV0AT6adNsL9Kdy4ezV48UWU='"
     script-src-attr:
       base: self
+      sources:
+        - 'https://plus.browsealoud.com'
+        - 'https://www.browsealoud.com'
+        - 'http://www.browsealoud.com/plus/scripts/ba.js'
+        - "'sha256-K+EgnlR8Sed9/8PNusrhV0AT6adNsL9Kdy4ezV48UWU='"
     script-src-elem:
       base: self
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
         - 'https://*.twitter.com'
+        - 'https://www.browsealoud.com'
+        - 'https://plus.browsealoud.com'
+        - 'http://www.browsealoud.com/plus/scripts/ba.js'
+        - "'sha256-K+EgnlR8Sed9/8PNusrhV0AT6adNsL9Kdy4ezV48UWU='"
     style-src:
       base: self
       sources:
         - '*.typekit.com'
+        - 'https://www.browsealoud.com'
+        - 'https://plus.browsealoud.com'
     style-src-attr:
       base: self
       flags:
         - unsafe-inline
+      sources:
+        - 'https://www.browsealoud.com'
+        - 'https://plus.browsealoud.com'
     style-src-elem:
       base: self
+      flags:
+        - unsafe-inline
+      sources:
+        - '*.typekit.com'
+        - 'https://www.browsealoud.com'
+        - 'https://plus.browsealoud.com'
     block-all-mixed-content: true
   reporting:
     plugin: none
@@ -102,6 +123,8 @@ enforce:
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
+    script-src-attr:
+      base: self
     script-src-elem:
       base: self
       sources:
@@ -115,6 +138,8 @@ enforce:
         - unsafe-inline
     style-src-elem:
       base: self
+      flags:
+        - unsafe-inline
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
