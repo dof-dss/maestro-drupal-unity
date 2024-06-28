@@ -13,6 +13,7 @@ report-only:
         - 'https://*.twitter.com'
         - 'https://plus.browsealoud.com/'
         - 'https://www.browsealoud.com'
+        - 'https://speech.speechstream.net'
     font-src:
       base: self
       sources:
@@ -69,6 +70,7 @@ report-only:
         - 'https://plus.browsealoud.com'
         - 'http://www.browsealoud.com/plus/scripts/ba.js'
         - "'sha256-K+EgnlR8Sed9/8PNusrhV0AT6adNsL9Kdy4ezV48UWU='"
+        - 'https://apis.google.com'
     style-src:
       base: self
       sources:
