@@ -48,6 +48,10 @@ function judiciaryni_common_validate_publication(&$form, FormStateInterface $for
       $form_state->setErrorByName('field_attachment', t('You must provide an attachment or external link'));
       $form_state->setErrorByName('field_external_publication', t('You must provide an attachment or external link'));
     }
+
+    if (str_contains($values['field_external_publication'][0]['uri'], 'judiciaryni.uk')) {
+      $form_state->setErrorByName('field_external_publication', t('URL must not be to the Judiciary website, use the attachment field for documents on the Judiciary website.'));
+    }
 }
 
 
