@@ -4,7 +4,6 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\node\NodeInterface;
-use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_form_alter().
@@ -21,18 +20,6 @@ function judiciaryni_common_form_node_form_alter(&$form, FormStateInterface $for
   }
 
   if ($node->bundle() === 'publication') {
-    $form['field_attachment']['#states'] = [
-      'invisible' => [
-        ':input[name="publication_attachment_type"]' => ['value' => 1],
-      ],
-    ];
-
-    $form['field_external_publication']['#states'] = [
-      'invisible' => [
-        ':input[name="publication_attachment_type"]' => ['value' => 1],
-      ],
-    ];
-
     $form['#validate'][] = 'judiciaryni_common_validate_publication';
   }
 }
@@ -42,21 +29,23 @@ function judiciaryni_common_form_node_form_alter(&$form, FormStateInterface $for
  */
 function judiciaryni_common_validate_publication(&$form, FormStateInterface $form_state) {
   $values = $form_state->getValues();
-  // Parse the external URL added to the field.
-  $external_publication_url = parse_url($values['field_external_publication'][0]['uri']);
 
-  // Validate public and secure file attachments.
-    if (empty($values['field_attachment']["selection"][0]) && empty($values['field_external_publication'][0]['uri'])) {
-      $form_state->setErrorByName('field_attachment', t('You must provide an attachment or external link'));
-      $form_state->setErrorByName('field_external_publication', t('You must provide an attachment or external link'));
-    }
+  // Validate file attachments and external links.
+  if (empty($values['field_attachment']["selection"][0]) && empty($values['field_external_publication'][0]['uri'])) {
+    $form_state->setErrorByName('field_attachment', t('You must provide an attachment or external link'));
+    $form_state->setErrorByName('field_external_publication', t('You must provide an attachment or external link'));
+  }
 
-    // If the parsed URL host has any reference to the current site then add an error message.
-    if (str_contains($external_publication_url['host'], 'judiciaryni.uk')) {
+  // If the parsed URL host has any reference to the current Judiciary site then add an error message.
+  if (!empty($values['field_external_publication'][0]['uri'])) {
+    $ext_url = parse_url($values['field_external_publication'][0]['uri']);
+    $ext_host = $ext_url['host'];
+
+    if (str_contains($ext_host, 'judiciaryni.uk')) {
       $form_state->setErrorByName('field_external_publication', t('URL must not be to the Judiciary website, use the attachment field for documents on the Judiciary website.'));
     }
+  }
 }
-
 
 /**
  * Implements hook_entity_presave().
@@ -64,7 +53,6 @@ function judiciaryni_common_validate_publication(&$form, FormStateInterface $for
 function judiciaryni_common_entity_presave(EntityInterface $entity) {
   // This will fire when nodes are created or edited.
   if ($entity instanceof NodeInterface && $entity->bundle() === 'judicial_member') {
-
     $judge_name = $entity->get('field_surname')->value;
     $judge_sex = $entity->get('field_sex_of_member')->value;
     $tier_tid = $entity->get('field_judicial_tier')->target_id;
