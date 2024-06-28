@@ -43,6 +43,10 @@ report-only:
         - 'https://*.twitter.com'
     manifest-src:
       base: self
+    media-src:
+      base: self
+      sources:
+        - 'blob:'
     script-src:
       base: self
       sources:
