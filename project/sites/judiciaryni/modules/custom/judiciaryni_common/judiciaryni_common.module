@@ -42,6 +42,8 @@ function judiciaryni_common_form_node_form_alter(&$form, FormStateInterface $for
  */
 function judiciaryni_common_validate_publication(&$form, FormStateInterface $form_state) {
   $values = $form_state->getValues();
+  // Parse the external URL added to the field.
+  $external_publication_url = parse_url($values['field_external_publication'][0]['uri']);
 
   // Validate public and secure file attachments.
     if (empty($values['field_attachment']["selection"][0]) && empty($values['field_external_publication'][0]['uri'])) {
@@ -49,7 +51,8 @@ function judiciaryni_common_validate_publication(&$form, FormStateInterface $for
       $form_state->setErrorByName('field_external_publication', t('You must provide an attachment or external link'));
     }
 
-    if (str_contains($values['field_external_publication'][0]['uri'], 'judiciaryni.uk')) {
+    // If the parsed URL host has any reference to the current site then add an error message.
+    if (str_contains($external_publication_url['host'], 'judiciaryni.uk')) {
       $form_state->setErrorByName('field_external_publication', t('URL must not be to the Judiciary website, use the attachment field for documents on the Judiciary website.'));
     }
 }
