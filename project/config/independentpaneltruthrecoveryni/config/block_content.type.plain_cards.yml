@@ -1,0 +1,10 @@
+uuid: df7d33c5-2625-443a-974b-7896543463b4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1w4AXdoSfMY8T7aSeD3dYz7zieA3Co5DVzZTwXmikuQ
+id: plain_cards
+label: 'Plain cards'
+revision: 1
+description: ''
