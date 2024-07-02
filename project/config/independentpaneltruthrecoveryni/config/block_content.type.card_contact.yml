@@ -1,0 +1,10 @@
+uuid: 288b1f7e-c5cd-456c-bc62-1cb14c8bc815
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7_rtzb1BUL0AAVVu1fNUavcR7DaSkSKvAvfyap_f7RM
+id: card_contact
+label: 'Card - contact'
+revision: 1
+description: ''
