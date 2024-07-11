@@ -14,6 +14,7 @@ dependencies:
     - node.type.feature
     - node.type.news
     - node.type.publication
+    - node.type.webform
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
@@ -101,6 +102,7 @@ permissions:
   - 'edit any news content'
   - 'edit any publication content'
   - 'edit any remote_video media'
+  - 'edit any webform content'
   - 'edit basic meta tags'
   - 'edit own audio media'
   - 'edit own basic_page content'
@@ -124,6 +126,7 @@ permissions:
   - 'revert feature revisions'
   - 'revert news revisions'
   - 'revert publication revisions'
+  - 'revert webform revisions'
   - 'update board_members_queue entityqueue'
   - 'update homepage_block_bundle entityqueue'
   - 'use moderation sidebar'
@@ -153,3 +156,4 @@ permissions:
   - 'view scheduled transitions node news'
   - 'view scheduled transitions node publication'
   - 'view the administration theme'
+  - 'view webform revisions'
