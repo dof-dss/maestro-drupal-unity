@@ -46,7 +46,9 @@ function judiciaryni_common_validate_publication(&$form, FormStateInterface $for
       $ext_host = $ext_url['host'];
 
       if (str_contains($ext_host, 'judiciaryni.uk')) {
-        $form_state->setErrorByName('field_external_publication', t('URL must not be to the Judiciary website, use the attachment field for documents on the Judiciary website.'));
+        // Set the error name to be used by using the _weight as the array position the error occurs in.
+        $error_name = 'field_external_publication]' . '[' . $value['_weight'] . ']' . '[uri';
+        $form_state->setErrorByName($error_name, t('URL must not be to the Judiciary website, use the attachment field for documents on the Judiciary website.'));
       }
     }
   }
