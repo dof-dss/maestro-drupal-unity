@@ -4,19 +4,53 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\node\NodeInterface;
-use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_form_alter().
  */
-function judiciaryni_common_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form_id == 'node_judicial_member_form' || $form_id == 'node_judicial_member_edit_form') {
+function judiciaryni_common_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  /** @var \Drupal\Core\Entity\EntityFormInterface $form_object */
+  $form_object = $form_state->getFormObject();
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $form_object->getEntity();
+
+  if ($node->bundle() === 'judicial_member') {
     $form['title']['#disabled'] = 'disabled';
     $form['title']['widget'][0]['value']['#description'] = t('You cannot edit this field. It is created automatically using the Name of Judge and Judicial Tier.');
+  }
 
+  if ($node->bundle() === 'publication') {
+    $form['#validate'][] = 'judiciaryni_common_validate_publication';
   }
 }
 
+/**
+ * Form validation callback.
+ */
+function judiciaryni_common_validate_publication(&$form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+
+  // Validate file attachments and external links.
+  if (empty($values['field_attachment']["selection"][0]) && empty($values['field_external_publication'][0]['uri'])) {
+    $form_state->setErrorByName('field_attachment', t('You must provide an attachment or external link'));
+    $form_state->setErrorByName('field_external_publication', t('You must provide an attachment or external link'));
+  }
+
+  // Remove the last add more array from the list of external publications as this is just the add another item button.
+  $remove_last_element = array_pop($values['field_external_publication']);
+
+  // If the parsed URL host has any reference to the current Judiciary site then add an error message.
+  foreach ($values['field_external_publication'] as $value) {
+    if (!empty($value['uri'])) {
+      $ext_url = parse_url($value['uri']);
+      $ext_host = $ext_url['host'];
+
+      if (str_contains($ext_host, 'judiciaryni.uk')) {
+        $form_state->setErrorByName('field_external_publication', t('URL must not be to the Judiciary website, use the attachment field for documents on the Judiciary website.'));
+      }
+    }
+  }
+}
 
 /**
  * Implements hook_entity_presave().
@@ -24,7 +58,6 @@ function judiciaryni_common_form_alter(&$form, FormStateInterface $form_state, $
 function judiciaryni_common_entity_presave(EntityInterface $entity) {
   // This will fire when nodes are created or edited.
   if ($entity instanceof NodeInterface && $entity->bundle() === 'judicial_member') {
-
     $judge_name = $entity->get('field_surname')->value;
     $judge_sex = $entity->get('field_sex_of_member')->value;
     $tier_tid = $entity->get('field_judicial_tier')->target_id;
