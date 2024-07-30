@@ -1,0 +1,20 @@
+uuid: 405f3731-0fe5-420b-bbcf-842503917940
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - horizoneuropeni_theme
+id: mainpagecontent
+theme: horizoneuropeni_theme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
