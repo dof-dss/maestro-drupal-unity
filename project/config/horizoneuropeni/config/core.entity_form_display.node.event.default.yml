@@ -1,110 +1,104 @@
-uuid: 50495192-a354-4d84-8991-f70587c319eb
+uuid: 02b46528-30ca-4b94-be49-f7647d7edb7a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.publication.body
-    - field.field.node.publication.field_attachment
-    - field.field.node.publication.field_meta_tags
-    - field.field.node.publication.field_published_date
-    - field.field.node.publication.field_summary
-    - node.type.publication
+    - field.field.node.event.field_contact_details
+    - field.field.node.event.field_cost
+    - field.field.node.event.field_event_dates
+    - field.field.node.event.field_event_description
+    - field.field.node.event.field_location
+    - node.type.event
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
-    - datetime
-    - media_library
-    - media_library_edit
-    - metatag
+    - datetime_range
     - path
-    - text
-_core:
-  default_config_hash: 8EG7CL4bkYhCFJykpOT74o26u9Kqd5i5boJpPLhtZWc
-id: node.publication.default
+id: node.event.default
 targetEntityType: node
-bundle: publication
+bundle: event
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 11
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_contact_details:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_cost:
+    type: string_textfield
     weight: 3
     region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_event_dates:
+    type: daterange_default
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-  field_attachment:
-    type: media_library_widget
-    weight: 12
+  field_event_description:
+    type: string_textarea
+    weight: 4
     region: content
     settings:
-      media_types: {  }
-    third_party_settings:
-      media_library_edit:
-        show_edit: '1'
-  field_meta_tags:
-    type: metatag_firehose
-    weight: 13
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_location:
+    type: string_textfield
+    weight: 2
     region: content
     settings:
-      sidebar: true
-      use_details: true
-    third_party_settings: {  }
-  field_published_date:
-    type: datetime_default
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  flag:
-    weight: 10
-    region: content
-    settings: {  }
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 1
+    weight: 6
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 8
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
-    type: boolean_checkbox
-    weight: 4
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  status:
     type: boolean_checkbox
     weight: 9
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 5
+    weight: 10
     region: content
     settings:
       display_label: true
@@ -119,7 +113,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 7
     region: content
     settings:
       match_operator: CONTAINS
@@ -128,9 +122,8 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 7
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  field_summary: true
+hidden: {  }

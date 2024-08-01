@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.basic_page
     - node.type.board_member
+    - node.type.event
     - node.type.news
     - node.type.publication
     - node.type.webform
@@ -99,6 +100,7 @@ type_settings:
     node:
       - basic_page
       - board_member
+      - event
       - news
       - publication
       - webform
