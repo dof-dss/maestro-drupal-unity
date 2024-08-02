@@ -1,0 +1,15 @@
+uuid: dd8d06fd-8e9c-42e8-bdc2-996799e9847d
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: Hosted
+description: ''
+weight: 0
+folder: ../project/config/horizoneuropeni/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
