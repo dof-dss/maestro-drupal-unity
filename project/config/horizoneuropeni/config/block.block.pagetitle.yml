@@ -1,0 +1,24 @@
+uuid: 4efc4bb2-951b-42bb-8f1f-7b4d94cc84f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - horizoneuropeni_theme
+id: pagetitle
+theme: horizoneuropeni_theme
+region: content
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/search\r\n/publications\r\n/publications/date/*\r\n/news\r\n/news/date/*"

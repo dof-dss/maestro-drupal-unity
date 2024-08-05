@@ -140,3 +140,13 @@ sites:
         database: independentpaneltruthrecoveryni
         status: production
         default: false
+    horizoneuropeni:
+        name: 'Horizon Europe'
+        url: horizoneuropeni.com
+        solr: horizoneuropeni
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/horizoneuropeni ; drush core-cron'
+        database: horizoneuropeni
+        status: development
+        default: false
