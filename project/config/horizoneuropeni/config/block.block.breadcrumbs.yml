@@ -1,0 +1,24 @@
+uuid: e81764ac-aa4b-4e57-a2ea-5144a64ce62a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - horizoneuropeni_theme
+id: breadcrumbs
+theme: horizoneuropeni_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

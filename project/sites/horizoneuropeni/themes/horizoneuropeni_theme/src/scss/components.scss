@@ -1,0 +1,100 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+.top_left {
+  min-height: 7.5rem;
+
+  #logo img {
+    height: 4rem;
+    margin: 1.8rem 2rem 1.8rem 0;
+    @media screen and (max-width: $tab) {
+      position: relative;
+      height: 3rem;
+    }
+  }
+}
+
+#main-menu {
+  .menu-link {
+    &:hover,
+    &:focus {
+      background: transparent;
+      border-bottom: 5px solid $brand-secondary;
+    }
+  }
+
+  .menu {
+    .menu-item {
+      .active,
+      .active + .menu-main_sub .title a {
+        background: transparent;
+        border-bottom: 5px solid $brand-secondary;
+      }
+    }
+  }
+}
+
+.region-front-welcome {
+  background: resolve('he-background.png') no-repeat 50%;
+  padding: 0rem 5rem 5rem 2rem;
+  margin: auto;
+}
+@media screen and (min-width: 766px) {
+  body {
+    @include adjust-font-size-to(18px);
+  }
+}
+
+#block-frontpagebanner {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+
+  h2 {
+    @include adjust-font-size-to(26px);
+    color: $white;
+    line-height: 1.5;
+    text-align: left;
+
+    @media screen and (max-width: $tab) {
+      @include adjust-font-size-to(18px);
+    }
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(14px);
+    }
+  }
+
+  p {
+    color: $white;
+  }
+
+  a.btn {
+    background: #0369ab;
+    @include adjust-font-size-to(18px);
+    line-height: 2.5rem;
+    padding: 1rem 2.8rem;
+    border-radius: 5px;
+    text-decoration: underline;
+    text-decoration-color: $white;
+
+    @media screen and (max-width: $tab) {
+      @include adjust-font-size-to(16px);
+      display: inline;
+    }
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(12px)
+    }
+
+    &:hover,
+    &:focus {
+      opacity: .8;
+      color: #fff;
+      text-decoration: underline;
+      background: #3bb350;
+    }
+  }
+}

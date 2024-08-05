@@ -1,0 +1,30 @@
+uuid: 25fff968-4f60-4727-8001-94d1a7196bad
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:c883aeea-5e88-4d98-871c-e673a59dfd2a'
+  module:
+    - block_content
+    - system
+  theme:
+    - horizoneuropeni_theme
+id: frontpagebanner
+theme: horizoneuropeni_theme
+region: front_welcome
+weight: -2
+provider: null
+plugin: 'block_content:c883aeea-5e88-4d98-871c-e673a59dfd2a'
+settings:
+  id: 'block_content:c883aeea-5e88-4d98-871c-e673a59dfd2a'
+  label: 'Frontpage banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
