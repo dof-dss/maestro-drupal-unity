@@ -5,14 +5,15 @@ dependencies:
   config:
     - field.field.node.event.field_contact_details
     - field.field.node.event.field_cost
-    - field.field.node.event.field_event_dates
     - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_end_date
+    - field.field.node.event.field_event_start_date
     - field.field.node.event.field_location
     - node.type.event
     - workflows.workflow.nics_editorial_workflow
   module:
     - content_moderation
-    - datetime_range
+    - datetime
     - path
 id: node.event.default
 targetEntityType: node
@@ -21,13 +22,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_contact_details:
     type: string_textarea
-    weight: 5
+    weight: 6
     region: content
     settings:
       rows: 5
@@ -35,29 +36,35 @@ content:
     third_party_settings: {  }
   field_cost:
     type: string_textfield
-    weight: 3
+    weight: 4
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_event_dates:
-    type: daterange_default
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_event_description:
     type: string_textarea
-    weight: 4
+    weight: 5
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_event_end_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_event_start_date:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_location:
     type: string_textfield
-    weight: 2
+    weight: 3
     region: content
     settings:
       size: 60
@@ -65,40 +72,40 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 6
+    weight: 7
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 9
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 14
+    weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -113,7 +120,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -122,7 +129,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 12
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
