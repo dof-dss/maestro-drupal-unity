@@ -4,7 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_contact_details
-    - field.storage.node.field_event_dates
+    - field.storage.node.field_event_end_date
+    - field.storage.node.field_event_start_date
     - field.storage.node.field_location
     - search_api.server.solr_default
   module:
@@ -71,14 +72,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_contact_details
-  field_event_dates:
-    label: 'Event dates'
+  field_event_end_date:
+    label: 'Event end date'
     datasource_id: 'entity:node'
-    property_path: field_event_dates
+    property_path: field_event_end_date
     type: date
     dependencies:
       config:
-        - field.storage.node.field_event_dates
+        - field.storage.node.field_event_end_date
+  field_event_start_date:
+    label: 'Event start date'
+    datasource_id: 'entity:node'
+    property_path: field_event_start_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_start_date
   field_location:
     label: Location
     datasource_id: 'entity:node'
