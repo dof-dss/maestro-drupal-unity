@@ -68,19 +68,12 @@
 #}
 
 <article>
-  <h3>
-    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-  </h3>
-  <p>
-    {% apply spaceless %}
-      <span>{{ content.field_event_date }}</span>
-      {% if content.field_start_time['#items'].value %}
-        <span>{{ ', '|t }}{{ content.field_start_time['#items'].value }}
-          {% if content.field_start_time['#items'].value2 %}
-            {{ '-'|t }} {{ content.field_start_time['#items'].value2 }}
-          {% endif %}
-    </span>
-      {% endif %}
-    {% endapply %}
-  </p>
+  <a href="{{ url }}" rel="bookmark" class="news-link">
+    <div class="news-article">
+      <h3>
+        {{ label }}
+      </h3>
+      {{ content | without('field_photo', 'field_teaser')}}
+    </div>
+  </a>
 </article>
