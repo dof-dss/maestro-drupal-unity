@@ -14,6 +14,7 @@ dependencies:
   module:
     - layout_builder
     - smart_date
+    - timefield
     - user
 third_party_settings:
   layout_builder:
@@ -60,12 +61,24 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_start_time:
+    type: timefield_default_formatter
+    label: hidden
+    settings:
+      display_format:
+        hour: g
+        minute: i
+        separator: ':'
+        period: a
+        periodSeparator: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   body: true
   content_moderation_control: true
   field_contact_details: true
   field_cost: true
-  field_start_time: true
   langcode: true
   links: true
   search_api_excerpt: true

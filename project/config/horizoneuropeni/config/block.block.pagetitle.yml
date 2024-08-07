@@ -9,7 +9,7 @@ dependencies:
 id: pagetitle
 theme: horizoneuropeni_theme
 region: content
-weight: -2
+weight: -6
 provider: null
 plugin: page_title_block
 settings:
