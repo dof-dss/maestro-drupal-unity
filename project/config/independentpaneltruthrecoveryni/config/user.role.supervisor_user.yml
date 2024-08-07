@@ -12,6 +12,7 @@ dependencies:
     - node.type.basic_page
     - node.type.board_member
     - node.type.feature
+    - node.type.institutions
     - node.type.news
     - node.type.publication
     - node.type.webform
@@ -61,6 +62,7 @@ permissions:
   - 'create feature content'
   - 'create file media'
   - 'create image media'
+  - 'create institutions content'
   - 'create news content'
   - 'create publication content'
   - 'create remote_video media'
@@ -74,12 +76,14 @@ permissions:
   - 'delete any file'
   - 'delete any file media'
   - 'delete any image media'
+  - 'delete any institutions content'
   - 'delete any news content'
   - 'delete any publication content'
   - 'delete any remote_video media'
   - 'delete basic_page revisions'
   - 'delete board_member revisions'
   - 'delete feature revisions'
+  - 'delete institutions revisions'
   - 'delete news revisions'
   - 'delete own audio media'
   - 'delete own basic_page content'
@@ -88,6 +92,7 @@ permissions:
   - 'delete own feature content'
   - 'delete own file media'
   - 'delete own image media'
+  - 'delete own institutions content'
   - 'delete own news content'
   - 'delete own publication content'
   - 'delete own remote_video media'
@@ -99,6 +104,7 @@ permissions:
   - 'edit any feature content'
   - 'edit any file media'
   - 'edit any image media'
+  - 'edit any institutions content'
   - 'edit any news content'
   - 'edit any publication content'
   - 'edit any remote_video media'
@@ -111,6 +117,7 @@ permissions:
   - 'edit own feature content'
   - 'edit own file media'
   - 'edit own image media'
+  - 'edit own institutions content'
   - 'edit own news content'
   - 'edit own publication content'
   - 'edit own remote_video media'
@@ -124,6 +131,7 @@ permissions:
   - 'revert basic_page revisions'
   - 'revert board_member revisions'
   - 'revert feature revisions'
+  - 'revert institutions revisions'
   - 'revert news revisions'
   - 'revert publication revisions'
   - 'revert webform revisions'
@@ -146,6 +154,7 @@ permissions:
   - 'view board_member revisions'
   - 'view content references'
   - 'view feature revisions'
+  - 'view institutions revisions'
   - 'view latest version'
   - 'view news revisions'
   - 'view own unpublished content'

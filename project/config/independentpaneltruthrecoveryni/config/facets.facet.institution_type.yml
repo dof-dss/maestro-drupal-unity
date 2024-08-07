@@ -6,7 +6,11 @@ dependencies:
     - search_api.index.institutions
     - views.view.institutions_search
   module:
+    - facets_pretty_paths
     - search_api
+third_party_settings:
+  facets_pretty_paths:
+    coder: default_coder
 id: institution_type
 name: 'Type of institution'
 weight: 0
@@ -49,17 +53,17 @@ processor_configs:
       sort: 20
     settings:
       sort: ASC
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: 40
+    settings:
+      sort: ASC
   hierarchy_processor:
     processor_id: hierarchy_processor
     weights:
       build: 100
     settings: {  }
-  raw_value_widget_order:
-    processor_id: raw_value_widget_order
-    weights:
-      sort: 50
-    settings:
-      sort: DESC
   translate_entity:
     processor_id: translate_entity
     weights:
