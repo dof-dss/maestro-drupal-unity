@@ -1,12 +1,10 @@
-uuid: 17d25e49-af97-4e3a-b394-cd03f56bc25d
+uuid: 77dc13a2-b873-4ba6-a339-a29f3bebab45
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_contact_details
-    - field.storage.node.field_event_end_date
-    - field.storage.node.field_event_start_date
-    - field.storage.node.field_location
+    - field.storage.node.field_detail
+    - field.storage.node.field_institution_type
     - search_api.server.solr_default
   module:
     - search_api_solr
@@ -58,59 +56,82 @@ third_party_settings:
       specific_languages:
         en: '0'
       use_universal_collation: false
-id: events
-name: Events
+id: institutions
+name: Institutions
 description: ''
 read_only: false
 field_settings:
-  field_contact_details:
-    label: 'Contact details'
+  field_detail:
+    label: Detail
     datasource_id: 'entity:node'
-    property_path: field_contact_details
-    type: text
-    boost: 0.5
-    dependencies:
-      config:
-        - field.storage.node.field_contact_details
-  field_event_end_date:
-    label: 'Event end date'
-    datasource_id: 'entity:node'
-    property_path: field_event_end_date
-    type: date
-    dependencies:
-      config:
-        - field.storage.node.field_event_end_date
-  field_event_start_date:
-    label: 'Event start date'
-    datasource_id: 'entity:node'
-    property_path: field_event_start_date
-    type: date
-    dependencies:
-      config:
-        - field.storage.node.field_event_start_date
-  field_location:
-    label: Location
-    datasource_id: 'entity:node'
-    property_path: field_location
+    property_path: field_detail
     type: text
     dependencies:
       config:
-        - field.storage.node.field_location
+        - field.storage.node.field_detail
+  field_institution_type:
+    label: 'Type of institution'
+    datasource_id: 'entity:node'
+    property_path: field_institution_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_institution_type
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
+  spelling:
+    label: Spelling
+    property_path: aggregated_field
+    type: solr_text_spellcheck
+    configuration:
+      type: union
+      separator: |+
+
+
+      fields:
+        - 'entity:node/title'
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
   title:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
     type: text
-    boost: 5.0
+    boost: 3.0
     dependencies:
       module:
         - node
+  title_fulltext:
+    label: 'Title fulltext'
+    property_path: aggregated_field
+    type: text
+    boost: 13.0
+    configuration:
+      type: union
+      separator: |+
+
+
+      fields:
+        - 'entity:node/field_detail'
+        - 'entity:node/title'
 datasource_settings:
   'entity:node':
     bundles:
       default: false
       selected:
-        - event
+        - institutions
     languages:
       default: true
       selected: {  }
@@ -138,9 +159,11 @@ processor_settings:
       preprocess_query: -15
     all_fields: true
     fields:
-      - field_contact_details
-      - field_location
+      - field_detail
+      - langcode
+      - spelling
       - title
+      - title_fulltext
     title: false
     alt: true
     tags:

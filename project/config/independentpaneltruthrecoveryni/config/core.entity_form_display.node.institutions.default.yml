@@ -1,70 +1,80 @@
-uuid: 02b46528-30ca-4b94-be49-f7647d7edb7a
+uuid: 34aa8460-ed9f-4024-9cab-fad7b64d003c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.event.field_contact_details
-    - field.field.node.event.field_cost
-    - field.field.node.event.field_event_description
-    - field.field.node.event.field_event_end_date
-    - field.field.node.event.field_event_start_date
-    - field.field.node.event.field_location
-    - node.type.event
-    - workflows.workflow.nics_editorial_workflow
+    - field.field.node.institutions.field_also_known_as
+    - field.field.node.institutions.field_dates_of_operation
+    - field.field.node.institutions.field_detail
+    - field.field.node.institutions.field_institution_type
+    - field.field.node.institutions.field_location_s
+    - field.field.node.institutions.field_records
+    - field.field.node.institutions.field_run_by
+    - node.type.institutions
   module:
     - content_moderation
-    - datetime
     - path
-id: node.event.default
+    - text
+id: node.institutions.default
 targetEntityType: node
-bundle: event
+bundle: institutions
 mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_contact_details:
-    type: string_textarea
-    weight: 6
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_cost:
+  field_also_known_as:
     type: string_textfield
-    weight: 4
+    weight: 125
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_event_description:
-    type: string_textarea
-    weight: 5
+  field_dates_of_operation:
+    type: string_textfield
+    weight: 124
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_detail:
+    type: text_textarea
+    weight: 123
     region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_event_end_date:
-    type: datetime_default
-    weight: 2
+  field_institution_type:
+    type: options_select
+    weight: 122
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_event_start_date:
-    type: datetime_default
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_location:
+  field_location_s:
     type: string_textfield
-    weight: 3
+    weight: 126
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_records:
+    type: text_textarea
+    weight: 128
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_run_by:
+    type: string_textfield
+    weight: 127
     region: content
     settings:
       size: 60
@@ -72,47 +82,47 @@ content:
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 7
+    weight: 2
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 14
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 12
+    weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
-    type: boolean_checkbox
-    weight: 10
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  status:
     type: boolean_checkbox
     weight: 15
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 11
+    weight: 16
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     region: content
     settings:
       size: 60
@@ -120,7 +130,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 5
     region: content
     settings:
       match_operator: CONTAINS
@@ -129,7 +139,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 13
+    weight: 50
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -1,4 +1,4 @@
-uuid: 3754d922-aaad-4a56-b3e2-1604db1418de
+uuid: bc9460cd-11d4-4684-ae95-4b1b59b844ba
 langcode: en
 status: true
 dependencies:
@@ -8,11 +8,11 @@ dependencies:
     - system
     - views
   theme:
-    - independentpaneltruthrecoveryni_theme
+    - horizoneuropeni_theme
 id: exposedformnews_searchnews_search_page
-theme: independentpaneltruthrecoveryni_theme
+theme: horizoneuropeni_theme
 region: search_facets
-weight: -9
+weight: -6
 provider: null
 plugin: 'views_exposed_filter_block:news_search-news_search_page'
 settings:

@@ -1,9 +1,9 @@
-uuid: dbc402b9-d24b-493a-aafe-652eb7f03d15
+uuid: 0fb32b9f-7152-48ab-a3ae-51aa92f7c837
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.search_index
     - field.field.node.event.field_contact_details
     - field.field.node.event.field_cost
     - field.field.node.event.field_event_description
@@ -12,28 +12,41 @@ dependencies:
     - field.field.node.event.field_location
     - node.type.event
   module:
+    - datetime
+    - layout_builder
     - user
-id: node.event.teaser
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.event.search_index
 targetEntityType: node
 bundle: event
-mode: teaser
+mode: search_index
 content:
-  content_moderation_control:
-    settings: {  }
+  field_event_start_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: unity_date
     third_party_settings: {  }
-    weight: -20
+    weight: 1
     region: content
-  links:
-    settings: {  }
+  field_location:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
+  content_moderation_control: true
   field_contact_details: true
   field_cost: true
   field_event_description: true
   field_event_end_date: true
-  field_event_start_date: true
-  field_location: true
   langcode: true
+  links: true
   search_api_excerpt: true
