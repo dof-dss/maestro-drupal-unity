@@ -16,9 +16,10 @@ processor_configs:
     weights:
       build: '45'
     settings: {  }
-  show_text_when_empty:
-    processor_id: show_text_when_empty
-    weights:
-      build: '10'
-    settings: {  }
-facets: {  }
+facets:
+  institution_type:
+    checked: true
+    label: 'Type of institution'
+    separator: ', '
+    show_count: false
+    weight: 0
