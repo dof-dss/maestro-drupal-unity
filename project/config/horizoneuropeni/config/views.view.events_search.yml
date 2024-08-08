@@ -134,23 +134,10 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        field_event_start_date:
-          id: field_event_start_date
+        field_event_date:
+          id: field_event_date
           table: search_api_index_events
-          field: field_event_start_date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: search_api
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_events
-          field: search_api_relevance
+          field: field_event_date
           relationship: none
           group_type: group
           admin_label: ''

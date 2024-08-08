@@ -1,4 +1,4 @@
-uuid: 1f62419d-d12a-40e4-976f-97eaec3db29d
+uuid: 82202b40-ec9d-4024-9104-645eb64c75d8
 langcode: en
 status: true
 dependencies:
@@ -7,17 +7,17 @@ dependencies:
     - views.view.events_search
   module:
     - search_api
-id: event_start_date
-name: 'Event Start Date'
+id: event_date
+name: 'Event date'
 weight: 0
 min_count: 1
 missing: false
 missing_label: others
 url_alias: date
 facet_source_id: 'search_api:views_page__events_search__events_search_page'
-field_identifier: field_event_start_date
+field_identifier: field_event_date
 query_operator: and
-hard_limit: 0
+hard_limit: 50
 exclude: false
 use_hierarchy: false
 keep_hierarchy_parents_active: false
@@ -48,7 +48,7 @@ processor_configs:
     weights:
       sort: 20
     settings:
-      sort: DESC
+      sort: ASC
   date_facet_drilldown:
     processor_id: date_facet_drilldown
     weights:
@@ -73,7 +73,7 @@ processor_configs:
     weights:
       sort: 50
     settings:
-      sort: ASC
+      sort: DESC
   url_processor_handler:
     processor_id: url_processor_handler
     weights:
