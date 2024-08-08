@@ -4,16 +4,17 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_index
+    - field.field.node.event.body
     - field.field.node.event.field_contact_details
     - field.field.node.event.field_cost
-    - field.field.node.event.field_event_description
-    - field.field.node.event.field_event_end_date
-    - field.field.node.event.field_event_start_date
+    - field.field.node.event.field_event_date
     - field.field.node.event.field_location
+    - field.field.node.event.field_start_time
     - node.type.event
   module:
-    - datetime
     - layout_builder
+    - smart_date
+    - timefield
     - user
 third_party_settings:
   layout_builder:
@@ -24,12 +25,31 @@ targetEntityType: node
 bundle: event
 mode: search_index
 content:
-  field_event_start_date:
-    type: datetime_default
+  field_event_date:
+    type: smartdate_custom
     label: hidden
     settings:
-      timezone_override: ''
-      format_type: unity_date
+      separator: ' - '
+      time_diff:
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: '2'
+        refresh: '60'
+        enabled: 0
+        description: ''
+      date_format: 'd F Y'
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      join: ', '
+      time_format: 'g:ia'
+      time_hour_format: 'g:ia'
+      allday_label: ''
+      date_first: '1'
+      ampm_reduce: '1'
+      site_time_toggle: '1'
     third_party_settings: {  }
     weight: 1
     region: content
@@ -41,12 +61,24 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_start_time:
+    type: timefield_default_formatter
+    label: hidden
+    settings:
+      display_format:
+        hour: g
+        minute: i
+        separator: ':'
+        period: a
+        periodSeparator: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
+  body: true
   content_moderation_control: true
   field_contact_details: true
   field_cost: true
-  field_event_description: true
-  field_event_end_date: true
   langcode: true
   links: true
   search_api_excerpt: true

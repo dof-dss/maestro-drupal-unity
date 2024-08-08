@@ -1,16 +1,16 @@
-uuid: 21eed817-69c4-47be-b8a2-55b2a7f393eb
+uuid: e1bd16b7-c062-4726-8cb3-8899165aabd6
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_event_description
-field_name: field_event_description
+    - timefield
+id: node.field_start_time
+field_name: field_start_time
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: timefield
+settings: {  }
+module: timefield
 locked: false
 cardinality: 1
 translatable: true

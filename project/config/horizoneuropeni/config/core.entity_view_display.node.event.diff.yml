@@ -1,9 +1,9 @@
-uuid: dbc402b9-d24b-493a-aafe-652eb7f03d15
+uuid: 7951d8f1-87a2-479f-849d-2245d3cdfb60
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.diff
     - field.field.node.event.body
     - field.field.node.event.field_contact_details
     - field.field.node.event.field_cost
@@ -14,18 +14,17 @@ dependencies:
   module:
     - text
     - user
-id: node.event.teaser
+id: node.event.diff
 targetEntityType: node
 bundle: event
-mode: teaser
+mode: diff
 content:
   body:
-    type: text_summary_or_trimmed
+    type: text_default
     label: hidden
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 0
     region: content
   content_moderation_control:
     settings: {  }

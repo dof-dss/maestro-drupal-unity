@@ -17,9 +17,9 @@ processor_configs:
       build: '45'
     settings: {  }
 facets:
-  event_start_date:
+  event_date:
     checked: true
-    label: 'Event Start Date'
+    label: 'Event date'
     separator: ', '
     show_count: false
     weight: 0
