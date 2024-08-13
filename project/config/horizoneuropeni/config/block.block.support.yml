@@ -1,0 +1,25 @@
+uuid: a43c0173-83e4-40ad-b5cd-f87cd250ce57
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:3936629e-11ec-49b6-a3c4-a8f7de9122d4'
+  module:
+    - block_content
+  theme:
+    - horizoneuropeni_theme
+id: support
+theme: horizoneuropeni_theme
+region: footer_third
+weight: -10
+provider: null
+plugin: 'block_content:3936629e-11ec-49b6-a3c4-a8f7de9122d4'
+settings:
+  id: 'block_content:3936629e-11ec-49b6-a3c4-a8f7de9122d4'
+  label: Support
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
