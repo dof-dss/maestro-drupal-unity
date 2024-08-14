@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
     - field.field.node.event.field_contact_details
     - field.field.node.event.field_cost
-    - field.field.node.event.field_event_dates
-    - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_date
     - field.field.node.event.field_location
+    - field.field.node.event.field_start_time
     - node.type.event
   module:
     - user
@@ -16,22 +17,15 @@ id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
-content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
+content: {  }
 hidden:
+  body: true
+  content_moderation_control: true
   field_contact_details: true
   field_cost: true
-  field_event_dates: true
-  field_event_description: true
+  field_event_date: true
   field_location: true
+  field_start_time: true
   langcode: true
+  links: true
   search_api_excerpt: true
