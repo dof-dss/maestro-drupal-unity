@@ -289,11 +289,12 @@ div.event-info {
   }
 
   h3 {
+    @include adjust-font-size-to(20px);
     margin: 1rem 0;
     color: $link;
 
-    @include breakpoint($tab) {
-      @include adjust-font-size-to(18px, 4);
+    @media screen and (max-width: 766px) {
+      @include adjust-font-size-to(16px);
     }
   }
 
@@ -303,6 +304,12 @@ div.event-info {
     height: 20rem;
     width: 30rem;
     align-content: center;
+    @media screen and (max-width: $lap) {
+      width: 40rem;
+    }
+    @media screen and (max-width: $mob) {
+      width: 28rem;
+    }
   }
 
   article {
@@ -359,11 +366,12 @@ div.event-info {
   }
 
   h3 {
+    @include adjust-font-size-to(20px);
     margin: 1rem 0;
     color: $link;
 
-    @include breakpoint($tab) {
-      @include adjust-font-size-to(18px, 4);
+    @media screen and (max-width: 766px) {
+      @include adjust-font-size-to(18px);
     }
   }
 
@@ -373,6 +381,12 @@ div.event-info {
     width: 30rem;
     background: $white;
     align-content: center;
+    @media screen and (max-width: $lap) {
+      width: 40rem;
+    }
+    @media screen and (max-width: $mob) {
+      width: 28rem;
+    }
   }
 
   article {
@@ -448,16 +462,23 @@ div.event-info {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    @media screen and (max-width: $mob) {
+      width: 28rem;
+    }
   }
 
   article {
     clear: right;
+    @media screen and (max-width: 766px) {
+      justify-content: space-around;
+      border-bottom: none;
+    }
 
     p {
       margin-bottom: 0;
     }
 
-    a.featured-home-link{
+    a.featured-home-link #content {
       &:hover,
       &:focus {
         border-bottom: none;
@@ -520,19 +541,28 @@ div.event-info {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    @media screen and (max-width: 961px) {
+    @media screen and (max-width: $lap) {
       width: 40rem;
+    }
+    @media screen and (max-width: $mob) {
+      width: 28rem;
     }
   }
 
   article {
     clear: right;
+    @media screen and (max-width: 766px) {
+      justify-content: space-around;
+      border-bottom: none;
+    }
 
     p {
       margin-bottom: 0;
     }
 
     a.featured-home-attachment-link{
+      border-bottom: none;
+
       &:hover,
       &:focus {
         border-bottom: none;
