@@ -1,0 +1,26 @@
+uuid: eefb0880-b71b-4c24-9964-b5d4921d58de
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: support_contacts
+label: 'Support Contacts'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      board_member: board_member
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 0
+  max_size: 0
+  act_as_queue: false
+  reverse: false

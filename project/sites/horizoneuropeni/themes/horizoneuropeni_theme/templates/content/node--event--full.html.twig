@@ -70,7 +70,6 @@
 <article class="event-content">
   <div class="event-left">
     {{ drupal_block('page_title_block', wrapper=false) }}
-    {{ content.field_cost }}
     {{ content.body }}
     {{ content.field_contact_details }}
   </div>
@@ -102,6 +101,9 @@
         <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
         <span>{{ content.field_location }}</span>
       </p>
+      <p>
+        <i class="fas fa-pound-sign" aria-hidden="true"></i>
+        <span>{{ content.field_cost }}</span>
       </p>
     </div>
   </div>
