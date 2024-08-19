@@ -36,9 +36,7 @@
  * @see template_preprocess_field()
  */
 #}
-<p{{ attributes }}>
-<span>{{ 'Cost:'|t }}</span>
+<span>{{ 'Cost'|t }}</span>
 {% for item in items %}
   <span>{{ item.content }}</span>
 {% endfor %}
-</p>

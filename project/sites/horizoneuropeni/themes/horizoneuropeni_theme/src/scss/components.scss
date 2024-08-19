@@ -204,18 +204,7 @@ div.event-info {
   .fas {
     padding-right: 2rem;
     width: 6rem;
-  }
-
-  .fa-calendar-alt {
     font-size: 5rem;
-  }
-
-  .fa-clock {
-    font-size: 4.8rem;
-  }
-
-  .fa-map-marker-alt {
-    font-size: 5.8rem;
   }
 }
 
@@ -478,7 +467,7 @@ div.event-info {
       margin-bottom: 0;
     }
 
-    a.featured-home-link #content {
+    a.featured-home-link {
       &:hover,
       &:focus {
         border-bottom: none;
@@ -679,3 +668,11 @@ div.event-info {
     }
   }
 }
+
+.node-type-board-member {
+  fieldset .fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
