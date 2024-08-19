@@ -125,6 +125,7 @@ field_settings:
       separator: |+
 
 
+
       fields:
         - 'entity:node/body'
         - 'entity:node/title'
