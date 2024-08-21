@@ -9,13 +9,20 @@ use Drupal\Core\Database\Database;
  * Implements hook_cron().
  */
 function pressclippingsnics_clippingtidy_cron() {
-  // Retrieve all press clippings.
-  $press_clippings = \Drupal::entityTypeManager()->getStorage('node')
-    ->loadByProperties([
-      'type' => 'press_clippings'
-    ]);
   // Allow 30 days before archiving.
   $cutoff_time = time() - (60 * 60 * 24 * 30);
+  $cutoff_date = date('Y-m-d', $cutoff_time);
+  // Retrieve press clippings that are ready for archiving.
+  $result = \Drupal::entityQuery('node')
+    ->condition('type', 'press_clippings')
+    ->condition('status', '1')
+    ->condition('field_publication_date', $cutoff_date, '<')
+    ->accessCheck(FALSE)
+    ->execute();
+
+  $press_clippings = \Drupal::entityTypeManager()->getStorage('node')
+    ->loadMultiple($result);
+
   // Loop through all press clippings checking the publication date.
   foreach ($press_clippings as $pressclipping) {
     // If the clipping is already archived, ignore it.
