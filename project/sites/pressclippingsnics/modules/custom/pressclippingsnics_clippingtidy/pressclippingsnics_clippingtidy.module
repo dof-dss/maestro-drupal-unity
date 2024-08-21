@@ -12,7 +12,8 @@ function pressclippingsnics_clippingtidy_cron() {
   // Allow 30 days before archiving.
   $cutoff_time = time() - (60 * 60 * 24 * 30);
   $cutoff_date = date('Y-m-d', $cutoff_time);
-  // Retrieve press clippings that are ready for archiving.
+  // Retrieve press clippings that are ready for archiving (their
+  // status is 'published' and they are older than the cutoff date).
   $result = \Drupal::entityQuery('node')
     ->condition('type', 'press_clippings')
     ->condition('status', '1')
@@ -25,14 +26,17 @@ function pressclippingsnics_clippingtidy_cron() {
 
   // Loop through all press clippings checking the publication date.
   foreach ($press_clippings as $pressclipping) {
-    // If the clipping is already archived, ignore it.
+    // If the clipping is already archived, ignore it (this check is a
+    // fail safe, press clippings should only be returned by the query
+    // if they are not archived).
     $current_state = $pressclipping->moderation_state->getString();
     if ($current_state != 'archived') {
       $clippings_date = $pressclipping->get('field_publication_date');
       $field_publication_date = $clippings_date->getValue()[0]['value'];
       $field_publication_date = strtotime($field_publication_date);
       if ($field_publication_date < $cutoff_time) {
-        // If publication date was more than 30 days ago, archive the clipping.
+        // If publication date was more than 30 days ago, archive the clipping
+        // (again, this check should not really be necessary, but is a fail safe)
         \Drupal::logger('clippingtidy')->notice(
           'Archiving press clipping @nid',
           ['@nid' => $pressclipping->get('nid')->getString()]
