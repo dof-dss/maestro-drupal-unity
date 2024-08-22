@@ -12,6 +12,7 @@ dependencies:
     - node.type.board_member
   module:
     - field_group
+    - telephone
     - text
     - user
 third_party_settings:
@@ -24,12 +25,18 @@ third_party_settings:
       parent_name: ''
       region: content
       weight: 3
-      format_type: fieldset
+      format_type: html_element
       format_settings:
         classes: ''
         show_empty_fields: false
-        id: ''
-        description: ''
+        id: contact
+        element: div
+        show_label: true
+        label_element: h2
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
 _core:
   default_config_hash: iLbyzpQj6xkSEqQH4_QICp9TBeUnnjBnScTtM36cf1g
 id: node.board_member.default
@@ -45,7 +52,7 @@ content:
     weight: 2
     region: content
   field_email:
-    type: basic_string
+    type: email_mailto
     label: inline
     settings: {  }
     third_party_settings: {  }
@@ -69,10 +76,10 @@ content:
     weight: 0
     region: content
   field_phone_number:
-    type: string
+    type: telephone_link
     label: inline
     settings:
-      link_to_entity: false
+      title: ''
     third_party_settings: {  }
     weight: 5
     region: content
