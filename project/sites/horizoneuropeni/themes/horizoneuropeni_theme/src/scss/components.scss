@@ -40,8 +40,15 @@
 
 .region-front-welcome {
   background: resolve('he-background.png') no-repeat 50%;
-  padding: 0rem 5rem 5rem 2rem;
+  padding: 0rem 3rem 0rem 2rem;
   margin: auto;
+  @media screen and (max-width: $tab) {
+    background: $brand-primary;
+    height: 32rem;
+  }
+  @media screen and (max-width: $mob) {
+    height: 40rem;
+  }
 }
 @media screen and (min-width: 766px) {
   body {
@@ -53,6 +60,10 @@
   display: flex;
   align-items: flex-start;
   text-align: left;
+  width: 55%;
+  @media screen and (max-width: $tab) {
+    width: 100%;
+  }
 
   h2 {
     @include adjust-font-size-to(26px);
@@ -64,7 +75,7 @@
       @include adjust-font-size-to(18px);
     }
     @media screen and (max-width: $mob) {
-      @include adjust-font-size-to(14px);
+      @include adjust-font-size-to(16px);
     }
   }
 
@@ -76,17 +87,15 @@
     background: #0369ab;
     @include adjust-font-size-to(18px);
     line-height: 2.5rem;
-    padding: 1rem 2.8rem;
     border-radius: 5px;
     text-decoration: underline;
     text-decoration-color: $white;
 
     @media screen and (max-width: $tab) {
-      @include adjust-font-size-to(16px);
-      display: inline;
+      @include adjust-font-size-to(18px);
     }
     @media screen and (max-width: $mob) {
-      @include adjust-font-size-to(12px)
+      @include adjust-font-size-to(16px)
     }
 
     &:hover,
@@ -517,6 +526,9 @@ div.event-info {
     color: $white;
     line-height: 4rem;
     @include adjust-font-size-to(35px);
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(24px);
+    }
   }
 
   .featured-article-attachment {
@@ -631,7 +643,7 @@ div.event-info {
     h2 {
       color: $black;
       padding: 0;
-      margin: 0 0 2rem;
+      margin: 2rem 0 2.7rem;
       @include adjust-font-size-to(24px);
     }
 
@@ -658,7 +670,6 @@ div.event-info {
       display: inline-block;
       padding: 0 .8rem 0 0;
       line-height: 1.8rem;
-      margin-right: .5rem;
     }
 
     a {
@@ -707,6 +718,8 @@ div.event-info {
 }
 
 #mc_embed_signup {
+  margin-top: 2rem;
+
   .indicates-required {
     text-align: right;
     font-size: 11px;
@@ -755,4 +768,5 @@ div.event-info {
     }
   }
 }
+
 
