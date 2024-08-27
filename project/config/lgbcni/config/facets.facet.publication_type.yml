@@ -6,7 +6,11 @@ dependencies:
     - search_api.index.publications
     - views.view.publications_search
   module:
+    - facets_pretty_paths
     - search_api
+third_party_settings:
+  facets_pretty_paths:
+    coder: default_coder
 id: publication_type
 name: 'Publication type'
 weight: 0
@@ -59,7 +63,7 @@ processor_configs:
     weights:
       sort: 50
     settings:
-      sort: DESC
+      sort: ASC
   translate_entity:
     processor_id: translate_entity
     weights:
