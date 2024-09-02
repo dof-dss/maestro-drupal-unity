@@ -19,11 +19,6 @@ targetEntityType: node
 bundle: institutions
 mode: default
 content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 9
-    region: content
   field_also_known_as:
     type: string
     label: above
@@ -84,5 +79,6 @@ content:
     weight: 0
     region: content
 hidden:
+  content_moderation_control: true
   langcode: true
   search_api_excerpt: true
