@@ -40,8 +40,15 @@
 
 .region-front-welcome {
   background: resolve('he-background.png') no-repeat 50%;
-  padding: 0rem 5rem 5rem 2rem;
+  padding: 0rem 3rem 0rem 2rem;
   margin: auto;
+  @media screen and (max-width: $tab) {
+    background: $brand-primary;
+    height: 32rem;
+  }
+  @media screen and (max-width: $mob) {
+    height: 40rem;
+  }
 }
 @media screen and (min-width: 766px) {
   body {
@@ -53,6 +60,10 @@
   display: flex;
   align-items: flex-start;
   text-align: left;
+  width: 55%;
+  @media screen and (max-width: $tab) {
+    width: 100%;
+  }
 
   h2 {
     @include adjust-font-size-to(26px);
@@ -64,7 +75,7 @@
       @include adjust-font-size-to(18px);
     }
     @media screen and (max-width: $mob) {
-      @include adjust-font-size-to(14px);
+      @include adjust-font-size-to(16px);
     }
   }
 
@@ -76,17 +87,15 @@
     background: #0369ab;
     @include adjust-font-size-to(18px);
     line-height: 2.5rem;
-    padding: 1rem 2.8rem;
     border-radius: 5px;
     text-decoration: underline;
     text-decoration-color: $white;
 
     @media screen and (max-width: $tab) {
-      @include adjust-font-size-to(16px);
-      display: inline;
+      @include adjust-font-size-to(18px);
     }
     @media screen and (max-width: $mob) {
-      @include adjust-font-size-to(12px)
+      @include adjust-font-size-to(16px)
     }
 
     &:hover,
@@ -94,7 +103,7 @@
       opacity: .8;
       color: #fff;
       text-decoration: underline;
-      background: #3bb350;
+      background: #2d863d;
     }
   }
 }
@@ -204,18 +213,7 @@ div.event-info {
   .fas {
     padding-right: 2rem;
     width: 6rem;
-  }
-
-  .fa-calendar-alt {
     font-size: 5rem;
-  }
-
-  .fa-clock {
-    font-size: 4.8rem;
-  }
-
-  .fa-map-marker-alt {
-    font-size: 5.8rem;
   }
 }
 
@@ -289,11 +287,12 @@ div.event-info {
   }
 
   h3 {
+    @include adjust-font-size-to(20px);
     margin: 1rem 0;
     color: $link;
 
-    @include breakpoint($tab) {
-      @include adjust-font-size-to(18px, 4);
+    @media screen and (max-width: 766px) {
+      @include adjust-font-size-to(16px);
     }
   }
 
@@ -303,6 +302,12 @@ div.event-info {
     height: 20rem;
     width: 30rem;
     align-content: center;
+    @media screen and (max-width: $lap) {
+      width: 40rem;
+    }
+    @media screen and (max-width: $mob) {
+      width: 28rem;
+    }
   }
 
   article {
@@ -359,11 +364,12 @@ div.event-info {
   }
 
   h3 {
+    @include adjust-font-size-to(20px);
     margin: 1rem 0;
     color: $link;
 
-    @include breakpoint($tab) {
-      @include adjust-font-size-to(18px, 4);
+    @media screen and (max-width: 766px) {
+      @include adjust-font-size-to(18px);
     }
   }
 
@@ -373,6 +379,12 @@ div.event-info {
     width: 30rem;
     background: $white;
     align-content: center;
+    @media screen and (max-width: $lap) {
+      width: 40rem;
+    }
+    @media screen and (max-width: $mob) {
+      width: 28rem;
+    }
   }
 
   article {
@@ -416,6 +428,174 @@ div.event-info {
   }
 }
 
+#content .featured-home {
+  @include breakpoint($lap) {
+    display:block;
+    width:40%;
+    margin:0 auto;
+    float:right;
+
+
+    .views-row {
+      flex-basis: 31.5%;
+    }
+  }
+
+  h3 {
+    margin: 1rem 0;
+    color: $white;
+    line-height: 3.5rem;
+    @include adjust-font-size-to(24px);
+  }
+
+
+  .featured-article {
+    border: 1px solid black;
+    padding: 2.4rem;
+    height: 26rem;
+    width: 40rem;
+    align-content: center;
+    background: #111b47;
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    @media screen and (max-width: $mob) {
+      width: 28rem;
+    }
+  }
+
+  article {
+    clear: right;
+    @media screen and (max-width: 766px) {
+      justify-content: space-around;
+      border-bottom: none;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a.featured-home-link {
+      &:hover,
+      &:focus {
+        border-bottom: none;
+        outline: none;
+        background: none;
+
+        .featured-article {
+          background: $link-hover-background;
+
+          h3 {
+            color: $link-hover;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .published-date {
+    margin-bottom: 0;
+  }
+}
+
+#content {
+  .featured-home {
+    a[href] {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+#content .featured-home-attachment {
+  @include breakpoint($lap) {
+    display:block;
+    width:50%;
+    margin:0 auto;
+    float:left;
+
+    .views-row {
+      flex-basis: 31.5%;
+    }
+  }
+
+  h3 {
+    margin: 1rem 0;
+    color: $white;
+    line-height: 4rem;
+    @include adjust-font-size-to(35px);
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(24px);
+    }
+  }
+
+  .featured-article-attachment {
+    border: 1px solid black;
+    padding: 2.4rem;
+    height: 26rem;
+    width: 55rem;
+    align-content: center;
+    background: #2a2a2e;
+    text-align:left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    @media screen and (max-width: $lap) {
+      width: 40rem;
+    }
+    @media screen and (max-width: $mob) {
+      width: 28rem;
+    }
+  }
+
+  article {
+    clear: right;
+    @media screen and (max-width: 766px) {
+      justify-content: space-around;
+      border-bottom: none;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    a.featured-home-attachment-link{
+      border-bottom: none;
+
+      &:hover,
+      &:focus {
+        border-bottom: none;
+        outline: none;
+        background: none;
+
+        .featured-article-attachment {
+          background: $link-hover-background;
+
+          h3 {
+            color: $link-hover;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .published-date {
+    margin-bottom: 0;
+  }
+}
+
+#content {
+  .featured-home-attachment {
+    a[href] {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
 .region-top-first {
   @media screen and (max-width: 961px) {
     display: flex;
@@ -444,3 +624,149 @@ div.event-info {
     background: #e2eafd;
   }
 }
+
+.region-top-third {
+  @media screen and (max-width: 961px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #e2eafd;
+
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+#footer {
+  .block {
+    h2 {
+      color: $black;
+      padding: 0;
+      margin: 2rem 0 2.7rem;
+      @include adjust-font-size-to(24px);
+    }
+
+    label {
+      @include adjust-font-size-to(20px);
+      padding-bottom: 2rem;
+    }
+  }
+
+  .container-wrap {
+    display: block;
+  }
+
+  @include breakpoint($tab) {
+    padding: 2%;
+  }
+
+  .footer-menu li {
+    @include adjust-font-size-to(16px);
+    padding-left: 0;
+    list-style-type: none;
+
+    @include breakpoint($mob) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+    }
+
+    a {
+      @media screen and (min-width: $mob) {
+        display: block;
+      }
+    }
+  }
+}
+
+.node-type-board-member {
+  fieldset .fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.sidebar-second-layout {
+  .rel-menu--latest-news {
+    margin-bottom: 2rem;
+
+    ul {
+      margin-bottom: 1rem;
+
+      li {
+        padding: 0 0 .6rem 1rem;
+        list-style: none;
+        margin: 0 0 .2rem;
+        position: relative;
+
+        &::before {
+          content: "-";
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+
+        .date-published {
+          display: block;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+#mc_embed_signup {
+  margin-top: 2rem;
+
+  .indicates-required {
+    text-align: right;
+    font-size: 11px;
+    margin-right: 4%;
+    @media screen and (max-width: 961px) {
+      text-align: left;
+    }
+  }
+
+  .asterisk {
+    color: #e85c41;
+    font-size: 150%;
+    font-weight: normal;
+    position: relative;
+    top: 5px;
+  }
+
+  .button {
+    clear: both;
+    background: $black;
+    border: 0 none;
+    border-radius: 4px;
+    transition: all 0.23s ease-in-out 0s;
+    color: $white;
+    display: inline-block;
+    font-size: 15px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 22px;
+    white-space: nowrap;
+    width: fit-content;
+    font-weight: normal;
+    text-shadow: none;
+
+    &:hover,
+    &:focus {
+      border-bottom: none;
+      outline: none;
+      background: $white;
+      color: $black;
+    }
+  }
+  #mc_embed_signup_scroll {
+    h2 {
+      margin: 0;
+    }
+  }
+}
+
+

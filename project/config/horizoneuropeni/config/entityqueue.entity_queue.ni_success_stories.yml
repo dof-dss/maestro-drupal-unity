@@ -1,0 +1,26 @@
+uuid: 605ad219-5d9f-414f-88d6-191fd7ae0344
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ni_success_stories
+label: 'NI Success Stories'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      featured_link: featured_link
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 2
+  max_size: 2
+  act_as_queue: false
+  reverse: false

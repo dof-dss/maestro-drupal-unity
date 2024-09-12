@@ -41,6 +41,8 @@ module:
   entity_browser_entity_form: 0
   entity_embed: 0
   entity_reference_revisions: 0
+  entityqueue: 0
+  entityqueue_smartqueue: 0
   facets: 0
   facets_pretty_paths: 0
   facets_summary: 0
@@ -52,7 +54,6 @@ module:
   filelog: 0
   filter: 0
   flag: 0
-  google_tag: 0
   handy_cache_tags: 0
   help: 0
   history: 0
@@ -109,6 +110,7 @@ module:
   structure_sync: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   timefield: 0
   token: 0

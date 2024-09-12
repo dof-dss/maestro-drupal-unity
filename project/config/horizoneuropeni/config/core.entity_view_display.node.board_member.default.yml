@@ -4,13 +4,39 @@ status: true
 dependencies:
   config:
     - field.field.node.board_member.body
+    - field.field.node.board_member.field_email
     - field.field.node.board_member.field_member_image
     - field.field.node.board_member.field_member_role
     - field.field.node.board_member.field_meta_tags
+    - field.field.node.board_member.field_phone_number
     - node.type.board_member
   module:
+    - field_group
+    - telephone
     - text
     - user
+third_party_settings:
+  field_group:
+    group_contact_details:
+      children:
+        - field_email
+        - field_phone_number
+      label: 'Contact Details'
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: contact
+        element: div
+        show_label: true
+        label_element: h2
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
 _core:
   default_config_hash: iLbyzpQj6xkSEqQH4_QICp9TBeUnnjBnScTtM36cf1g
 id: node.board_member.default
@@ -19,28 +45,43 @@ bundle: board_member
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
+  field_email:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_member_image:
     type: entity_reference_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: portrait_float
       link: false
     third_party_settings: {  }
+    weight: 1
     region: content
   field_member_role:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
+    region: content
+  field_phone_number:
+    type: telephone_link
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 5
     region: content
 hidden:
   content_moderation_control: true

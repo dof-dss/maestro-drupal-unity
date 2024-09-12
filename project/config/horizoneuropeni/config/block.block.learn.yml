@@ -1,0 +1,25 @@
+uuid: 0cb2ab30-cd35-4049-8bdd-04312abd5615
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:5cae9556-30f7-4b40-a924-a26f99d66b89'
+  module:
+    - block_content
+  theme:
+    - horizoneuropeni_theme
+id: learn
+theme: horizoneuropeni_theme
+region: footer_second
+weight: -9
+provider: null
+plugin: 'block_content:5cae9556-30f7-4b40-a924-a26f99d66b89'
+settings:
+  id: 'block_content:5cae9556-30f7-4b40-a924-a26f99d66b89'
+  label: Learn
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

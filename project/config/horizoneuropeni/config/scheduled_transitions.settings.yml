@@ -18,6 +18,9 @@ bundles:
     bundle: event
   -
     entity_type: node
+    bundle: featured_link
+  -
+    entity_type: node
     bundle: news
   -
     entity_type: node
