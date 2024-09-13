@@ -385,6 +385,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 20
           total_pages: null
           id: 0
@@ -433,10 +434,10 @@ display:
             format: basic_html
           tokenize: false
       sorts:
-        field_first_name:
-          id: field_first_name
+        field_last_name:
+          id: field_last_name
           table: search_api_index_managers_index
-          field: field_first_name
+          field: field_last_name
           relationship: none
           group_type: group
           admin_label: ''
