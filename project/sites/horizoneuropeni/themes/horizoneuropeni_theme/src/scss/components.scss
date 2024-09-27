@@ -47,7 +47,7 @@
     height: 32rem;
   }
   @media screen and (max-width: $mob) {
-    height: 40rem;
+    height: 55rem;
   }
 }
 @media screen and (min-width: 766px) {
@@ -112,6 +112,10 @@
   h2 {
     color: $black;
     padding: 3rem 3rem 0;
+  }
+
+  @media screen and (max-width: $mob){
+    margin: 0 1rem;
   }
 }
 
@@ -288,7 +292,7 @@ div.event-info {
 
   h3 {
     @include adjust-font-size-to(20px);
-    margin: 1rem 0;
+    margin: auto;
     color: $link;
 
     @media screen and (max-width: 766px) {
@@ -297,21 +301,27 @@ div.event-info {
   }
 
   .news-article {
-    border: 1px solid black;
     padding: 2.4rem;
     height: 20rem;
     width: 30rem;
     align-content: center;
+
     @media screen and (max-width: $lap) {
-      width: 40rem;
+      width: auto;
     }
+
     @media screen and (max-width: $mob) {
-      width: 28rem;
+      padding: .5rem;
     }
   }
 
   article {
+    border: 1px solid black;
     clear: right;
+
+    @media screen and (max-width: $lap) {
+      margin: 1rem auto;
+    }
 
     p {
       margin-bottom: 0;
@@ -383,7 +393,9 @@ div.event-info {
       width: 40rem;
     }
     @media screen and (max-width: $mob) {
-      width: 28rem;
+      width: auto;
+      padding: 0 2.4rem;
+      margin: 0 1rem;
     }
   }
 
@@ -404,6 +416,10 @@ div.event-info {
         .event-article {
           border: solid black 1px;
           margin: 0 -1px -3px;
+
+          @media screen and (max-width: $mob) {
+            margin: 0 1rem;
+          }
 
           h3 {
             color: $link-hover;
@@ -435,7 +451,6 @@ div.event-info {
     margin:0 auto;
     float:right;
 
-
     .views-row {
       flex-basis: 31.5%;
     }
@@ -445,9 +460,11 @@ div.event-info {
     margin: 1rem 0;
     color: $white;
     line-height: 3.5rem;
-    @include adjust-font-size-to(24px);
-  }
 
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(18px);
+    }
+  }
 
   .featured-article {
     border: 1px solid black;
@@ -460,13 +477,16 @@ div.event-info {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+
     @media screen and (max-width: $mob) {
-      width: 28rem;
+      width: auto;
+      text-align: center;
     }
   }
 
   article {
     clear: right;
+
     @media screen and (max-width: 766px) {
       justify-content: space-around;
       border-bottom: none;
@@ -525,9 +545,9 @@ div.event-info {
     margin: 1rem 0;
     color: $white;
     line-height: 4rem;
-    @include adjust-font-size-to(35px);
+
     @media screen and (max-width: $mob) {
-      @include adjust-font-size-to(24px);
+      @include adjust-font-size-to(18px);
     }
   }
 
@@ -542,11 +562,15 @@ div.event-info {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+
     @media screen and (max-width: $lap) {
       width: 40rem;
     }
+
     @media screen and (max-width: $mob) {
-      width: 28rem;
+      width: auto;
+      padding: 1.8rem 0;
+      text-align:center;
     }
   }
 
@@ -602,6 +626,10 @@ div.event-info {
     justify-content: center;
     text-align: center;
 
+    @media screen and (min-width: $mob) {
+      margin: 0 1rem;
+    }
+
     h2 {
       text-align: center;
     }
@@ -614,6 +642,10 @@ div.event-info {
     justify-content: center;
     text-align: center;
     background: #e2eafd;
+
+    @media screen and (min-width: $mob) {
+      margin: 1rem;
+    }
 
     h2 {
       text-align: center;
@@ -766,6 +798,16 @@ div.event-info {
     h2 {
       margin: 0;
     }
+  }
+}
+
+.no-sidebars.front.eu-cookie-compliance-popup-open {
+  @media screen and (max-width: $mob) {
+    margin-bottom: 53rem;
+  }
+
+  @media screen and (max-width: $phab) {
+    margin-bottom: 30rem;
   }
 }
 
