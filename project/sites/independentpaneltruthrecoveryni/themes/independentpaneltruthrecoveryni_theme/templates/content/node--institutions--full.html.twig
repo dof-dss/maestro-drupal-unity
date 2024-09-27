@@ -67,44 +67,46 @@
  * @see template_preprocess_node()
  */
 #}
-
-<article class="event-content">
-  <div class="event-left">
-    {{ content.body }}
-    {{ content.field_contact_details }}
+{% set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'clearfix',
+] %}
+{% if not page %}
+<article{{ attributes.addClass(classes).setAttribute('id', 'node-' ~ node.id).removeAttribute('role') }}>
+  {% endif %}
+  <h1>{{ content.field_institutions_title }}</h1>
+  <div class="institution-fields">
+    <p class="type-field">
+      <span class="institutions-type">{{ 'Type of institution: '|t }}{{ content.field_institution_type }}</span>
+    </p>
+    <p class="detail-field">
+      <span class="institutions-detail">{{ 'Detail: '|t }}{{ content.field_detail }}</span>
+    </p>
+    <p class="dates-of-operation-field">
+      <span class="institutions-dates-of-operation">{{ 'Dates of operation: '|t }}{{ content.field_dates_of_operation }}</span>
+    </p>
+    <p class="also-known-as-field">
+      <span class="institutions-also-known-as">{{ 'Also known as: '|t }}{{ content.field_also_known_as }}</span>
+    </p>
+    <p class="location-s-field">
+      <span class="institutions-location-s">{{ 'Location(s): '|t }}{{ content.field_location_s }}</span>
+    </p>
+    <p class="run-by-field">
+      <span class="institutions-run-by">{{ 'Run by: '|t }}{{ content.field_run_by }}</span>
+    </p>
+    <p class="records-field">
+      <span class="institutions-records">{{ 'Records: '|t }}{{ content.field_records }}</span>
+    </p>
+    <div class="institutions-body">{{ content.body }}</div>
   </div>
-  <div class="event-right">
-    <div class="event-info">
-      <h2>Event Information</h2>
-      <p>
-        {% apply spaceless %}
-      <p>
-        <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-        <span>{{ content.field_event_date }}</span>
-      </p>
-
-      {% if content.field_start_time['#items'].value %}
-        <p>
-          <i class="fas fa-clock" aria-hidden="true"></i>
-          <span>
-            <span>{{ 'Time'|t }}</span>
-            <span>{{ content.field_start_time['#items'].value }}
-              {% if content.field_start_time['#items'].value2 %}
-              {{ '-'|t }} {{ content.field_start_time['#items'].value2 }}
-            </span>
-          </span>
-          {% endif %}
-        </p>
-      {% endif %}
-      {% endapply %}
-      <p>
-        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-        <span>{{ content.field_location }}</span>
-      </p>
-      <p>
-        <i class="fas fa-pound-sign" aria-hidden="true"></i>
-        <span>{{ content.field_cost }}</span>
-      </p>
-    </div>
-  </div>
+  {% apply spaceless %}
+  {% endapply %}
+  {{ content.field_attachment }}
+  {% if not page %}
 </article>
+{% endif %}

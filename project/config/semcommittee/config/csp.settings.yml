@@ -1,5 +1,3 @@
-_core:
-  default_config_hash: 4JpC3F2x_VsACQQuTI4JOMCLDQcjUp0gTMJspJQ2M7s
 report-only:
   enable: true
   directives:
@@ -10,10 +8,8 @@ report-only:
       sources:
         - 'https://www.google-analytics.com'
         - 'https://region1.google-analytics.com'
-        - 'https://*.twitter.com'
-        - 'https://plus.browsealoud.com/'
-        - 'https://www.browsealoud.com'
-        - 'https://speech.speechstream.net'
+        - 'https://*.newrelic.com'
+        - 'https://*.nr-data.net'
     font-src:
       base: self
       sources:
@@ -22,12 +18,11 @@ report-only:
         - 'https://use.fontawesome.com'
         - 'https://cdn.jsdelivr.net'
         - 'data:'
-        - '*.typekit.com'
     frame-src:
       base: self
       sources:
         - 'https://www.youtube.com'
-        - 'https://*.twitter.com'
+        - 'https://www.vimeo.com'
     img-src:
       base: self
       sources:
@@ -40,62 +35,55 @@ report-only:
         - 'https://maps.gstatic.com'
         - 'https://maps.googleapis.com'
         - 'data:'
-        - 'https://*.twitter.com'
     manifest-src:
       base: self
-    media-src:
-      base: self
-      sources:
-        - 'blob:'
     script-src:
       base: self
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
-        - 'https://*.twitter.com'
-        - 'https://plus.browsealoud.com'
-        - 'https://www.browsealoud.com'
-        - 'http://www.browsealoud.com/plus/scripts/ba.js'
-        - "'sha256-K+EgnlR8Sed9/8PNusrhV0AT6adNsL9Kdy4ezV48UWU='"
+        - cdn.jsdelivr.net
+        - cdnjs.cloudflare.com
+        - unpkg.com
+        - 'https://*.newrelic.com'
+        - 'https://*.nr-data.net'
+        - 'https://app.feedblitz.com'
     script-src-attr:
       base: self
+      flags:
+        - unsafe-hashes
       sources:
-        - 'https://plus.browsealoud.com'
-        - 'https://www.browsealoud.com'
-        - 'http://www.browsealoud.com/plus/scripts/ba.js'
-        - "'sha256-K+EgnlR8Sed9/8PNusrhV0AT6adNsL9Kdy4ezV48UWU='"
+        - 'https://app.feedblitz.com'
     script-src-elem:
       base: self
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
-        - 'https://*.twitter.com'
-        - 'https://www.browsealoud.com'
-        - 'https://plus.browsealoud.com'
-        - 'http://www.browsealoud.com/plus/scripts/ba.js'
-        - "'sha256-K+EgnlR8Sed9/8PNusrhV0AT6adNsL9Kdy4ezV48UWU='"
-        - 'https://apis.google.com'
+        - cdn.jsdelivr.net
+        - cdnjs.cloudflare.com
+        - unpkg.com
+        - 'https://*.newrelic.com'
+        - 'https://*.nr-data.net'
     style-src:
       base: self
       sources:
-        - '*.typekit.com'
-        - 'https://www.browsealoud.com'
-        - 'https://plus.browsealoud.com'
+        - cdn.jsdelivr.net
+        - cdnjs.cloudflare.com
+        - fonts.googleapis.com
+        - unpkg.com
     style-src-attr:
       base: self
       flags:
         - unsafe-inline
-      sources:
-        - 'https://www.browsealoud.com'
-        - 'https://plus.browsealoud.com'
     style-src-elem:
       base: self
       flags:
         - unsafe-inline
       sources:
-        - '*.typekit.com'
-        - 'https://www.browsealoud.com'
-        - 'https://plus.browsealoud.com'
+        - cdn.jsdelivr.net
+        - cdnjs.cloudflare.com
+        - fonts.googleapis.com
+        - unpkg.com
     block-all-mixed-content: true
   reporting:
     plugin: none
@@ -129,8 +117,6 @@ enforce:
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
-    script-src-attr:
-      base: self
     script-src-elem:
       base: self
       sources:
@@ -144,8 +130,6 @@ enforce:
         - unsafe-inline
     style-src-elem:
       base: self
-      flags:
-        - unsafe-inline
       sources:
         - 'https://www.googletagmanager.com'
         - 'https://www.google-analytics.com'
