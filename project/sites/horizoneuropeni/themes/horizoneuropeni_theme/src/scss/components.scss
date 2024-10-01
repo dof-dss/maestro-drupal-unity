@@ -319,6 +319,11 @@ div.event-info {
     border: 1px solid black;
     clear: right;
 
+    &:hover,
+    &:focus {
+      background: $link-hover-background;
+    }
+
     @media screen and (max-width: $lap) {
       margin: 1rem auto;
     }
@@ -335,7 +340,6 @@ div.event-info {
         background: none;
 
         .news-article {
-          background: $link-hover-background;
           margin: 0 -1px -3px;
 
           h3 {
