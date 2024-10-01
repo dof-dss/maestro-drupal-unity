@@ -339,17 +339,13 @@ div.event-info {
         outline: none;
         background: none;
 
-        .news-article {
-          margin: 0 -1px -3px;
-
-          h3 {
+        .news-article h3 {
             color: $link-hover;
             text-decoration: underline;
           }
         }
       }
     }
-  }
 
   .published-date {
     margin-bottom: 0;
