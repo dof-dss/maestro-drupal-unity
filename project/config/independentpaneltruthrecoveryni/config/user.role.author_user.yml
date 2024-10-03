@@ -55,6 +55,7 @@ permissions:
   - 'delete own document media'
   - 'delete own file media'
   - 'delete own image media'
+  - 'delete own institutions content'
   - 'delete own news content'
   - 'delete own publication content'
   - 'delete own remote_video media'

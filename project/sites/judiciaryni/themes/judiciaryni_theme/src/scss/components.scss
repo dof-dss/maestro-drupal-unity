@@ -199,3 +199,15 @@ p.published-date {
     padding-right: 1rem;
   }
 }
+
+.search-form input[type='text'] {
+  &:focus {
+    outline: 3px solid #FFFF00;
+  }
+}
+
+.search-form input[type='submit'] {
+  &:focus {
+    outline: 3px solid #FFFF00;
+  }
+}
