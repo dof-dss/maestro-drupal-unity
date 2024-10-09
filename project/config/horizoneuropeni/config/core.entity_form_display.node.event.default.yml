@@ -73,14 +73,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_event_date:
-    type: smartdate_only
+    type: smartdate_default
     weight: 2
     region: content
     settings:
-      separator: to
-      hide_date: 0
-      allday: 0
-      remove_seconds: 0
       modal: false
       default_duration: 60
       default_duration_increments: |-
@@ -90,6 +86,9 @@ content:
         120|2 hours
         custom
       show_extra: false
+      hide_date: false
+      allday: true
+      remove_seconds: false
     third_party_settings: {  }
   field_location:
     type: string_textfield
