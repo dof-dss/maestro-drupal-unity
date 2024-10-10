@@ -1,5 +1,7 @@
 _core:
   default_config_hash: IqFDJOUXgoqYSm39bzsb0BVMDSkw3b4-KD4YSUgMw7U
+langcode: en
+uuid: 934008c1-620f-454a-b0ac-4ec66b1db671
 name: 'Horizon Europe NI'
 mail: test@test.com
 slogan: ''
@@ -9,7 +11,5 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-uuid: 934008c1-620f-454a-b0ac-4ec66b1db671
 frontpage_title: 'Welcome to Drupal site'

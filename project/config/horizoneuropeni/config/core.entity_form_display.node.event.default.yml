@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.event.field_cost
     - field.field.node.event.field_event_date
     - field.field.node.event.field_location
-    - field.field.node.event.field_start_time
     - node.type.event
     - workflows.workflow.nics_editorial_workflow
   module:
@@ -17,7 +16,6 @@ dependencies:
     - path
     - smart_date
     - text
-    - timefield
 third_party_settings:
   field_group:
     group_event_date_time:
@@ -73,14 +71,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_event_date:
-    type: smartdate_only
+    type: smartdate_default
     weight: 2
     region: content
     settings:
-      separator: to
-      hide_date: 0
-      allday: 0
-      remove_seconds: 0
       modal: false
       default_duration: 60
       default_duration_increments: |-
@@ -90,6 +84,9 @@ content:
         120|2 hours
         custom
       show_extra: false
+      hide_date: false
+      allday: true
+      remove_seconds: false
     third_party_settings: {  }
   field_location:
     type: string_textfield
@@ -98,31 +95,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_start_time:
-    type: timefield_standard_widget
-    weight: 3
-    region: content
-    settings:
-      disable_plugin: false
-      separator: ':'
-      showLeadingZero: false
-      showMinutesLeadingZero: true
-      showPeriod: true
-      periodSeparator: ''
-      showHours: true
-      showMinutes: true
-      am_text: AM
-      pm_text: PM
-      minute_interval: 5
-      showCloseButton: false
-      closeButtonText: Done
-      showNowButton: false
-      nowButtonText: Now
-      showDeselectButton: false
-      deselectButtonText: Deselect
-      myPosition: 'left top'
-      atPosition: 'left bottom'
     third_party_settings: {  }
   langcode:
     type: language_select

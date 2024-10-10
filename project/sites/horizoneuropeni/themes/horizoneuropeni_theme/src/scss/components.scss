@@ -47,7 +47,7 @@
     height: 32rem;
   }
   @media screen and (max-width: $mob) {
-    height: 40rem;
+    height: 55rem;
   }
 }
 @media screen and (min-width: 766px) {
@@ -113,6 +113,10 @@
     color: $black;
     padding: 3rem 3rem 0;
   }
+
+  @media screen and (max-width: $mob){
+    margin: 0 1rem;
+  }
 }
 
 .node-type-event {
@@ -146,74 +150,73 @@
   flex-wrap: wrap-reverse;
   padding-top: 5rem;
 
+  p {
+    flex: 1;
+  }
+
   div.event-left {
     flex-basis: 100%;
 
     h1 {
       margin-top: 0;
     }
+
     @include breakpoint($tab) {
       flex-basis: 66%;
       padding-right: 3rem;
     }
   }
 
-  p {
-    flex: 1;
-  }
-}
-
-div.event-right {
-  flex-basis: 100%;
-
-  @include breakpoint($mob) {
-    flex-basis: 50%;
-  }
-
-  @include breakpoint($tab) {
-    flex-basis: 33%;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-
-div.event-info {
-  background: #1b2c57;
-  padding: 2rem;
-  margin-bottom: 3rem;
-
-  h2,
-  p {
-    color: $white;
-  }
-
-  h2 {
-    margin-top: 0;
-  }
-
-  p {
-    display: flex;
-
-    &:first-child {
-      border-bottom: 1px solid $white;
-      padding-bottom: 1.8rem;
+  div.event-right {
+    @include breakpoint($mob) {
+      flex-basis: 50%;
     }
 
-    &:last-child {
-      margin-bottom: 0;
+    @include breakpoint($tab) {
+      flex-basis: 33%;
     }
-  }
 
-  span {
-    display: block;
-  }
+    .btn {
+      width: 100%;
+    }
 
-  .fas {
-    padding-right: 2rem;
-    width: 6rem;
-    font-size: 5rem;
+    div.event-info {
+      background: #1b2c57;
+      padding: 2rem;
+      margin-bottom: 3rem;
+
+      h2,
+      p {
+        color: $white;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      p {
+        display: flex;
+
+        &:first-child {
+          border-bottom: 1px solid $white;
+          padding-bottom: 1.8rem;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      span {
+        display: block;
+      }
+
+      .fas {
+        padding-right: 2rem;
+        width: 6rem;
+        font-size: 5rem;
+      }
+    }
   }
 }
 
@@ -288,7 +291,7 @@ div.event-info {
 
   h3 {
     @include adjust-font-size-to(20px);
-    margin: 1rem 0;
+    margin: auto;
     color: $link;
 
     @media screen and (max-width: 766px) {
@@ -297,21 +300,32 @@ div.event-info {
   }
 
   .news-article {
-    border: 1px solid black;
     padding: 2.4rem;
     height: 20rem;
     width: 30rem;
     align-content: center;
+
     @media screen and (max-width: $lap) {
-      width: 40rem;
+      width: auto;
     }
+
     @media screen and (max-width: $mob) {
-      width: 28rem;
+      padding: .5rem;
     }
   }
 
   article {
+    border: 1px solid black;
     clear: right;
+
+    &:hover,
+    &:focus {
+      background: $link-hover-background;
+    }
+
+    @media screen and (max-width: $lap) {
+      margin: 1rem auto;
+    }
 
     p {
       margin-bottom: 0;
@@ -324,35 +338,22 @@ div.event-info {
         outline: none;
         background: none;
 
-        .news-article {
-          background: $link-hover-background;
-          margin: 0 -1px -3px;
-
-          h3 {
+        .news-article h3 {
             color: $link-hover;
             text-decoration: underline;
           }
         }
       }
     }
-  }
 
   .published-date {
     margin-bottom: 0;
   }
 }
 
-#content {
-  .home-latest-news {
-    a[href] {
-      margin: 0;
-      padding: 0;
-    }
-  }
-}
-
 #content .home-latest-events {
   background: #e2eafd;
+
   @include breakpoint($lap) {
     display: flex;
     justify-content: space-between;
@@ -379,11 +380,15 @@ div.event-info {
     width: 30rem;
     background: $white;
     align-content: center;
+
     @media screen and (max-width: $lap) {
       width: 40rem;
     }
+
     @media screen and (max-width: $mob) {
-      width: 28rem;
+      width: auto;
+      padding: 0 2.4rem;
+      margin: 0 1rem;
     }
   }
 
@@ -403,7 +408,10 @@ div.event-info {
 
         .event-article {
           border: solid black 1px;
-          margin: 0 -1px -3px;
+
+          @media screen and (max-width: $mob) {
+            margin: 0 1rem;
+          }
 
           h3 {
             color: $link-hover;
@@ -419,22 +427,12 @@ div.event-info {
   }
 }
 
-#content {
-  .home-latest-events {
-    a[href] {
-      margin: 0;
-      padding: 0;
-    }
-  }
-}
-
 #content .featured-home {
   @include breakpoint($lap) {
-    display:block;
-    width:40%;
-    margin:0 auto;
-    float:right;
-
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    float: right;
 
     .views-row {
       flex-basis: 31.5%;
@@ -445,9 +443,11 @@ div.event-info {
     margin: 1rem 0;
     color: $white;
     line-height: 3.5rem;
-    @include adjust-font-size-to(24px);
-  }
 
+    @media screen and (max-width: $mob) {
+      @include adjust-font-size-to(18px);
+    }
+  }
 
   .featured-article {
     border: 1px solid black;
@@ -460,20 +460,19 @@ div.event-info {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+
     @media screen and (max-width: $mob) {
-      width: 28rem;
+      width: auto;
+      text-align: center;
     }
   }
 
   article {
     clear: right;
+
     @media screen and (max-width: 766px) {
       justify-content: space-around;
       border-bottom: none;
-    }
-
-    p {
-      margin-bottom: 0;
     }
 
     a.featured-home-link {
@@ -500,21 +499,12 @@ div.event-info {
   }
 }
 
-#content {
-  .featured-home {
-    a[href] {
-      margin: 0;
-      padding: 0;
-    }
-  }
-}
-
 #content .featured-home-attachment {
   @include breakpoint($lap) {
-    display:block;
-    width:50%;
-    margin:0 auto;
-    float:left;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    float: left;
 
     .views-row {
       flex-basis: 31.5%;
@@ -525,9 +515,9 @@ div.event-info {
     margin: 1rem 0;
     color: $white;
     line-height: 4rem;
-    @include adjust-font-size-to(35px);
+
     @media screen and (max-width: $mob) {
-      @include adjust-font-size-to(24px);
+      @include adjust-font-size-to(18px);
     }
   }
 
@@ -542,11 +532,15 @@ div.event-info {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+
     @media screen and (max-width: $lap) {
       width: 40rem;
     }
+
     @media screen and (max-width: $mob) {
-      width: 28rem;
+      width: auto;
+      padding: 1.8rem 0;
+      text-align:center;
     }
   }
 
@@ -581,19 +575,6 @@ div.event-info {
       }
     }
   }
-
-  .published-date {
-    margin-bottom: 0;
-  }
-}
-
-#content {
-  .featured-home-attachment {
-    a[href] {
-      margin: 0;
-      padding: 0;
-    }
-  }
 }
 
 .region-top-first {
@@ -601,6 +582,10 @@ div.event-info {
     display: flex;
     justify-content: center;
     text-align: center;
+
+    @media screen and (min-width: $mob) {
+      margin: 0 1rem;
+    }
 
     h2 {
       text-align: center;
@@ -614,6 +599,10 @@ div.event-info {
     justify-content: center;
     text-align: center;
     background: #e2eafd;
+
+    @media screen and (min-width: $mob) {
+      margin: 1rem;
+    }
 
     h2 {
       text-align: center;
@@ -634,48 +623,6 @@ div.event-info {
 
     h2 {
       text-align: center;
-    }
-  }
-}
-
-#footer {
-  .block {
-    h2 {
-      color: $black;
-      padding: 0;
-      margin: 2rem 0 2.7rem;
-      @include adjust-font-size-to(24px);
-    }
-
-    label {
-      @include adjust-font-size-to(20px);
-      padding-bottom: 2rem;
-    }
-  }
-
-  .container-wrap {
-    display: block;
-  }
-
-  @include breakpoint($tab) {
-    padding: 2%;
-  }
-
-  .footer-menu li {
-    @include adjust-font-size-to(16px);
-    padding-left: 0;
-    list-style-type: none;
-
-    @include breakpoint($mob) {
-      display: inline-block;
-      padding: 0 .8rem 0 0;
-      line-height: 1.8rem;
-    }
-
-    a {
-      @media screen and (min-width: $mob) {
-        display: block;
-      }
     }
   }
 }
@@ -765,6 +712,58 @@ div.event-info {
   #mc_embed_signup_scroll {
     h2 {
       margin: 0;
+    }
+  }
+}
+
+.no-sidebars.front.eu-cookie-compliance-popup-open {
+  @media screen and (max-width: $mob) {
+    margin-bottom: 53rem;
+  }
+
+  @media screen and (max-width: $phab) {
+    margin-bottom: 30rem;
+  }
+}
+
+#footer {
+  .block {
+    h2 {
+      color: $black;
+      padding: 0;
+      margin: 2rem 0 2.7rem;
+      @include adjust-font-size-to(24px);
+    }
+
+    label {
+      @include adjust-font-size-to(20px);
+      padding-bottom: 2rem;
+    }
+  }
+
+  .container-wrap {
+    display: block;
+  }
+
+  @include breakpoint($tab) {
+    padding: 2%;
+  }
+
+  .footer-menu li {
+    @include adjust-font-size-to(16px);
+    padding-left: 0;
+    list-style-type: none;
+
+    @include breakpoint($mob) {
+      display: inline-block;
+      padding: 0 .8rem 0 0;
+      line-height: 1.8rem;
+    }
+
+    a {
+      @media screen and (min-width: $mob) {
+        display: block;
+      }
     }
   }
 }
