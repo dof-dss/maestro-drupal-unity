@@ -41,10 +41,10 @@ backend_config:
   connector: standard
   connector_config:
     scheme: http
-    host: horizoneuropeni_solr
-    port: 8983
+    host: horizoneuropeni_solr.internal
+    port: 8080
     path: /
-    core: default
+    core: horizoneuropeni_index
     timeout: 5
     index_timeout: 5
     optimize_timeout: 10
