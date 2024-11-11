@@ -5,21 +5,20 @@
 # original repository.Any changes here will be overwritten when the project #
 # is built.                                                                 #
 #############################################################################
-name: unity.1
+name: unity.svr.3
 additional_hostnames:
-    - uregni
-    - odscni
-    - fiscalcommissionni
-    - mahinquiry
-    - nifiscalcouncil
-    - octf
-    - niauditoffice
-    - employmenttribunalsni
-    - independentreviewofeducation
-    - nipolicingboard
-    - pbni
-    - investnireview
-    - attorneygeneralni
-    - cscsreviewni
-    - pcsps
-    - urologyservicesinquiry
+    - pacni
+    - judiciaryni
+    - boundarycommission
+    - industrialcourt
+    - interchangeni
+    - infolibrarynics
+    - pressclippingsnics
+    - parolecomni
+    - lgbcni
+    - semcommittee
+    - nibureau
+    - nicscommissioners
+    - liofa
+    - independentpaneltruthrecoveryni
+    - horizoneuropeni
