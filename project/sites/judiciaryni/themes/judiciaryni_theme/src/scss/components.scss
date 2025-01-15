@@ -12,8 +12,10 @@
   }
 }
 
-.top_left #logo {
+.top_left #logo img {
   margin-top: 1.7rem;
+  max-width: 100%;
+  height: auto;
 }
 
 #inner_header_wrapper {
