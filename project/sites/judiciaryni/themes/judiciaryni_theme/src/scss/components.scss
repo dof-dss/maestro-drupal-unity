@@ -12,6 +12,12 @@
   }
 }
 
+.top_left #logo img {
+  margin-top: 1.4rem;
+  max-width: 100%;
+  height: auto;
+}
+
 #inner_header_wrapper {
   background: $brand-primary;
 }

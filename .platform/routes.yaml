@@ -23,14 +23,6 @@
     upstream: 'unity_svr_3:http'
     cache:
         enabled: 'false'
-'https://www.horizoneuropeni.com/':
-    type: upstream
-    upstream: 'unity_svr_3:http'
-    cache:
-        enabled: 'false'
-'https://horizoneuropeni.com/':
-    type: redirect
-    to: 'https://www.horizoneuropeni.com/'
 'https://www.{all}/':
     type: upstream
     upstream: 'unity_svr_3:http'

@@ -148,5 +148,5 @@ sites:
         cron_spec: '10 * * * *'
         cron_cmd: 'cd web/sites/horizoneuropeni ; drush core-cron'
         database: horizoneuropeni
-        status: development
+        status: production
         default: false
