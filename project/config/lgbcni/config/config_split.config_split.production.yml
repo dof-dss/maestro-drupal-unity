@@ -6,7 +6,7 @@ id: production
 label: production
 description: 'Used for production site.'
 weight: 0
-folder: ''
+folder: ../project/config/lgbcni/production
 module:
   fastly: 0
 theme: {  }
