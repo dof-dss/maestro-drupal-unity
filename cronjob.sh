@@ -25,4 +25,5 @@
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-liofa" "/app/log/liofa/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-nibureau" "/app/log/nibureau/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
 /bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-independentpaneltruthrecoveryni" "/app/log/independentpaneltruthrecoveryni/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
+/bin/bash /app/nicsdru-logging/scripts/shiplog.sh "drupal-horizoneuropeni" "/app/log/horizoneuropeni/drupal.log" "$(date +'%a, %d/%m/%Y -')" "drupal"
 

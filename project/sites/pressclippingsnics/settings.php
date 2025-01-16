@@ -21,3 +21,7 @@ include $app_root . '/sites/site.settings.php';
  * about securing private files.
  */
 $settings['file_private_path'] = $app_root . '/files/pressclippingsnics/clippings';
+
+if (getenv('IS_DDEV_PROJECT')) {
+  $databases['default']['default']['database'] = $subsite_id;
+}
