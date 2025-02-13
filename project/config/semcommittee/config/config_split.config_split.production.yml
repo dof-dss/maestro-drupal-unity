@@ -1,0 +1,17 @@
+uuid: 8cc1a14d-afd6-48a8-8b30-d2bd8dd6050a
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: ''
+weight: 0
+folder: ../project/config/semcommittee/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

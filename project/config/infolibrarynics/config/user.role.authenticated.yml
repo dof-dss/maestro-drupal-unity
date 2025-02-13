@@ -1,0 +1,31 @@
+uuid: a231c588-aff5-453b-b2f3-d4ad09dba556
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.restricted_html
+    - filter.format.webform_default
+  module:
+    - filter
+    - media
+    - node
+    - pathauto
+    - search
+    - system
+_core:
+  default_config_hash: JBR0Wc7hm00L3_AMYZjiL-5UJE_fbIeLEjx1Khm_AkM
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'notify of path changes'
+  - 'search content'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'use text format webform_default'
+  - 'view all revisions'
+  - 'view media'
+  - 'view own unpublished content'

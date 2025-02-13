@@ -1,0 +1,16 @@
+uuid: 80594ede-230f-4775-82e8-289a0ec3b5b7
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: ''
+weight: 0
+folder: ../project/config/pressclippingsnics/hosted
+module: {  }
+theme: {  }
+blacklist:
+  - search_api.server.solr_default
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

@@ -1,0 +1,129 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function judiciaryni_common_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  /** @var \Drupal\Core\Entity\EntityFormInterface $form_object */
+  $form_object = $form_state->getFormObject();
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $form_object->getEntity();
+
+  if ($node->bundle() === 'judicial_member') {
+    $form['title']['#disabled'] = 'disabled';
+    $form['title']['widget'][0]['value']['#description'] = t('You cannot edit this field. It is created automatically using the Name of Judge and Judicial Tier.');
+  }
+
+  if ($node->bundle() === 'publication') {
+    $form['#validate'][] = 'judiciaryni_common_validate_publication';
+  }
+}
+
+/**
+ * Form validation callback.
+ */
+function judiciaryni_common_validate_publication(&$form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+
+  // Validate file attachments and external links.
+  if (empty($values['field_attachment']["selection"][0]) && empty($values['field_external_publication'][0]['uri'])) {
+    $form_state->setErrorByName('field_attachment', t('You must provide an attachment or external link'));
+    $form_state->setErrorByName('field_external_publication', t('You must provide an attachment or external link'));
+  }
+
+  // Remove the last add more array from the list of external publications as this is just the add another item button.
+  $remove_last_element = array_pop($values['field_external_publication']);
+
+  // If the parsed URL host has any reference to the current Judiciary site then add an error message.
+  foreach ($values['field_external_publication'] as $value) {
+    if (!empty($value['uri'])) {
+      $ext_url = parse_url($value['uri']);
+      $ext_host = $ext_url['host'];
+
+      if (str_contains($ext_host, 'judiciaryni.uk')) {
+        // Set the error name to be used by using the _weight as the array position the error occurs in.
+        $error_name = 'field_external_publication]' . '[' . $value['_weight'] . ']' . '[uri';
+        $form_state->setErrorByName($error_name, t('URL must not be to the Judiciary website, use the attachment field for documents on the Judiciary website.'));
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function judiciaryni_common_entity_presave(EntityInterface $entity) {
+  // This will fire when nodes are created or edited.
+  if ($entity instanceof NodeInterface && $entity->bundle() === 'judicial_member') {
+    $judge_name = $entity->get('field_surname')->value;
+    $judge_sex = $entity->get('field_sex_of_member')->value;
+    $tier_tid = $entity->get('field_judicial_tier')->target_id;
+    $judge_title = ucfirst($entity->get('field_prefix_title')->value);
+    $short_title = $judge_title . ' ' . $judge_name;
+
+    if (!empty($tier_tid)) {
+      $tier = Term::load($tier_tid);
+      $tier_name = $tier->getName();
+
+      if ($judge_title === 'Vacant') {
+        $short_title = $judge_name . ' ' . $tier_name;
+      }
+      else {
+        judiciaryni_common_switch_tier($tier_name, $short_title, $judge_name, $judge_sex);
+      }
+    }
+    $entity->setTitle($short_title);
+  }
+}
+
+/**
+ * Utility function to add a Judge postfix based on their judicial tier.
+ */
+function judiciaryni_common_switch_tier($tier_name, &$short_title, $judge_name, $judge_sex) {
+  switch ($tier_name) {
+    case 'Lord Chief Justice':
+    case 'Lady Chief Justice':
+      $short_title = $judge_name . t(' LCJ');
+      break;
+
+    case 'Justice of Appeal':
+      $short_title = $judge_name . t(' LJ');
+      break;
+
+    case 'High Court Judge':
+      $short_title = $judge_name . t(' J');
+      break;
+
+    case 'Temporary High Court Judge':
+      $short_title = $short_title . t(' sitting as HCJ');
+      break;
+
+    case 'County Court Judge':
+    case 'Recorder of Belfast':
+    case 'Recorder of Londonderry':
+      $sex = t('His ');
+      if ($judge_sex !== 'male') {
+        $sex = t('Her ');
+      }
+      $short_title = $sex . t('Honour Judge ') . $judge_name;
+      break;
+
+    case 'Master of the High Court':
+      $short_title = t('Master ') . $judge_name;
+      break;
+
+    case 'District Judge';
+      $short_title = t('District Judge ') . $judge_name;
+      break;
+
+    case 'District Judge (Magistrates’ Courts)':
+    case 'Presiding District Judge (Magistrates’ Courts)':
+      $short_title = t('District Judge (MC) ') . $judge_name;
+      break;
+  }
+}

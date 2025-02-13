@@ -1,0 +1,30 @@
+uuid: 31b77b56-cede-4d35-9c3e-d6634ca918bc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:0124a05f-b56c-4637-8f9d-ad4b40de6b9e'
+  module:
+    - block_content
+    - system
+  theme:
+    - nibureau_theme
+id: howwecanhelp
+theme: nibureau_theme
+region: front_welcome
+weight: -4
+provider: null
+plugin: 'block_content:0124a05f-b56c-4637-8f9d-ad4b40de6b9e'
+settings:
+  id: 'block_content:0124a05f-b56c-4637-8f9d-ad4b40de6b9e'
+  label: 'How we can help'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

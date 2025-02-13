@@ -1,0 +1,51 @@
+uuid: 4086b1ca-b7c6-467e-86e1-6d29c0833c6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.consultation_response.field_attachment
+    - field.field.node.consultation_response.field_consultation_stage
+    - field.field.node.consultation_response.field_meta_tags
+    - field.field.node.consultation_response.field_response_type
+    - node.type.consultation_response
+  module:
+    - unity_common
+    - user
+id: node.consultation_response.default
+targetEntityType: node
+bundle: consultation_response
+mode: default
+content:
+  field_attachment:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: embed
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_consultation_stage:
+    type: 'Map taxonomy term to facet'
+    label: inline
+    settings:
+      search_page_url: representations-received
+      facets: stage
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_response_type:
+    type: 'Map taxonomy term to facet'
+    label: inline
+    settings:
+      search_page_url: representations-received
+      facets: response_type
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  content_moderation_control: true
+  field_meta_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

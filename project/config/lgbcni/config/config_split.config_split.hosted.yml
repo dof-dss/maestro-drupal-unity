@@ -1,0 +1,16 @@
+uuid: 7e26995c-b7aa-49e1-9fd9-3cb27b718df9
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: "Use for any sites that are 'hosted' and not running locally, whether development, QA or production."
+weight: 0
+folder: ../project/config/lgbcni/hosted
+module: {  }
+theme: {  }
+blacklist:
+  - search_api.server.solr_default
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

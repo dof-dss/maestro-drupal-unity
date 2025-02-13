@@ -1,0 +1,11 @@
+uuid: 371d2240-5c9a-4dfc-b6c3-7b882be58c5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.member_small_image
+label: 'Member small image'
+description: ''
+targetEntityType: media
+cache: true

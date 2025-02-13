@@ -1,0 +1,10 @@
+uuid: b6cf3a2a-fb0f-4d82-898f-111ec6c947f8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Eh9aHqn3Vg37J2NBGWLkml89nMug48CM_ByYpd8fG8Y
+id: text
+label: Text
+revision: 1
+description: 'A block containing a restricted set of text formatting tools.'

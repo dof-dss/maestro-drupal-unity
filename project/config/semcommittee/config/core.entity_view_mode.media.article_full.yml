@@ -1,0 +1,13 @@
+uuid: 4bbc6a56-ad89-46de-8b49-c801a6c50e1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: 95EdkutKV-wywHMx7h_A8tIbRDCItQMvrwOijDMm4ps
+id: media.article_full
+label: 'Article full'
+description: ''
+targetEntityType: media
+cache: true

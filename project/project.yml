@@ -1,0 +1,152 @@
+project_type: unity
+project_name: 'Unity Svr 3'
+project_id: vnetibjd44moa
+project_disk_size: 36864
+db_disk_size: 12288
+sites:
+    pacni:
+        name: 'Planning Appeals Commission'
+        url: pacni.gov.uk
+        solr: pacni
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/pacni ; drush core-cron'
+        database: pacni
+        status: production
+        default: false
+    judiciaryni:
+        name: 'Judiciary NI'
+        url: judiciaryni.uk
+        solr: judiciaryni
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/judiciaryni ; drush core-cron'
+        database: judiciaryni
+        status: production
+        default: false
+    boundarycommission:
+        name: 'Boundary Commission'
+        url: boundarycommission.org.uk
+        solr: boundarycommission
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/boundarycommission ; drush core-cron'
+        database: boundarycommission
+        status: production
+        default: true
+    industrialcourt:
+        name: 'Industrial Court'
+        url: industrialcourt.gov.uk
+        solr: industrialcourt
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/industrialcourt ; drush core-cron'
+        database: industrialcourt
+        status: production
+        default: false
+    interchangeni:
+        name: 'Interchange NI'
+        url: interchangeni.org.uk
+        solr: interchangeni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/interchangeni ; drush core-cron'
+        database: interchangeni
+        status: production
+        default: false
+    infolibrarynics:
+        name: 'NICS e-library'
+        url: info.library.nics.gov.uk
+        www: false
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/infolibrarynics ; drush core-cron'
+        database: infolibrarynics
+        status: production
+        default: false
+    pressclippingsnics:
+        name: 'Press Clippings Service'
+        url: pressclippings.nics.gov.uk
+        solr: pressclippingsnics
+        www: false
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/pressclippingsnics ; drush core-cron'
+        database: pressclippingsnics
+        status: production
+        default: false
+    parolecomni:
+        name: 'Parole Commissioners for Northern Ireland'
+        url: parolecomni.org.uk
+        solr: parolecomni
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/parolecomni ; drush core-cron'
+        database: parolecomni
+        status: production
+        default: false
+    lgbcni:
+        name: 'Local Government Boundaries Commissioner for Northern Ireland'
+        url: lgbc-ni.org.uk
+        solr: lgbcni
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/lgbcni ; drush core-cron'
+        database: lgbcni
+        status: production
+        default: false
+    semcommittee:
+        name: 'The Single Electricity Market Committee'
+        url: semcommittee.com
+        solr: semcommittee
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/semcommittee ; drush core-cron'
+        database: semcommittee
+        status: production
+        default: false
+    nibureau:
+        name: 'Northern Ireland Bureau'
+        url: nibureau.com
+        solr: nibureau
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/nibureau ; drush core-cron'
+        database: nibureau
+        status: production
+        default: false
+    nicscommissioners:
+        name: 'Civil Service Commissioners for Northern Ireland'
+        url: nicscommissioners.org
+        solr: nicscommissioners
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/nicscommissioners ; drush core-cron'
+        database: nicscommissioners
+        status: production
+        default: false
+    liofa:
+        name: Liofa
+        url: liofa.eu
+        solr: liofa
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/liofa ; drush core-cron'
+        database: liofa
+        status: production
+        default: false
+    independentpaneltruthrecoveryni:
+        name: 'Independent Panel Truth Recovery NI'
+        url: independentpanel.truthrecoveryni.co.uk
+        solr: independentpaneltruthrecoveryni
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/independentpaneltruthrecoveryni ; drush core-cron'
+        database: independentpaneltruthrecoveryni
+        status: production
+        default: false
+    horizoneuropeni:
+        name: 'Horizon Europe'
+        url: horizoneuropeni.com
+        solr: horizoneuropeni
+        www: true
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/horizoneuropeni ; drush core-cron'
+        database: horizoneuropeni
+        status: production
+        default: false

@@ -1,0 +1,16 @@
+uuid: 0bc0c187-0039-4ccd-a119-b587d6638857
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: Hosted
+description: ''
+weight: 0
+folder: ../project/config/independentpaneltruthrecoveryni/hosted
+module: {  }
+theme: {  }
+blacklist:
+  - search_api.server.solr_default
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

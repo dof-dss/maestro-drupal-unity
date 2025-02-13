@@ -1,0 +1,30 @@
+uuid: e82480be-beca-442d-9bb3-9ca63d014c26
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:map:40f2d722-5752-450f-a2c7-68c75934d49e'
+  module:
+    - block_content
+    - system
+  theme:
+    - parolecomni_theme
+id: map
+theme: parolecomni_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:40f2d722-5752-450f-a2c7-68c75934d49e'
+settings:
+  id: 'block_content:40f2d722-5752-450f-a2c7-68c75934d49e'
+  label: Map
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contact-us

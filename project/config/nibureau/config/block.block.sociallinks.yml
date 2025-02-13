@@ -1,0 +1,25 @@
+uuid: d9652ed2-f52c-4f1e-b6e0-da13c60484be
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:61b8bac2-3daa-44b4-8de6-14b189182646'
+  module:
+    - block_content
+  theme:
+    - nibureau_theme
+id: sociallinks
+theme: nibureau_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:61b8bac2-3daa-44b4-8de6-14b189182646'
+settings:
+  id: 'block_content:61b8bac2-3daa-44b4-8de6-14b189182646'
+  label: 'Social links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

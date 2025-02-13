@@ -1,0 +1,18 @@
+uuid: b42f2a01-960f-4c03-b73d-95742f78e136
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for production site.'
+weight: 0
+folder: ../project/config/pacni/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - search_api.server.solr_default
+  - fastly.settings
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

@@ -1,0 +1,25 @@
+uuid: e4453339-2632-4c8b-8bc7-3917e6fdd909
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:67a9e95c-4a0d-4c7e-b2d3-fee8d076643e'
+  module:
+    - block_content
+  theme:
+    - horizoneuropeni_theme
+id: collaboration
+theme: horizoneuropeni_theme
+region: footer_third
+weight: -9
+provider: null
+plugin: 'block_content:67a9e95c-4a0d-4c7e-b2d3-fee8d076643e'
+settings:
+  id: 'block_content:67a9e95c-4a0d-4c7e-b2d3-fee8d076643e'
+  label: Collaboration
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
