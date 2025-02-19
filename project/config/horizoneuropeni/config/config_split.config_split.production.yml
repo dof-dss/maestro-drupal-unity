@@ -6,12 +6,13 @@ id: production
 label: Production
 description: ''
 weight: 0
+stackable: false
+no_patching: false
+storage: folder
 folder: ../project/config/horizoneuropeni/production
 module:
   fastly: 0
 theme: {  }
-blacklist:
+complete_list:
   - search_api.server.solr_default
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+partial_list: (  )
