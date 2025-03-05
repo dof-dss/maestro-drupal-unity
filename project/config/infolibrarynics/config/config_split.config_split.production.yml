@@ -6,12 +6,13 @@ id: production
 label: production
 description: 'Used for the production site only.'
 weight: 0
+stackable: false
+no_patching: false
+storage: folder
 folder: ../project/config/infolibrarynics/production
 module:
   fastly: 0
 theme: {  }
-blacklist:
+complete_list:
   - fastly.settings
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+partial_list: (  )
