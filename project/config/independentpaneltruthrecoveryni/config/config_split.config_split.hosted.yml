@@ -6,12 +6,11 @@ id: hosted
 label: Hosted
 description: ''
 weight: 0
-stackable: false
-no_patching: false
-storage: folder
 folder: ../project/config/independentpaneltruthrecoveryni/hosted
 module: {  }
 theme: {  }
-complete_list:
+blacklist:
   - search_api.server.solr_default
-partial_list: (  )
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

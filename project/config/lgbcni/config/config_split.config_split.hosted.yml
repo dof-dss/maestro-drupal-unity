@@ -6,12 +6,11 @@ id: hosted
 label: hosted
 description: "Use for any sites that are 'hosted' and not running locally, whether development, QA or production."
 weight: 0
-stackable: false
-no_patching: false
-storage: folder
 folder: ../project/config/lgbcni/hosted
 module: {  }
 theme: {  }
-complete_list:
+blacklist:
   - search_api.server.solr_default
-partial_list: (  )
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
