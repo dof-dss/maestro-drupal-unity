@@ -6,14 +6,13 @@ id: production
 label: production
 description: 'Used for production site.'
 weight: 0
-stackable: false
-no_patching: false
-storage: folder
 folder: ../project/config/lgbcni/production
 module:
   fastly: 0
 theme: {  }
-complete_list:
+blacklist:
   - fastly.settings
   - search_api.server.solr_default
-partial_list: (  )
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

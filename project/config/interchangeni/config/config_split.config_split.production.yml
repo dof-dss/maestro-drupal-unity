@@ -6,14 +6,13 @@ id: production
 label: production
 description: 'Used for the production site only.'
 weight: 0
-stackable: false
-no_patching: false
-storage: folder
 folder: ../project/config/interchangeni/production
 module:
   fastly: 0
 theme: {  }
-complete_list:
+blacklist:
   - search_api.server.solr_default
   - fastly.settings
-partial_list: (  )
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
