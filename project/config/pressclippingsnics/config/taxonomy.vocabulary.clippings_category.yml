@@ -1,0 +1,8 @@
+uuid: a1eee275-dfa2-405c-a3ee-56c654aef2e5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Clippings category'
+vid: clippings_category
+description: 'Enables news items to be structured into areas of work'
+weight: 0
