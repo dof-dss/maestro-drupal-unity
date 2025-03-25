@@ -1,0 +1,25 @@
+uuid: bb655d0c-080a-4fb7-a8a5-a398f7220724
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:7438a391-0f54-4ead-a97a-370379ad8704'
+  module:
+    - block_content
+  theme:
+    - horizoneuropeni_theme
+id: horizoneurope
+theme: horizoneuropeni_theme
+region: footer_second
+weight: -10
+provider: null
+plugin: 'block_content:7438a391-0f54-4ead-a97a-370379ad8704'
+settings:
+  id: 'block_content:7438a391-0f54-4ead-a97a-370379ad8704'
+  label: 'Horizon Europe'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

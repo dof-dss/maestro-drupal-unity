@@ -1,0 +1,16 @@
+uuid: 6a7a3a8b-3934-457c-896a-51e553e095f3
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: "Use for any that are 'hosted' and not running locally, apart from production (which has its own split)."
+weight: 0
+folder: ../project/config/liofa/hosted
+module: {  }
+theme: {  }
+blacklist:
+  - search_api.server.solr_default
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

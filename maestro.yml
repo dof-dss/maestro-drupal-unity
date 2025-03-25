@@ -1,0 +1,16 @@
+# Add additional hosting providers to the services below or comment out to prevent a
+# defined provider from running.
+services:
+  hosting.platformSH:
+    class: 'Maestro\Hosting\Provider\PlatformSH'
+    tags:
+      - { name: maestro.hosting }
+  hosting.ddev:
+    class: 'Maestro\Hosting\Provider\DDev'
+    tags:
+      - { name: maestro.hosting }
+  hosting.common:
+    class: 'Maestro\Hosting\Provider\Common'
+    tags:
+      - { name: maestro.hosting }
+

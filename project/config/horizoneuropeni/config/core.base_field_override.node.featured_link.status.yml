@@ -1,0 +1,22 @@
+uuid: b09a4268-0d3d-4c03-a10d-ab855b1dbd1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.featured_link
+id: node.featured_link.status
+field_name: status
+entity_type: node
+bundle: featured_link
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

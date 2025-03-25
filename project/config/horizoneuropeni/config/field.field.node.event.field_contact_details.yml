@@ -1,0 +1,19 @@
+uuid: 9ac3d163-926e-4240-a250-811ad0263510
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_details
+    - node.type.event
+id: node.event.field_contact_details
+field_name: field_contact_details
+entity_type: node
+bundle: event
+label: 'Contact Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

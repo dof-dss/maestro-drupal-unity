@@ -1,0 +1,25 @@
+uuid: 009f7abe-2a97-4703-a7de-834ee193bd5b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:e446cf2f-8b4a-4101-8733-578c1cb96107'
+  module:
+    - block_content
+  theme:
+    - nicscommissioners_theme
+id: accesstoinformation
+theme: nicscommissioners_theme
+region: footer_third
+weight: 0
+provider: null
+plugin: 'block_content:e446cf2f-8b4a-4101-8733-578c1cb96107'
+settings:
+  id: 'block_content:e446cf2f-8b4a-4101-8733-578c1cb96107'
+  label: 'Access to Information'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

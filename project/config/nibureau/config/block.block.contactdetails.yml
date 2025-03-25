@@ -1,0 +1,25 @@
+uuid: eb0f7eb2-869a-4ac3-a145-77232a76b54a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:d9bbac24-ae23-4efe-946b-99f654e7ff30'
+  module:
+    - block_content
+  theme:
+    - nibureau_theme
+id: contactdetails
+theme: nibureau_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:d9bbac24-ae23-4efe-946b-99f654e7ff30'
+settings:
+  id: 'block_content:d9bbac24-ae23-4efe-946b-99f654e7ff30'
+  label: 'Contact details'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

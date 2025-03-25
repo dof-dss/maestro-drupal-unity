@@ -1,0 +1,25 @@
+uuid: 85a3cd69-8e58-46e5-8287-3b6f6458cd05
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:47d1adf0-68d1-40cb-9c1a-6ee8c460b516'
+  module:
+    - block_content
+  theme:
+    - nicscommissioners_theme
+id: usefullinks
+theme: nicscommissioners_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:47d1adf0-68d1-40cb-9c1a-6ee8c460b516'
+settings:
+  id: 'block_content:47d1adf0-68d1-40cb-9c1a-6ee8c460b516'
+  label: 'Useful Links'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,18 @@
+uuid: 01ac6bad-0032-4ba1-ac53-c3ce98c07bc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.press_clippings
+id: node.press_clippings.title
+field_name: title
+entity_type: node
+bundle: press_clippings
+label: 'Press Clipping'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

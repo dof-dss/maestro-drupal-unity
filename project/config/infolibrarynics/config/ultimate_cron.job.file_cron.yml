@@ -1,0 +1,30 @@
+uuid: 2e87f9d4-7c24-40e4-aade-50507757f728
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+title: 'Deletes temporary files'
+id: file_cron
+weight: -3
+module: file
+callback: file_cron
+scheduler:
+  id: crontab
+  configuration:
+    rules:
+      - '5 4 * * *'
+    catch_up: 0
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000

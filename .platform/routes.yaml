@@ -1,0 +1,33 @@
+#############################################################################
+###                           --== IMPORTANT ==--                         ###
+#############################################################################
+# If you require changes to this file you must edit the file within the     #
+# original repository.Any changes here will be overwritten when the project #
+# is built.                                                                 #
+#############################################################################
+'https://www.boundarycommission.org.uk.{default}/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://boundarycommission.org.uk.{default}/':
+    type: redirect
+    to: 'https://www.boundarycommission.org.uk.{default}/'
+'https://info.library.nics.gov.uk/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://pressclippings.nics.gov.uk/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://www.{all}/':
+    type: upstream
+    upstream: 'unity_svr_3:http'
+    cache:
+        enabled: 'false'
+'https://{all}/':
+    type: redirect
+    to: 'https://www.{all}/'

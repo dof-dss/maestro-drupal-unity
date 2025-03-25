@@ -1,0 +1,152 @@
+#############################################################################
+###                           --== IMPORTANT ==--                         ###
+#############################################################################
+# If you require changes to this file you must edit the file within the     #
+# original repository.Any changes here will be overwritten when the project #
+# is built.                                                                 #
+#############################################################################
+db:
+    type: 'mariadb:10.4'
+    disk: 12288
+    configuration:
+        schemas:
+            - pacnidb
+            - judiciarynidb
+            - boundarycommissiondb
+            - industrialcourtdb
+            - interchangenidb
+            - infolibrarynicsdb
+            - pressclippingsnicsdb
+            - parolecomnidb
+            - lgbcnidb
+            - semcommitteedb
+            - nibureaudb
+            - nicscommissionersdb
+            - liofadb
+            - independentpaneltruthrecoverynidb
+            - horizoneuropenidb
+        endpoints:
+            pacni:
+                default_schema: pacnidb
+                privileges:
+                    pacnidb: admin
+            judiciaryni:
+                default_schema: judiciarynidb
+                privileges:
+                    judiciarynidb: admin
+            boundarycommission:
+                default_schema: boundarycommissiondb
+                privileges:
+                    boundarycommissiondb: admin
+            industrialcourt:
+                default_schema: industrialcourtdb
+                privileges:
+                    industrialcourtdb: admin
+            interchangeni:
+                default_schema: interchangenidb
+                privileges:
+                    interchangenidb: admin
+            infolibrarynics:
+                default_schema: infolibrarynicsdb
+                privileges:
+                    infolibrarynicsdb: admin
+            pressclippingsnics:
+                default_schema: pressclippingsnicsdb
+                privileges:
+                    pressclippingsnicsdb: admin
+            parolecomni:
+                default_schema: parolecomnidb
+                privileges:
+                    parolecomnidb: admin
+            lgbcni:
+                default_schema: lgbcnidb
+                privileges:
+                    lgbcnidb: admin
+            semcommittee:
+                default_schema: semcommitteedb
+                privileges:
+                    semcommitteedb: admin
+            nibureau:
+                default_schema: nibureaudb
+                privileges:
+                    nibureaudb: admin
+            nicscommissioners:
+                default_schema: nicscommissionersdb
+                privileges:
+                    nicscommissionersdb: admin
+            liofa:
+                default_schema: liofadb
+                privileges:
+                    liofadb: admin
+            independentpaneltruthrecoveryni:
+                default_schema: independentpaneltruthrecoverynidb
+                privileges:
+                    independentpaneltruthrecoverynidb: admin
+            horizoneuropeni:
+                default_schema: horizoneuropenidb
+                privileges:
+                    horizoneuropenidb: admin
+solr_8_11:
+    type: 'solr:8.11'
+    disk: 1024
+    configuration:
+        cores:
+            pacni_index:
+                conf_dir: !archive solr_config/
+            judiciaryni_index:
+                conf_dir: !archive solr_config/
+            boundarycommission_index:
+                conf_dir: !archive solr_config/
+            industrialcourt_index:
+                conf_dir: !archive solr_config/
+            interchangeni_index:
+                conf_dir: !archive solr_config/
+            pressclippingsnics_index:
+                conf_dir: !archive solr_config/
+            parolecomni_index:
+                conf_dir: !archive solr_config/
+            lgbcni_index:
+                conf_dir: !archive solr_config/
+            semcommittee_index:
+                conf_dir: !archive solr_config/
+            nibureau_index:
+                conf_dir: !archive solr_config/
+            nicscommissioners_index:
+                conf_dir: !archive solr_config/
+            liofa_index:
+                conf_dir: !archive solr_config/
+            independentpaneltruthrecoveryni_index:
+                conf_dir: !archive solr_config/
+            horizoneuropeni_index:
+                conf_dir: !archive solr_config/
+        endpoints:
+            pacni:
+                core: pacni_index
+            judiciaryni:
+                core: judiciaryni_index
+            boundarycommission:
+                core: boundarycommission_index
+            industrialcourt:
+                core: industrialcourt_index
+            interchangeni:
+                core: interchangeni_index
+            pressclippingsnics:
+                core: pressclippingsnics_index
+            parolecomni:
+                core: parolecomni_index
+            lgbcni:
+                core: lgbcni_index
+            semcommittee:
+                core: semcommittee_index
+            nibureau:
+                core: nibureau_index
+            nicscommissioners:
+                core: nicscommissioners_index
+            liofa:
+                core: liofa_index
+            independentpaneltruthrecoveryni:
+                core: independentpaneltruthrecoveryni_index
+            horizoneuropeni:
+                core: horizoneuropeni_index
+redis:
+    type: 'redis:6.0'

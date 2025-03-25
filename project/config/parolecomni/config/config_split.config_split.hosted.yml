@@ -1,0 +1,16 @@
+uuid: 077a6044-f041-4c1a-af36-0c2ae7bc69c1
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: "Use for any sites that are 'hosted' and not running locally, whether development, QA or production."
+weight: 0
+folder: ../project/config/parolecomni/hosted
+module: {  }
+theme: {  }
+blacklist:
+  - search_api.server.solr_default
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

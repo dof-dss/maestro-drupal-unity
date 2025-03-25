@@ -1,0 +1,32 @@
+uuid: 63f0099c-e34d-4a6b-890d-e45f749c0fcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.featured_list.field_link
+    - node.type.featured_list
+  module:
+    - link
+    - user
+id: node.featured_list.default
+targetEntityType: node
+bundle: featured_list
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
