@@ -4,6 +4,5 @@ status: true
 dependencies: {  }
 name: 'Publication topics'
 vid: publication_topics
-description: null
+description: ''
 weight: 0
-new_revision: false
