@@ -4,6 +4,5 @@ status: true
 dependencies: {  }
 name: 'Publication type'
 vid: publication_type
-description: null
+description: ''
 weight: 0
-new_revision: false

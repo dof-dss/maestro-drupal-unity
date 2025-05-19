@@ -4,6 +4,5 @@ status: true
 dependencies: {  }
 name: 'Consultation Stage'
 vid: consultation_stage
-description: null
+description: ''
 weight: 0
-new_revision: false

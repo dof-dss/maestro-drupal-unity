@@ -60,5 +60,4 @@ settings:
       linkit_profile: default
     media_media:
       allow_view_mode_override: true
-image_upload:
-  status: false
+image_upload: {  }
