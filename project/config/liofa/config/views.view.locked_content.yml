@@ -400,7 +400,7 @@ display:
         options:
           perm: 'administer nodes'
       cache:
-        type: search_api_none
+        type: none
         options: {  }
       empty:
         area_text_custom:
