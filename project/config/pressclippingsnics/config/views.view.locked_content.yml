@@ -27,7 +27,7 @@ display:
         options:
           perm: 'administer nodes'
       cache:
-        type: search_api_none
+        type: none
         options: {  }
       query:
         type: views_query
