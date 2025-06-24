@@ -94,7 +94,7 @@
   {% endif %}
 
   {% if drupal_view_result('judicial_members', 'judiciary_term_id', 24)|length > 0 %}
-    <h3>Chief Social Security and Child Support Commissioner
+    <h3>Chief Social Security and Chief Child Support Commissioner
       ({{ drupal_view_result('judicial_members', 'judiciary_term_id', 24)|length }})</h3>
     {{ drupal_view('judicial_members', 'judiciary_term_id', 24) }}
   {% endif %}
