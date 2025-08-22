@@ -1,0 +1,23 @@
+uuid: 5a78fd1d-dd65-4880-9760-523bf25b3d52
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.publications_topics
+  module:
+    - text
+id: taxonomy_term.publications_topics.default
+targetEntityType: taxonomy_term
+bundle: publications_topics
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
