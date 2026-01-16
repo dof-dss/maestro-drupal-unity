@@ -1,0 +1,26 @@
+uuid: 5238127a-2b47-4721-badc-a7d41652eb5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - eu_cookie_compliance
+    - filter
+    - media
+    - search
+    - system
+_core:
+  default_config_hash: pLQ3fYQmtg_00xJLseQuO1SQp9mbk7BIkJ9jo1p2uGg
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'diff view changes'
+  - 'display eu cookie compliance popup'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view files'
+  - 'view media'

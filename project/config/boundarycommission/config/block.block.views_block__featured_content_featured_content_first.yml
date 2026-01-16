@@ -1,0 +1,24 @@
+uuid: baa5d503-e691-48d6-9dcd-0ef0ceb3a0fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured_content
+  module:
+    - views
+  theme:
+    - boundarycommission_theme
+id: views_block__featured_content_featured_content_first
+theme: boundarycommission_theme
+region: top_first
+weight: 0
+provider: null
+plugin: 'views_block:featured_content-featured_content_first'
+settings:
+  id: 'views_block:featured_content-featured_content_first'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

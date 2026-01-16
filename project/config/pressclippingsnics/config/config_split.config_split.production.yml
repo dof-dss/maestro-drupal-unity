@@ -1,0 +1,17 @@
+uuid: d910f7d5-de7a-421b-929e-aeb89f4224e7
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: ''
+weight: 0
+folder: ../project/config/pressclippingsnics/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
