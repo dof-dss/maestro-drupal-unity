@@ -1,0 +1,52 @@
+uuid: 9d73428e-fe3c-4e8a-9433-498a5017d5e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.press_clippings.field_attachment
+    - field.field.node.press_clippings.field_press_type
+    - field.field.node.press_clippings.field_publication_date
+    - node.type.press_clippings
+  module:
+    - datetime
+    - file
+    - user
+id: node.press_clippings.default
+targetEntityType: node
+bundle: press_clippings
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_attachment:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_press_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_publication_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

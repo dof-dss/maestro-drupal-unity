@@ -1,0 +1,25 @@
+uuid: 58283f3a-95bf-4f0c-87f2-aa28eece435b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:7292d87f-2077-4b6f-8d9d-840b2737e512'
+  module:
+    - block_content
+  theme:
+    - semcommittee_theme
+id: commissionforregulationofutilities
+theme: semcommittee_theme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:7292d87f-2077-4b6f-8d9d-840b2737e512'
+settings:
+  id: 'block_content:7292d87f-2077-4b6f-8d9d-840b2737e512'
+  label: 'Commission for Regulation of Utilities'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

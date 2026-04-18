@@ -1,0 +1,32 @@
+uuid: 83fcb49a-a1c1-4fb3-a4f5-807e1722e35c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.latest_news
+  module:
+    - node
+    - views
+  theme:
+    - semcommittee_theme
+id: views_block__latest_news_latest_news
+theme: semcommittee_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:latest_news-latest_news'
+settings:
+  id: 'views_block:latest_news-latest_news'
+  label: 'Latest News'
+  label_display: visible
+  provider: views
+  views_label: 'Latest News'
+  items_per_page: '4'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      news: news

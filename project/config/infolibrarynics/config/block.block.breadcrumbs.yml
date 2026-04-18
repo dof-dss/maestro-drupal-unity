@@ -1,0 +1,20 @@
+uuid: 5594181f-b3ec-432e-8840-063b92b32ef0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - infolibrarynics_theme
+id: breadcrumbs
+theme: infolibrarynics_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
