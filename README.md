@@ -6,7 +6,7 @@ deployed direct to a hosting environment and instead is used to create 'server s
 When a core or contrib update is required for Unity sites it is first performed against this repository, pushed to
 Github and then each 'server instance' fork will pull from this upstream source. It is imperative that any
 changes to the files within this repository are not altered directly on the server instance fork as any future pulls
-could possibly overwrite those changes.
+could possibly overwrite those  changes.
 
 ## Structure
 

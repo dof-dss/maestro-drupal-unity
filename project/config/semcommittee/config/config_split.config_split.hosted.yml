@@ -1,0 +1,15 @@
+uuid: 75187cc1-4de5-4712-be97-39bf815b1f0c
+langcode: en
+status: true
+dependencies: {  }
+id: hosted
+label: hosted
+description: ''
+weight: 0
+folder: ../project/config/semcommittee/hosted
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

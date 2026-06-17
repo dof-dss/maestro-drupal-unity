@@ -1,0 +1,41 @@
+uuid: f6e68ebd-a061-4b13-93fb-74b83d684df3
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.publication_date
+  module:
+    - facets
+    - system
+    - user
+  theme:
+    - pressclippingsnics_theme
+id: publicationdate
+theme: pressclippingsnics_theme
+region: search_facets
+weight: -3
+provider: null
+plugin: 'facet_block:publication_date'
+settings:
+  id: 'facet_block:publication_date'
+  label: 'Publication Date'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publicationdate
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/press-clippings\r\n/press-clippings/type/*\r\n/press-clippings/date/*"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      supervisor_user: supervisor_user
+      qa: qa
+      author_user: author_user
