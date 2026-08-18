@@ -138,6 +138,7 @@
         "drupal/readonlymode": "^1.2",
         "drupal/redirect": "^1.12",
         "drupal/redis": "^1.7",
+        "drupal/revision_manager": "^1.0@beta",
         "drupal/scheduled_transitions": "^2.7",
         "drupal/scheduler": "^2.0",
         "drupal/scheduler_content_moderation_integration": "^2.0@beta",
