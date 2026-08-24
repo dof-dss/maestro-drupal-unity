@@ -1,0 +1,29 @@
+uuid: 88eb6dea-e24d-4d2a-9c2c-fecbcf93e004
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.publication_type
+  module:
+    - facets
+    - system
+  theme:
+    - parolecomni_theme
+id: publicationtype
+theme: parolecomni_theme
+region: search_facets
+weight: 0
+provider: null
+plugin: 'facet_block:publication_type'
+settings:
+  id: 'facet_block:publication_type'
+  label: Type
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publicationtype
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*"

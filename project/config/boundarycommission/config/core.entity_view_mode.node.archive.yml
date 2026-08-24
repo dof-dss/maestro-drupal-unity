@@ -1,0 +1,10 @@
+uuid: 16650976-0788-4d99-975a-39c8de2b07d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.archive
+label: Archive
+targetEntityType: node
+cache: true

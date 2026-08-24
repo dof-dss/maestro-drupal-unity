@@ -1,0 +1,31 @@
+uuid: c4414839-5afc-4227-ae5e-c562a41401d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.publications
+    - views.view.publications_search
+  module:
+    - search_api
+id: publications_summary
+name: 'Publications summary'
+facet_source_id: 'search_api:views_page__publications_search__publication_search_page'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+facets:
+  published_date:
+    checked: true
+    label: 'Published date'
+    separator: ', '
+    show_count: false
+    weight: -10
+  publication_type:
+    checked: true
+    label: 'Publication type'
+    separator: ', '
+    show_count: false
+    weight: -9

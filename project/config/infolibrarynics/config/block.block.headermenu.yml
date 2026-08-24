@@ -1,0 +1,25 @@
+uuid: ca7b5f62-77b1-46b4-b2b4-f0e01e6bc196
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-menu
+  module:
+    - system
+  theme:
+    - infolibrarynics_theme
+id: headermenu
+theme: infolibrarynics_theme
+region: header
+weight: -2
+provider: null
+plugin: 'system_menu_block:header-menu'
+settings:
+  id: 'system_menu_block:header-menu'
+  label: 'Header menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

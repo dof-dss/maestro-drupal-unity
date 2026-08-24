@@ -1,0 +1,29 @@
+uuid: 49fdbd53-6494-4e1e-b346-dbb5acece41d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.published_date
+  module:
+    - facets
+    - system
+  theme:
+    - semcommittee_theme
+id: publisheddate
+theme: semcommittee_theme
+region: search_facets
+weight: -8
+provider: null
+plugin: 'facet_block:published_date'
+settings:
+  id: 'facet_block:published_date'
+  label: 'Published Date'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: publisheddate
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/publications\r\n/publications/date/*\r\n/publications/type/*\r\n/publications/topic/*"

@@ -1,0 +1,26 @@
+uuid: e602bc8d-31e3-4b49-a346-a13ddf393195
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: featured_links
+label: 'Featured links'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      featured_list: featured_list
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 1
+  max_size: 6
+  act_as_queue: false
+  reverse: false
