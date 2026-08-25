@@ -1,0 +1,109 @@
+/*
+ * @file
+ * Defines the components for the theme.
+ */
+@import 'init/index';
+@import '../../node_modules/nicsdru_unity_theme/src/scss/3_components/index';
+
+@media screen and (max-width: $tab) {
+  .top_left #logo {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: $tab) {
+  .top_left {
+    width: 100%;
+
+    #logo {
+      position: relative;
+      float: none;
+    }
+
+    #header-menu .menu {
+      text-align: center;
+    }
+  }
+}
+
+#main-menu {
+  background: none;
+
+  ui, li {
+    list-style: none;
+  }
+
+  .nav-main {
+    justify-content: center;
+  }
+}
+
+#headerHero {
+  background: none;
+}
+
+#block-nicsloginnotice {
+  background: $grey-medium;
+  text-align: center;
+  border: $charcoal 1px solid;
+
+  h2 {
+    @include adjust-font-size-to(30px);
+  }
+
+  p {
+    @include adjust-font-size-to(16px);
+  }
+}
+
+#header {
+  display: block;
+  background: $grey-light;
+  border: solid 1px $grey-lightest;
+  border-radius: 6px;
+  padding: .5rem .5rem 0 2rem;
+}
+
+  @include breakpoint($tab) {
+    padding-bottom: 1%;
+  }
+
+  .menu_wrapper {
+    float: right;
+    margin-top: 2rem;
+    @media screen and (max-width: $tab) {
+      float: none;
+      margin-top: 7rem;
+      @media screen and (max-width: $mob) {
+        margin-top: 5rem
+      }
+    }
+
+    a {
+      @include adjust-font-size-to(16px);
+
+      &:hover,
+      &:focus {
+        border-bottom: 2px solid $link;
+      }
+    }
+  }
+
+#main-menu .hamburger > span {
+  background: $brand-primary;
+}
+
+#usermenu {
+  .menu {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding-right: 2rem;
+    }
+  }
+}
+
+#search-facets a.facets-soft-limit-link, #content a.facets-soft-limit-link {
+  color: $link;
+}

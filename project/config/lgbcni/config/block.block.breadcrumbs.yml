@@ -1,0 +1,24 @@
+uuid: e95917b6-b2ad-48b7-89a5-86a6e00ef222
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - lgbcni_theme
+id: breadcrumbs
+theme: lgbcni_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

@@ -1,0 +1,17 @@
+uuid: 1fdcf6e1-b6c5-4e19-8a49-411b6a975efc
+langcode: en
+status: true
+dependencies: {  }
+id: production
+label: production
+description: 'Used for the production site only.'
+weight: 0
+folder: ../project/config/infolibrarynics/production
+module:
+  fastly: 0
+theme: {  }
+blacklist:
+  - fastly.settings
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

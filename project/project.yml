@@ -1,0 +1,95 @@
+project_type: unity
+project_name: 'Unity Svr 3'
+project_id: vnetibjd44moa
+project_disk_size: 25000
+db_disk_size: 14000
+sites:
+    pacni:
+        name: 'Planning Appeals Commission'
+        url: pacni.gov.uk
+        solr: pacni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/pacni ; drush core-cron'
+        database: pacni
+        status: development
+        default: true
+    judiciaryni:
+        name: 'Judiciary NI'
+        url: judiciaryni.uk
+        solr: judiciaryni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/judiciaryni ; drush core-cron'
+        database: judiciaryni
+        status: development
+        default: false
+    boundarycommission:
+        name: 'Boundary Commission'
+        url: boundarycommission.org.uk
+        solr: boundarycommission
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/boundarycommission ; drush core-cron'
+        database: boundarycommission
+        status: development
+        default: false
+    industrialcourt:
+        name: 'Industrial Court'
+        url: industrialcourt.gov.uk
+        solr: industrialcourt
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/industrialcourt ; drush core-cron'
+        database: industrialcourt
+        status: development
+        default: false
+    interchangeni:
+        name: 'Interchange NI'
+        url: interchangeni.org.uk
+        solr: interchangeni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/interchangeni ; drush core-cron'
+        database: interchangeni
+        status: development
+        default: false
+    infolibrarynics:
+        name: 'NICS e-library'
+        url: info.library.nics.gov.uk
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/infolibrarynics ; drush core-cron'
+        database: infolibrarynics
+        status: development
+        default: false
+    pressclippingsnics:
+        name: 'Press Clippings Service'
+        url: pressclippings.nics.gov.uk
+        solr: pressclippingsnics
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/pressclippingsnics ; drush core-cron'
+        database: pressclippingsnics
+        status: development
+        default: false
+    parolecomni:
+        name: 'Parole Commissioners for Northern Ireland'
+        url: parolecomni.org.uk
+        solr: parolecomni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/parolecomni ; drush core-cron'
+        database: parolecomni
+        status: development
+        default: false
+    lgbcni:
+        name: 'Local Government Boundaries Commissioner for Northern Ireland'
+        url: lgbc-ni.org.uk
+        solr: lgbcni
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/lgbcni ; drush core-cron'
+        database: lgbcni
+        status: development
+        default: false
+    semcommittee:
+        name: 'The Single Electricity Market Committee'
+        url: semcommittee.com
+        solr: semcommittee
+        cron_spec: '10 * * * *'
+        cron_cmd: 'cd web/sites/semcommittee ; drush core-cron'
+        database: semcommittee
+        status: development
+        default: false
